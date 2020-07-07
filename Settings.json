@@ -28,7 +28,14 @@
                 "9": "Page Count",
                 "10": "Date Setup",
                 "11": "Samples",
-                "12": "Deadline"
+                "12": "Deadline",
+                "13": "Added On",
+                "14": "Publication Number",
+                "15": "Designer Email",
+                "16": "Shipping Added",
+                "17": "Page Count Matched Estimate",
+                "18": "Publication Month",
+                "19": "Exported to MIS"
             }
         },
         "Samples": {
