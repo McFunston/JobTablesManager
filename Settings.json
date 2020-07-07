@@ -2,7 +2,7 @@
     "Data Sources": {
         "Jobs List": {
             "File Name": "BVM_Jobs.xlsx",
-            "Default Path": "/Users/micafunston/Projects/BVMTools/BVM_Jobs.xlsx",
+            "Default Path": "Test_Data/BVM_Jobs.xlsx",
             "Type": "Data List",
             "Job Field": "Job",
             "Tab": "Sheet",
@@ -12,7 +12,9 @@
                 "Files In",
                 "Approved",
                 "Scheduled Ship Date",
-                "Date Setup"
+                "Date Setup",
+                "Publication Month",
+                "Exported to MIS"
             ],
             "True Dates": false,
             "Date Format": "%m/%d/%Y",

@@ -144,13 +144,6 @@ class DataSource:
         _columns = list(intersection)
         return _columns
 
-
-def loadDataSettings_JSON(name: str) -> dict:
-    with open('BVMSettings.json') as j:
-        settings: dict = json.load(j)
-        return settings["Data Sources"][name]
-
-
 class JobsList(DataSource):
     def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "Jobs List"
@@ -167,6 +160,13 @@ class JobsList(DataSource):
         self.DateSetup: str = "Date Setup"
         self.Samples: str = "Samples"
         self.Deadline: str = "Deadline"
+        self.AddedOn: str = "Added On"
+        self.PublicationNumber: str = "Publication Number"
+        self.DesignerEmail: str = "Designer Email"
+        self.ShippingAdded: str = "Shipping Added"
+        self.PageCountMatchedEstimate: str = "Page Count Matched Estimate"
+        self.PublicationMonth = "Publication Month"
+        self.ExportedToMIS = "Exported to MIS"
 
     def GetMostRecentPub(self, pubNumber):
         candidates = self._findInAllRows(self.Description, pubNumber)

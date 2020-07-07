@@ -39,14 +39,6 @@ def OpenXLS(inputPath):
     return sheet.get_rows()
 
 
-def OpenTable(path):
-    extension = path.split(".")[-1].lower()
-    if extension == "xls":
-        return OpenXLS(path)
-    if extension == "xlsx":
-        return OpenXLSX(path)
-    if extension == "csv":
-        return OpenCSV(path)
 
 def GetRows(sheet):
     table = list()
@@ -83,13 +75,16 @@ def GetData(path: str, tab: str) -> list:
         df = read_excel(path, tab)
     else: 
         df = read_excel(path)
-    df1 = df.where(pd.notnull(df), None)
+    df1 = df.where(pd.notnull(df), None)    
     dfDict = df1.to_dict('records')
     for d in dfDict:
         for c in d:            
             if str(type(d[c]))=="<class 'pandas._libs.tslibs.timestamps.Timestamp'>":
                 d[c]=d[c].to_pydatetime()
-            print(type(d[c]))
+            if type(d[c])==float:
+                d[c]=int(d[c])
+            if type(d[c])==int:
+                d[c]=str(d[c])                                            
     return dfDict
     # dfList = df.values.tolist()
     # for d in dfDict:
