@@ -13,6 +13,7 @@
                 "Approved",
                 "Scheduled Ship Date",
                 "Date Setup",
+                "Added On",
                 "Publication Month",
                 "Exported to MIS"
             ],
@@ -144,6 +145,7 @@
         },
         "Pace Update": {
             "Type": "Data List",
+            "Default Path": "Test_Data/BVM+Job+Grouped+For+Tracking+Report.xls",
             "True Dates": true,
             "Tab": "Report1",
             "Date Columns": [

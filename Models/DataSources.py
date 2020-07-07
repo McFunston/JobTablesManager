@@ -167,6 +167,7 @@ class JobsList(DataSource):
         self.PageCountMatchedEstimate: str = "Page Count Matched Estimate"
         self.PublicationMonth = "Publication Month"
         self.ExportedToMIS = "Exported to MIS"
+        self._dataList = self._normalizeDates()
 
     def GetMostRecentPub(self, pubNumber):
         candidates = self._findInAllRows(self.Description, pubNumber)
@@ -234,7 +235,7 @@ class PaceUpdate(DataSource):
         self._additionalDescription = "Additional Description"
         self._dateSetup = "Date Setup"
         self._pageCountStrings = self.settings['Page Count Strings']
-        self._addExtraColumns()
+        self._addExtraColumns()        
 
     def _getCPC(self, row: dict) -> str:
         cpc = row[self._productionNotes].split()[-1]
