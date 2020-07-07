@@ -1,4 +1,3 @@
-from ExcelLibs import GetData
 from typing import Dict, List
 import json
 from datetime import datetime
@@ -29,7 +28,7 @@ class DataSource:
     
     Columns = property(_getColumnNames)
 
-    def _normalizeDates(self) -> list:
+    def _normalizeDates(self) -> List[Dict]:
         dateDataList = copy.deepcopy(self._dataList)
         if self.settings['True Dates'] == False:
             for row in dateDataList:
@@ -38,7 +37,7 @@ class DataSource:
                         row[column] = datetime.strptime(row[column], self.settings['Date Format'])
         return dateDataList
 
-    def _getStringDatalist(self) -> list:
+    def _getStringDatalist(self) -> List[Dict[str, str]]:
         stringDataList = copy.deepcopy(self._dataList)
         for row in stringDataList:
             for x in row:
@@ -48,14 +47,14 @@ class DataSource:
                     row[x] = row[x].strftime(self.settings['Date Format'])
         return stringDataList
 
-    def _findAllRows(self, column: str, searchTerm: str) -> list:
+    def _findAllRows(self, column: str, searchTerm: str) -> List[Dict]:
         foundList: list[dict] = list()
         for row in self._dataList:
             if row[column] == searchTerm:
                 foundList.append(row)
         return foundList
 
-    def _findInAllRows(self, column: str, searchTerm: str) -> list:
+    def _findInAllRows(self, column: str, searchTerm: str) -> List[Dict]:
         foundList: list[dict] = list()
         for row in self._dataList:
             if searchTerm in row[column]:
@@ -68,7 +67,7 @@ class DataSource:
     def _getCell(self, index: int, column: str):
         return self._getRow(index)[column]
 
-    def getConsumableList(self, columns: list) -> list:
+    def getConsumableList(self, columns: list) -> List:
         consumableList = list()
         for row in self._dataList:
             entries = dict()
@@ -77,7 +76,7 @@ class DataSource:
             consumableList.append(entries)
         return consumableList
 
-    def returnSavableList(self) -> list:
+    def returnSavableList(self) -> List:
         savableList: list[list] = list()
         headers: list[str] = list()
         columnsOrder: dict[str, str] = self.settings["Columns Order"]
