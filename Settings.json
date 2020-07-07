@@ -1,0 +1,177 @@
+{
+    "Data Sources": {
+        "Jobs List": {
+            "File Name": "BVM_Jobs.xlsx",
+            "Default Path": "/Users/micafunston/Projects/BVMTools/BVM_Jobs.xlsx",
+            "Type": "Data List",
+            "Job Field": "Job",
+            "Tab": "Sheet",
+            "Publication Field": "Description",
+            "Publication Number Separate": false,
+            "Date Columns": [
+                "Files In",
+                "Approved",
+                "Scheduled Ship Date",
+                "Date Setup"
+            ],
+            "True Dates": false,
+            "Date Format": "%m/%d/%Y",
+            "Columns Order": {
+                "1": "Job",
+                "2": "Description",
+                "3": "Files In",
+                "4": "Approved",
+                "5": "Production Status",
+                "6": "Scheduled Ship Date",
+                "7": "Qty Ordered",
+                "8": "CPC",
+                "9": "Page Count",
+                "10": "Date Setup",
+                "11": "Samples",
+                "12": "Deadline"
+            }
+        },
+        "Samples": {
+            "Tab": "Ship List",
+            "Type": "Address",
+            "Separate Names": false,
+            "Date Columns": [
+                "Cycle"
+            ],
+            "True Dates": false,
+            "Date Format": "%Y-%m",
+            "Publication Field": "ID",
+            "Publication Number Separate": true,
+            "Columns Order": {
+                "1": "Region",
+                "2": "ID",
+                "3": "Publication",
+                "4": "Cycle",
+                "5": "Deadline",
+                "6": "Quantity",
+                "7": "User Number",
+                "8": "Customer",
+                "9": "Address1",
+                "10": "Address2",
+                "11": "City",
+                "12": "State",
+                "13": "Postal Code",
+                "14": "Phone",
+                "15": "External",
+                "16": "Shipping"
+            }
+        },
+        "Designer Copies": {
+            "Tab": "Designer List",
+            "Type": "Address",
+            "Separate Names": true,
+            "Date Columns": [
+                "Cycle"
+            ],
+            "True Dates": false,
+            "Date Format": "%Y-%m",
+            "Publication Field": "ID",
+            "Publication Number Separate": true,
+            "Columns Order": {
+                "1": "ID",
+                "2": "Publication",
+                "3": "Cycle",
+                "4": "Deadline",
+                "5": "User Number",
+                "6": "Designer First Name",
+                "7": "Designer Last Name",
+                "8": "Designer Email",
+                "9": "Address1",
+                "10": "Address2",
+                "11": "City",
+                "12": "State",
+                "13": "Postal Code",
+                "14": "Phone"
+            }
+        },
+        "Contacts": {
+            "File Name": "Contacts.xlsx",
+            "Tab": "EPace Data",
+            "Type": "Address",
+            "Separate Names": true,
+            "Columns Order": {
+                "1": "_ACTION_",
+                "2": "job",
+                "3": "shipmentType",
+                "4": "shipVia",
+                "5": "U_shipmentNotes",
+                "6": "contactFirstName",
+                "7": "contactLastName",
+                "8": "address1",
+                "9": "address2",
+                "10": "address3",
+                "11": "city",
+                "12": "state",
+                "13": "zip",
+                "14": "phone",
+                "15": "country",
+                "16": "shipperName",
+                "17": "contactNumber"
+            }
+        },
+        "Customer Report": {
+            "Tab": "Sheet",
+            "Type": "Report",
+            "Last Column": "H",
+            "True Dates": true,
+            "Job Field": "Job",
+            "Publication Field": "Description",
+            "Publication Number Separate": false,
+            "Columns Order": {
+                "1": "Job",
+                "2": "Deadline",
+                "3": "Description",
+                "4": "Files In",
+                "5": "Approved",
+                "6": "Production Status",
+                "7": "Scheduled Ship Date",
+                "8": "Qty Ordered"
+            }
+        },
+        "Pace Update": {
+            "Type": "Data List",
+            "True Dates": true,
+            "Tab": "Report1",
+            "Date Columns": [
+                "Scheduled Ship Date",
+                "Date Setup"
+            ],
+            "Date Format": "%m/%d/%Y",
+            "Columns Order": {
+                "1": "Job",
+                "2": "Description",
+                "3": "Production Status",
+                "4": "Scheduled Ship Date",
+                "5": "Qty Ordered",
+                "6": "Production Notes",
+                "7": "Item Template",
+                "8": "Additional Description",
+                "9": "Date Setup"
+            },
+            "Page Count Strings": {
+                "16 page": "16 Pages",
+                "20 page": "20 Pages",
+                "24 page": "24 Pages",
+                "28 page": "28 Pages",
+                "32 page": "32 Pages",
+                "36 page": "36 Pages",
+                "40 page": "40 Pages"
+            }
+        },
+        "Jobs List Update": {
+            "Type": "Intermediary Data",
+            "Overwrite Source Fields": [
+                "Production Status",
+                "Scheduled Ship Date",
+                "Qty Ordered",
+                "CPC",
+                "Page Count"
+            ]
+        }
+    }
+}
