@@ -127,6 +127,7 @@
         "Customer Report": {
             "Tab": "Sheet",
             "Type": "Report",
+            "Default Path": "Test_Data/BVM_Jobs_Report.xlsx",
             "Last Column": "H",
             "True Dates": true,
             "Job Field": "Job",

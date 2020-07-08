@@ -8,6 +8,10 @@ def loadDataSettings_JSON(name: str) -> Dict:
         settings: dict = json.load(j)
         return settings["Data Sources"][name]
 
+def getEmptyDS(path: str, tab: str):
+    moqCustomerReport = [{}]
+    return moqCustomerReport
+
 def GetJobsList():
     name='Jobs List'
     settings = loadDataSettings_JSON(name)
@@ -18,6 +22,13 @@ def GetMISUpdateList():
     name='Pace Update'
     settings = loadDataSettings_JSON(name)
     updateList = ds.PaceUpdate(settings['Default Path'], loadDataSettings_JSON, GetData)
-    print(updateList)
-GetJobsList()
-GetMISUpdateList()
+    return updateList
+
+def GetCustomerReportList():
+    name = 'Customer Report'
+    settings = loadDataSettings_JSON(name)
+    customerReportList = ds.CustomerReport(settings['Default Path'], loadDataSettings_JSON, getEmptyDS)
+    return customerReportList
+
+test = GetCustomerReportList()
+print('')
