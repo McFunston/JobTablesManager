@@ -103,6 +103,7 @@
             "File Name": "Contacts.xlsx",
             "Tab": "EPace Data",
             "Type": "Address",
+            "Default Path": "Test_Data/Contacts.xlsx",
             "Separate Names": true,
             "Columns Order": {
                 "1": "_ACTION_",

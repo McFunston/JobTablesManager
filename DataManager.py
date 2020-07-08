@@ -30,5 +30,16 @@ def GetCustomerReportList():
     customerReportList = ds.CustomerReport(settings['Default Path'], loadDataSettings_JSON, getEmptyDS)
     return customerReportList
 
-test = GetCustomerReportList()
+def GetContactsList():
+    name = 'Contacts'
+    settings = loadDataSettings_JSON(name)
+    contactsList = ds.Contacts(settings['Default Path'], loadDataSettings_JSON, GetData)
+    return contactsList
+
+def GetSamplesList(path):
+
+    samplesList = ds.Samples(path, loadDataSettings_JSON, GetData)
+    return samplesList
+
+test = GetSamplesList('Test_Data/1st deadline_Sample Magazine Orders_July 2020_Canada.xlsx')
 print('')
