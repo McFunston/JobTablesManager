@@ -10,16 +10,16 @@ def moqJobsListSettingsFunc(name: str):
 
 
 def moqJobsListFunc(path: str, tab: str):
-    moqJobsList = [{"Job": "M511", "Description": "2656-Silver Valley-Academy Park Neighbou-Mar", "Files In": "2/11/2020", "Approved": "3/3/2020", "Production Status": "Closed",
-                    "Scheduled Ship Date": "03/09/2020", "Qty Ordered": "2500", "CPC": "2089", "Page Count": "16 Pages", "Date Setup": "02/03/2020", "Samples": "316", "Deadline": "10"},
-                   {"Job": "M532", "Description": "3254-Neighbours of Kirkendall and Durand-Mar", "Files In": "02/28/2020", "Approved": "02/28/2020", "Production Status": "Open",
-                    "Scheduled Ship Date": "03/05/2020", "Qty Ordered": "4500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": "02/03/2020", "Samples": "216", "Deadline": "15"},
-                   {"Job": "M999", "Description": "Bad Data1", "Files In": None, "Approved": "02/28/2020", "Production Status": "Open",
-                    "Scheduled Ship Date": "02/26/2020", "Qty Ordered": "3500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": "09/04/2050", "Samples": "216", "Deadline": "15"},
-                   {"Job": "M704", "Description": "3254-Neighbours of Kirkendall and Durand-Apr", "Files In": "03/28/2020", "Approved": None, "Production Status": "Open",
-                    "Scheduled Ship Date": "04/05/2020", "Qty Ordered": "4500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": "03/03/2020", "Samples": "216", "Deadline": "15"},
-                    {"Job": "", "Description": "3535-Neighbours of Perth-Jul", "Files In": "03/28/2020", "Approved": None, "Production Status": "Open",
-                    "Scheduled Ship Date": "04/05/2020", "Qty Ordered": "4500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": "03/03/2020", "Samples": "216", "Deadline": "15"}]
+    moqJobsList = [{"Job": "M511", "Description": "2656-Silver Valley-Academy Park Neighbou-Mar", "Files In": datetime.strptime("2/11/2020","%m/%d/%Y"), "Approved": datetime.strptime("3/3/2020","%m/%d/%Y"), "Production Status": "Closed",
+                    "Scheduled Ship Date": datetime.strptime("03/09/2020","%m/%d/%Y"), "Qty Ordered": "2500", "CPC": "2089", "Page Count": "16 Pages", "Date Setup": datetime.strptime("02/03/2020","%m/%d/%Y"), "Samples": "316", "Deadline": "10"},
+                   {"Job": "M532", "Description": "3254-Neighbours of Kirkendall and Durand-Mar", "Files In": datetime.strptime("02/28/2020","%m/%d/%Y"), "Approved": datetime.strptime("02/28/2020","%m/%d/%Y"), "Production Status": "Open",
+                    "Scheduled Ship Date": datetime.strptime("03/05/2020","%m/%d/%Y"), "Qty Ordered": "4500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("02/03/2020","%m/%d/%Y"), "Samples": "216", "Deadline": "15"},
+                   {"Job": "M999", "Description": "Bad Data1", "Files In": None, "Approved": datetime.strptime("02/28/2020","%m/%d/%Y"), "Production Status": "Open",
+                    "Scheduled Ship Date": datetime.strptime("02/26/2020","%m/%d/%Y"), "Qty Ordered": "3500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("09/04/2050","%m/%d/%Y"), "Samples": "216", "Deadline": "15"},
+                   {"Job": "M704", "Description": "3254-Neighbours of Kirkendall and Durand-Apr", "Files In": datetime.strptime("03/28/2020","%m/%d/%Y"), "Approved": None, "Production Status": "Open",
+                    "Scheduled Ship Date": datetime.strptime("04/05/2020","%m/%d/%Y"), "Qty Ordered": "4500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("03/03/2020","%m/%d/%Y"), "Samples": "216", "Deadline": "15"},
+                    {"Job": "", "Description": "3535-Neighbours of Perth-Jul", "Files In": datetime.strptime("03/28/2020","%m/%d/%Y"), "Approved": None, "Production Status": "Open",
+                    "Scheduled Ship Date": datetime.strptime("04/05/2020","%m/%d/%Y"), "Qty Ordered": "4500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("03/03/2020","%m/%d/%Y"), "Samples": "216", "Deadline": "15"}]
     return moqJobsList
 
 
@@ -186,6 +186,7 @@ class TestDataSources(unittest.TestCase):
         jobs = JobsList("BVM_Jobs.xlsx",
                         moqJobsListSettingsFunc, moqJobsListFunc)
         moqjobs = moqJobsListFunc('', '')
+        
 
         # Act
         expected = moqjobs[3]

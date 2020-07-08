@@ -34,7 +34,8 @@ class DataSource:
             for row in dateDataList:
                 for column in self.settings["Date Columns"]:
                     if row[column] != None:
-                        row[column] = datetime.strptime(row[column], self.settings['Date Format'])
+                        if  type(row[column]) == str:
+                            row[column] = datetime.strptime(row[column], self.settings['Date Format'])
         return dateDataList
 
     def _getStringDatalist(self) -> List[Dict[str, str]]:
@@ -113,8 +114,11 @@ class DataSource:
         else:
             return False
 
-    def getTrueDate(self, columnHeader: str, index: int,) -> datetime:
-        return datetime.strptime(self._dataList[index][columnHeader], self.settings['Date Format'])
+    def getTrueDate(self, columnHeader: str, index: int):
+        value = self._dataList[index][columnHeader]
+        if type(value)==str:
+            value = datetime.strptime(value, self.settings['Date Format'])
+        return value
 
     def _setDate(self, searchColumn: str, ID: str, dateColumn: str, dateToSet: datetime):
         found = self._findFirstRow(searchColumn, ID)
@@ -125,8 +129,11 @@ class DataSource:
     def len(self):
         return len(self._dataList)
 
-    def _cellToDate(self, cell: str) -> datetime:
-        return datetime.strptime(cell, self.settings['Date Format'])
+    def _cellToDate(self, cell):
+        dateReturn = cell
+        if type(cell) == str:
+            dateReturn = datetime.strptime(cell, self.settings['Date Format'])
+        return dateReturn
 
     def _updateField(self, row: dict, columnName: str, value: str) -> None:
         row[columnName] = value
