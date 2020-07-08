@@ -37,9 +37,12 @@ def GetContactsList():
     return contactsList
 
 def GetSamplesList(path):
-
     samplesList = ds.Samples(path, loadDataSettings_JSON, GetData)
     return samplesList
 
-test = GetSamplesList('Test_Data/1st deadline_Sample Magazine Orders_July 2020_Canada.xlsx')
+def GetDesignerCopiesList(path):
+    designerCopiesList = ds.DesignerCopies(path, loadDataSettings_JSON, GetData)
+    return designerCopiesList
+
+test = GetDesignerCopiesList('Test_Data/25th deadline_Sample Orders_July 2020 - CANADA.xlsx')
 print('')
