@@ -202,6 +202,19 @@
                 "36 page": "36 Pages",
                 "40 page": "40 Pages"
             }
+        },
+        "Job Projects": {
+            "Type":"Data List",
+            "Default Path": "Test_Data/BVM Job Projects",
+            "Columns Order": {
+                "1": "Customer",
+                "2": "Code",
+                "3": "Name",
+                "4": "Project ID"
+            },
+            "Common Data Columns": {
+                "Code": "id"
+            }
         }
     }
 }
