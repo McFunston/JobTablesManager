@@ -262,7 +262,7 @@ class PaceUpdate(DataSource):
 
 class ExportList(DataSource):
     def _getColumnNames(self) -> list:
-        return self.settings["Columns Order"].values()
+        return list(self.settings["Columns Order"].values())
     
     Columns = property(_getColumnNames)
 
@@ -272,8 +272,4 @@ class CustomerReport(ExportList):
         self._type: str = "Customer Report"
         super().__init__(self._type, path, settingsFunc, dictFunc)
 
-    def _getColumnNames(self) -> list:
-        return self.settings["Columns Order"].values()
-    
-    Columns = property(_getColumnNames)
 
