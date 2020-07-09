@@ -39,6 +39,11 @@
                 "17": "Page Count Matched Estimate",
                 "18": "Publication Month",
                 "19": "Exported to MIS"
+            },
+            "Common Data Columns": {
+                "Job": "job",
+                "Qty Ordered": "part1QuantityOrdered",
+                "Description": "description"
             }
         },
         "Samples": {
@@ -69,6 +74,17 @@
                 "14": "Phone",
                 "15": "External",
                 "16": "Shipping"
+            },
+            "Common Data Columns": {
+                "First Name": "contactFirstName",
+                "Last Name": "contactLastName",
+                "Address1": "address1",
+                "Address2": "address2",
+                "City": "city",
+                "State": "state",
+                "Postal Code": "zip",
+                "Phone": "phone",
+                "ID": "id"
             }
         },
         "Designer Copies": {
@@ -97,6 +113,17 @@
                 "12": "State",
                 "13": "Postal Code",
                 "14": "Phone"
+            },
+            "Common Data Columns": {
+                "Designer First Name": "contactFirstName",
+                "Designer Last Name": "contactLastName",
+                "Address1": "address1",
+                "Address2": "address2",
+                "City": "city",
+                "State": "state",
+                "Postal Code": "zip",
+                "Phone": "phone",
+                "ID": "id"
             }
         },
         "Contacts": {
@@ -175,16 +202,6 @@
                 "36 page": "36 Pages",
                 "40 page": "40 Pages"
             }
-        },
-        "Jobs List Update": {
-            "Type": "Intermediary Data",
-            "Overwrite Source Fields": [
-                "Production Status",
-                "Scheduled Ship Date",
-                "Qty Ordered",
-                "CPC",
-                "Page Count"
-            ]
         }
     }
 }
