@@ -215,6 +215,32 @@
             "Common Data Columns": {
                 "Code": "id"
             }
+        },
+        "Job Shipments":{
+            "Default Path":"Test_Data/JobShipment.xlsx",
+            "Type": "Address",
+            "Columns Order": {
+                "1": "_ACTION_",
+                "2": "job",
+                "3": "shipmentType",
+                "4": "U_shipmentNotes",
+                "5": "contactFirstName",
+                "6": "contactLastName",
+                "7": "address1",
+                "8": "address2",
+                "9": "address3",
+                "10": "city",
+                "11": "state",
+                "12": "zip",
+                "13": "phone",
+                "14": "country",
+                "15": "shipperName",
+                "16": "contactNumber",
+                "17": "name"
+            },
+            "Static Columns":{
+                "shipperName": "Keven Rodney"
+            }
         }
     }
 }

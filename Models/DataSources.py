@@ -6,7 +6,7 @@ import copy
 
 class DataSource:
 
-    def __base_init__(self, name: str, path: str, settingsFunc, dictFunc):
+    def __init__(self, name: str, path: str, settingsFunc, dictFunc):
         self.name: str = name
         self.settings: dict = settingsFunc(self.name)
         if path == "":
@@ -154,7 +154,7 @@ class DataSource:
 class JobsList(DataSource):
     def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "Jobs List"
-        self.__base_init__(self._type, path, settingsFunc, dictFunc)
+        super().__init__(self._type, path, settingsFunc, dictFunc)
         self.Job: str = "Job"
         self.Description: str = "Description"
         self.FilesIn: str = "Files In"
@@ -214,24 +214,24 @@ class JobsList(DataSource):
 class Samples(DataSource):
     def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "Samples"
-        self.__base_init__(self._type, path, settingsFunc, dictFunc)
+        super().__init__(self._type, path, settingsFunc, dictFunc)
 
 
 class DesignerCopies(DataSource):
     def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "Designer Copies"
-        self.__base_init__(self._type, path, settingsFunc, dictFunc)
+        super().__init__(self._type, path, settingsFunc, dictFunc)
 
 
 class Contacts(DataSource):
     def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "Contacts"
-        self.__base_init__(self._type, path, settingsFunc, dictFunc)
+        super().__init__(self._type, path, settingsFunc, dictFunc)
 
 class PaceUpdate(DataSource):
     def __init__(self, path, settingsFunc, dictFunc) -> None:    
         self._type: str = "Pace Update"
-        self.__base_init__(self._type, path, settingsFunc, dictFunc)
+        super().__init__(self._type, path, settingsFunc, dictFunc)
         self._job = "Job"
         self._description = "Description"
         self._productionStatus = "Production Status"
@@ -263,7 +263,7 @@ class PaceUpdate(DataSource):
 class CustomerReport(DataSource):
     def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "Customer Report"
-        self.__base_init__(self._type, path, settingsFunc, dictFunc)
+        super().__init__(self._type, path, settingsFunc, dictFunc)
 
     def _getColumnNames(self) -> list:
         return self.settings["Columns Order"].values()
