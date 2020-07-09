@@ -272,4 +272,8 @@ class CustomerReport(ExportList):
         self._type: str = "Customer Report"
         super().__init__(self._type, path, settingsFunc, dictFunc)
 
+class JobShipments(ExportList):
+    def __init__(self, path, settingsFunc, dictFunc) -> None:
+        self._type: str = "Job Shipments"
+        super().__init__(self._type, path, settingsFunc, dictFunc)
 

@@ -44,5 +44,11 @@ def GetDesignerCopiesList(path):
     designerCopiesList = ds.DesignerCopies(path, loadDataSettings_JSON, GetData)
     return designerCopiesList
 
-test = GetCustomerReportList()
+def GetShipmentsList():
+    name = 'Job Shipments'
+    settings = loadDataSettings_JSON(name)
+    shipmentsList = ds.JobShipments(settings['Default Path'], loadDataSettings_JSON, getEmptyDS)
+    return shipmentsList
+
+test = GetShipmentsList()
 print('')

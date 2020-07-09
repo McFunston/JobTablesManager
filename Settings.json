@@ -219,6 +219,7 @@
         "Job Shipments":{
             "Default Path":"Test_Data/JobShipment.xlsx",
             "Type": "Address",
+            "Tab": "",
             "Columns Order": {
                 "1": "_ACTION_",
                 "2": "job",
