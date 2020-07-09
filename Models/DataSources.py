@@ -260,7 +260,14 @@ class PaceUpdate(DataSource):
             row['CPC'] = self._getCPC(row)
             row['Page Count'] = self._getPageCount(row)
 
-class CustomerReport(DataSource):
+class ExportList(DataSource):
+    def _getColumnNames(self) -> list:
+        return self.settings["Columns Order"].values()
+    
+    Columns = property(_getColumnNames)
+
+
+class CustomerReport(ExportList):
     def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "Customer Report"
         super().__init__(self._type, path, settingsFunc, dictFunc)

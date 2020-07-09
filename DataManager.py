@@ -44,5 +44,5 @@ def GetDesignerCopiesList(path):
     designerCopiesList = ds.DesignerCopies(path, loadDataSettings_JSON, GetData)
     return designerCopiesList
 
-test = GetDesignerCopiesList('Test_Data/25th deadline_Sample Orders_July 2020 - CANADA.xlsx')
+test = GetCustomerReportList()
 print('')
