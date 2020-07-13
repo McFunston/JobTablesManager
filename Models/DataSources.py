@@ -1,11 +1,12 @@
 from typing import Dict, List
 import json
-from datetime import datetime
+from datetime import date, datetime
 import copy
 
 
 class DataSource:
-    
+    """Base type for all data sources collected from Excel and comma delimited files.
+    """    
     def __init__(self, name: str, path: str, settingsFunc, dictFunc):
         self.name: str = name
         self.settings: dict = settingsFunc(self.name)
@@ -34,7 +35,7 @@ class DataSource:
             if row[column] == search_term:
                 return row
         return empty
-    
+
     def _get_column_names(self) -> list:
         """
         Returns a list of all columns used in the first element in _data_list
@@ -47,7 +48,7 @@ class DataSource:
 
         """
         return list(self._dataList[0].keys())
-    
+
     Columns = property(_get_column_names)
 
     def _normalize_dates(self) -> List[Dict]:
@@ -66,8 +67,9 @@ class DataSource:
             for row in dateDataList:
                 for column in self.settings["Date Columns"]:
                     if row[column] != None:
-                        if  type(row[column]) == str:
-                            row[column] = datetime.strptime(row[column], self.settings['Date Format'])
+                        if type(row[column]) == str:
+                            row[column] = datetime.strptime(
+                                row[column], self.settings['Date Format'])
         return dateDataList
 
     def _get_string_datalist(self) -> List[Dict[str, str]]:
@@ -118,7 +120,7 @@ class DataSource:
 
         Returns:
             List[Dict]: List of rows
-        """        
+        """
         found_list: list[dict] = list()
         for row in self._dataList:
             if search_term in row[column]:
@@ -133,7 +135,7 @@ class DataSource:
 
         Returns:
             dict: Row
-        """        
+        """
         return self._dataList[index]
 
     def _get_cell(self, index: int, column: str):
@@ -145,7 +147,7 @@ class DataSource:
 
         Returns:
             [type]: Data contained within the cell
-        """        
+        """
         return self._getRow(index)[column]
 
     def get_consumable_list(self, columns: list) -> List:
@@ -156,12 +158,12 @@ class DataSource:
 
         Returns:
             List: List of columns
-        """        
+        """
         consumableList = list()
         for row in self._dataList:
             entries = dict()
             for column in columns:
-                entries[column]=row[column]
+                entries[column] = row[column]
             consumableList.append(entries)
         return consumableList
 
@@ -170,7 +172,7 @@ class DataSource:
 
         Returns:
             List: List of lists
-        """        
+        """
         savableList: list[list] = list()
         headers: list[str] = list()
         columnsOrder: dict[str, str] = self.settings["Columns Order"]
@@ -185,73 +187,144 @@ class DataSource:
             headers.append(columnsOrder[str(columnNumber)])
         savableList.insert(0, headers)
         return savableList
-    
-    def _consume_data(self, dataSource, IdColumn: str):
+
+    def _consume_data(self, data_source, id_column: str):
         """Merge and/or add compatible data from another DataSource's _datalist. 
         If IDColunn exists in the source's _datalist its' columns are overwritten with matching ones from the DataSource it's consuming.
 
         Args:
             dataSource ([type]): DataSource to consume
             IdColumn (str): Column to match between self, and dataSource
-        """        
-        commonColumns = self.FindCommonColumns(dataSource)
-        listToConsume = dataSource.get_consumable_list(commonColumns)
+        """
+        commonColumns = self.find_common_columns(data_source)
+        listToConsume = data_source.get_consumable_list(commonColumns)
         for newRow in listToConsume:
             found = False
             if len(self._dataList[0]) == 0:
-                self._dataList[0]=newRow
+                self._dataList[0] = newRow
             for oldRow in self._dataList:
-                if newRow[IdColumn]==oldRow[IdColumn]:
+                if newRow[id_column] == oldRow[id_column]:
                     found = True
                     for column in commonColumns:
-                        oldRow[column]=newRow[column]
+                        oldRow[column] = newRow[column]
             if found == False:
                 self._dataList.append(newRow)
 
-    def columnIsDate(self, columnHeader: str) -> bool:
+    def column_is_date(self, columnHeader: str) -> bool:
+        """Checks if a column contains dates or not as described by the DataSource's settings
+
+        Args:
+            columnHeader (str): 
+
+        Returns:
+            bool: Return true if found in 'Date Columns', false otherwise.
+        """
         if columnHeader in self.settings['Date Columns']:
             return True
         else:
             return False
 
-    def getTrueDate(self, columnHeader: str, index: int):
+    def get_true_date(self, columnHeader: str, index: int) -> datetime:
+        """Returns the value at a given row, and column as a proper Python DateTime.
+
+        Args:
+            columnHeader (str): Column header under which the date can be found. 
+            Must be listed under "Date Columns" in the object's settings.
+            index (int): Row index of the date
+
+        Returns:
+            [datetime]: If the location has a string it is converted to datetime. 
+            If it is already a datetime it is returned as is.
+        """
         value = self._dataList[index][columnHeader]
-        if type(value)==str:
+        if type(value) != datetime:
             value = datetime.strptime(value, self.settings['Date Format'])
         return value
 
-    def _setDate(self, searchColumn: str, ID: str, dateColumn: str, dateToSet: datetime):
-        found = self._find_first_row(searchColumn, ID)
-        if dateColumn in self.settings['Date Columns']:
-            found[dateColumn] = dateToSet.strftime(
+    def _set_date(self, search_column: str, search_term: str, date_column: str, date_to_set: datetime) -> None:
+        """Finds a row in which [search_column] contains [search_term]. Sets [date_column] to [date_to_set]
+
+        Args:
+            search_column (str): Column to search in
+            search_term (str): Value to search for
+            date_column (str): Column that will have date assigned
+            date_to_set (datetime): Date to assign
+        """       
+        found = self._find_first_row(search_column, search_term)
+        if date_column in self.settings['Date Columns']:
+            found[date_column] = date_to_set.strftime(
                 self.settings['Date Format'])
 
-    def len(self):
+    def len(self) -> int:
+        """Returns the current length of _dataList
+
+        Returns:
+            int: Current length of _dataList
+        """        
         return len(self._dataList)
 
-    def _cellToDate(self, cell):
-        dateReturn = cell
-        if type(cell) == str:
-            dateReturn = datetime.strptime(cell, self.settings['Date Format'])
+    def _cell_to_date(self, cell) -> datetime:
+        """Converts a cell to a datetime. It must contain a string. Uses the object's "Date Format" setting.
+
+        Args:
+            cell (str): String to convert to datetime
+
+        Returns:
+            datetime:
+        """
+        if type(cell) == datetime:
+            return cell
+
+        dateReturn = datetime.strptime(cell, self.settings['Date Format'])
         return dateReturn
 
-    def _updateField(self, row: dict, columnName: str, value: str) -> None:
-        row[columnName] = value
+    def _update_field(self, row: dict, column_name: str, value: str) -> None:
+        """Updates [column_name] in the supplied row with [value]
 
-    def _getFirstIndex(self, columnName: str, search_term: str) -> int:
+        Args:
+            row (dict): Supplied row
+            column_name (str): Name of the column to be updated
+            value (str): Value to insert
+        """        
+        row[column_name] = value
+
+    def _get_first_index(self, column_name: str, search_term: str) -> int:
+        """Searches the _datalist and returns the index of the first row in which column[column_name] matches search_term
+
+        Args:
+            column_name (str): Name of the column to search
+            search_term (str): Value to search for
+
+        Returns:
+            int: Index of the found row
+        """        
         index = int()
         for i in range(len(self._dataList)):
-            if self._dataList[i][columnName] == search_term:
+            if self._dataList[i][column_name] == search_term:
                 return i
         return index
 
-    def FindCommonColumns(self, ds2) ->list:
+    def find_common_columns(self, ds2) -> List[str]:
+        """Returns a list of all common columns between the current object, and a supplied DataSource
+
+        Args:
+            ds2 ([type]): Any DataSource
+
+        Returns:
+            list[str]: List of column names
+        """        
         columnsSet = set(self.Columns)
         intersection = columnsSet.intersection(ds2.Columns)
         _columns = list(intersection)
         return _columns
 
+
 class JobsList(DataSource):
+    """List of Jobs, including information about when the job was uploaded, approved, created, etc.
+
+    Args:
+        DataSource ([type]): [description]
+    """    
     def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "Jobs List"
         super().__init__(self._type, path, settingsFunc, dictFunc)
@@ -276,60 +349,125 @@ class JobsList(DataSource):
         self.ExportedToMIS = "Exported to MIS"
         self._dataList = self._normalize_dates()
 
-    def GetMostRecentPub(self, pubNumber):
-        candidates = self._find_in_all_rows(self.Description, pubNumber)
+    def get_most_recent_pub(self, pub_number: str) -> Dict:
+        """Find the most recent publication.
+
+        Args:
+            pub_number (str): Publication number as a string
+
+        Returns:
+            Dict: The row containing the most recent publication
+        """        
+        candidates = self._find_in_all_rows(self.Description, pub_number)
         found = dict()
         if len(candidates) > 0:
             found = candidates[0]
             for candidate in candidates:
-                if self._cellToDate(candidate[self.DateSetup]) > self._cellToDate(found[self.DateSetup]):
+                if self._cell_to_date(candidate[self.DateSetup]) > self._cell_to_date(found[self.DateSetup]):
                     found = candidate
         return found
 
-    def GetJob(self, job: str) -> dict:
+    def get_job(self, job: str) -> dict:
+        """Return the row containing [job]
+
+        Args:
+            job (str): Job number as a string
+
+        Returns:
+            dict: Row containing the found job
+        """        
         found = self._find_first_row(self.Job, job)
         return found
 
-    def jobIsApproved(self, job: str) -> bool:
-        found = self.GetJob(job)
+    def job_is_approved(self, job: str) -> bool:
+        """Return true if a job has been approved, false if not.
+
+        Args:
+            job (str): Job number as a string
+
+        Returns:
+            bool: True if approved, false if not.
+        """        
+        found = self.get_job(job)
         if len(found.keys()) > 1:
             if found[self.Approved] != None:
                 return True
         return False
 
-    def jobIsUploaded(self, job: str) -> bool:
-        found = self.GetJob(job)
+    def job_is_uploaded(self, job: str) -> bool:
+        """Return true if a job has been uploaded, false if not.
+
+        Args:
+            job (str): Job number as a string.
+
+        Returns:
+            bool: True if uploaded, false it not.
+        """        
+        found = self.get_job(job)
         if len(found.keys()) > 1:
             if found[self.FilesIn] != None:
                 return True
         return False
 
-    def SetUploadDate(self, job: str, date: datetime):
-        self._setDate(self.Job, job, self.FilesIn, date)
+    def set_upload_date(self, job: str, date: datetime):
+        """Set the upload date for a given job number
 
-    def SetApprovedDate(self, job: str, date: datetime):
-        self._setDate(self.Job, job, self.Approved, date)
+        Args:
+            job (str): Job number
+            date (datetime): Date to set
+        """        
+        self._set_date(self.Job, job, self.FilesIn, date)
+
+    def set_approved_date(self, job: str, date: datetime):
+        """Set the approval date for a given job number
+
+        Args:
+            job (str): Job number as a string
+            date (datetime): Date to set.
+        """        
+        self._set_date(self.Job, job, self.Approved, date)
 
 
 class Samples(DataSource):
+    """Mailing list of sample counts for publishers, advertisers, etc.
+
+    Args:
+        DataSource ([type]): [description]
+    """    
     def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "Samples"
         super().__init__(self._type, path, settingsFunc, dictFunc)
 
 
 class DesignerCopies(DataSource):
+    """Mailing list of designers. Does not include counts since they only receive one sample.
+
+    Args:
+        DataSource ([type]): [description]
+    """    
     def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "Designer Copies"
         super().__init__(self._type, path, settingsFunc, dictFunc)
 
 
 class Contacts(DataSource):
+    """List of Contacts from the MIS. Used for substitution when updating the records in the MIS
+
+    Args:
+        DataSource ([type]): [description]
+    """    
     def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "Contacts"
         super().__init__(self._type, path, settingsFunc, dictFunc)
 
+
 class PaceUpdate(DataSource):
-    def __init__(self, path, settingsFunc, dictFunc) -> None:    
+    """The data about customer jobs retrieved from the MIS
+
+    Args:
+        DataSource ([type]): [description]
+    """    
+    def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "Pace Update"
         super().__init__(self._type, path, settingsFunc, dictFunc)
         self._job = "Job"
@@ -342,14 +480,30 @@ class PaceUpdate(DataSource):
         self._additionalDescription = "Additional Description"
         self._dateSetup = "Date Setup"
         self._pageCountStrings = self.settings['Page Count Strings']
-        self._addExtraColumns()        
+        self._addExtraColumns()
 
-    def _getCPC(self, row: dict) -> str:
+    def _get_cpc(self, row: dict) -> str:
+        """Get the mailing count from a row
+
+        Args:
+            row (dict): Row from MIS export
+
+        Returns:
+            str: Mailing count as string
+        """        
         cpc = row[self._productionNotes].split()[-1]
         return cpc
-    
-    def _getPageCount(self, row: dict) -> str:
-        pageCount=''        
+
+    def _get_page_count(self, row: dict) -> str:
+        """Return the page count in a supplied row
+
+        Args:
+            row (dict): Row from MIS export
+
+        Returns:
+            str: Page count as string
+        """        
+        pageCount = ''
         for key in self._pageCountStrings:
             if key in row[self._additionalDescription]:
                 pageCount = self._pageCountStrings[key]
@@ -357,13 +511,14 @@ class PaceUpdate(DataSource):
 
     def _addExtraColumns(self):
         for row in self._dataList:
-            row['CPC'] = self._getCPC(row)
-            row['Page Count'] = self._getPageCount(row)
+            row['CPC'] = self._get_cpc(row)
+            row['Page Count'] = self._get_page_count(row)
+
 
 class ExportList(DataSource):
     def _get_column_names(self) -> list:
         return list(self.settings["Columns Order"].values())
-    
+
     Columns = property(_get_column_names)
 
 
@@ -372,8 +527,8 @@ class CustomerReport(ExportList):
         self._type: str = "Customer Report"
         super().__init__(self._type, path, settingsFunc, dictFunc)
 
+
 class JobShipments(ExportList):
     def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "Job Shipments"
         super().__init__(self._type, path, settingsFunc, dictFunc)
-

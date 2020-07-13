@@ -81,7 +81,7 @@ class TestDataSources(unittest.TestCase):
                         moqJobsListSettingsFunc, moqJobsListFunc)
 
         # Act
-        actual = jobs.returnSavableList()
+        actual = jobs.return_savable_list()
 
         # Assert
         self.assertIsNotNone(actual)
@@ -93,7 +93,7 @@ class TestDataSources(unittest.TestCase):
                         moqJobsListSettingsFunc, moqJobsListFunc)
 
         # Act
-        actual = jobs.columnIsDate("Files In")
+        actual = jobs.column_is_date("Files In")
 
         # Assert
         self.assertTrue(actual)
@@ -105,7 +105,7 @@ class TestDataSources(unittest.TestCase):
                         moqJobsListSettingsFunc, moqJobsListFunc)
 
         # Act
-        actual = jobs.columnIsDate("Production Status")
+        actual = jobs.column_is_date("Production Status")
 
         # Assert
         self.assertFalse(actual)
@@ -118,7 +118,7 @@ class TestDataSources(unittest.TestCase):
 
         # Act
         expected = datetime.strptime("2/11/2020", "%m/%d/%Y")
-        actual = jobs.getTrueDate('Files In', 0)
+        actual = jobs.get_true_date('Files In', 0)
 
         # Assert
         self.assertEqual(expected, actual)
@@ -190,7 +190,7 @@ class TestDataSources(unittest.TestCase):
 
         # Act
         expected = moqjobs[3]
-        actual = jobs.GetMostRecentPub('3254')
+        actual = jobs.get_most_recent_pub('3254')
 
         # Assert
         self.assertDictEqual(expected, actual)
@@ -201,7 +201,7 @@ class TestDataSources(unittest.TestCase):
                         moqJobsListSettingsFunc, moqJobsListFunc)
 
         # Act
-        actual = jobs.jobIsApproved("M532")
+        actual = jobs.job_is_approved("M532")
 
         # Assert
         self.assertTrue(actual)
@@ -212,7 +212,7 @@ class TestDataSources(unittest.TestCase):
                         moqJobsListSettingsFunc, moqJobsListFunc)
 
         # Act
-        actual = jobs.jobIsApproved("M704")
+        actual = jobs.job_is_approved("M704")
 
         # Assert
         self.assertFalse(actual)
@@ -223,7 +223,7 @@ class TestDataSources(unittest.TestCase):
                         moqJobsListSettingsFunc, moqJobsListFunc)
 
         # Act
-        actual = jobs.jobIsApproved("M1704")
+        actual = jobs.job_is_approved("M1704")
 
         # Assert
         self.assertFalse(actual)
@@ -234,7 +234,7 @@ class TestDataSources(unittest.TestCase):
                         moqJobsListSettingsFunc, moqJobsListFunc)
 
         # Act
-        actual = jobs.jobIsUploaded("M532")
+        actual = jobs.job_is_uploaded("M532")
 
         # Assert
         self.assertTrue(actual)
@@ -245,7 +245,7 @@ class TestDataSources(unittest.TestCase):
                         moqJobsListSettingsFunc, moqJobsListFunc)
 
         # Act
-        actual = jobs.jobIsUploaded("M999")
+        actual = jobs.job_is_uploaded("M999")
 
         # Assert
         self.assertFalse(actual)
@@ -256,7 +256,7 @@ class TestDataSources(unittest.TestCase):
                         moqJobsListSettingsFunc, moqJobsListFunc)
 
         # Act
-        actual = jobs.jobIsUploaded("M1704")
+        actual = jobs.job_is_uploaded("M1704")
 
         # Assert
         self.assertFalse(actual)
@@ -268,7 +268,7 @@ class TestDataSources(unittest.TestCase):
         moqjobs = moqJobsListFunc('', '')
 
         # Act
-        actual = jobs.GetJob('M704')
+        actual = jobs.get_job('M704')
         expected = moqjobs[3]
 
         # Assert
@@ -278,11 +278,11 @@ class TestDataSources(unittest.TestCase):
         # Arrange
         jobs = JobsList("BVM_Jobs.xlsx",
                         moqJobsListSettingsFunc, moqJobsListFunc)
-        job = jobs.GetJob('M704')
+        job = jobs.get_job('M704')
         Today = datetime.today()
 
         # Act
-        jobs.SetUploadDate('M704', Today)
+        jobs.set_upload_date('M704', Today)
         actual = job['Files In']
         expected = datetime.today().strftime('%m/%d/%Y')
 
@@ -293,11 +293,11 @@ class TestDataSources(unittest.TestCase):
         # Arrange
         jobs = JobsList("BVM_Jobs.xlsx",
                         moqJobsListSettingsFunc, moqJobsListFunc)
-        job = jobs.GetJob('M704')
+        job = jobs.get_job('M704')
         Today = datetime.today()
 
         # Act
-        jobs.SetApprovedDate('M704', Today)
+        jobs.set_approved_date('M704', Today)
         actual = job['Approved']
         expected = datetime.today().strftime('%m/%d/%Y')
 
@@ -308,10 +308,10 @@ class TestDataSources(unittest.TestCase):
         # Arrange
         jobs = JobsList("BVM_Jobs.xlsx",
                         moqJobsListSettingsFunc, moqJobsListFunc)
-        job = jobs.GetJob('M704')
+        job = jobs.get_job('M704')
 
         # Act
-        jobs._updateField(job, jobs.CPC, '6666')
+        jobs._update_field(job, jobs.CPC, '6666')
         expected = '6666'
         actual = jobs._dataList[3][jobs.CPC]
 
@@ -325,7 +325,7 @@ class TestDataSources(unittest.TestCase):
 
         # Act
         expected = 3
-        actual = jobs._getFirstIndex(jobs.Job, 'M704')
+        actual = jobs._get_first_index(jobs.Job, 'M704')
 
         # Assert
         self.assertEqual(actual, expected)
@@ -362,7 +362,7 @@ class TestDataSources(unittest.TestCase):
 
         # Act
         expected = "2200"
-        actual = paceUpdate._getCPC(paceUpdate._dataList[0])
+        actual = paceUpdate._get_cpc(paceUpdate._dataList[0])
 
         # Assert
         self.assertEqual(actual, expected)
@@ -402,7 +402,7 @@ class TestDataSources(unittest.TestCase):
 
         # Act
         expected = 8
-        commonColumns = jobs.FindCommonColumns(paceUpdate)
+        commonColumns = jobs.find_common_columns(paceUpdate)
         actual = len(commonColumns)
 
         # Assert
@@ -418,7 +418,7 @@ class TestDataSources(unittest.TestCase):
 
         # Act
         expected = 8
-        commonColumns = customerReport.FindCommonColumns(jobs)
+        commonColumns = customerReport.find_common_columns(jobs)
         actual = len(commonColumns)
 
         # Assert
