@@ -57,7 +57,7 @@ class TestDataSources(unittest.TestCase):
                         moqJobsListSettingsFunc, moqJobsListFunc)
         moqjobs = moqJobsListFunc('', '')
         # Act
-        actual = jobs._findFirstRow('Job', 'M511')
+        actual = jobs._find_first_row('Job', 'M511')
         expected = moqjobs[0]
 
         # Assert
@@ -69,7 +69,7 @@ class TestDataSources(unittest.TestCase):
                         moqJobsListSettingsFunc, moqJobsListFunc)
         moqjobs = moqJobsListFunc('', '')
         # Act
-        actual = jobs._findAllRows('Job', 'M532')
+        actual = jobs._find_all_rows('Job', 'M532')
         expected = moqjobs[1]
 
         # Assert
@@ -150,7 +150,7 @@ class TestDataSources(unittest.TestCase):
         # Assert
         self.assertDictEqual(expected, actual)
 
-    def test_getCell(self):
+    def test_get_cell(self):
 
         # Arrange
         jobs = JobsList("BVM_Jobs.xlsx",
@@ -159,7 +159,7 @@ class TestDataSources(unittest.TestCase):
 
         # Act
         expected = moqjobs[1]['Description']
-        actual = jobs._getCell(1, 'Description')
+        actual = jobs._get_cell(1, 'Description')
 
         # Assert
         self.assertEqual(expected, actual)
@@ -173,7 +173,7 @@ class TestDataSources(unittest.TestCase):
 
         # Act
         expected = list()
-        actual = jobs._findInAllRows('Description', '3254')
+        actual = jobs._find_in_all_rows('Description', '3254')
         expected.append(moqjobs[1])
         expected.append(moqjobs[3])
         
@@ -337,7 +337,7 @@ class TestDataSources(unittest.TestCase):
 
         # Act
         expected = "None"
-        actual = jobs._getStringDatalist()[2]['Files In']
+        actual = jobs._get_string_datalist()[2]['Files In']
 
         # Assert
         self.assertEqual(actual, expected)
@@ -350,7 +350,7 @@ class TestDataSources(unittest.TestCase):
 
         # Act
         expected = datetime.today().strftime('%m/%d/%Y')
-        actual = jobs._getStringDatalist()[2]['Files In']
+        actual = jobs._get_string_datalist()[2]['Files In']
 
         # Assert
         self.assertEqual(actual, expected)
@@ -383,7 +383,7 @@ class TestDataSources(unittest.TestCase):
         # Arrange
         jobs = JobsList("BVM_Jobs.xlsx",
                         moqJobsListSettingsFunc, moqJobsListFunc)
-        normalDates = jobs._normalizeDates()
+        normalDates = jobs._normalize_dates()
 
         # Act
         expected = datetime.strptime("02/03/2020", "%m/%d/%Y")
@@ -424,14 +424,14 @@ class TestDataSources(unittest.TestCase):
         # Assert
         self.assertEqual(actual, expected)
     
-    def test_GetConsumableList(self):
+    def test_get_consumable_list(self):
         # Arrange
         jobs = JobsList("BVM_Jobs.xlsx",
                         moqJobsListSettingsFunc, moqJobsListFunc)
 
         # Act
         expected=jobs._dataList[0]['Job']
-        actual=jobs.getConsumableList(['Job'])[0]['Job']
+        actual=jobs.get_consumable_list(['Job'])[0]['Job']
 
         # Assert
         self.assertEqual(actual, expected)
@@ -445,7 +445,7 @@ class TestDataSources(unittest.TestCase):
                                 moqCustomerReportSettingsFunc, moqCustomerReportFunc)
         
         # Act
-        customerReport._consumeData(jobs, 'Job')
+        customerReport._consume_data(jobs, 'Job')
         expected = jobs._dataList[0]['Job']
         actual = customerReport._dataList[0]['Job']
 
@@ -458,10 +458,10 @@ class TestDataSources(unittest.TestCase):
                         moqJobsListSettingsFunc, moqJobsListFunc)
         paceUpdate = PaceUpdate("BVM+Job+Grouped+For+Tracking+Report.xls",
                                 moqPaceUpdateSettingsFunc, moqPaceUpdateFunc)
-        paceUpdate._dataList = paceUpdate._getStringDatalist()
+        paceUpdate._dataList = paceUpdate._get_string_datalist()
         
         # Act
-        jobs._consumeData(paceUpdate, 'Description')
+        jobs._consume_data(paceUpdate, 'Description')
         expected = "M1800"
         actual = jobs._dataList[4]["Job"]
 

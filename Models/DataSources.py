@@ -5,7 +5,7 @@ import copy
 
 
 class DataSource:
-
+    
     def __init__(self, name: str, path: str, settingsFunc, dictFunc):
         self.name: str = name
         self.settings: dict = settingsFunc(self.name)
@@ -16,19 +16,51 @@ class DataSource:
         self.tab: str = self.settings["Tab"]
         self._dataList: list[dict] = dictFunc(self.path, self.tab)
 
-    def _findFirstRow(self, column: str, searchTerm: str) -> dict:
+    def _find_first_row(self, column: str, search_term: str) -> dict:
+        """
+        Finds the first row containing searchterm.
+
+        Args:
+            self (undefined):
+            column (str): The column header to search under
+            search_term(str):
+
+        Returns:
+            dict: Complete row. Empty if nothing found.
+
+        """
         empty: dict[str, str] = {'None': ''}
         for row in self._dataList:
-            if row[column] == searchTerm:
+            if row[column] == search_term:
                 return row
         return empty
     
-    def _getColumnNames(self) -> list:
+    def _get_column_names(self) -> list:
+        """
+        Returns a list of all columns used in the first element in _data_list
+
+        Args:
+            self (undefined):
+
+        Returns:
+            list of columns[str]
+
+        """
         return list(self._dataList[0].keys())
     
-    Columns = property(_getColumnNames)
+    Columns = property(_get_column_names)
 
-    def _normalizeDates(self) -> List[Dict]:
+    def _normalize_dates(self) -> List[Dict]:
+        """
+        Change all dates in string format to proper DateTime dates
+
+        Args:
+            self (undefined):
+
+        Returns:
+            List[Dict]: A deep copy of current _datalist with proper dates
+
+        """
         dateDataList = copy.deepcopy(self._dataList)
         if self.settings['True Dates'] == False:
             for row in dateDataList:
@@ -38,7 +70,17 @@ class DataSource:
                             row[column] = datetime.strptime(row[column], self.settings['Date Format'])
         return dateDataList
 
-    def _getStringDatalist(self) -> List[Dict[str, str]]:
+    def _get_string_datalist(self) -> List[Dict[str, str]]:
+        """
+        Change all non string values to string. Datetimes are converted using the objects Date Format
+
+        Args:
+            self (undefined):
+
+        Returns:
+            List[Dict[str, str]]: A deep copy of the _datalist with all values as strings
+
+        """
         stringDataList = copy.deepcopy(self._dataList)
         for row in stringDataList:
             for x in row:
@@ -48,27 +90,73 @@ class DataSource:
                     row[x] = row[x].strftime(self.settings['Date Format'])
         return stringDataList
 
-    def _findAllRows(self, column: str, searchTerm: str) -> List[Dict]:
-        foundList: list[dict] = list()
-        for row in self._dataList:
-            if row[column] == searchTerm:
-                foundList.append(row)
-        return foundList
+    def _find_all_rows(self, column: str, search_term: str) -> List[Dict]:
+        """
+        Find all rows which have a column equal to search_term
 
-    def _findInAllRows(self, column: str, searchTerm: str) -> List[Dict]:
-        foundList: list[dict] = list()
+        Args:
+            self (undefined):
+            column (str): The column header to search in (ie Job)
+            search_term(str):
+
+        Returns:
+            List[Dict]: List of all rows containing the search term
+
+        """
+        found_list: list[dict] = list()
         for row in self._dataList:
-            if searchTerm in row[column]:
-                foundList.append(row)
-        return foundList
+            if row[column] == search_term:
+                found_list.append(row)
+        return found_list
+
+    def _find_in_all_rows(self, column: str, search_term: str) -> List[Dict]:
+        """[Find all rows that have a column containing (in) search_term]
+
+        Args:
+            column (str): Column header to search
+            search_term (str): string to search for
+
+        Returns:
+            List[Dict]: List of rows
+        """        
+        found_list: list[dict] = list()
+        for row in self._dataList:
+            if search_term in row[column]:
+                found_list.append(row)
+        return found_list
 
     def _getRow(self, index: int) -> dict:
+        """Get a row in _datalist by index
+
+        Args:
+            index (int): 0 based index to return
+
+        Returns:
+            dict: Row
+        """        
         return self._dataList[index]
 
-    def _getCell(self, index: int, column: str):
+    def _get_cell(self, index: int, column: str):
+        """Get a single cell 
+
+        Args:
+            index (int): 0 based index of row
+            column (str): Column header
+
+        Returns:
+            [type]: Data contained within the cell
+        """        
         return self._getRow(index)[column]
 
-    def getConsumableList(self, columns: list) -> List:
+    def get_consumable_list(self, columns: list) -> List:
+        """Get a list of _datalist conatining only the given columns
+
+        Args:
+            columns (list): The columns to include in the returned list
+
+        Returns:
+            List: List of columns
+        """        
         consumableList = list()
         for row in self._dataList:
             entries = dict()
@@ -77,7 +165,12 @@ class DataSource:
             consumableList.append(entries)
         return consumableList
 
-    def returnSavableList(self) -> List:
+    def return_savable_list(self) -> List:
+        """Returns a copy of the _datalist as a list of lists using the order stored in Columns Order of settings
+
+        Returns:
+            List: List of lists
+        """        
         savableList: list[list] = list()
         headers: list[str] = list()
         columnsOrder: dict[str, str] = self.settings["Columns Order"]
@@ -93,9 +186,16 @@ class DataSource:
         savableList.insert(0, headers)
         return savableList
     
-    def _consumeData(self, dataSource, IdColumn: str):
+    def _consume_data(self, dataSource, IdColumn: str):
+        """Merge and/or add compatible data from another DataSource's _datalist. 
+        If IDColunn exists in the source's _datalist its' columns are overwritten with matching ones from the DataSource it's consuming.
+
+        Args:
+            dataSource ([type]): DataSource to consume
+            IdColumn (str): Column to match between self, and dataSource
+        """        
         commonColumns = self.FindCommonColumns(dataSource)
-        listToConsume = dataSource.getConsumableList(commonColumns)
+        listToConsume = dataSource.get_consumable_list(commonColumns)
         for newRow in listToConsume:
             found = False
             if len(self._dataList[0]) == 0:
@@ -121,7 +221,7 @@ class DataSource:
         return value
 
     def _setDate(self, searchColumn: str, ID: str, dateColumn: str, dateToSet: datetime):
-        found = self._findFirstRow(searchColumn, ID)
+        found = self._find_first_row(searchColumn, ID)
         if dateColumn in self.settings['Date Columns']:
             found[dateColumn] = dateToSet.strftime(
                 self.settings['Date Format'])
@@ -138,10 +238,10 @@ class DataSource:
     def _updateField(self, row: dict, columnName: str, value: str) -> None:
         row[columnName] = value
 
-    def _getFirstIndex(self, columnName: str, searchTerm: str) -> int:
+    def _getFirstIndex(self, columnName: str, search_term: str) -> int:
         index = int()
         for i in range(len(self._dataList)):
-            if self._dataList[i][columnName] == searchTerm:
+            if self._dataList[i][columnName] == search_term:
                 return i
         return index
 
@@ -174,10 +274,10 @@ class JobsList(DataSource):
         self.PageCountMatchedEstimate: str = "Page Count Matched Estimate"
         self.PublicationMonth = "Publication Month"
         self.ExportedToMIS = "Exported to MIS"
-        self._dataList = self._normalizeDates()
+        self._dataList = self._normalize_dates()
 
     def GetMostRecentPub(self, pubNumber):
-        candidates = self._findInAllRows(self.Description, pubNumber)
+        candidates = self._find_in_all_rows(self.Description, pubNumber)
         found = dict()
         if len(candidates) > 0:
             found = candidates[0]
@@ -187,7 +287,7 @@ class JobsList(DataSource):
         return found
 
     def GetJob(self, job: str) -> dict:
-        found = self._findFirstRow(self.Job, job)
+        found = self._find_first_row(self.Job, job)
         return found
 
     def jobIsApproved(self, job: str) -> bool:
@@ -261,10 +361,10 @@ class PaceUpdate(DataSource):
             row['Page Count'] = self._getPageCount(row)
 
 class ExportList(DataSource):
-    def _getColumnNames(self) -> list:
+    def _get_column_names(self) -> list:
         return list(self.settings["Columns Order"].values())
     
-    Columns = property(_getColumnNames)
+    Columns = property(_get_column_names)
 
 
 class CustomerReport(ExportList):
