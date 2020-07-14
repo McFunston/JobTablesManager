@@ -532,3 +532,8 @@ class JobShipments(ExportList):
     def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "Job Shipments"
         super().__init__(self._type, path, settingsFunc, dictFunc)
+
+class Invoice(ExportList):
+    def __init__(self, path, settingsFunc, dictFunc) -> None:
+        self._type: str = "Invoice"
+        super().__init__(self._type, path, settingsFunc, dictFunc)

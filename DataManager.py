@@ -2,53 +2,61 @@ import json
 from typing import Dict, List
 from Libraries.ExcelLibs import GetData
 import Models.DataSources as ds
+from Models.DataSources import Contacts, CustomerReport, DesignerCopies, Invoice, JobShipments, JobsList, PaceUpdate, Samples
 
-def loadDataSettings_JSON(name: str) -> Dict:
+def load_data_settings_json(name: str) -> Dict:
     with open('Settings.json') as j:
         settings: dict = json.load(j)
         return settings["Data Sources"][name]
 
 def getEmptyDS(path: str, tab: str):
-    moqCustomerReport = [{}]
-    return moqCustomerReport
+    empty_list = [{}]
+    return empty_list
 
-def GetJobsList():
+def get_jobs_list() -> JobsList:
     name='Jobs List'
-    settings = loadDataSettings_JSON(name)
-    jobs = ds.JobsList(settings['Default Path'], loadDataSettings_JSON, GetData)
+    settings = load_data_settings_json(name)
+    jobs: JobsList = ds.JobsList(settings['Default Path'], load_data_settings_json, GetData)
     return jobs
 
-def GetMISUpdateList():
+def get_mis_update_list() -> PaceUpdate:
     name='Pace Update'
-    settings = loadDataSettings_JSON(name)
-    updateList = ds.PaceUpdate(settings['Default Path'], loadDataSettings_JSON, GetData)
+    settings = load_data_settings_json(name)
+    updateList: PaceUpdate = ds.PaceUpdate(settings['Default Path'], load_data_settings_json, GetData)
     return updateList
 
-def GetCustomerReportList():
+def get_customer_report_list() -> CustomerReport:
     name = 'Customer Report'
-    settings = loadDataSettings_JSON(name)
-    customerReportList = ds.CustomerReport(settings['Default Path'], loadDataSettings_JSON, getEmptyDS)
+    settings = load_data_settings_json(name)
+    customerReportList: CustomerReport = ds.CustomerReport(settings['Default Path'], load_data_settings_json, getEmptyDS)
     return customerReportList
 
-def GetContactsList():
+def get_contacts_list() -> Contacts:
     name = 'Contacts'
-    settings = loadDataSettings_JSON(name)
-    contactsList = ds.Contacts(settings['Default Path'], loadDataSettings_JSON, GetData)
+    settings = load_data_settings_json(name)
+    contactsList: Contacts = ds.Contacts(settings['Default Path'], load_data_settings_json, GetData)
     return contactsList
 
-def GetSamplesList(path):
-    samplesList = ds.Samples(path, loadDataSettings_JSON, GetData)
+def get_samples_list(path) -> Samples:
+    samplesList: Samples = ds.Samples(path, load_data_settings_json, GetData)
     return samplesList
 
-def GetDesignerCopiesList(path):
-    designerCopiesList = ds.DesignerCopies(path, loadDataSettings_JSON, GetData)
+def get_designer_copies_list(path) -> DesignerCopies:
+    designerCopiesList: DesignerCopies = ds.DesignerCopies(path, load_data_settings_json, GetData)
     return designerCopiesList
 
-def GetShipmentsList():
-    name = 'Job Shipments'
-    settings = loadDataSettings_JSON(name)
-    shipmentsList = ds.JobShipments(settings['Default Path'], loadDataSettings_JSON, getEmptyDS)
+def get_shipments_list() -> JobShipments:
+    name: str = 'Job Shipments'
+    settings = load_data_settings_json(name)
+    shipmentsList: JobShipments = ds.JobShipments(settings['Default Path'], load_data_settings_json, getEmptyDS)
     return shipmentsList
 
-test = GetShipmentsList()
+def get_invoice() -> Invoice:
+    name: str = "Invoice"
+    settings = load_data_settings_json(name)
+    invoice: Invoice = ds.Invoice(settings['Default Path'], load_data_settings_json, getEmptyDS)
+    return invoice
+
+
+test = get_invoice()
 print('')

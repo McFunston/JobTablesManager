@@ -81,8 +81,8 @@ def GetData(path: str, tab: str) -> list:
         for c in d:            
             if str(type(d[c]))=="<class 'pandas._libs.tslibs.timestamps.Timestamp'>":
                 d[c]=d[c].to_pydatetime()
-            if type(d[c])==float:
-                d[c]=int(d[c])
+            # if type(d[c])==float:
+            #     d[c]=int(d[c])
             if type(d[c])==int:
                 d[c]=str(d[c])                                            
     return dfDict

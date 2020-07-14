@@ -374,7 +374,7 @@ class TestDataSources(unittest.TestCase):
 
         # Act
         expected = "24 Pages"
-        actual = paceUpdate._getPageCount(paceUpdate._dataList[1])
+        actual = paceUpdate._get_page_count(paceUpdate._dataList[1])
 
         # Assert
         self.assertEqual(actual, expected)

@@ -34,7 +34,7 @@
                 "12": "Deadline",
                 "13": "Added On",
                 "14": "Publication Number",
-                "15": "Designer Email",
+                "15": "Designer",
                 "16": "Shipping Added",
                 "17": "Page Count Matched Estimate",
                 "18": "Publication Month",
@@ -44,6 +44,27 @@
                 "Job": "job",
                 "Qty Ordered": "part1QuantityOrdered",
                 "Description": "description"
+            },
+            "Data Types": {
+                "Job": "str",
+                "Description": "str",
+                "Files In": "datetime",
+                "Approved": "datetime",
+                "Production Status": "str",
+                "Scheduled Ship Date": "datetime",
+                "Qty Ordered": "int",
+                "CPC": "int",
+                "Page Count": "str",
+                "Date Setup": "datetime",
+                "Samples": "int",
+                "Deadline": "int",
+                "Added On": "datetime",
+                "Publication Number": "int",
+                "Designer": "int",
+                "Shipping Added": "str",
+                "Page Count Matched Estimate": "str",
+                "Publication Month": "datetime",
+                "Exported to MIS": "datetime"
             }
         },
         "Samples": {
@@ -85,6 +106,24 @@
                 "Postal Code": "zip",
                 "Phone": "phone",
                 "ID": "id"
+            },
+            "Data Types": {
+                "Region": "str",
+                "ID": "int",
+                "Publication": "str",
+                "Cycle": "datetime",
+                "Deadline": "int",
+                "Quantity": "int",
+                "User Number": "int",
+                "Customer": "str",
+                "Address1": "str",
+                "Address2": "str",
+                "City": "str",
+                "State": "str",
+                "Postal Code": "str",
+                "Phone": "str",
+                "External": "str",
+                "Shipping": "str"
             }
         },
         "Designer Copies": {
@@ -124,6 +163,22 @@
                 "Postal Code": "zip",
                 "Phone": "phone",
                 "ID": "id"
+            },
+            "Data Types": {
+                "ID": "int",
+                "Publication": "str",
+                "Cycle": "datetime",
+                "Deadline": "int",
+                "User Number": "int",
+                "Designer First Name": "str",
+                "Designer Last Name": "str",
+                "Designer Email": "str",
+                "Address1": "str",
+                "Address2": "str",
+                "City": "str",
+                "State": "str",
+                "Postal Code": "str",
+                "Phone": "str"
             }
         },
         "Contacts": {
@@ -170,6 +225,16 @@
                 "6": "Production Status",
                 "7": "Scheduled Ship Date",
                 "8": "Qty Ordered"
+            },
+            "Data Types": {
+                "Job": "str",
+                "Deadline": "int",
+                "Description": "str",
+                "Files In": "datetime",
+                "Approved": "datetime",
+                "Production Status": "str",
+                "Scheduled Ship Date": "datetime",
+                "Qty Ordered": "int"
             }
         },
         "Pace Update": {
@@ -193,6 +258,17 @@
                 "8": "Additional Description",
                 "9": "Date Setup"
             },
+            "Data Types": {
+                "Job": "str",
+                "Description": "str",
+                "Production Status": "str",
+                "Scheduled Ship Date": "datetime",
+                "Qty Ordered": "int",
+                "Production Notes": "str",
+                "Item Template": "str",
+                "Additional Description": "str",
+                "Date Setup": "datetime"
+            },
             "Page Count Strings": {
                 "16 page": "16 Pages",
                 "20 page": "20 Pages",
@@ -211,6 +287,12 @@
                 "2": "Code",
                 "3": "Name",
                 "4": "Project ID"
+            },
+            "Data Types": {
+                "Customer": "str",
+                "Code": "int",
+                "Name": "str",
+                "Project ID": "int"
             },
             "Common Data Columns": {
                 "Code": "id"
@@ -239,8 +321,82 @@
                 "16": "contactNumber",
                 "17": "name"
             },
+            "Data Types": {
+                "_ACTION": "str",
+                "job": "str",
+                "shipmentType": "int",
+                "U_shipmentNotes": "int",
+                "contactFirstName": "str",
+                "contactLastName": "str",
+                "address1": "str",
+                "address2": "str",
+                "address3": "str",
+                "city": "str",
+                "state": "str",
+                "zip": "str",
+                "phone": "str",
+                "country": "int",
+                "shipperName": "str",
+                "contactNumber": "int",
+                "name": "str"
+            },
             "Static Columns":{
                 "shipperName": "Keven Rodney"
+            }
+        },
+        "Invoice": {
+            "Default Path":"Test_Data/Aug pub. . 2020 billing.xlsx",
+            "Tab": "invoice",
+            "Type": "Pricing",
+            "Column Order": {
+                "1": "Docket",
+                "2": "Magazine Title:",
+                "3": "Magazine City:",
+                "4": "Page count:",
+                "5": "Qty. printed:",
+                "6": "Qty. mailed",
+                "7": "Print and mail prep:",
+                "8": "Sales tax",
+                "9": "Magazine Province:",
+                "10": "Samples to Publisher:",
+                "11": "Courier to Publisher:",
+                "12": "Publisher Sales Tax",
+                "13": "Publisher Prov",
+                "14": "Samples to designer:",
+                "15": "Designer",
+                "16": "Courier to Designer:",
+                "17": "Designer Sales tax",
+                "18": "Designer Prov",
+                "19": "G Total",
+                "20": "AA",
+                "21": "ON. Sales tax",
+                "22": "Deadline",
+                "23": "courier fee"
+            },
+            "Data Types": {
+                "Docket": "str",
+                "Magazine Title:": "str",
+                "Magazine City:": "str",
+                "Page count:": "int",
+                "Qty. printed:": "int",
+                "Qty. mailed": "int",
+                "Print and mail prep:": "float",
+                "Sales tax": "float",
+                "Magazine Province:": "str",
+                "Samples to Publisher:": "int",
+                "Courier to Publisher:": "float",
+                "Publisher Sales Tax": "float",
+                "Publisher Prov": "str",
+                "Samples to designer:": "int",
+                "Designer": "int",
+                "Courier to Designer:": "float",
+                "Designer Sales tax": "float",
+                "Designer Prov": "str",
+                "G Total": "float",
+                "AA": "float",
+                "ON. Sales tax": "float",
+                "Deadline": "int",
+                "courier fee": "float"
             }
         }
     }
