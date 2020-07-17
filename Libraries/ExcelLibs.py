@@ -70,12 +70,22 @@ def getDict(sheet):
 # def GetXLSXAsDict(path, tab):
 #     return getDict(OpenXLSX(path, tab))
 
+def get_dataframe(path: str, tab: str) -> pd.DataFrame:
+    if tab !="":
+        df = read_excel(path, tab)
+
+    else:
+        df = read_excel(path, tab)
+    print(df.columns.tolist())
+    return df
+
 def GetData(path: str, tab: str) -> list:
     if tab != '':
         df = read_excel(path, tab)
     else: 
         df = read_excel(path)
-    df1 = df.where(pd.notnull(df), None)    
+    df1 = df.where(pd.notnull(df), None)
+    # print(df1.head(2))
     dfDict = df1.to_dict('records')
     for d in dfDict:
         for c in d:            
@@ -84,7 +94,8 @@ def GetData(path: str, tab: str) -> list:
             # if type(d[c])==float:
             #     d[c]=int(d[c])
             if type(d[c])==int:
-                d[c]=str(d[c])                                            
+                d[c]=str(d[c])
+    df3 = pd.DataFrame(dfDict)
     return dfDict
     # dfList = df.values.tolist()
     # for d in dfDict:

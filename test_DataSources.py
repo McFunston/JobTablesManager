@@ -1,6 +1,7 @@
 from datetime import datetime
 import unittest
 from Models.DataSources import CustomerReport, JobsList, PaceUpdate
+import pandas as pd
 
 
 def moqJobsListSettingsFunc(name: str):
@@ -20,7 +21,7 @@ def moqJobsListFunc(path: str, tab: str):
                     "Scheduled Ship Date": datetime.strptime("04/05/2020","%m/%d/%Y"), "Qty Ordered": "4500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("03/03/2020","%m/%d/%Y"), "Samples": "216", "Deadline": "15"},
                     {"Job": "", "Description": "3535-Neighbours of Perth-Jul", "Files In": datetime.strptime("03/28/2020","%m/%d/%Y"), "Approved": None, "Production Status": "Open",
                     "Scheduled Ship Date": datetime.strptime("04/05/2020","%m/%d/%Y"), "Qty Ordered": "4500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("03/03/2020","%m/%d/%Y"), "Samples": "216", "Deadline": "15"}]
-    return moqJobsList
+    return pd.DataFrame(moqJobsList)
 
 
 def moqPaceUpdateSettingsFunc(name: str):
@@ -37,7 +38,7 @@ def moqPaceUpdateFunc(path: str, tab: str):
                       "Additional Description": "4500 24 page self cover Flat size 16.75 x 10.875, fold & stitch to 8.375 x 10.875 4 process / same  with bleeds Plastic strap band (cross) in 50's Carton pack with 3 strips of tape on the bottom Deliver to DLI", "Date Setup": datetime.strptime("07-30-2020", "%m-%d-%Y")},
                      {"Job": 'M1800', "Description": "3535-Neighbours of Perth-Jul", "Production Status": "In Production", "Scheduled Ship Date": datetime.strptime("08-15-2020", "%m-%d-%Y"), "Qty Ordered": 4500, "Production Notes": "PW Count = 4000", "Item Template": "BVM 16 Page",
                       "Additional Description": "4500 24 page self cover Flat size 16.75 x 10.875, fold & stitch to 8.375 x 10.875 4 process / same  with bleeds Plastic strap band (cross) in 50's Carton pack with 3 strips of tape on the bottom Deliver to DLI", "Date Setup": datetime.strptime("08-30-2020", "%m-%d-%Y")}]
-    return moqPaceUpdate
+    return pd.DataFrame(moqPaceUpdate)
 
 
 def moqCustomerReportSettingsFunc(name: str):
@@ -47,7 +48,7 @@ def moqCustomerReportSettingsFunc(name: str):
 
 def moqCustomerReportFunc(path: str, tab: str):
     moqCustomerReport = [{}]
-    return moqCustomerReport
+    return pd.DataFrame(moqCustomerReport)
 
 class TestDataSources(unittest.TestCase):
 
@@ -58,10 +59,11 @@ class TestDataSources(unittest.TestCase):
         moqjobs = moqJobsListFunc('', '')
         # Act
         actual = jobs._find_first_row('Job', 'M511')
-        expected = moqjobs[0]
+        expected = moqjobs.iloc[[0]]
+        areEqal = actual.equals(expected)
 
         # Assert
-        self.assertDictEqual(actual, expected)
+        self.assertTrue(areEqal)
 
     def test_FindAllRows(self):
         # Arrange
@@ -70,10 +72,10 @@ class TestDataSources(unittest.TestCase):
         moqjobs = moqJobsListFunc('', '')
         # Act
         actual = jobs._find_all_rows('Job', 'M532')
-        expected = moqjobs[1]
+        expected = moqjobs.iloc[1]
 
         # Assert
-        self.assertEqual(actual[0]['Job'], expected['Job'])
+        self.assertEqual(actual.iloc[0]['Job'], expected['Job'])
 
     def test_returnSavableList(self):
         # Arrange
@@ -136,7 +138,7 @@ class TestDataSources(unittest.TestCase):
         # Assert
         self.assertEqual(expected, actual)
 
-    def test_getRow(self):
+    def test_get_row(self):
 
         # Arrange
         jobs = JobsList("BVM_Jobs.xlsx",
@@ -144,11 +146,12 @@ class TestDataSources(unittest.TestCase):
         moqjobs = moqJobsListFunc('', '')
 
         # Act
-        expected = moqjobs[1]
-        actual = jobs._getRow(1)
+        expected = moqjobs.iloc[1]
+        actual = jobs._get_row(1)
+        are_equal = actual.equals(expected)
 
         # Assert
-        self.assertDictEqual(expected, actual)
+        self.assertTrue(are_equal)
 
     def test_get_cell(self):
 
@@ -158,11 +161,11 @@ class TestDataSources(unittest.TestCase):
         moqjobs = moqJobsListFunc('', '')
 
         # Act
-        expected = moqjobs[1]['Description']
-        actual = jobs._get_cell(1, 'Description')
+        expected = moqjobs.at[1, 'Description']
+        actual = jobs._get_cell(1, 'Description')        
 
         # Assert
-        self.assertEqual(expected, actual)
+        self.assertEqual(actual, expected)
 
     def test_FindInAllRows(self):
 
@@ -172,14 +175,16 @@ class TestDataSources(unittest.TestCase):
         moqjobs = moqJobsListFunc('', '')
 
         # Act
-        expected = list()
-        actual = jobs._find_in_all_rows('Description', '3254')
-        expected.append(moqjobs[1])
-        expected.append(moqjobs[3])
         
+        actual = jobs._find_in_all_rows('Description', '3254')
+        actual = actual.iloc[0]["Job"]
+
+        expected = moqjobs.iloc[1]["Job"]
+        # areequal = actual.equals(expected)
+
 
         # Assert
-        self.assertListEqual(expected, actual)
+        self.assertEqual(actual, expected)
 
     def test_GetMostRecentPub(self):
         # Arrange
@@ -189,11 +194,12 @@ class TestDataSources(unittest.TestCase):
         
 
         # Act
-        expected = moqjobs[3]
-        actual = jobs.get_most_recent_pub('3254')
+        expected = moqjobs.iloc[[3]]        
+        actual = jobs.get_most_recent_pub('3254')        
+        are_equal = actual.equals(expected)
 
         # Assert
-        self.assertDictEqual(expected, actual)
+        self.assertTrue(are_equal)
 
     def test_jobIsApprovedTrue(self):
         # Arrange
@@ -268,23 +274,26 @@ class TestDataSources(unittest.TestCase):
         moqjobs = moqJobsListFunc('', '')
 
         # Act
-        actual = jobs.get_job('M704')
-        expected = moqjobs[3]
+        actual = jobs.get_job('M704')        
+        expected = moqjobs.iloc[[3]]
+        are_equal = actual.equals(expected)
 
         # Assert
-        self.assertDictEqual(actual, expected)
+        self.assertTrue(are_equal)
 
     def test_SetUploadDate(self):
         # Arrange
         jobs = JobsList("BVM_Jobs.xlsx",
                         moqJobsListSettingsFunc, moqJobsListFunc)
-        job = jobs.get_job('M704')
+        
         Today = datetime.today()
 
         # Act
         jobs.set_upload_date('M704', Today)
-        actual = job['Files In']
+        job = jobs.get_job('M704')
+        actual = job.iloc[0]['Files In']
         expected = datetime.today().strftime('%m/%d/%Y')
+        actual = actual.strftime('%m/%d/%Y')
 
         # Assert
         self.assertEqual(actual, expected)
@@ -293,13 +302,15 @@ class TestDataSources(unittest.TestCase):
         # Arrange
         jobs = JobsList("BVM_Jobs.xlsx",
                         moqJobsListSettingsFunc, moqJobsListFunc)
-        job = jobs.get_job('M704')
+        
         Today = datetime.today()
 
         # Act
         jobs.set_approved_date('M704', Today)
-        actual = job['Approved']
+        job = jobs.get_job('M704')
+        actual = job.iloc[0]['Approved']
         expected = datetime.today().strftime('%m/%d/%Y')
+        actual = actual.strftime('%m/%d/%Y')        
 
         # Assert
         self.assertEqual(actual, expected)
@@ -308,12 +319,13 @@ class TestDataSources(unittest.TestCase):
         # Arrange
         jobs = JobsList("BVM_Jobs.xlsx",
                         moqJobsListSettingsFunc, moqJobsListFunc)
-        job = jobs.get_job('M704')
+        job = jobs.get_job_index('M704')
 
         # Act
+        
         jobs._update_field(job, jobs.CPC, '6666')
         expected = '6666'
-        actual = jobs._dataList[3][jobs.CPC]
+        actual = jobs._dataList.iloc[3][jobs.CPC]
 
         # Assert
         self.assertEqual(actual, expected)
@@ -362,7 +374,7 @@ class TestDataSources(unittest.TestCase):
 
         # Act
         expected = "2200"
-        actual = paceUpdate._get_cpc(paceUpdate._dataList[0])
+        actual = paceUpdate._get_cpc(paceUpdate.DataDict[0])
 
         # Assert
         self.assertEqual(actual, expected)
@@ -374,7 +386,7 @@ class TestDataSources(unittest.TestCase):
 
         # Act
         expected = "24 Pages"
-        actual = paceUpdate._get_page_count(paceUpdate._dataList[1])
+        actual = paceUpdate._get_page_count(paceUpdate.DataDict[1])
 
         # Assert
         self.assertEqual(actual, expected)
@@ -430,7 +442,7 @@ class TestDataSources(unittest.TestCase):
                         moqJobsListSettingsFunc, moqJobsListFunc)
 
         # Act
-        expected=jobs._dataList[0]['Job']
+        expected=jobs.DataDict[0]['Job']
         actual=jobs.get_consumable_list(['Job'])[0]['Job']
 
         # Assert

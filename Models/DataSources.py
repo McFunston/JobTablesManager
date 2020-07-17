@@ -2,6 +2,9 @@ from typing import Dict, List
 import json
 from datetime import date, datetime
 import copy
+import Libraries.ExcelLibs as el
+import numpy as np
+import pandas as pd
 
 
 class DataSource:
@@ -15,9 +18,11 @@ class DataSource:
         else:
             self.path: str = path
         self.tab: str = self.settings["Tab"]
-        self._dataList: list[dict] = dictFunc(self.path, self.tab)
+        self._dataList = dictFunc(self.path, self.tab)        
+        
+        # self.df = el.get_dataframe(self.path, self.tab)
 
-    def _find_first_row(self, column: str, search_term: str) -> dict:
+    def _find_first_row(self, column: str, search_term: str) -> pd.DataFrame:
         """
         Finds the first row containing searchterm.
 
@@ -30,11 +35,13 @@ class DataSource:
             dict: Complete row. Empty if nothing found.
 
         """
-        empty: dict[str, str] = {'None': ''}
-        for row in self._dataList:
-            if row[column] == search_term:
-                return row
-        return empty
+        try: 
+            found = self._find_all_rows(column, search_term)
+        except:
+            return pd.DataFrame()
+        if found.empty:
+            return found
+        return found.iloc[[0]]
 
     def _get_column_names(self) -> list:
         """
@@ -47,7 +54,17 @@ class DataSource:
             list of columns[str]
 
         """
-        return list(self._dataList[0].keys())
+        return self._dataList.columns.tolist()
+
+    def _get_data_dict(self) -> List[Dict]:
+        data_dict = self.dataDict = self._dataList.to_dict('records')
+        return data_dict
+    
+    def _set_data_dict(self, value):
+        new_dict = copy.deepcopy(value)        
+        self._dataList = pd.DataFrame(new_dict)
+
+    DataDict = property(_get_data_dict, _set_data_dict)
 
     Columns = property(_get_column_names)
 
@@ -92,7 +109,7 @@ class DataSource:
                     row[x] = row[x].strftime(self.settings['Date Format'])
         return stringDataList
 
-    def _find_all_rows(self, column: str, search_term: str) -> List[Dict]:
+    def _find_all_rows(self, column: str, search_term: str) -> pd.DataFrame:
         """
         Find all rows which have a column equal to search_term
 
@@ -105,13 +122,14 @@ class DataSource:
             List[Dict]: List of all rows containing the search term
 
         """
-        found_list: list[dict] = list()
-        for row in self._dataList:
-            if row[column] == search_term:
-                found_list.append(row)
+        found_list = self._dataList.loc[self._dataList[column]==search_term]
+        # found_list: list[dict] = list()
+        # for row in self._dataList:
+        #     if row[column] == search_term:
+        #         found_list.append(row)
         return found_list
 
-    def _find_in_all_rows(self, column: str, search_term: str) -> List[Dict]:
+    def _find_in_all_rows(self, column: str, search_term: str) -> pd.DataFrame:
         """[Find all rows that have a column containing (in) search_term]
 
         Args:
@@ -121,13 +139,11 @@ class DataSource:
         Returns:
             List[Dict]: List of rows
         """
-        found_list: list[dict] = list()
-        for row in self._dataList:
-            if search_term in row[column]:
-                found_list.append(row)
-        return found_list
+        found = self._dataList.loc[self._dataList[column].str.contains(search_term)]
 
-    def _getRow(self, index: int) -> dict:
+        return found
+
+    def _get_row(self, index: int) -> pd.DataFrame:
         """Get a row in _datalist by index
 
         Args:
@@ -136,7 +152,7 @@ class DataSource:
         Returns:
             dict: Row
         """
-        return self._dataList[index]
+        return self._dataList.iloc[index]
 
     def _get_cell(self, index: int, column: str):
         """Get a single cell 
@@ -148,7 +164,7 @@ class DataSource:
         Returns:
             [type]: Data contained within the cell
         """
-        return self._getRow(index)[column]
+        return self._dataList.at[index, column]
 
     def get_consumable_list(self, columns: list) -> List:
         """Get a list of _datalist conatining only the given columns
@@ -160,7 +176,7 @@ class DataSource:
             List: List of columns
         """
         consumableList = list()
-        for row in self._dataList:
+        for row in self.DataDict:
             entries = dict()
             for column in columns:
                 entries[column] = row[column]
@@ -236,8 +252,9 @@ class DataSource:
             [datetime]: If the location has a string it is converted to datetime. 
             If it is already a datetime it is returned as is.
         """
-        value = self._dataList[index][columnHeader]
-        if type(value) != datetime:
+        value = self._dataList.iloc[index][columnHeader]
+        #print(value)
+        if type(value) == str:
             value = datetime.strptime(value, self.settings['Date Format'])
         return value
 
@@ -251,9 +268,12 @@ class DataSource:
             date_to_set (datetime): Date to assign
         """       
         found = self._find_first_row(search_column, search_term)
+        index = self._get_first_index(search_column, search_term)
+        #print(found.at[0, date_column])
         if date_column in self.settings['Date Columns']:
-            found[date_column] = date_to_set.strftime(
+            self._dataList.at[index, date_column] = date_to_set.strftime(
                 self.settings['Date Format'])
+        
 
     def len(self) -> int:
         """Returns the current length of _dataList
@@ -286,9 +306,11 @@ class DataSource:
             column_name (str): Name of the column to be updated
             value (str): Value to insert
         """        
-        row[column_name] = value
+        row.at[0, column_name] = value
+        # print(row.at[0, column_name])
+        # print("pause")
 
-    def _get_first_index(self, column_name: str, search_term: str) -> int:
+    def _get_first_index(self, column: str, search_term: str) -> int:
         """Searches the _datalist and returns the index of the first row in which column[column_name] matches search_term
 
         Args:
@@ -299,8 +321,8 @@ class DataSource:
             int: Index of the found row
         """        
         index = int()
-        for i in range(len(self._dataList)):
-            if self._dataList[i][column_name] == search_term:
+        for i in range(len(self.DataDict)):
+            if self.DataDict[i][column] == search_term:
                 return i
         return index
 
@@ -347,9 +369,9 @@ class JobsList(DataSource):
         self.PageCountMatchedEstimate: str = "Page Count Matched Estimate"
         self.PublicationMonth = "Publication Month"
         self.ExportedToMIS = "Exported to MIS"
-        self._dataList = self._normalize_dates()
+        # self._dataList = self._normalize_dates()
 
-    def get_most_recent_pub(self, pub_number: str) -> Dict:
+    def get_most_recent_pub(self, pub_number: str) -> pd.DataFrame:
         """Find the most recent publication.
 
         Args:
@@ -358,16 +380,15 @@ class JobsList(DataSource):
         Returns:
             Dict: The row containing the most recent publication
         """        
-        candidates = self._find_in_all_rows(self.Description, pub_number)
-        found = dict()
-        if len(candidates) > 0:
-            found = candidates[0]
-            for candidate in candidates:
-                if self._cell_to_date(candidate[self.DateSetup]) > self._cell_to_date(found[self.DateSetup]):
-                    found = candidate
+        candidates = self._find_in_all_rows(self.Description, pub_number)        
+        if len(candidates) == 1:
+            found = candidates.iloc[[0]]
+        else:
+            candidates.sort_values([self.DateSetup])
+            found = candidates.tail(1)
         return found
 
-    def get_job(self, job: str) -> dict:
+    def get_job_index(self, job: str) -> int:
         """Return the row containing [job]
 
         Args:
@@ -376,8 +397,9 @@ class JobsList(DataSource):
         Returns:
             dict: Row containing the found job
         """        
-        found = self._find_first_row(self.Job, job)
+        found = self._get_first_index(self.Job, job)
         return found
+  
 
     def job_is_approved(self, job: str) -> bool:
         """Return true if a job has been approved, false if not.
@@ -389,10 +411,13 @@ class JobsList(DataSource):
             bool: True if approved, false if not.
         """        
         found = self.get_job(job)
-        if len(found.keys()) > 1:
-            if found[self.Approved] != None:
-                return True
-        return False
+        
+        if found.empty == True:
+            return False
+        approved = pd.notnull(found.iloc[0][self.Approved])
+
+        return approved
+
 
     def job_is_uploaded(self, job: str) -> bool:
         """Return true if a job has been uploaded, false if not.
@@ -404,10 +429,10 @@ class JobsList(DataSource):
             bool: True if uploaded, false it not.
         """        
         found = self.get_job(job)
-        if len(found.keys()) > 1:
-            if found[self.FilesIn] != None:
-                return True
-        return False
+        if found.empty ==True:
+            return False
+        
+        return pd.notnull(found.iloc[0][self.FilesIn])
 
     def set_upload_date(self, job: str, date: datetime):
         """Set the upload date for a given job number
@@ -510,9 +535,11 @@ class PaceUpdate(DataSource):
         return pageCount
 
     def _addExtraColumns(self):
-        for row in self._dataList:
+        new_dict = self.DataDict
+        for row in new_dict:
             row['CPC'] = self._get_cpc(row)
-            row['Page Count'] = self._get_page_count(row)
+            row['Page Count'] = self._get_page_count(row)        
+        self.DataDict=new_dict
 
 
 class ExportList(DataSource):

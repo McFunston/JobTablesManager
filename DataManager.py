@@ -1,8 +1,10 @@
+from copy import copy
 import json
 from typing import Dict, List
-from Libraries.ExcelLibs import GetData
+from Libraries.ExcelLibs import GetData, get_dataframe
 import Models.DataSources as ds
 from Models.DataSources import Contacts, CustomerReport, DesignerCopies, Invoice, JobShipments, JobsList, PaceUpdate, Samples
+import copy
 
 def load_data_settings_json(name: str) -> Dict:
     with open('Settings.json') as j:
@@ -16,7 +18,7 @@ def getEmptyDS(path: str, tab: str):
 def get_jobs_list() -> JobsList:
     name='Jobs List'
     settings = load_data_settings_json(name)
-    jobs: JobsList = ds.JobsList(settings['Default Path'], load_data_settings_json, GetData)
+    jobs: JobsList = ds.JobsList(settings['Default Path'], load_data_settings_json, get_dataframe)
     return jobs
 
 def get_mis_update_list() -> PaceUpdate:
@@ -58,5 +60,11 @@ def get_invoice() -> Invoice:
     return invoice
 
 
-test = get_invoice()
+test = get_jobs_list()
+df = copy.deepcopy(test._dataList)
+dd = test.DataDict
+#dd[0]['Approved'] = "10/10/2030"
+test.DataDict=dd
+print(df.equals(test._dataList))
+print(test.DataDict[0]['Approved'])
 print('')

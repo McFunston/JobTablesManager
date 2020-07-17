@@ -280,7 +280,7 @@
             }
         },
         "Job Projects": {
-            "Type":"Data List",
+            "Type": "Data List",
             "Default Path": "Test_Data/BVM Job Projects",
             "Columns Order": {
                 "1": "Customer",
@@ -298,8 +298,8 @@
                 "Code": "id"
             }
         },
-        "Job Shipments":{
-            "Default Path":"Test_Data/JobShipment.xlsx",
+        "Job Shipments": {
+            "Default Path": "Test_Data/JobShipment.xlsx",
             "Type": "Address",
             "Tab": "",
             "Columns Order": {
@@ -340,12 +340,12 @@
                 "contactNumber": "int",
                 "name": "str"
             },
-            "Static Columns":{
+            "Static Columns": {
                 "shipperName": "Keven Rodney"
             }
         },
         "Invoice": {
-            "Default Path":"Test_Data/Aug pub. . 2020 billing.xlsx",
+            "Default Path": "Test_Data/Aug pub. . 2020 billing.xlsx",
             "Tab": "invoice",
             "Type": "Pricing",
             "Column Order": {
