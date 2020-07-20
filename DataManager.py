@@ -56,7 +56,3 @@ def get_invoice() -> Invoice:
     settings = load_data_settings_json(name)
     invoice: Invoice = ds.Invoice(settings['Default Path'], load_data_settings_json, getEmptyDS)
     return invoice
-
-
-test = get_invoice()
-print('')

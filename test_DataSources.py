@@ -181,6 +181,149 @@ class TestDataSources(unittest.TestCase):
         # Assert
         self.assertListEqual(expected, actual)
 
+    
+
+    def test_updateField(self):
+        # Arrange
+        jobs = JobsList("BVM_Jobs.xlsx",
+                        moqJobsListSettingsFunc, moqJobsListFunc)
+        job = jobs.get_job('M704')
+
+        # Act
+        jobs._update_field(job, jobs.CPC, '6666')
+        expected = '6666'
+        actual = jobs._dataList[3][jobs.CPC]
+
+        # Assert
+        self.assertEqual(actual, expected)
+
+    def test__getFirstIndex(self):
+        # Arrange
+        jobs = JobsList("BVM_Jobs.xlsx",
+                        moqJobsListSettingsFunc, moqJobsListFunc)
+
+        # Act
+        expected = 3
+        actual = jobs._get_first_index(jobs.Job, 'M704')
+
+        # Assert
+        self.assertEqual(actual, expected)
+
+    def test_getStringDataListNone(self):
+        # Arrange
+        jobs = JobsList("BVM_Jobs.xlsx",
+                        moqJobsListSettingsFunc, moqJobsListFunc)
+
+        # Act
+        expected = "None"
+        actual = jobs._get_string_datalist()[2]['Files In']
+
+        # Assert
+        self.assertEqual(actual, expected)
+
+    def test_getStringDataListDateTime(self):
+        # Arrange
+        jobs = JobsList("BVM_Jobs.xlsx",
+                        moqJobsListSettingsFunc, moqJobsListFunc)
+        jobs._dataList[2]['Files In'] = datetime.today()
+
+        # Act
+        expected = datetime.today().strftime('%m/%d/%Y')
+        actual = jobs._get_string_datalist()[2]['Files In']
+
+        # Assert
+        self.assertEqual(actual, expected)
+
+    def test_normalizeDates(self):
+        # Arrange
+        jobs = JobsList("BVM_Jobs.xlsx",
+                        moqJobsListSettingsFunc, moqJobsListFunc)
+        normalDates = jobs._normalize_dates()
+
+        # Act
+        expected = datetime.strptime("02/03/2020", "%m/%d/%Y")
+        actual = normalDates[1]["Date Setup"]
+
+        # Assert
+        self.assertEqual(actual, expected)
+
+    def test_FindCommonColumnsPaceUD(self):
+        # Arrange
+        jobs = JobsList("BVM_Jobs.xlsx",
+                        moqJobsListSettingsFunc, moqJobsListFunc)
+
+        paceUpdate = PaceUpdate("BVM+Job+Grouped+For+Tracking+Report.xls",
+                                moqPaceUpdateSettingsFunc, moqPaceUpdateFunc)
+
+        # Act
+        expected = 8
+        commonColumns = jobs.find_common_columns(paceUpdate)
+        actual = len(commonColumns)
+
+        # Assert
+        self.assertEqual(actual, expected)
+
+    def test_FindCommonColumnsCustomerReport(self):
+        # Arrange
+        jobs = JobsList("BVM_Jobs.xlsx",
+                        moqJobsListSettingsFunc, moqJobsListFunc)
+
+        customerReport = CustomerReport("BVM+Job+Grouped+For+Tracking+Report.xls",
+                                moqCustomerReportSettingsFunc, moqCustomerReportFunc)
+
+        # Act
+        expected = 8
+        commonColumns = customerReport.find_common_columns(jobs)
+        actual = len(commonColumns)
+
+        # Assert
+        self.assertEqual(actual, expected)
+    
+    def test_get_consumable_list(self):
+        # Arrange
+        jobs = JobsList("BVM_Jobs.xlsx",
+                        moqJobsListSettingsFunc, moqJobsListFunc)
+
+        # Act
+        expected=jobs._dataList[0]['Job']
+        actual=jobs.get_consumable_list(['Job'])[0]['Job']
+
+        # Assert
+        self.assertEqual(actual, expected)
+
+    def test_ConsumeDataCR(self):
+        # Arrange
+        jobs = JobsList("BVM_Jobs.xlsx",
+                        moqJobsListSettingsFunc, moqJobsListFunc)
+
+        customerReport = CustomerReport("BVM+Job+Grouped+For+Tracking+Report.xls",
+                                moqCustomerReportSettingsFunc, moqCustomerReportFunc)
+        
+        # Act
+        customerReport._consume_data(jobs, 'Job')
+        expected = jobs._dataList[0]['Job']
+        actual = customerReport._dataList[0]['Job']
+
+        # Assert
+        self.assertEqual(actual, expected)
+
+    def test_ConsumeDataJL(self):
+        # Arrange
+        jobs = JobsList("BVM_Jobs.xlsx",
+                        moqJobsListSettingsFunc, moqJobsListFunc)
+        paceUpdate = PaceUpdate("BVM+Job+Grouped+For+Tracking+Report.xls",
+                                moqPaceUpdateSettingsFunc, moqPaceUpdateFunc)
+        paceUpdate._dataList = paceUpdate._get_string_datalist()
+        
+        # Act
+        jobs._consume_data(paceUpdate, 'Description')
+        expected = "M1800"
+        actual = jobs._dataList[4]["Job"]
+
+        # Assert
+        self.assertEqual(actual, expected)
+
+class TestJobsList(unittest.TestCase):
     def test_GetMostRecentPub(self):
         # Arrange
         jobs = JobsList("BVM_Jobs.xlsx",
@@ -304,57 +447,7 @@ class TestDataSources(unittest.TestCase):
         # Assert
         self.assertEqual(actual, expected)
 
-    def test_updateField(self):
-        # Arrange
-        jobs = JobsList("BVM_Jobs.xlsx",
-                        moqJobsListSettingsFunc, moqJobsListFunc)
-        job = jobs.get_job('M704')
-
-        # Act
-        jobs._update_field(job, jobs.CPC, '6666')
-        expected = '6666'
-        actual = jobs._dataList[3][jobs.CPC]
-
-        # Assert
-        self.assertEqual(actual, expected)
-
-    def test__getFirstIndex(self):
-        # Arrange
-        jobs = JobsList("BVM_Jobs.xlsx",
-                        moqJobsListSettingsFunc, moqJobsListFunc)
-
-        # Act
-        expected = 3
-        actual = jobs._get_first_index(jobs.Job, 'M704')
-
-        # Assert
-        self.assertEqual(actual, expected)
-
-    def test_getStringDataListNone(self):
-        # Arrange
-        jobs = JobsList("BVM_Jobs.xlsx",
-                        moqJobsListSettingsFunc, moqJobsListFunc)
-
-        # Act
-        expected = "None"
-        actual = jobs._get_string_datalist()[2]['Files In']
-
-        # Assert
-        self.assertEqual(actual, expected)
-
-    def test_getStringDataListDateTime(self):
-        # Arrange
-        jobs = JobsList("BVM_Jobs.xlsx",
-                        moqJobsListSettingsFunc, moqJobsListFunc)
-        jobs._dataList[2]['Files In'] = datetime.today()
-
-        # Act
-        expected = datetime.today().strftime('%m/%d/%Y')
-        actual = jobs._get_string_datalist()[2]['Files In']
-
-        # Assert
-        self.assertEqual(actual, expected)
-
+class TestPaceUpdate(unittest.TestCase):
     def test_pu_getCPC(self):
         # Arrange
         paceUpdate = PaceUpdate("BVM+Job+Grouped+For+Tracking+Report.xls",
@@ -378,93 +471,3 @@ class TestDataSources(unittest.TestCase):
 
         # Assert
         self.assertEqual(actual, expected)
-
-    def test_normalizeDates(self):
-        # Arrange
-        jobs = JobsList("BVM_Jobs.xlsx",
-                        moqJobsListSettingsFunc, moqJobsListFunc)
-        normalDates = jobs._normalize_dates()
-
-        # Act
-        expected = datetime.strptime("02/03/2020", "%m/%d/%Y")
-        actual = normalDates[1]["Date Setup"]
-
-        # Assert
-        self.assertEqual(actual, expected)
-
-    def test_FindCommonColumnsPaceUD(self):
-        # Arrange
-        jobs = JobsList("BVM_Jobs.xlsx",
-                        moqJobsListSettingsFunc, moqJobsListFunc)
-
-        paceUpdate = PaceUpdate("BVM+Job+Grouped+For+Tracking+Report.xls",
-                                moqPaceUpdateSettingsFunc, moqPaceUpdateFunc)
-
-        # Act
-        expected = 8
-        commonColumns = jobs.find_common_columns(paceUpdate)
-        actual = len(commonColumns)
-
-        # Assert
-        self.assertEqual(actual, expected)
-
-    def test_FindCommonColumnsCustomerReport(self):
-        # Arrange
-        jobs = JobsList("BVM_Jobs.xlsx",
-                        moqJobsListSettingsFunc, moqJobsListFunc)
-
-        customerReport = CustomerReport("BVM+Job+Grouped+For+Tracking+Report.xls",
-                                moqCustomerReportSettingsFunc, moqCustomerReportFunc)
-
-        # Act
-        expected = 8
-        commonColumns = customerReport.find_common_columns(jobs)
-        actual = len(commonColumns)
-
-        # Assert
-        self.assertEqual(actual, expected)
-    
-    def test_get_consumable_list(self):
-        # Arrange
-        jobs = JobsList("BVM_Jobs.xlsx",
-                        moqJobsListSettingsFunc, moqJobsListFunc)
-
-        # Act
-        expected=jobs._dataList[0]['Job']
-        actual=jobs.get_consumable_list(['Job'])[0]['Job']
-
-        # Assert
-        self.assertEqual(actual, expected)
-
-    def test_ConsumeDataCR(self):
-        # Arrange
-        jobs = JobsList("BVM_Jobs.xlsx",
-                        moqJobsListSettingsFunc, moqJobsListFunc)
-
-        customerReport = CustomerReport("BVM+Job+Grouped+For+Tracking+Report.xls",
-                                moqCustomerReportSettingsFunc, moqCustomerReportFunc)
-        
-        # Act
-        customerReport._consume_data(jobs, 'Job')
-        expected = jobs._dataList[0]['Job']
-        actual = customerReport._dataList[0]['Job']
-
-        # Assert
-        self.assertEqual(actual, expected)
-
-    def test_ConsumeDataJL(self):
-        # Arrange
-        jobs = JobsList("BVM_Jobs.xlsx",
-                        moqJobsListSettingsFunc, moqJobsListFunc)
-        paceUpdate = PaceUpdate("BVM+Job+Grouped+For+Tracking+Report.xls",
-                                moqPaceUpdateSettingsFunc, moqPaceUpdateFunc)
-        paceUpdate._dataList = paceUpdate._get_string_datalist()
-        
-        # Act
-        jobs._consume_data(paceUpdate, 'Description')
-        expected = "M1800"
-        actual = jobs._dataList[4]["Job"]
-
-        # Assert
-        self.assertEqual(actual, expected)
-
