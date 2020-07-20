@@ -192,7 +192,7 @@ class TestDataSources(unittest.TestCase):
         # Act
         jobs._update_field(job, jobs.CPC, '6666')
         expected = '6666'
-        actual = jobs._dataList[3][jobs.CPC]
+        actual = jobs._data_list[3][jobs.CPC]
 
         # Assert
         self.assertEqual(actual, expected)
@@ -216,7 +216,7 @@ class TestDataSources(unittest.TestCase):
 
         # Act
         expected = "None"
-        actual = jobs._get_string_datalist()[2]['Files In']
+        actual = jobs._get_string_data_list()[2]['Files In']
 
         # Assert
         self.assertEqual(actual, expected)
@@ -225,11 +225,11 @@ class TestDataSources(unittest.TestCase):
         # Arrange
         jobs = JobsList("BVM_Jobs.xlsx",
                         moqJobsListSettingsFunc, moqJobsListFunc)
-        jobs._dataList[2]['Files In'] = datetime.today()
+        jobs._data_list[2]['Files In'] = datetime.today()
 
         # Act
         expected = datetime.today().strftime('%m/%d/%Y')
-        actual = jobs._get_string_datalist()[2]['Files In']
+        actual = jobs._get_string_data_list()[2]['Files In']
 
         # Assert
         self.assertEqual(actual, expected)
@@ -285,7 +285,7 @@ class TestDataSources(unittest.TestCase):
                         moqJobsListSettingsFunc, moqJobsListFunc)
 
         # Act
-        expected=jobs._dataList[0]['Job']
+        expected=jobs._data_list[0]['Job']
         actual=jobs.get_consumable_list(['Job'])[0]['Job']
 
         # Assert
@@ -301,8 +301,8 @@ class TestDataSources(unittest.TestCase):
         
         # Act
         customerReport._consume_data(jobs, 'Job')
-        expected = jobs._dataList[0]['Job']
-        actual = customerReport._dataList[0]['Job']
+        expected = jobs._data_list[0]['Job']
+        actual = customerReport._data_list[0]['Job']
 
         # Assert
         self.assertEqual(actual, expected)
@@ -313,12 +313,12 @@ class TestDataSources(unittest.TestCase):
                         moqJobsListSettingsFunc, moqJobsListFunc)
         paceUpdate = PaceUpdate("BVM+Job+Grouped+For+Tracking+Report.xls",
                                 moqPaceUpdateSettingsFunc, moqPaceUpdateFunc)
-        paceUpdate._dataList = paceUpdate._get_string_datalist()
+        paceUpdate._data_list = paceUpdate._get_string_data_list()
         
         # Act
         jobs._consume_data(paceUpdate, 'Description')
         expected = "M1800"
-        actual = jobs._dataList[4]["Job"]
+        actual = jobs._data_list[4]["Job"]
 
         # Assert
         self.assertEqual(actual, expected)
@@ -455,7 +455,7 @@ class TestPaceUpdate(unittest.TestCase):
 
         # Act
         expected = "2200"
-        actual = paceUpdate._get_cpc(paceUpdate._dataList[0])
+        actual = paceUpdate._get_cpc(paceUpdate._data_list[0])
 
         # Assert
         self.assertEqual(actual, expected)
@@ -467,7 +467,7 @@ class TestPaceUpdate(unittest.TestCase):
 
         # Act
         expected = "24 Pages"
-        actual = paceUpdate._get_page_count(paceUpdate._dataList[1])
+        actual = paceUpdate._get_page_count(paceUpdate._data_list[1])
 
         # Assert
         self.assertEqual(actual, expected)
