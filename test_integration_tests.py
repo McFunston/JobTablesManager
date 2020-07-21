@@ -38,10 +38,20 @@ class TestObjectsInitialization(unittest.TestCase):
 
     def test_samples_dc_merge(self):
         sample_list = dm.get_samples_list("Test_Data/1st deadline_Sample Magazine Orders_July 2020_Canada.xlsx")
-        designer_copies_list = dm.get_designer_copies_list("Test_Data/20th deadline_Sample Magazine Order_June 2020_Canada.xlsx")
+        designer_copies_list = dm.get_designer_copies_list("Test_Data/20th deadline_Sample Magazine Order_June 2020_Canada.xlsx")        
         expected = len(sample_list._data_list)+len(designer_copies_list._data_list)
-        sample_list._nd_merge(designer_copies_list)
+        sample_list.nd_merge(designer_copies_list)
         
         actual = len(sample_list._data_list)
 
         self.assertEqual(actual, expected)
+
+    def test_deliveries_merge(self):
+        sample_list = dm.get_samples_list("Test_Data/1st deadline_Sample Magazine Orders_July 2020_Canada.xlsx")
+        designer_copies_list = dm.get_designer_copies_list("Test_Data/20th deadline_Sample Magazine Order_June 2020_Canada.xlsx")
+        shipments_list = dm.get_shipments_list()
+
+        sample_list.nd_merge(designer_copies_list)
+        shipments_list.nd_merge(sample_list)
+
+        self.assertEqual(len(sample_list._data_list), len(shipments_list._data_list))

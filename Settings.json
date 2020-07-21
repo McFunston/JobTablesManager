@@ -346,7 +346,8 @@
                 "name": "str"
             },
             "Static Columns":{
-                "shipperName": "Keven Rodney"
+                "shipperName": "Keven Rodney",
+                "_ACTION": "I"
             }
         },
         "Invoice": {

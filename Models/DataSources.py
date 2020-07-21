@@ -15,7 +15,7 @@ class DataSource:
         else:
             self.path: str = path
         self.tab: str = self.settings["Tab"]
-        self._data_list: list[dict] = dictFunc(self.path, self.tab)
+        self._data_list: list[dict] = dictFunc(self.path, self.tab)        
         
 
     def _find_first_row(self, column: str, search_term: str) -> dict:
@@ -211,7 +211,19 @@ class DataSource:
             if found == False:
                 self._data_list.append(newRow)
     
-    def _nd_merge(self, data_source):
+    def _create_common_column_names(self):
+        if "Common Data Columns" in self.settings:
+            for row in self._data_list:
+                for common_column_name in self.settings["Common Data Columns"]:
+                    for column in row.copy():
+                        if column == common_column_name:
+                            common_name = self.settings["Common Data Columns"][common_column_name]                        
+                            row[common_name]=row[column]
+
+    def nd_merge(self, data_source):
+        self._create_common_column_names()
+        data_source._create_common_column_names()
+        #self._create_common_column_names()
         commonColumns = self.find_common_columns(data_source)
         list_to_merge = data_source.get_consumable_list(commonColumns)
         self._data_list = self._data_list + list_to_merge
