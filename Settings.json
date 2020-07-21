@@ -99,6 +99,7 @@
             "Common Data Columns": {
                 "First Name": "contactFirstName",
                 "Last Name": "contactLastName",
+                "Quantity": "U_shipmentNotes",
                 "Address1": "address1",
                 "Address2": "address2",
                 "City": "city",
@@ -156,6 +157,7 @@
             "Common Data Columns": {
                 "Designer First Name": "contactFirstName",
                 "Designer Last Name": "contactLastName",
+                "Quantity": "U_shipmentNotes",
                 "Address1": "address1",
                 "Address2": "address2",
                 "City": "city",
@@ -179,6 +181,9 @@
                 "State": "str",
                 "Postal Code": "str",
                 "Phone": "str"
+            },
+            "Static Columns":{
+                "Quantity": 1
             }
         },
         "Contacts": {

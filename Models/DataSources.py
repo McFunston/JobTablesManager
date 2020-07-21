@@ -210,6 +210,12 @@ class DataSource:
                         oldRow[column] = newRow[column]
             if found == False:
                 self._data_list.append(newRow)
+    
+    def _nd_merge(self, data_source):
+        commonColumns = self.find_common_columns(data_source)
+        list_to_merge = data_source.get_consumable_list(commonColumns)
+        self._data_list = self._data_list + list_to_merge
+            
 
     def column_is_date(self, columnHeader: str) -> bool:
         """Checks if a column contains dates or not as described by the DataSource's settings
@@ -473,6 +479,7 @@ class DesignerCopies(DataSource):
     def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "Designer Copies"
         super().__init__(self._type, path, settingsFunc, dictFunc)
+        self._data_list = self._normalize_dates()
 
 
 class Contacts(DataSource):
