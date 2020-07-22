@@ -43,7 +43,8 @@
             "Common Data Columns": {
                 "Job": "job",
                 "Qty Ordered": "part1QuantityOrdered",
-                "Description": "description"
+                "Description": "description",
+                "Publication Number": "id"
             },
             "Data Types": {
                 "Job": "str",
@@ -107,7 +108,7 @@
                 "Postal Code": "zip",
                 "Phone": "phone",
                 "ID": "id",
-                "Cycle": "Publication Date"
+                "Cycle": "Publication Month"
             },
             "Data Types": {
                 "Region": "str",
@@ -166,7 +167,7 @@
                 "Postal Code": "zip",
                 "Phone": "phone",
                 "ID": "id",
-                "Cycle": "Publication Date"
+                "Cycle": "Publication Month"
             },
             "Data Types": {
                 "ID": "int",

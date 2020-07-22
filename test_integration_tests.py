@@ -1,6 +1,7 @@
 import unittest
 import Models.DataSources
 import DataManager as dm
+from Models.DataSources import JobsList
 
 class TestObjectsInitialization(unittest.TestCase):
 
@@ -47,12 +48,15 @@ class TestObjectsInitialization(unittest.TestCase):
         self.assertEqual(actual, expected)
 
     def test_deliveries_merge(self):
-        sample_list = dm.get_samples_list("Test_Data/1st deadline_Sample Magazine Orders_July 2020_Canada.xlsx")
-        designer_copies_list = dm.get_designer_copies_list("Test_Data/20th deadline_Sample Magazine Order_June 2020_Canada.xlsx")
+        sample_list = dm.get_samples_list("Test_Data/1st deadline_Sample Magazine Orders_March 2020_Canada.xlsx")
+        designer_copies_list = dm.get_designer_copies_list("Test_Data/1st deadline_Sample Magazine Orders_March 2020_Canada.xlsx")
         shipments_list = dm.get_shipments_list()
+        jobs_list = dm.get_jobs_list()
+        
 
         sample_list.nd_merge(designer_copies_list)
-        shipments_list.nd_merge(sample_list)
+        sample_list._merge_data_ow(jobs_list, ["id", "Publication Month"], False)
+        shipments_list.nd_merge(sample_list)        
 
         self.assertEqual(len(sample_list._data_list), len(shipments_list._data_list))
 

@@ -189,6 +189,10 @@ class DataSource:
             headers.append(columnsOrder[str(columnNumber)])
         savableList.insert(0, headers)
         return savableList
+    
+    def _add_column(self, name: str):
+        for row in self._data_list:
+            row[name]=None
 
     def _merge_data_ow(self, data_source, id_columns: List, add_missing: bool):
         """Merge and/or add compatible data from another DataSource's _data_list. 
@@ -198,6 +202,8 @@ class DataSource:
             dataSource ([type]): DataSource to consume
             IdColumn (str): Column to match between self, and dataSource
         """
+        self._create_common_column_names()
+        data_source._create_common_column_names()
         commonColumns = self.find_common_columns(data_source)
         listToConsume = data_source.get_consumable_list(commonColumns)
         for newRow in listToConsume:
@@ -205,10 +211,12 @@ class DataSource:
             if len(self._data_list[0]) == 0 and add_missing == True:
                 self._data_list[0] = newRow
             for oldRow in self._data_list:
-                data_match=False
+                data_match=True
                 for id in id_columns:
-                    if newRow[id] == oldRow[id]:
+                    if newRow[id] == oldRow[id] and data_match == True:
                         data_match = True
+                    else:
+                        data_match = False
                 if data_match:
                     found = True
                     for column in commonColumns:
@@ -524,7 +532,7 @@ class JobsList(DataSource):
         for row in self._data_list:
             pub_number: str = row[self.Description].split("-")[0]
             pub_number = pub_number.strip()
-            pub_number = pub_number.rjust(4, "0")
+            #pub_number = pub_number.rjust(4, "0")
             row[self.PublicationNumber]=pub_number
 
 class Samples(DataSource):
@@ -538,6 +546,7 @@ class Samples(DataSource):
         super().__init__(self._type, path, settingsFunc, dictFunc)
         self._split_column("Customer", ["First Name", "Last Name"], self._name_split)
         self._data_list = self._normalize_dates()
+        self._add_column("job")
 
     def _name_split(self, name: str) -> List[str]:
         namesList = list()
@@ -565,6 +574,7 @@ class DesignerCopies(DataSource):
         self._type: str = "Designer Copies"
         super().__init__(self._type, path, settingsFunc, dictFunc)
         self._data_list = self._normalize_dates()
+        self._add_column("job")
 
 
 class Contacts(DataSource):
