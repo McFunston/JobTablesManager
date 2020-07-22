@@ -190,7 +190,7 @@ class DataSource:
         savableList.insert(0, headers)
         return savableList
 
-    def _consume_data(self, data_source, id_column: str):
+    def _merge_data_ow(self, data_source, id_columns: List, add_missing: bool):
         """Merge and/or add compatible data from another DataSource's _data_list. 
         If IDColunn exists in the source's _data_list its' columns are overwritten with matching ones from the DataSource it's consuming.
 
@@ -202,14 +202,18 @@ class DataSource:
         listToConsume = data_source.get_consumable_list(commonColumns)
         for newRow in listToConsume:
             found = False
-            if len(self._data_list[0]) == 0:
+            if len(self._data_list[0]) == 0 and add_missing == True:
                 self._data_list[0] = newRow
             for oldRow in self._data_list:
-                if newRow[id_column] == oldRow[id_column]:
+                data_match=False
+                for id in id_columns:
+                    if newRow[id] == oldRow[id]:
+                        data_match = True
+                if data_match:
                     found = True
                     for column in commonColumns:
                         oldRow[column] = newRow[column]
-            if found == False:
+            if found == False and add_missing == True:
                 self._data_list.append(newRow)
     
     def populate_static(self):
@@ -387,6 +391,7 @@ class JobsList(DataSource):
         self.ExportedToMIS = "Exported to MIS"
         self._data_list = self._normalize_dates()
         self.set_publication_month()
+        self._set_publication_numbers()
         
 
     def add_one_month(self, orig_date):
@@ -515,6 +520,12 @@ class JobsList(DataSource):
                 #print(date_string)
                 row[self.PublicationMonth]=datetime.strptime(date_string, "%b/%d/%Y")
 
+    def _set_publication_numbers(self):
+        for row in self._data_list:
+            pub_number: str = row[self.Description].split("-")[0]
+            pub_number = pub_number.strip()
+            pub_number = pub_number.rjust(4, "0")
+            row[self.PublicationNumber]=pub_number
 
 class Samples(DataSource):
     """Mailing list of sample counts for publishers, advertisers, etc.

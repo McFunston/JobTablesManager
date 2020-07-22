@@ -19,7 +19,11 @@ def moqJobsListFunc(path: str, tab: str):
                    {"Job": "M704", "Description": "3254-Neighbours of Kirkendall and Durand-Apr", "Files In": datetime.strptime("03/28/2020","%m/%d/%Y"), "Approved": None, "Production Status": "Open",
                     "Scheduled Ship Date": datetime.strptime("04/05/2020","%m/%d/%Y"), "Qty Ordered": "4500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("03/03/2020","%m/%d/%Y"), "Samples": "216", "Deadline": "15", "Publication Month": None},
                     {"Job": "", "Description": "3535-Neighbours of Perth-Jul", "Files In": datetime.strptime("03/28/2020","%m/%d/%Y"), "Approved": None, "Production Status": "Open",
-                    "Scheduled Ship Date": datetime.strptime("04/05/2020","%m/%d/%Y"), "Qty Ordered": "4500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("03/03/2020","%m/%d/%Y"), "Samples": "216", "Deadline": "15", "Publication Month": None}]
+                    "Scheduled Ship Date": datetime.strptime("04/05/2020","%m/%d/%Y"), "Qty Ordered": "4500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("03/03/2020","%m/%d/%Y"), "Samples": "216", "Deadline": "15", "Publication Month": None},
+                    {"Job": "M1532", "Description": "3299-Neighbours of Something or Other", "Files In": datetime.strptime("02/28/2020","%m/%d/%Y"), "Approved": datetime.strptime("02/28/2020","%m/%d/%Y"), "Production Status": "Open",
+                    "Scheduled Ship Date": datetime.strptime("03/05/2020","%m/%d/%Y"), "Qty Ordered": "4500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("02/03/2020","%m/%d/%Y"), "Samples": "216", "Deadline": "15", "Publication Month": None},
+                    {"Job": "M1777", "Description": "3298-Neighbours of Nowhere", "Files In": datetime.strptime("02/28/2020","%m/%d/%Y"), "Approved": datetime.strptime("02/28/2020","%m/%d/%Y"), "Production Status": "Open",
+                    "Scheduled Ship Date": datetime.strptime("03/05/2020","%m/%d/%Y"), "Qty Ordered": "4500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("02/27/2020","%m/%d/%Y"), "Samples": "216", "Deadline": "15", "Publication Month": None}]
     return moqJobsList
 
 
@@ -167,20 +171,16 @@ class TestDataSources(unittest.TestCase):
 
         # Arrange
         jobs = JobsList("BVM_Jobs.xlsx",
-                        moqJobsListSettingsFunc, moqJobsListFunc)
-        
+                        moqJobsListSettingsFunc, moqJobsListFunc)        
 
         # Act
         expected = list()
         actual = jobs._find_in_all_rows('Description', '3254')
         expected.append(jobs._data_list[1])
-        expected.append(jobs._data_list[3])
-        
+        expected.append(jobs._data_list[3])     
 
         # Assert
-        self.assertListEqual(expected, actual)
-
-    
+        self.assertListEqual(expected, actual)    
 
     def test_updateField(self):
         # Arrange
@@ -299,7 +299,7 @@ class TestDataSources(unittest.TestCase):
                                 moqCustomerReportSettingsFunc, moqCustomerReportFunc)
         
         # Act
-        customerReport._consume_data(jobs, 'Job')
+        customerReport._merge_data_ow(jobs, ['Job'], True)
         expected = jobs._data_list[0]['Job']
         actual = customerReport._data_list[0]['Job']
 
@@ -315,7 +315,7 @@ class TestDataSources(unittest.TestCase):
         paceUpdate._data_list = paceUpdate._get_string_data_list()
         
         # Act
-        jobs._consume_data(paceUpdate, 'Description')
+        jobs._merge_data_ow(paceUpdate, ['Description'], True)
         expected = "M1800"
         actual = jobs._data_list[4]["Job"]
 
@@ -444,6 +444,46 @@ class TestJobsList(unittest.TestCase):
 
         # Assert
         self.assertEqual(actual, expected)
+
+    def test_set_publication_month_descrip(self):
+        # Arrange
+        jobs = JobsList("BVM_Jobs.xlsx",
+                        moqJobsListSettingsFunc, moqJobsListFunc)
+        
+        # Act
+        jobs.set_publication_month()
+        actual = jobs._data_list[0]["Publication Month"]
+        expected = datetime.strptime("03/01/2020","%m/%d/%Y")
+
+        # Assert
+        self.assertEqual(actual, expected)
+
+    def test_set_publication_month_setup(self):
+        # Arrange
+        jobs = JobsList("BVM_Jobs.xlsx",
+                        moqJobsListSettingsFunc, moqJobsListFunc)
+        
+        # Act
+        jobs.set_publication_month()
+        actual = jobs._data_list[5]["Publication Month"]
+        expected = datetime.strptime("02/01/2020","%m/%d/%Y")
+
+        # Assert
+        self.assertEqual(actual, expected)
+
+    def test_set_publication_month_setup_eom(self):
+        # Arrange
+        jobs = JobsList("BVM_Jobs.xlsx",
+                        moqJobsListSettingsFunc, moqJobsListFunc)
+        
+        # Act
+        jobs.set_publication_month()
+        actual = jobs._data_list[6]["Publication Month"]
+        expected = datetime.strptime("03/01/2020","%m/%d/%Y")
+
+        # Assert
+        self.assertEqual(actual, expected)
+
 
 class TestPaceUpdate(unittest.TestCase):
     def test_pu_getCPC(self):

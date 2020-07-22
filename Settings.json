@@ -59,7 +59,7 @@
                 "Samples": "int",
                 "Deadline": "int",
                 "Added On": "datetime",
-                "Publication Number": "int",
+                "Publication Number": "str",
                 "Designer": "int",
                 "Shipping Added": "str",
                 "Page Count Matched Estimate": "str",
