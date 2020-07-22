@@ -5,7 +5,7 @@ import DataManager as dm
 class TestObjectsInitialization(unittest.TestCase):
 
     def test_jobs_list(self):
-        jobs_list = dm.get_jobs_list()
+        jobs_list = dm.get_jobs_list()        
         self.assertIsNotNone(jobs_list)
     
     def test_mis_update_list(self):
@@ -55,3 +55,11 @@ class TestObjectsInitialization(unittest.TestCase):
         shipments_list.nd_merge(sample_list)
 
         self.assertEqual(len(sample_list._data_list), len(shipments_list._data_list))
+
+    def test_customer_report_merge(self):
+        jobs_list = dm.get_jobs_list()
+        customer_report = dm.get_customer_report_list()
+
+        customer_report.nd_merge(jobs_list)
+
+        self.assertEqual(len(jobs_list._data_list), len(customer_report._data_list))

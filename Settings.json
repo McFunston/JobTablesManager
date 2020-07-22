@@ -106,7 +106,8 @@
                 "State": "state",
                 "Postal Code": "zip",
                 "Phone": "phone",
-                "ID": "id"
+                "ID": "id",
+                "Cycle": "Publication Date"
             },
             "Data Types": {
                 "Region": "str",
@@ -164,7 +165,8 @@
                 "State": "state",
                 "Postal Code": "zip",
                 "Phone": "phone",
-                "ID": "id"
+                "ID": "id",
+                "Cycle": "Publication Date"
             },
             "Data Types": {
                 "ID": "int",

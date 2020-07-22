@@ -1,6 +1,7 @@
 from typing import Dict, List
 import json
 from datetime import date, datetime
+import calendar
 import copy
 
 
@@ -211,6 +212,12 @@ class DataSource:
             if found == False:
                 self._data_list.append(newRow)
     
+    def populate_static(self):
+        if "Static Columns" in self.settings:
+            for row in self._data_list:
+                for static_column in self.settings["Static Columns"]:
+                    row[static_column]=self.settings["Static Columns"][static_column]
+
     def _create_common_column_names(self):
         if "Common Data Columns" in self.settings:
             for row in self._data_list:
@@ -222,11 +229,16 @@ class DataSource:
 
     def nd_merge(self, data_source):
         self._create_common_column_names()
+        self.populate_static()
         data_source._create_common_column_names()
+        data_source.populate_static()
         #self._create_common_column_names()
         commonColumns = self.find_common_columns(data_source)
         list_to_merge = data_source.get_consumable_list(commonColumns)
-        self._data_list = self._data_list + list_to_merge
+        if len(self._data_list) > 1: 
+            self._data_list = self._data_list + list_to_merge
+        else: 
+            self._data_list = list_to_merge
             
 
     def column_is_date(self, columnHeader: str) -> bool:
@@ -374,6 +386,22 @@ class JobsList(DataSource):
         self.PublicationMonth = "Publication Month"
         self.ExportedToMIS = "Exported to MIS"
         self._data_list = self._normalize_dates()
+        self.set_publication_month()
+        
+
+    def add_one_month(self, orig_date):
+        # advance year and month by one month
+        new_year = orig_date.year
+        new_month = orig_date.month + 1
+        # note: in datetime.date, months go from 1 to 12
+        if new_month > 12:
+            new_year += 1
+            new_month -= 12
+
+        last_day_of_month = calendar.monthrange(new_year, new_month)[1]
+        new_day = min(orig_date.day, last_day_of_month)
+
+        return orig_date.replace(year=new_year, month=new_month, day=new_day)
 
     def get_most_recent_pub(self, pub_number: str) -> Dict:
         """Find the most recent publication.
@@ -452,6 +480,40 @@ class JobsList(DataSource):
             date (datetime): Date to set.
         """        
         self._set_date(self.Job, job, self.Approved, date)
+
+    def set_publication_month(self):
+        month_string = str()
+        day_string = "01"
+        for row in self._data_list:
+            month_string = ""
+            if row[self.PublicationMonth] == None:
+                if row[self.Description] != None:
+                    if len(row[self.Description].split("-")[-1]) < 5:
+                        month_string = row[self.Description].split("-")[-1]
+                        #print("Used the Description "+row[self.Description])
+                if month_string ==  "":
+                    if row[self.DateSetup] != None:
+                        date_to_set: datetime = row[self.DateSetup]
+                        if date_to_set.day > 25:
+                            date_to_set = self.add_one_month(date_to_set)                            
+                        month_string = date_to_set.strftime("%b")
+                        #print("Unable to use " + row[self.Description])
+                if month_string == "":
+                    if row[self.AddedOn] != None:
+                        date_to_set: datetime = row[self.AddedOn]
+                        if date_to_set.day > 25:
+                            date_to_set = self.add_one_month(date_to_set)
+                        month_string = date_to_set.strftime("%b")
+                        #print("Used the Added On date")
+            if month_string != "":
+                
+                year_to_set = datetime.now().year
+                month_string = month_string.strip()
+                if month_string == "Jan" and datetime.now().month == 12:                    
+                    year_to_set = year_to_set+1
+                date_string = month_string+"/"+day_string+"/"+str(year_to_set)
+                #print(date_string)
+                row[self.PublicationMonth]=datetime.strptime(date_string, "%b/%d/%Y")
 
 
 class Samples(DataSource):

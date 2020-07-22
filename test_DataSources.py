@@ -11,15 +11,15 @@ def moqJobsListSettingsFunc(name: str):
 
 def moqJobsListFunc(path: str, tab: str):
     moqJobsList = [{"Job": "M511", "Description": "2656-Silver Valley-Academy Park Neighbou-Mar", "Files In": datetime.strptime("2/11/2020","%m/%d/%Y"), "Approved": datetime.strptime("3/3/2020","%m/%d/%Y"), "Production Status": "Closed",
-                    "Scheduled Ship Date": datetime.strptime("03/09/2020","%m/%d/%Y"), "Qty Ordered": "2500", "CPC": "2089", "Page Count": "16 Pages", "Date Setup": datetime.strptime("02/03/2020","%m/%d/%Y"), "Samples": "316", "Deadline": "10"},
+                    "Scheduled Ship Date": datetime.strptime("03/09/2020","%m/%d/%Y"), "Qty Ordered": "2500", "CPC": "2089", "Page Count": "16 Pages", "Date Setup": datetime.strptime("02/03/2020","%m/%d/%Y"), "Samples": "316", "Deadline": "10", "Publication Month": None},
                    {"Job": "M532", "Description": "3254-Neighbours of Kirkendall and Durand-Mar", "Files In": datetime.strptime("02/28/2020","%m/%d/%Y"), "Approved": datetime.strptime("02/28/2020","%m/%d/%Y"), "Production Status": "Open",
-                    "Scheduled Ship Date": datetime.strptime("03/05/2020","%m/%d/%Y"), "Qty Ordered": "4500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("02/03/2020","%m/%d/%Y"), "Samples": "216", "Deadline": "15"},
+                    "Scheduled Ship Date": datetime.strptime("03/05/2020","%m/%d/%Y"), "Qty Ordered": "4500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("02/03/2020","%m/%d/%Y"), "Samples": "216", "Deadline": "15", "Publication Month": None},
                    {"Job": "M999", "Description": "Bad Data1", "Files In": None, "Approved": datetime.strptime("02/28/2020","%m/%d/%Y"), "Production Status": "Open",
-                    "Scheduled Ship Date": datetime.strptime("02/26/2020","%m/%d/%Y"), "Qty Ordered": "3500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("09/04/2050","%m/%d/%Y"), "Samples": "216", "Deadline": "15"},
+                    "Scheduled Ship Date": datetime.strptime("02/26/2020","%m/%d/%Y"), "Qty Ordered": "3500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("09/04/2050","%m/%d/%Y"), "Samples": "216", "Deadline": "15", "Publication Month": None},
                    {"Job": "M704", "Description": "3254-Neighbours of Kirkendall and Durand-Apr", "Files In": datetime.strptime("03/28/2020","%m/%d/%Y"), "Approved": None, "Production Status": "Open",
-                    "Scheduled Ship Date": datetime.strptime("04/05/2020","%m/%d/%Y"), "Qty Ordered": "4500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("03/03/2020","%m/%d/%Y"), "Samples": "216", "Deadline": "15"},
+                    "Scheduled Ship Date": datetime.strptime("04/05/2020","%m/%d/%Y"), "Qty Ordered": "4500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("03/03/2020","%m/%d/%Y"), "Samples": "216", "Deadline": "15", "Publication Month": None},
                     {"Job": "", "Description": "3535-Neighbours of Perth-Jul", "Files In": datetime.strptime("03/28/2020","%m/%d/%Y"), "Approved": None, "Production Status": "Open",
-                    "Scheduled Ship Date": datetime.strptime("04/05/2020","%m/%d/%Y"), "Qty Ordered": "4500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("03/03/2020","%m/%d/%Y"), "Samples": "216", "Deadline": "15"}]
+                    "Scheduled Ship Date": datetime.strptime("04/05/2020","%m/%d/%Y"), "Qty Ordered": "4500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("03/03/2020","%m/%d/%Y"), "Samples": "216", "Deadline": "15", "Publication Month": None}]
     return moqJobsList
 
 
@@ -55,10 +55,10 @@ class TestDataSources(unittest.TestCase):
         # Arrange
         jobs = JobsList("BVM_Jobs.xlsx",
                         moqJobsListSettingsFunc, moqJobsListFunc)
-        moqjobs = moqJobsListFunc('', '')
+
         # Act
         actual = jobs._find_first_row('Job', 'M511')
-        expected = moqjobs[0]
+        expected = jobs._data_list[0]
 
         # Assert
         self.assertDictEqual(actual, expected)
@@ -70,7 +70,7 @@ class TestDataSources(unittest.TestCase):
         moqjobs = moqJobsListFunc('', '')
         # Act
         actual = jobs._find_all_rows('Job', 'M532')
-        expected = moqjobs[1]
+        expected = jobs._data_list[1]
 
         # Assert
         self.assertEqual(actual[0]['Job'], expected['Job'])
@@ -140,11 +140,10 @@ class TestDataSources(unittest.TestCase):
 
         # Arrange
         jobs = JobsList("BVM_Jobs.xlsx",
-                        moqJobsListSettingsFunc, moqJobsListFunc)
-        moqjobs = moqJobsListFunc('', '')
+                        moqJobsListSettingsFunc, moqJobsListFunc)        
 
         # Act
-        expected = moqjobs[1]
+        expected = jobs._data_list[1]
         actual = jobs._getRow(1)
 
         # Assert
@@ -169,13 +168,13 @@ class TestDataSources(unittest.TestCase):
         # Arrange
         jobs = JobsList("BVM_Jobs.xlsx",
                         moqJobsListSettingsFunc, moqJobsListFunc)
-        moqjobs = moqJobsListFunc('', '')
+        
 
         # Act
         expected = list()
         actual = jobs._find_in_all_rows('Description', '3254')
-        expected.append(moqjobs[1])
-        expected.append(moqjobs[3])
+        expected.append(jobs._data_list[1])
+        expected.append(jobs._data_list[3])
         
 
         # Assert
@@ -328,11 +327,10 @@ class TestJobsList(unittest.TestCase):
         # Arrange
         jobs = JobsList("BVM_Jobs.xlsx",
                         moqJobsListSettingsFunc, moqJobsListFunc)
-        moqjobs = moqJobsListFunc('', '')
-        
+               
 
         # Act
-        expected = moqjobs[3]
+        expected = jobs._data_list[3]
         actual = jobs.get_most_recent_pub('3254')
 
         # Assert
@@ -408,11 +406,11 @@ class TestJobsList(unittest.TestCase):
         # Arrange
         jobs = JobsList("BVM_Jobs.xlsx",
                         moqJobsListSettingsFunc, moqJobsListFunc)
-        moqjobs = moqJobsListFunc('', '')
+        
 
         # Act
         actual = jobs.get_job('M704')
-        expected = moqjobs[3]
+        expected = jobs._data_list[3]
 
         # Assert
         self.assertDictEqual(actual, expected)
