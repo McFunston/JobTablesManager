@@ -3,7 +3,7 @@ import json
 from datetime import date, datetime
 import calendar
 import copy
-
+import pandas as pd
 
 class DataSource:
     """Base type for all data sources collected from Excel and comma delimited files.
@@ -18,6 +18,14 @@ class DataSource:
         self.tab: str = self.settings["Tab"]
         self._data_list: list[dict] = dictFunc(self.path, self.tab)        
         
+    def _get_data_frame(self):
+        return pd.DataFrame(self._data_list)
+    
+    Data_Frame = property(_get_data_frame)
+
+    def write_to_file(self, path: str, sheet: str, write_func):
+        self.populate_static()
+        write_func(path, sheet, self.Data_Frame, self.ExportColumns)
 
     def _find_first_row(self, column: str, search_term: str) -> dict:
         """
@@ -51,7 +59,14 @@ class DataSource:
         """
         return list(self._data_list[0].keys())
 
+    def _get_export_columns(self):
+        columns_list = list()
+        for i in range(1, len(self.settings["Columns Order"])+1):
+            columns_list.append(self.settings["Columns Order"][str(i)])
+        return columns_list
+
     Columns = property(_get_column_names)
+    ExportColumns = property(_get_export_columns)
 
     def _normalize_dates(self) -> List[Dict]:
         """
@@ -264,6 +279,7 @@ class DataSource:
             self._data_list = self._data_list + list_to_merge
         else: 
             self._data_list = list_to_merge
+        
             
 
     def column_is_date(self, columnHeader: str) -> bool:
@@ -520,6 +536,7 @@ class JobsList(DataSource):
                 if month_string ==  "":
                     if row[self.DateSetup] != None:
                         date_to_set: datetime = row[self.DateSetup]
+                        date_to_set = self.add_one_month(date_to_set)
                         if date_to_set.day > 25:
                             date_to_set = self.add_one_month(date_to_set)                            
                         month_string = date_to_set.strftime("%b")
@@ -527,6 +544,7 @@ class JobsList(DataSource):
                 if month_string == "":
                     if row[self.AddedOn] != None:
                         date_to_set: datetime = row[self.AddedOn]
+                        date_to_set = self.add_one_month(date_to_set)
                         if date_to_set.day > 25:
                             date_to_set = self.add_one_month(date_to_set)
                         month_string = date_to_set.strftime("%b")
@@ -547,6 +565,9 @@ class JobsList(DataSource):
             pub_number = pub_number.strip()
             #pub_number = pub_number.rjust(4, "0")
             row[self.PublicationNumber]=pub_number
+    
+    def add_from_mis_list(self, mis_list):
+        self._merge_data_ow(mis_list, ["Job"], self._add_row)
 
 class Samples(DataSource):
     """Mailing list of sample counts for publishers, advertisers, etc.

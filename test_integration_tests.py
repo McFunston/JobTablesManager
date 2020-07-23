@@ -2,6 +2,7 @@ import unittest
 import Models.DataSources
 import DataManager as dm
 from Models.DataSources import JobsList
+from Libraries.ExcelLibs import WriteData
 
 class TestObjectsInitialization(unittest.TestCase):
 
@@ -56,14 +57,15 @@ class TestObjectsInitialization(unittest.TestCase):
 
         sample_list.nd_merge(designer_copies_list)
         sample_list._merge_data_ow(jobs_list, ["id", "Publication Month"], sample_list._not_add_row)
-        shipments_list.nd_merge(sample_list)        
+        shipments_list.nd_merge(sample_list)
+        shipments_list.write_to_file("Test_Data/test.xlsx", "test_sheet", WriteData)        
 
         self.assertEqual(len(sample_list._data_list), len(shipments_list._data_list))
 
     def test_customer_report_merge(self):
         jobs_list = dm.get_jobs_list()
         customer_report = dm.get_customer_report_list()
-
         customer_report.nd_merge(jobs_list)
+        
 
         self.assertEqual(len(jobs_list._data_list), len(customer_report._data_list))

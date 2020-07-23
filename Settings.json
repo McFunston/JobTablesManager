@@ -186,7 +186,7 @@
                 "Phone": "str"
             },
             "Static Columns":{
-                "Quantity": 1
+                "Quantity": "1"
             }
         },
         "Contacts": {
@@ -350,7 +350,7 @@
             },
             "Static Columns":{
                 "shipperName": "Keven Rodney",
-                "_ACTION": "I"
+                "_ACTION_": "I"
             }
         },
         "Invoice": {

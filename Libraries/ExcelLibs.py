@@ -1,3 +1,4 @@
+from typing import Dict, List
 from openpyxl import Workbook, load_workbook
 from xlrd import open_workbook
 import csv
@@ -94,3 +95,7 @@ def GetData(path: str, tab: str) -> list:
 
 # d = GetData('BVM+Job+Grouped+For+Tracking+Report.xls', '')
 # print('Pause')
+
+def WriteData(path: str, sheet: str, data_list: pd.DataFrame, columns: List):
+    df = pd.DataFrame(data_list)
+    df.to_excel(path, sheet, columns=columns, index=False)
