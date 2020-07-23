@@ -194,7 +194,7 @@ class DataSource:
         for row in self._data_list:
             row[name]=None
 
-    def _merge_data_ow(self, data_source, id_columns: List, add_missing: bool):
+    def _merge_data_ow(self, data_source, id_columns: List, missing_funct):
         """Merge and/or add compatible data from another DataSource's _data_list. 
         If IDColunn exists in the source's _data_list its' columns are overwritten with matching ones from the DataSource it's consuming.
 
@@ -208,8 +208,8 @@ class DataSource:
         listToConsume = data_source.get_consumable_list(commonColumns)
         for newRow in listToConsume:
             found = False
-            if len(self._data_list[0]) == 0 and add_missing == True:
-                self._data_list[0] = newRow
+            if len(self._data_list[0]) == 0:
+                missing_funct(newRow)
             for oldRow in self._data_list:
                 data_match=True
                 for id in id_columns:
@@ -221,9 +221,22 @@ class DataSource:
                     found = True
                     for column in commonColumns:
                         oldRow[column] = newRow[column]
-            if found == False and add_missing == True:
-                self._data_list.append(newRow)
+            if found == False:
+                missing_funct(newRow)
     
+    def _add_row(self, row: Dict):
+        if len(self._data_list[0]) == 0:
+            self._data_list[0] = row
+        else:
+            self._data_list.append(row)
+    
+    def _add_row_record_addition(self, row: Dict, record_column: str):
+        row[record_column]=datetime.now().strftime(self.settings["Date Format"])
+        self._data_list.append(row)
+
+    def _not_add_row(self, row: Dict):
+        row.clear()
+
     def populate_static(self):
         if "Static Columns" in self.settings:
             for row in self._data_list:

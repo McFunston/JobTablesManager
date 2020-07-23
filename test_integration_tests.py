@@ -55,7 +55,7 @@ class TestObjectsInitialization(unittest.TestCase):
         
 
         sample_list.nd_merge(designer_copies_list)
-        sample_list._merge_data_ow(jobs_list, ["id", "Publication Month"], False)
+        sample_list._merge_data_ow(jobs_list, ["id", "Publication Month"], sample_list._not_add_row)
         shipments_list.nd_merge(sample_list)        
 
         self.assertEqual(len(sample_list._data_list), len(shipments_list._data_list))
