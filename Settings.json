@@ -407,6 +407,34 @@
                 "Deadline": "int",
                 "courier fee": "float"
             }
+        },
+        "PDF Received":{
+            "Default Path": "NA",
+            "Tab": "NA",
+            "Column Order": {
+                "1": "Name",
+                "2": "Job",
+                "3": "Publication Number",
+                "4": "Files In",                
+                "5": "Page Count"
+            },
+            "Date Columns": [
+                "Files In"                
+            ]
+        },
+        "PDF Approved":{
+            "Default Path": "NA",
+            "Tab": "NA",
+            "Column Order": {
+                "1": "Name",
+                "2": "Job",
+                "3": "Publication Number",
+                "4": "Approved",                
+                "5": "Page Count"
+            },
+            "Date Columns": [
+                "Approved"                
+            ]
         }
     }
 }

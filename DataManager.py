@@ -1,8 +1,10 @@
 import json
+from pprint import pprint
 from typing import Dict, List
 from Libraries.ExcelLibs import GetData
+from Libraries.PDFLibs import get_pdf_data
 import Models.DataSources as ds
-from Models.DataSources import Contacts, CustomerReport, DesignerCopies, Invoice, JobShipments, JobsList, PaceUpdate, Samples
+from Models.DataSources import Contacts, CustomerReport, DesignerCopies, Invoice, JobShipments, JobsList, PaceUpdate, PdfApproved, PdfReceived, Samples
 
 def load_data_settings_json(name: str) -> Dict:
     with open('Settings.json') as j:
@@ -56,3 +58,17 @@ def get_invoice() -> Invoice:
     settings = load_data_settings_json(name)
     invoice: Invoice = ds.Invoice(settings['Default Path'], load_data_settings_json, getEmptyDS)
     return invoice
+
+def get_pdf_received(path) -> PdfReceived:
+    name: str = "PDF Received"
+    pdf_received = ds.PdfReceived(path, load_data_settings_json, get_pdf_data)
+    return pdf_received
+
+def get_pdf_approved(path) -> PdfApproved:
+    name: str = "PDF Received"
+    pdf_approved = ds.PdfApproved(path, load_data_settings_json, get_pdf_data)
+    return pdf_approved
+
+pdf_rec = get_pdf_approved("Test_Data/319_2190_NeighboursOfStittsville_August2020.pdf")
+
+pprint(pdf_rec._data_list)

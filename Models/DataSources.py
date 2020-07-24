@@ -4,7 +4,7 @@ from datetime import date, datetime
 import calendar
 import copy
 import pandas as pd
-
+from Libraries.NameParse import NameParse
 
 class DataSource:
     """Base type for all data sources collected from Excel and comma delimited files.
@@ -708,3 +708,24 @@ class Invoice(ExportList):
     def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "Invoice"
         super().__init__(self._type, path, settingsFunc, dictFunc)
+
+class PdfFile(DataSource):
+
+    def _get_column_names(self) -> list:
+        return list(self.settings["Columns Order"].values())
+
+    Columns = property(_get_column_names)
+
+class PdfReceived(PdfFile):
+    def __init__(self, path, settingsFunc, dictFunc) -> None:
+        self._type: str = "PDF Received"
+        super().__init__(self._type, path, settingsFunc, dictFunc)
+        self._data_list[0]["Files In"] = self._data_list[0]["DateTime"]
+        self._data_list[0]["Publication Number"] = NameParse(self._data_list[0]["Name"])
+
+class PdfApproved(PdfFile):
+    def __init__(self, path, settingsFunc, dictFunc) -> None:
+        self._type: str = "PDF Approved"
+        super().__init__(self._type, path, settingsFunc, dictFunc)
+        self._data_list[0]["Approved"] = self._data_list[0]["DateTime"]
+        self._data_list[0]["Publication Number"] = NameParse(self._data_list[0]["Name"])
