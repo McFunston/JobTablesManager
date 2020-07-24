@@ -62,7 +62,7 @@
                 "Added On": "datetime",
                 "Publication Number": "str",
                 "Designer": "int",
-                "Shipping Added": "str",
+                "Shipping Added": "datetime",
                 "Page Count Matched Estimate": "str",
                 "Publication Month": "datetime",
                 "Exported to MIS": "datetime"

@@ -53,11 +53,13 @@ class TestObjectsInitialization(unittest.TestCase):
         designer_copies_list = dm.get_designer_copies_list("Test_Data/1st deadline_Sample Magazine Orders_March 2020_Canada.xlsx")
         shipments_list = dm.get_shipments_list()
         jobs_list = dm.get_jobs_list()
-        
+        contacts_list = dm.get_contacts_list()
 
         sample_list.nd_merge(designer_copies_list)
         sample_list._merge_data_ow(jobs_list, ["id", "Publication Month"], sample_list._not_add_row)
         shipments_list.nd_merge(sample_list)
+        
+        shipments_list._merge_data_ow(contacts_list, ["contactLastName", "address1"], shipments_list._not_add_row)
         shipments_list.write_to_file("Test_Data/test.xlsx", "test_sheet", WriteData)        
 
         self.assertEqual(len(sample_list._data_list), len(shipments_list._data_list))

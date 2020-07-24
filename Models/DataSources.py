@@ -5,9 +5,11 @@ import calendar
 import copy
 import pandas as pd
 
+
 class DataSource:
     """Base type for all data sources collected from Excel and comma delimited files.
-    """    
+    """
+
     def __init__(self, name: str, path: str, settingsFunc, dictFunc):
         self.name: str = name
         self.settings: dict = settingsFunc(self.name)
@@ -16,11 +18,11 @@ class DataSource:
         else:
             self.path: str = path
         self.tab: str = self.settings["Tab"]
-        self._data_list: list[dict] = dictFunc(self.path, self.tab)        
-        
+        self._data_list: list[dict] = dictFunc(self.path, self.tab)
+
     def _get_data_frame(self):
         return pd.DataFrame(self._data_list)
-    
+
     Data_Frame = property(_get_data_frame)
 
     def write_to_file(self, path: str, sheet: str, write_func):
@@ -204,10 +206,10 @@ class DataSource:
             headers.append(columnsOrder[str(columnNumber)])
         savableList.insert(0, headers)
         return savableList
-    
+
     def _add_column(self, name: str):
         for row in self._data_list:
-            row[name]=None
+            row[name] = None
 
     def _merge_data_ow(self, data_source, id_columns: List, missing_funct):
         """Merge and/or add compatible data from another DataSource's _data_list. 
@@ -226,7 +228,7 @@ class DataSource:
             if len(self._data_list[0]) == 0:
                 missing_funct(newRow)
             for oldRow in self._data_list:
-                data_match=True
+                data_match = True
                 for id in id_columns:
                     if newRow[id] == oldRow[id] and data_match == True:
                         data_match = True
@@ -238,15 +240,16 @@ class DataSource:
                         oldRow[column] = newRow[column]
             if found == False:
                 missing_funct(newRow)
-    
+
     def _add_row(self, row: Dict):
         if len(self._data_list[0]) == 0:
             self._data_list[0] = row
         else:
             self._data_list.append(row)
-    
+
     def _add_row_record_addition(self, row: Dict, record_column: str):
-        row[record_column]=datetime.now().strftime(self.settings["Date Format"])
+        row[record_column] = datetime.now().strftime(
+            self.settings["Date Format"])
         self._data_list.append(row)
 
     def _not_add_row(self, row: Dict):
@@ -256,7 +259,7 @@ class DataSource:
         if "Static Columns" in self.settings:
             for row in self._data_list:
                 for static_column in self.settings["Static Columns"]:
-                    row[static_column]=self.settings["Static Columns"][static_column]
+                    row[static_column] = self.settings["Static Columns"][static_column]
 
     def _create_common_column_names(self):
         if "Common Data Columns" in self.settings:
@@ -264,23 +267,21 @@ class DataSource:
                 for common_column_name in self.settings["Common Data Columns"]:
                     for column in row.copy():
                         if column == common_column_name:
-                            common_name = self.settings["Common Data Columns"][common_column_name]                        
-                            row[common_name]=row[column]
+                            common_name = self.settings["Common Data Columns"][common_column_name]
+                            row[common_name] = row[column]
 
     def nd_merge(self, data_source):
         self._create_common_column_names()
         self.populate_static()
         data_source._create_common_column_names()
         data_source.populate_static()
-        #self._create_common_column_names()
+        # self._create_common_column_names()
         commonColumns = self.find_common_columns(data_source)
         list_to_merge = data_source.get_consumable_list(commonColumns)
-        if len(self._data_list) > 1: 
+        if len(self._data_list) > 1:
             self._data_list = self._data_list + list_to_merge
-        else: 
+        else:
             self._data_list = list_to_merge
-        
-            
 
     def column_is_date(self, columnHeader: str) -> bool:
         """Checks if a column contains dates or not as described by the DataSource's settings
@@ -321,7 +322,7 @@ class DataSource:
             search_term (str): Value to search for
             date_column (str): Column that will have date assigned
             date_to_set (datetime): Date to assign
-        """       
+        """
         found = self._find_first_row(search_column, search_term)
         if date_column in self.settings['Date Columns']:
             found[date_column] = date_to_set.strftime(
@@ -332,7 +333,7 @@ class DataSource:
 
         Returns:
             int: Current length of _data_list
-        """        
+        """
         return len(self._data_list)
 
     def _cell_to_date(self, cell) -> datetime:
@@ -357,7 +358,7 @@ class DataSource:
             row (dict): Supplied row
             column_name (str): Name of the column to be updated
             value (str): Value to insert
-        """        
+        """
         row[column_name] = value
 
     def _get_first_index(self, column_name: str, search_term: str) -> int:
@@ -369,7 +370,7 @@ class DataSource:
 
         Returns:
             int: Index of the found row
-        """        
+        """
         index = int()
         for i in range(len(self._data_list)):
             if self._data_list[i][column_name] == search_term:
@@ -384,26 +385,28 @@ class DataSource:
 
         Returns:
             list[str]: List of column names
-        """        
+        """
         columnsSet = set(self.Columns)
         intersection = columnsSet.intersection(ds2.Columns)
         _columns = list(intersection)
         return _columns
-    
+
     def _split_column(self, original_column_name: str, new_column_names: List[str], func):
         for row in self._data_list:
             new_column_values = func(row[original_column_name])
             i = 0
-            for new_column_value in new_column_values:                
-                row[new_column_names[i]]=new_column_value
+            for new_column_value in new_column_values:
+                row[new_column_names[i]] = new_column_value
                 i = i + 1
+
 
 class JobsList(DataSource):
     """List of Jobs, including information about when the job was uploaded, approved, created, etc.
 
     Args:
         DataSource ([type]): [description]
-    """    
+    """
+
     def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "Jobs List"
         super().__init__(self._type, path, settingsFunc, dictFunc)
@@ -429,7 +432,6 @@ class JobsList(DataSource):
         self._data_list = self._normalize_dates()
         self.set_publication_month()
         self._set_publication_numbers()
-        
 
     def add_one_month(self, orig_date):
         # advance year and month by one month
@@ -453,7 +455,7 @@ class JobsList(DataSource):
 
         Returns:
             Dict: The row containing the most recent publication
-        """        
+        """
         candidates = self._find_in_all_rows(self.Description, pub_number)
         found = dict()
         if len(candidates) > 0:
@@ -471,7 +473,7 @@ class JobsList(DataSource):
 
         Returns:
             dict: Row containing the found job
-        """        
+        """
         found = self._find_first_row(self.Job, job)
         return found
 
@@ -483,7 +485,7 @@ class JobsList(DataSource):
 
         Returns:
             bool: True if approved, false if not.
-        """        
+        """
         found = self.get_job(job)
         if len(found.keys()) > 1:
             if found[self.Approved] != None:
@@ -498,7 +500,7 @@ class JobsList(DataSource):
 
         Returns:
             bool: True if uploaded, false it not.
-        """        
+        """
         found = self.get_job(job)
         if len(found.keys()) > 1:
             if found[self.FilesIn] != None:
@@ -511,7 +513,7 @@ class JobsList(DataSource):
         Args:
             job (str): Job number
             date (datetime): Date to set
-        """        
+        """
         self._set_date(self.Job, job, self.FilesIn, date)
 
     def set_approved_date(self, job: str, date: datetime):
@@ -520,7 +522,7 @@ class JobsList(DataSource):
         Args:
             job (str): Job number as a string
             date (datetime): Date to set.
-        """        
+        """
         self._set_date(self.Job, job, self.Approved, date)
 
     def set_publication_month(self):
@@ -533,12 +535,12 @@ class JobsList(DataSource):
                     if len(row[self.Description].split("-")[-1]) < 5:
                         month_string = row[self.Description].split("-")[-1]
                         #print("Used the Description "+row[self.Description])
-                if month_string ==  "":
+                if month_string == "":
                     if row[self.DateSetup] != None:
                         date_to_set: datetime = row[self.DateSetup]
                         date_to_set = self.add_one_month(date_to_set)
                         if date_to_set.day > 25:
-                            date_to_set = self.add_one_month(date_to_set)                            
+                            date_to_set = self.add_one_month(date_to_set)
                         month_string = date_to_set.strftime("%b")
                         #print("Unable to use " + row[self.Description])
                 if month_string == "":
@@ -550,35 +552,39 @@ class JobsList(DataSource):
                         month_string = date_to_set.strftime("%b")
                         #print("Used the Added On date")
             if month_string != "":
-                
+
                 year_to_set = datetime.now().year
                 month_string = month_string.strip()
-                if month_string == "Jan" and datetime.now().month == 12:                    
+                if month_string == "Jan" and datetime.now().month == 12:
                     year_to_set = year_to_set+1
                 date_string = month_string+"/"+day_string+"/"+str(year_to_set)
-                #print(date_string)
-                row[self.PublicationMonth]=datetime.strptime(date_string, "%b/%d/%Y")
+                # print(date_string)
+                row[self.PublicationMonth] = datetime.strptime(
+                    date_string, "%b/%d/%Y")
 
     def _set_publication_numbers(self):
         for row in self._data_list:
             pub_number: str = row[self.Description].split("-")[0]
             pub_number = pub_number.strip()
             #pub_number = pub_number.rjust(4, "0")
-            row[self.PublicationNumber]=pub_number
-    
+            row[self.PublicationNumber] = pub_number
+
     def add_from_mis_list(self, mis_list):
         self._merge_data_ow(mis_list, ["Job"], self._add_row)
+
 
 class Samples(DataSource):
     """Mailing list of sample counts for publishers, advertisers, etc.
 
     Args:
         DataSource ([type]): [description]
-    """    
+    """
+
     def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "Samples"
         super().__init__(self._type, path, settingsFunc, dictFunc)
-        self._split_column("Customer", ["First Name", "Last Name"], self._name_split)
+        self._split_column(
+            "Customer", ["First Name", "Last Name"], self._name_split)
         self._data_list = self._normalize_dates()
         self._add_column("job")
 
@@ -603,7 +609,8 @@ class DesignerCopies(DataSource):
 
     Args:
         DataSource ([type]): [description]
-    """    
+    """
+
     def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "Designer Copies"
         super().__init__(self._type, path, settingsFunc, dictFunc)
@@ -616,7 +623,8 @@ class Contacts(DataSource):
 
     Args:
         DataSource ([type]): [description]
-    """    
+    """
+
     def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "Contacts"
         super().__init__(self._type, path, settingsFunc, dictFunc)
@@ -627,7 +635,8 @@ class PaceUpdate(DataSource):
 
     Args:
         DataSource ([type]): [description]
-    """    
+    """
+
     def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "Pace Update"
         super().__init__(self._type, path, settingsFunc, dictFunc)
@@ -651,7 +660,7 @@ class PaceUpdate(DataSource):
 
         Returns:
             str: Mailing count as string
-        """        
+        """
         cpc = row[self._productionNotes].split()[-1]
         return cpc
 
@@ -663,7 +672,7 @@ class PaceUpdate(DataSource):
 
         Returns:
             str: Page count as string
-        """        
+        """
         pageCount = ''
         for key in self._pageCountStrings:
             if key in row[self._additionalDescription]:
@@ -693,6 +702,7 @@ class JobShipments(ExportList):
     def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "Job Shipments"
         super().__init__(self._type, path, settingsFunc, dictFunc)
+
 
 class Invoice(ExportList):
     def __init__(self, path, settingsFunc, dictFunc) -> None:
