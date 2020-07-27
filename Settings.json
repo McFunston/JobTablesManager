@@ -17,6 +17,14 @@
                 "Publication Month",
                 "Exported to MIS"
             ],
+            "Write Once Columns": [
+                "Files In",
+                "Approved",
+                "Date Setup",
+                "Added On",
+                "Publication Month",
+                "Exported to MIS"
+            ],
             "True Dates": false,
             "Date Format": "%m/%d/%Y",
             "Columns Order": {
@@ -75,6 +83,7 @@
             "Date Columns": [
                 "Cycle"
             ],
+            "Write Once Columns": [],
             "True Dates": false,
             "Date Format": "%Y-%m",
             "Publication Field": "ID",
@@ -136,6 +145,7 @@
             "Date Columns": [
                 "Cycle"
             ],
+            "Write Once Columns": [],
             "True Dates": false,
             "Date Format": "%Y-%m",
             "Publication Field": "ID",
@@ -196,6 +206,7 @@
             "Default Path": "Test_Data/Contacts.xlsx",
             "Separate Names": true,
             "Date Columns": [],
+            "Write Once Columns": [],
             "Columns Order": {
                 "1": "_ACTION_",
                 "2": "job",
@@ -229,6 +240,7 @@
                 "Files In", 
                 "Approved", 
                 "Scheduled Ship Date"],
+            "Write Once Columns": [],
             "Columns Order": {
                 "1": "Job",
                 "2": "Deadline",
@@ -259,6 +271,7 @@
                 "Scheduled Ship Date",
                 "Date Setup"
             ],
+            "Write Once Columns": [],
             "Date Format": "%m/%d/%Y",
             "Columns Order": {
                 "1": "Job",
@@ -302,6 +315,7 @@
                 "4": "Project ID"
             },
             "Date Columns": [],
+            "Write Once Columns": [],
             "Data Types": {
                 "Customer": "str",
                 "Code": "int",
@@ -317,6 +331,7 @@
             "Type": "Address",
             "Tab": "",
             "Date Columns": [],
+            "Write Once Columns": [],
             "Columns Order": {
                 "1": "_ACTION_",
                 "2": "job",
@@ -365,6 +380,7 @@
             "Tab": "invoice",
             "Type": "Pricing",
             "Date Columns": [],
+            "Write Once Columns": [],
             "Column Order": {
                 "1": "Docket",
                 "2": "Magazine Title:",
@@ -427,7 +443,8 @@
             },
             "Date Columns": [
                 "Files In"                
-            ]
+            ],
+            "Write Once Columns": []
         },
         "PDF Approved":{
             "Default Path": "NA",
@@ -440,7 +457,8 @@
             },
             "Date Columns": [
                 "Approved"                
-            ]
+            ],
+            "Write Once Columns": []
         }
     }
 }

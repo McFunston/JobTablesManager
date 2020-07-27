@@ -239,7 +239,7 @@ class DataSource:
                     for column in commonColumns:
                         if column not in oldRow:
                             oldRow[column] = newRow[column]                            
-                        if oldRow[column] == None or column not in self.settings["Date Columns"]:
+                        if oldRow[column] == None or column not in self.settings["Write Once Columns"]:
                             oldRow[column] = newRow[column]
             if found == False:
                 missing_funct(newRow)

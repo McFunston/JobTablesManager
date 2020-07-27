@@ -5,7 +5,7 @@ from Models.DataSources import CustomerReport, JobsList, PaceUpdate
 
 def moqJobsListSettingsFunc(name: str):
     moqJobsListSettings = {"File Name": "BVM_Jobs.xlsx", "Default Path": "/Users/micafunston/Projects/BVMTools/BVM_Jobs.xlsx", "Type": "Data List", "Job Field": "Job", "Tab": "Sheet", "Publication Field": "Description", "Publication Number Separate": False, "Date Columns": [
-        "Files In", "Approved", "Scheduled Ship Date", "Date Setup"], "True Dates": False, "Date Format": "%m/%d/%Y", "Columns Order": {"1": "Job", "2": "Description", "3": "Files In", "4": "Approved", "5": "Production Status", "6": "Scheduled Ship Date", "7": "Qty Ordered", "8": "CPC", "9": "Page Count", "10": "Date Setup", "11": "Samples", "12": "Deadline"}}
+        "Files In", "Approved", "Scheduled Ship Date", "Date Setup"], "True Dates": False, "Date Format": "%m/%d/%Y", "Columns Order": {"1": "Job", "2": "Description", "3": "Files In", "4": "Approved", "5": "Production Status", "6": "Scheduled Ship Date", "7": "Qty Ordered", "8": "CPC", "9": "Page Count", "10": "Date Setup", "11": "Samples", "12": "Deadline"}, "Write Once Columns": ["Files In", "Approved", "Date Setup", "Added On", "Publication Month", "Exported to MIS"]}
     return moqJobsListSettings
 
 
@@ -30,7 +30,7 @@ def moqJobsListFunc(path: str, tab: str):
 def moqPaceUpdateSettingsFunc(name: str):
     moqSettings = {"Type": "Data List", "True Dates": True, "Date Columns": ["Scheduled Ship Date", "Date Setup"], "Tab": "Report1", "Columns Order": {
         "1": "Job", "2": "Description", "3": "Production Status", "4": "Scheduled Ship Date", "5": "Qty Ordered", "6": "Production Notes", "7": "Item Template", "8": "Additional Description", "9": "Date Setup"}, "Date Format": "%m/%d/%Y", "Page Count Strings": {
-            "16 page": "16 Pages", "20 page": "20 Pages", "24 page": "24 Pages", "28 page": "28 Pages", "32 page": "32 Pages", "36 page": "36 Pages", "40 page": "40 Pages"}}
+            "16 page": "16 Pages", "20 page": "20 Pages", "24 page": "24 Pages", "28 page": "28 Pages", "32 page": "32 Pages", "36 page": "36 Pages", "40 page": "40 Pages","Write Once Columns": []}}
     return moqSettings
 
 
@@ -46,7 +46,7 @@ def moqPaceUpdateFunc(path: str, tab: str):
 
 def moqCustomerReportSettingsFunc(name: str):
     moqSettings = {"Tab": "Sheet", "Type": "Report", "Last Column": "H", "True Dates": True, "Job Field": "Job", "Publication Field": "Description", "Publication Number Separate": False, "Date Columns": ["Files In", "Approved", "Scheduled Ship Date"],
-                                       "Columns Order": {"1": "Job", "2": "Deadline", "3": "Description", "4": "Files In", "5": "Approved", "6": "Production Status", "7": "Scheduled Ship Date", "8": "Qty Ordered"}}
+                                       "Columns Order": {"1": "Job", "2": "Deadline", "3": "Description", "4": "Files In", "5": "Approved", "6": "Production Status", "7": "Scheduled Ship Date", "8": "Qty Ordered"},"Write Once Columns": []}
     return moqSettings
 
 def moqCustomerReportFunc(path: str, tab: str):
