@@ -195,6 +195,7 @@
             "Type": "Address",
             "Default Path": "Test_Data/Contacts.xlsx",
             "Separate Names": true,
+            "Date Columns": [],
             "Columns Order": {
                 "1": "_ACTION_",
                 "2": "job",
@@ -224,6 +225,10 @@
             "Job Field": "Job",
             "Publication Field": "Description",
             "Publication Number Separate": false,
+            "Date Columns": [
+                "Files In", 
+                "Approved", 
+                "Scheduled Ship Date"],
             "Columns Order": {
                 "1": "Job",
                 "2": "Deadline",
@@ -296,6 +301,7 @@
                 "3": "Name",
                 "4": "Project ID"
             },
+            "Date Columns": [],
             "Data Types": {
                 "Customer": "str",
                 "Code": "int",
@@ -310,6 +316,7 @@
             "Default Path":"Test_Data/JobShipment.xlsx",
             "Type": "Address",
             "Tab": "",
+            "Date Columns": [],
             "Columns Order": {
                 "1": "_ACTION_",
                 "2": "job",
@@ -357,6 +364,7 @@
             "Default Path":"Test_Data/Aug pub. . 2020 billing.xlsx",
             "Tab": "invoice",
             "Type": "Pricing",
+            "Date Columns": [],
             "Column Order": {
                 "1": "Docket",
                 "2": "Magazine Title:",
@@ -411,12 +419,11 @@
         "PDF Received":{
             "Default Path": "NA",
             "Tab": "NA",
-            "Column Order": {
-                "1": "Name",
-                "2": "Job",
-                "3": "Publication Number",
-                "4": "Files In",                
-                "5": "Page Count"
+            "Columns Order": {
+                "1": "Name",                
+                "2": "Publication Number",
+                "3": "Files In",                
+                "4": "Page Count"
             },
             "Date Columns": [
                 "Files In"                
@@ -425,12 +432,11 @@
         "PDF Approved":{
             "Default Path": "NA",
             "Tab": "NA",
-            "Column Order": {
-                "1": "Name",
-                "2": "Job",
-                "3": "Publication Number",
-                "4": "Approved",                
-                "5": "Page Count"
+            "Columns Order": {
+                "1": "Name",                
+                "2": "Publication Number",
+                "3": "Approved",                
+                "4": "Page Count"
             },
             "Date Columns": [
                 "Approved"                

@@ -60,14 +60,20 @@ class TestObjectsInitialization(unittest.TestCase):
         shipments_list.nd_merge(sample_list)
         
         shipments_list._merge_data_ow(contacts_list, ["contactLastName", "address1"], shipments_list._not_add_row)
-        shipments_list.write_to_file("Test_Data/test.xlsx", "test_sheet", WriteData)        
+     
 
         self.assertEqual(len(sample_list._data_list), len(shipments_list._data_list))
 
     def test_customer_report_merge(self):
         jobs_list = dm.get_jobs_list()
         customer_report = dm.get_customer_report_list()
-        customer_report.nd_merge(jobs_list)
-        
+        customer_report.nd_merge(jobs_list)        
 
         self.assertEqual(len(jobs_list._data_list), len(customer_report._data_list))
+    
+    def test_file_received(self):
+        pdf_received = dm.get_pdf_received("Test_Data/319_2190_NeighboursOfStittsville_August2020.pdf")
+        jobs_list = dm.get_jobs_list()
+        jobs_list._merge_data_ow(pdf_received, ["Publication Number"], jobs_list._not_add_row)
+        jobs_list.write_to_file("Test_Data/test.xlsx", "test_sheet", WriteData)
+        self.assertIsNotNone(jobs_list)

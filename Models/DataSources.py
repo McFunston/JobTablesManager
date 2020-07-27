@@ -237,7 +237,10 @@ class DataSource:
                 if data_match:
                     found = True
                     for column in commonColumns:
-                        oldRow[column] = newRow[column]
+                        if column not in oldRow:
+                            oldRow[column] = newRow[column]                            
+                        if oldRow[column] == None or column not in self.settings["Date Columns"]:
+                            oldRow[column] = newRow[column]
             if found == False:
                 missing_funct(newRow)
 

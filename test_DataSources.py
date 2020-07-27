@@ -45,7 +45,7 @@ def moqPaceUpdateFunc(path: str, tab: str):
 
 
 def moqCustomerReportSettingsFunc(name: str):
-    moqSettings = {"Tab": "Sheet", "Type": "Report", "Last Column": "H", "True Dates": True, "Job Field": "Job", "Publication Field": "Description", "Publication Number Separate": False,
+    moqSettings = {"Tab": "Sheet", "Type": "Report", "Last Column": "H", "True Dates": True, "Job Field": "Job", "Publication Field": "Description", "Publication Number Separate": False, "Date Columns": ["Files In", "Approved", "Scheduled Ship Date"],
                                        "Columns Order": {"1": "Job", "2": "Deadline", "3": "Description", "4": "Files In", "5": "Approved", "6": "Production Status", "7": "Scheduled Ship Date", "8": "Qty Ordered"}}
     return moqSettings
 
@@ -466,7 +466,7 @@ class TestJobsList(unittest.TestCase):
         # Act
         jobs.set_publication_month()
         actual = jobs._data_list[5]["Publication Month"]
-        expected = datetime.strptime("02/01/2020","%m/%d/%Y")
+        expected = datetime.strptime("03/01/2020","%m/%d/%Y")
 
         # Assert
         self.assertEqual(actual, expected)
@@ -479,7 +479,7 @@ class TestJobsList(unittest.TestCase):
         # Act
         jobs.set_publication_month()
         actual = jobs._data_list[6]["Publication Month"]
-        expected = datetime.strptime("03/01/2020","%m/%d/%Y")
+        expected = datetime.strptime("04/01/2020","%m/%d/%Y")
 
         # Assert
         self.assertEqual(actual, expected)

@@ -69,6 +69,4 @@ def get_pdf_approved(path) -> PdfApproved:
     pdf_approved = ds.PdfApproved(path, load_data_settings_json, get_pdf_data)
     return pdf_approved
 
-pdf_rec = get_pdf_approved("Test_Data/319_2190_NeighboursOfStittsville_August2020.pdf")
 
-pprint(pdf_rec._data_list)
