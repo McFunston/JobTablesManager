@@ -589,7 +589,7 @@ class JobsList(DataSource):
             row[self.PublicationNumber] = pub_number
 
     def add_from_mis_list(self, mis_list):
-        self._merge_data_ow(mis_list, ["Job"], self._add_row)
+        self._merge_data(mis_list, ["Job"], self.hit_replace, self._add_row)
 
 
 class Samples(DataSource):
