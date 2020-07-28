@@ -205,6 +205,7 @@
             "Type": "Address",
             "Default Path": "Test_Data/Contacts.xlsx",
             "Separate Names": true,
+            "True Dates": false,
             "Date Columns": [],
             "Write Once Columns": [],
             "Columns Order": {
@@ -314,6 +315,7 @@
                 "3": "Name",
                 "4": "Project ID"
             },
+            "True Dates": false,
             "Date Columns": [],
             "Write Once Columns": [],
             "Data Types": {
@@ -330,6 +332,7 @@
             "Default Path":"Test_Data/JobShipment.xlsx",
             "Type": "Address",
             "Tab": "",
+            "True Dates": false,
             "Date Columns": [],
             "Write Once Columns": [],
             "Columns Order": {
@@ -379,6 +382,7 @@
             "Default Path":"Test_Data/Aug pub. . 2020 billing.xlsx",
             "Tab": "invoice",
             "Type": "Pricing",
+            "True Dates": false,
             "Date Columns": [],
             "Write Once Columns": [],
             "Column Order": {
@@ -441,6 +445,7 @@
                 "3": "Files In",                
                 "4": "Page Count"
             },
+            "True Dates": true,
             "Date Columns": [
                 "Files In"                
             ],
@@ -455,6 +460,7 @@
                 "3": "Approved",                
                 "4": "Page Count"
             },
+            "True Dates": true,
             "Date Columns": [
                 "Approved"                
             ],

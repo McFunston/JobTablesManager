@@ -27,6 +27,9 @@ class DataSource:
 
     def write_to_file(self, path: str, sheet: str, write_func):
         self.populate_static()
+        if self.settings["True Dates"] == False:
+            self._data_list = self._get_string_data_list()        
+        
         write_func(path, sheet, self.Data_Frame, self.ExportColumns)
 
     def _find_first_row(self, column: str, search_term: str) -> dict:
@@ -82,13 +85,13 @@ class DataSource:
 
         """
         dateDataList = copy.deepcopy(self._data_list)
-        if self.settings['True Dates'] == False:
-            for row in dateDataList:
-                for column in self.settings["Date Columns"]:
-                    if row[column] != None:
-                        if type(row[column]) == str:
-                            row[column] = datetime.strptime(
-                                row[column], self.settings['Date Format'])
+
+        for row in dateDataList:
+            for column in self.settings["Date Columns"]:
+                if row[column] != None:
+                    if type(row[column]) == str:
+                        row[column] = datetime.strptime(
+                            row[column], self.settings['Date Format'])
         return dateDataList
 
     def _get_string_data_list(self) -> List[Dict[str, str]]:
@@ -106,7 +109,10 @@ class DataSource:
         for row in stringDataList:
             for x in row:
                 if type(row[x]) != datetime:
-                    row[x] = str(row[x])
+                    if type(row[x]) == float:
+                        row[x] = int(row[x])
+                    if row[x] != None:
+                        row[x] = str(row[x])
                 else:
                     row[x] = row[x].strftime(self.settings['Date Format'])
         return stringDataList
@@ -210,8 +216,8 @@ class DataSource:
     def _add_column(self, name: str):
         for row in self._data_list:
             row[name] = None
-
-    def _merge_data_ow(self, data_source, id_columns: List, missing_funct):
+    
+    def _merge_data(self, data_source, id_columns: List, hit_funct, miss_funct):
         """Merge and/or add compatible data from another DataSource's _data_list. 
         If IDColunn exists in the source's _data_list its' columns are overwritten with matching ones from the DataSource it's consuming.
 
@@ -226,7 +232,7 @@ class DataSource:
         for newRow in listToConsume:
             found = False
             if len(self._data_list[0]) == 0:
-                missing_funct(newRow)
+                miss_funct(newRow)
             for oldRow in self._data_list:
                 data_match = True
                 for id in id_columns:
@@ -236,13 +242,23 @@ class DataSource:
                         data_match = False
                 if data_match:
                     found = True
-                    for column in commonColumns:
-                        if column not in oldRow:
-                            oldRow[column] = newRow[column]                            
-                        if oldRow[column] == None or column not in self.settings["Write Once Columns"]:
-                            oldRow[column] = newRow[column]
+                    hit_funct(commonColumns, newRow, oldRow)
             if found == False:
-                missing_funct(newRow)
+                miss_funct(newRow)
+
+    def hit_replace(self, columns, new_row, old_row):
+        for column in columns:
+            if column not in old_row:
+                old_row[column] = new_row[column]                            
+            if old_row[column] == None or column not in self.settings["Write Once Columns"]:
+                old_row[column] = new_row[column]
+
+    def hit_add_missing(self, columns, new_row, old_row):
+        for column in columns:
+            if column not in old_row:
+                old_row[column] = new_row[column]                            
+            if old_row[column] == None:
+                old_row[column] = new_row[column]             
 
     def _add_row(self, row: Dict):
         if len(self._data_list[0]) == 0:
