@@ -75,5 +75,5 @@ class TestObjectsInitialization(unittest.TestCase):
         pdf_received = dm.get_pdf_received("Test_Data/319_2190_NeighboursOfStittsville_August2020.pdf")
         jobs_list = dm.get_jobs_list()
         jobs_list._merge_data(pdf_received, ["Publication Number"], jobs_list.hit_add_missing ,jobs_list._not_add_row)
-        jobs_list.write_to_file("Test_Data/test.xlsx", "test_sheet", WriteData)
+        jobs_list.write_to_file("Test_Data/test.xlsx", jobs_list.settings["Tab"], jobs_list.prep_data_none, WriteData)
         self.assertIsNotNone(jobs_list)

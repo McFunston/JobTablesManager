@@ -76,12 +76,16 @@ def GetData(path: str, tab: str) -> list:
         df = read_excel(path, tab)
     else: 
         df = read_excel(path)
-    df1 = df.where(pd.notnull(df), None)    
+    df1 = df.where(pd.notnull(df), None)
+    #df1.replace({pd.NaT: None}) 
     dfDict = df1.to_dict('records')
     for d in dfDict:
-        for c in d:            
+        for c in d:
+            # print(type(d[c]))            
             if str(type(d[c]))=="<class 'pandas._libs.tslibs.timestamps.Timestamp'>":
                 d[c]=d[c].to_pydatetime()
+            if str(type(d[c]))=="<class 'pandas._libs.tslibs.nattype.NaTType'>":
+                d[c] = None
             # if type(d[c])==float:
             #     d[c]=int(d[c])
             if type(d[c])==int:

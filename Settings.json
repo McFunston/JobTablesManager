@@ -23,7 +23,8 @@
                 "Date Setup",
                 "Added On",
                 "Publication Month",
-                "Exported to MIS"
+                "Exported to MIS",
+                "True Page Count"
             ],
             "True Dates": false,
             "Date Format": "%m/%d/%Y",
@@ -44,7 +45,7 @@
                 "14": "Publication Number",
                 "15": "Designer",
                 "16": "Shipping Added",
-                "17": "Page Count Matched Estimate",
+                "17": "True Page Count",
                 "18": "Publication Month",
                 "19": "Exported to MIS"
             },
@@ -71,7 +72,7 @@
                 "Publication Number": "str",
                 "Designer": "int",
                 "Shipping Added": "datetime",
-                "Page Count Matched Estimate": "str",
+                "True Page Count": "int",
                 "Publication Month": "datetime",
                 "Exported to MIS": "datetime"
             }
@@ -443,7 +444,7 @@
                 "1": "Name",                
                 "2": "Publication Number",
                 "3": "Files In",                
-                "4": "Page Count"
+                "4": "True Page Count"
             },
             "True Dates": true,
             "Date Columns": [
@@ -458,7 +459,7 @@
                 "1": "Name",                
                 "2": "Publication Number",
                 "3": "Approved",                
-                "4": "Page Count"
+                "4": "True Page Count"
             },
             "True Dates": true,
             "Date Columns": [

@@ -4,6 +4,8 @@ import sys
 def receive_file(path):
     jobs = get_jobs_list()
     pdf_received = get_pdf_received(path)
+    jobs.on_file_upload(pdf_received)
+    jobs.save()
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:

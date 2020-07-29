@@ -16,7 +16,7 @@ def get_pdf_data(path: str, file_name) -> List[Dict]:
     name = name.split('\\')[-1]
     return_dict["Name"] = name
     return_dict["DateTime"] = datetime.now()
-    return_dict["Page Count"] = get_page_count(path)
+    return_dict["True Page Count"] = get_page_count(path)
     return_list.append(return_dict)
     return return_list
 

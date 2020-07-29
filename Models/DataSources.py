@@ -5,6 +5,7 @@ import calendar
 import copy
 import pandas as pd
 from Libraries.NameParse import NameParse
+from Libraries.ExcelLibs import WriteData
 
 class DataSource:
     """Base type for all data sources collected from Excel and comma delimited files.
@@ -25,12 +26,18 @@ class DataSource:
 
     Data_Frame = property(_get_data_frame)
 
-    def write_to_file(self, path: str, sheet: str, write_func):
+    def write_to_file(self, path: str, sheet: str, prep_data_funct, write_func):
         self.populate_static()
-        if self.settings["True Dates"] == False:
-            self._data_list = self._get_string_data_list()        
+      
         
         write_func(path, sheet, self.Data_Frame, self.ExportColumns)
+
+    def prep_data_to_string(self):
+        if self.settings["True Dates"] == False:
+            self._data_list = self._get_string_data_list()
+    
+    def prep_data_none(self):
+        return
 
     def _find_first_row(self, column: str, search_term: str) -> dict:
         """
@@ -243,8 +250,10 @@ class DataSource:
                 if data_match:
                     found = True
                     hit_funct(commonColumns, newRow, oldRow)
+                                     
             if found == False:
                 miss_funct(newRow)
+
 
     def hit_replace(self, columns, new_row, old_row):
         for column in columns:
@@ -252,13 +261,17 @@ class DataSource:
                 old_row[column] = new_row[column]                            
             if old_row[column] == None or column not in self.settings["Write Once Columns"]:
                 old_row[column] = new_row[column]
+                print("Replacing "+str(old_row[column])+" with "+str(new_row[column]))
+
 
     def hit_add_missing(self, columns, new_row, old_row):
         for column in columns:
             if column not in old_row:
-                old_row[column] = new_row[column]                            
+                old_row[column] = new_row[column]
+                print("Adding "+str(new_row[column])+" to "+column)
             if old_row[column] == None:
-                old_row[column] = new_row[column]             
+                old_row[column] = new_row[column]
+                print("Adding "+str(new_row[column])+" to "+column)
 
     def _add_row(self, row: Dict):
         if len(self._data_list[0]) == 0:
@@ -587,6 +600,15 @@ class JobsList(DataSource):
             pub_number = pub_number.strip()
             #pub_number = pub_number.rjust(4, "0")
             row[self.PublicationNumber] = pub_number
+    
+    def on_file_upload(self, file_upload):
+        self._merge_data(file_upload, ["Publication Number"], self.hit_add_missing, self._not_add_row)
+    
+    def on_approval(self, approved):
+        self._merge_data(approved, ["Publication Number"], self.hit_add_missing, self._not_add_row)
+
+    def save(self):
+        self.write_to_file(self.path, self.tab, self.prep_data_none, WriteData)
 
     def add_from_mis_list(self, mis_list):
         self._merge_data(mis_list, ["Job"], self.hit_replace, self._add_row)
