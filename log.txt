@@ -1,0 +1,897 @@
+2020-07-29 15:07:44,410 Retrieving settings for Jobs List
+2020-07-29 15:07:44,411 Trying to retrieve jobs list
+2020-07-29 15:07:44,411 Retrieving settings for Jobs List
+2020-07-29 15:07:44,421 Jobs list loaded successfully
+2020-07-29 15:07:44,421 Retrieving settings for Pace Update
+2020-07-29 15:07:44,421 Trying to open the MIS Update
+2020-07-29 15:07:44,421 Retrieving settings for Pace Update
+2020-08-04 10:38:53,557 Retrieving settings for EST File
+2020-08-04 11:59:17,095 Retrieving settings for EST File
+2020-08-04 12:02:03,662 Retrieving settings for EST File
+2020-08-04 12:09:11,393 Retrieving settings for EST File
+2020-08-04 12:12:13,159 Retrieving settings for EST File
+2020-08-04 12:12:40,599 Retrieving settings for EST File
+2020-08-04 12:14:19,623 Retrieving settings for EST File
+2020-08-04 12:15:05,671 Retrieving settings for EST File
+2020-08-04 12:16:32,333 Retrieving settings for EST File
+2020-08-04 12:17:12,039 Retrieving settings for EST File
+2020-08-04 12:24:43,947 Retrieving settings for EST File
+2020-08-04 12:28:46,269 Retrieving settings for EST File
+2020-08-04 12:29:20,293 Retrieving settings for EST File
+2020-08-04 13:45:32,213 Retrieving settings for EST File
+2020-08-04 13:45:32,236 Retrieving settings for Jobs List
+2020-08-04 13:45:32,237 Trying to retrieve jobs list
+2020-08-04 13:45:32,237 Retrieving settings for Jobs List
+2020-08-04 13:45:32,465 Jobs list loaded successfully
+2020-08-04 13:48:00,284 Retrieving settings for EST File
+2020-08-04 13:48:00,305 Retrieving settings for Jobs List
+2020-08-04 13:48:00,305 Trying to retrieve jobs list
+2020-08-04 13:48:00,306 Retrieving settings for Jobs List
+2020-08-04 13:48:00,513 Jobs list loaded successfully
+2020-08-04 13:48:29,750 Retrieving settings for EST File
+2020-08-04 13:48:29,771 Retrieving settings for Jobs List
+2020-08-04 13:48:29,771 Trying to retrieve jobs list
+2020-08-04 13:48:29,771 Retrieving settings for Jobs List
+2020-08-04 13:48:29,980 Jobs list loaded successfully
+2020-08-04 13:51:03,976 Retrieving settings for EST File
+2020-08-04 13:51:03,997 Retrieving settings for Jobs List
+2020-08-04 13:51:03,997 Trying to retrieve jobs list
+2020-08-04 13:51:03,998 Retrieving settings for Jobs List
+2020-08-04 13:51:04,207 Jobs list loaded successfully
+2020-08-04 13:51:27,969 Adding 3264 to CPC
+2020-08-04 13:58:01,950 Retrieving settings for EST File
+2020-08-04 13:58:01,958 Retrieving settings for Jobs List
+2020-08-04 13:58:01,959 Trying to retrieve jobs list
+2020-08-04 13:58:01,959 Retrieving settings for Jobs List
+2020-08-04 13:58:02,017 Jobs list loaded successfully
+2020-08-04 13:58:02,019 Adding 3264 to CPC
+2020-08-04 14:00:27,791 Replacing 07/15/2020 with 07/15/2020
+2020-08-04 14:00:27,791 Replacing In Production with In Production
+2020-08-04 14:00:27,791 Replacing M1800 with M1800
+2020-08-04 14:00:27,791 Replacing 08/15/2020 with 08/15/2020
+2020-08-04 14:00:27,791 Replacing In Production with In Production
+2020-08-04 14:00:27,816 Retrieving settings for Contacts
+2020-08-04 14:00:27,816 Retrieving settings for Contacts
+2020-08-04 14:00:27,846 Retrieving settings for Customer Report
+2020-08-04 14:00:27,846 Retrieving settings for Customer Report
+2020-08-04 14:00:27,847 Retrieving settings for Jobs List
+2020-08-04 14:00:27,847 Trying to retrieve jobs list
+2020-08-04 14:00:27,847 Retrieving settings for Jobs List
+2020-08-04 14:00:27,902 Jobs list loaded successfully
+2020-08-04 14:00:27,902 Retrieving settings for Customer Report
+2020-08-04 14:00:27,903 Retrieving settings for Customer Report
+2020-08-04 14:00:27,905 Retrieving settings for Samples
+2020-08-04 14:00:27,922 Retrieving settings for Designer Copies
+2020-08-04 14:00:27,938 Retrieving settings for Job Shipments
+2020-08-04 14:00:27,939 Retrieving settings for Job Shipments
+2020-08-04 14:00:27,939 Retrieving settings for Jobs List
+2020-08-04 14:00:27,939 Trying to retrieve jobs list
+2020-08-04 14:00:27,939 Retrieving settings for Jobs List
+2020-08-04 14:00:27,992 Jobs list loaded successfully
+2020-08-04 14:00:27,993 Retrieving settings for Contacts
+2020-08-04 14:00:27,993 Retrieving settings for Contacts
+2020-08-04 14:00:28,026 Adding None to address2
+2020-08-04 14:00:28,026 Adding 38023 to contactNumber
+2020-08-04 14:00:28,026 Adding M1100 to job
+2020-08-04 14:00:28,026 Adding 2 to country
+2020-08-04 14:00:28,026 Adding I to _ACTION_
+2020-08-04 14:00:28,026 Adding None to address3
+2020-08-04 14:00:28,026 Adding None to address3
+2020-08-04 14:00:28,026 Adding 3 to shipmentType
+2020-08-04 14:00:28,026 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,026 Adding None to address2
+2020-08-04 14:00:28,026 Adding 38023 to contactNumber
+2020-08-04 14:00:28,027 Adding M1100 to job
+2020-08-04 14:00:28,027 Adding 2 to country
+2020-08-04 14:00:28,027 Adding I to _ACTION_
+2020-08-04 14:00:28,027 Adding None to address3
+2020-08-04 14:00:28,027 Adding None to address3
+2020-08-04 14:00:28,027 Adding 3 to shipmentType
+2020-08-04 14:00:28,027 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,027 Adding None to address2
+2020-08-04 14:00:28,027 Adding 38023 to contactNumber
+2020-08-04 14:00:28,027 Adding M1100 to job
+2020-08-04 14:00:28,027 Adding 2 to country
+2020-08-04 14:00:28,027 Adding I to _ACTION_
+2020-08-04 14:00:28,027 Adding None to address3
+2020-08-04 14:00:28,027 Adding None to address3
+2020-08-04 14:00:28,027 Adding 3 to shipmentType
+2020-08-04 14:00:28,027 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,027 Adding None to address2
+2020-08-04 14:00:28,027 Adding 38023 to contactNumber
+2020-08-04 14:00:28,027 Adding M1100 to job
+2020-08-04 14:00:28,027 Adding 2 to country
+2020-08-04 14:00:28,027 Adding I to _ACTION_
+2020-08-04 14:00:28,027 Adding None to address3
+2020-08-04 14:00:28,027 Adding None to address3
+2020-08-04 14:00:28,027 Adding 3 to shipmentType
+2020-08-04 14:00:28,027 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,027 Adding None to address2
+2020-08-04 14:00:28,027 Adding 38023 to contactNumber
+2020-08-04 14:00:28,028 Adding M1100 to job
+2020-08-04 14:00:28,028 Adding 2 to country
+2020-08-04 14:00:28,028 Adding I to _ACTION_
+2020-08-04 14:00:28,028 Adding None to address3
+2020-08-04 14:00:28,028 Adding None to address3
+2020-08-04 14:00:28,028 Adding 3 to shipmentType
+2020-08-04 14:00:28,028 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,028 Adding None to address2
+2020-08-04 14:00:28,028 Adding 38023 to contactNumber
+2020-08-04 14:00:28,028 Adding M1100 to job
+2020-08-04 14:00:28,028 Adding 2 to country
+2020-08-04 14:00:28,028 Adding I to _ACTION_
+2020-08-04 14:00:28,028 Adding None to address3
+2020-08-04 14:00:28,028 Adding None to address3
+2020-08-04 14:00:28,028 Adding 3 to shipmentType
+2020-08-04 14:00:28,028 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,028 Adding None to address2
+2020-08-04 14:00:28,028 Adding 38023 to contactNumber
+2020-08-04 14:00:28,028 Adding M1100 to job
+2020-08-04 14:00:28,028 Adding 2 to country
+2020-08-04 14:00:28,028 Adding I to _ACTION_
+2020-08-04 14:00:28,028 Adding None to address3
+2020-08-04 14:00:28,028 Adding None to address3
+2020-08-04 14:00:28,028 Adding 3 to shipmentType
+2020-08-04 14:00:28,028 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,028 Adding None to address2
+2020-08-04 14:00:28,028 Adding 38023 to contactNumber
+2020-08-04 14:00:28,028 Adding M1100 to job
+2020-08-04 14:00:28,028 Adding 2 to country
+2020-08-04 14:00:28,028 Adding I to _ACTION_
+2020-08-04 14:00:28,028 Adding None to address3
+2020-08-04 14:00:28,028 Adding None to address3
+2020-08-04 14:00:28,029 Adding 3 to shipmentType
+2020-08-04 14:00:28,029 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,029 Adding None to address2
+2020-08-04 14:00:28,029 Adding 38032 to contactNumber
+2020-08-04 14:00:28,029 Adding M1142 to job
+2020-08-04 14:00:28,029 Adding 2 to country
+2020-08-04 14:00:28,029 Adding I to _ACTION_
+2020-08-04 14:00:28,029 Adding None to address3
+2020-08-04 14:00:28,029 Adding None to address3
+2020-08-04 14:00:28,029 Adding 3 to shipmentType
+2020-08-04 14:00:28,029 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,029 Adding None to address2
+2020-08-04 14:00:28,029 Adding 38032 to contactNumber
+2020-08-04 14:00:28,029 Adding M1142 to job
+2020-08-04 14:00:28,029 Adding 2 to country
+2020-08-04 14:00:28,029 Adding I to _ACTION_
+2020-08-04 14:00:28,029 Adding None to address3
+2020-08-04 14:00:28,029 Adding None to address3
+2020-08-04 14:00:28,029 Adding 3 to shipmentType
+2020-08-04 14:00:28,029 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,029 Adding None to address2
+2020-08-04 14:00:28,029 Adding 38036 to contactNumber
+2020-08-04 14:00:28,029 Adding M1154 to job
+2020-08-04 14:00:28,029 Adding 2 to country
+2020-08-04 14:00:28,029 Adding I to _ACTION_
+2020-08-04 14:00:28,029 Adding None to address3
+2020-08-04 14:00:28,029 Adding None to address3
+2020-08-04 14:00:28,030 Adding 3 to shipmentType
+2020-08-04 14:00:28,030 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,030 Adding None to address2
+2020-08-04 14:00:28,030 Adding 38036 to contactNumber
+2020-08-04 14:00:28,030 Adding M1154 to job
+2020-08-04 14:00:28,030 Adding 2 to country
+2020-08-04 14:00:28,030 Adding I to _ACTION_
+2020-08-04 14:00:28,030 Adding None to address3
+2020-08-04 14:00:28,030 Adding None to address3
+2020-08-04 14:00:28,030 Adding 3 to shipmentType
+2020-08-04 14:00:28,030 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,030 Adding None to address2
+2020-08-04 14:00:28,030 Adding 38036 to contactNumber
+2020-08-04 14:00:28,030 Adding M1154 to job
+2020-08-04 14:00:28,030 Adding 2 to country
+2020-08-04 14:00:28,030 Adding I to _ACTION_
+2020-08-04 14:00:28,030 Adding None to address3
+2020-08-04 14:00:28,030 Adding None to address3
+2020-08-04 14:00:28,030 Adding 3 to shipmentType
+2020-08-04 14:00:28,030 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,030 Adding None to address2
+2020-08-04 14:00:28,030 Adding 38053 to contactNumber
+2020-08-04 14:00:28,030 Adding M1171 to job
+2020-08-04 14:00:28,030 Adding 2 to country
+2020-08-04 14:00:28,030 Adding I to _ACTION_
+2020-08-04 14:00:28,030 Adding None to address3
+2020-08-04 14:00:28,031 Adding None to address3
+2020-08-04 14:00:28,031 Adding 3 to shipmentType
+2020-08-04 14:00:28,031 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,031 Adding None to address2
+2020-08-04 14:00:28,031 Adding 38053 to contactNumber
+2020-08-04 14:00:28,031 Adding M1171 to job
+2020-08-04 14:00:28,031 Adding 2 to country
+2020-08-04 14:00:28,031 Adding I to _ACTION_
+2020-08-04 14:00:28,031 Adding None to address3
+2020-08-04 14:00:28,031 Adding None to address3
+2020-08-04 14:00:28,031 Adding 3 to shipmentType
+2020-08-04 14:00:28,031 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,031 Adding None to address2
+2020-08-04 14:00:28,031 Adding 38057 to contactNumber
+2020-08-04 14:00:28,031 Adding M1194 to job
+2020-08-04 14:00:28,031 Adding 2 to country
+2020-08-04 14:00:28,031 Adding I to _ACTION_
+2020-08-04 14:00:28,031 Adding None to address3
+2020-08-04 14:00:28,031 Adding None to address3
+2020-08-04 14:00:28,031 Adding 3 to shipmentType
+2020-08-04 14:00:28,031 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,031 Adding None to address2
+2020-08-04 14:00:28,031 Adding 38057 to contactNumber
+2020-08-04 14:00:28,031 Adding M1194 to job
+2020-08-04 14:00:28,031 Adding 2 to country
+2020-08-04 14:00:28,031 Adding I to _ACTION_
+2020-08-04 14:00:28,031 Adding None to address3
+2020-08-04 14:00:28,031 Adding None to address3
+2020-08-04 14:00:28,031 Adding 3 to shipmentType
+2020-08-04 14:00:28,031 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,032 Adding None to address2
+2020-08-04 14:00:28,032 Adding 38057 to contactNumber
+2020-08-04 14:00:28,032 Adding M1194 to job
+2020-08-04 14:00:28,032 Adding 2 to country
+2020-08-04 14:00:28,032 Adding I to _ACTION_
+2020-08-04 14:00:28,032 Adding None to address3
+2020-08-04 14:00:28,032 Adding None to address3
+2020-08-04 14:00:28,032 Adding 3 to shipmentType
+2020-08-04 14:00:28,032 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,032 Adding None to address2
+2020-08-04 14:00:28,032 Adding 38057 to contactNumber
+2020-08-04 14:00:28,032 Adding M1194 to job
+2020-08-04 14:00:28,032 Adding 2 to country
+2020-08-04 14:00:28,032 Adding I to _ACTION_
+2020-08-04 14:00:28,032 Adding None to address3
+2020-08-04 14:00:28,032 Adding None to address3
+2020-08-04 14:00:28,032 Adding 3 to shipmentType
+2020-08-04 14:00:28,032 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,032 Adding None to address2
+2020-08-04 14:00:28,032 Adding 38062 to contactNumber
+2020-08-04 14:00:28,032 Adding M1207 to job
+2020-08-04 14:00:28,033 Adding 2 to country
+2020-08-04 14:00:28,033 Adding I to _ACTION_
+2020-08-04 14:00:28,033 Adding None to address3
+2020-08-04 14:00:28,033 Adding None to address3
+2020-08-04 14:00:28,033 Adding 3 to shipmentType
+2020-08-04 14:00:28,033 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,033 Adding None to address2
+2020-08-04 14:00:28,033 Adding 38062 to contactNumber
+2020-08-04 14:00:28,033 Adding M1207 to job
+2020-08-04 14:00:28,033 Adding 2 to country
+2020-08-04 14:00:28,033 Adding I to _ACTION_
+2020-08-04 14:00:28,033 Adding None to address3
+2020-08-04 14:00:28,033 Adding None to address3
+2020-08-04 14:00:28,033 Adding 3 to shipmentType
+2020-08-04 14:00:28,033 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,033 Adding None to address2
+2020-08-04 14:00:28,033 Adding 38062 to contactNumber
+2020-08-04 14:00:28,033 Adding M1207 to job
+2020-08-04 14:00:28,034 Adding 2 to country
+2020-08-04 14:00:28,034 Adding I to _ACTION_
+2020-08-04 14:00:28,034 Adding None to address3
+2020-08-04 14:00:28,034 Adding None to address3
+2020-08-04 14:00:28,034 Adding 3 to shipmentType
+2020-08-04 14:00:28,034 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,034 Adding None to address2
+2020-08-04 14:00:28,034 Adding 38071 to contactNumber
+2020-08-04 14:00:28,034 Adding M1237 to job
+2020-08-04 14:00:28,034 Adding 2 to country
+2020-08-04 14:00:28,034 Adding I to _ACTION_
+2020-08-04 14:00:28,034 Adding None to address3
+2020-08-04 14:00:28,034 Adding None to address3
+2020-08-04 14:00:28,034 Adding 3 to shipmentType
+2020-08-04 14:00:28,034 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,034 Adding None to address2
+2020-08-04 14:00:28,034 Adding 38072 to contactNumber
+2020-08-04 14:00:28,034 Adding M1239 to job
+2020-08-04 14:00:28,034 Adding 2 to country
+2020-08-04 14:00:28,034 Adding I to _ACTION_
+2020-08-04 14:00:28,034 Adding None to address3
+2020-08-04 14:00:28,034 Adding None to address3
+2020-08-04 14:00:28,034 Adding 3 to shipmentType
+2020-08-04 14:00:28,034 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,035 Adding None to address2
+2020-08-04 14:00:28,035 Adding 38086 to contactNumber
+2020-08-04 14:00:28,035 Adding M1243 to job
+2020-08-04 14:00:28,035 Adding 2 to country
+2020-08-04 14:00:28,035 Adding I to _ACTION_
+2020-08-04 14:00:28,035 Adding None to address3
+2020-08-04 14:00:28,035 Adding None to address3
+2020-08-04 14:00:28,035 Adding 3 to shipmentType
+2020-08-04 14:00:28,035 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,035 Adding None to address2
+2020-08-04 14:00:28,035 Adding 38091 to contactNumber
+2020-08-04 14:00:28,035 Adding M1184 to job
+2020-08-04 14:00:28,035 Adding 2 to country
+2020-08-04 14:00:28,035 Adding I to _ACTION_
+2020-08-04 14:00:28,035 Adding None to address3
+2020-08-04 14:00:28,035 Adding None to address3
+2020-08-04 14:00:28,035 Adding 3 to shipmentType
+2020-08-04 14:00:28,035 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,035 Adding None to address2
+2020-08-04 14:00:28,035 Adding 38091 to contactNumber
+2020-08-04 14:00:28,035 Adding M1184 to job
+2020-08-04 14:00:28,035 Adding 2 to country
+2020-08-04 14:00:28,035 Adding I to _ACTION_
+2020-08-04 14:00:28,035 Adding None to address3
+2020-08-04 14:00:28,035 Adding None to address3
+2020-08-04 14:00:28,035 Adding 3 to shipmentType
+2020-08-04 14:00:28,035 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,036 Adding None to address2
+2020-08-04 14:00:28,036 Adding 38091 to contactNumber
+2020-08-04 14:00:28,036 Adding M1184 to job
+2020-08-04 14:00:28,036 Adding 2 to country
+2020-08-04 14:00:28,036 Adding I to _ACTION_
+2020-08-04 14:00:28,036 Adding None to address3
+2020-08-04 14:00:28,036 Adding None to address3
+2020-08-04 14:00:28,036 Adding 3 to shipmentType
+2020-08-04 14:00:28,036 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,036 Adding None to address2
+2020-08-04 14:00:28,036 Adding 38091 to contactNumber
+2020-08-04 14:00:28,036 Adding M1184 to job
+2020-08-04 14:00:28,036 Adding 2 to country
+2020-08-04 14:00:28,036 Adding I to _ACTION_
+2020-08-04 14:00:28,036 Adding None to address3
+2020-08-04 14:00:28,036 Adding None to address3
+2020-08-04 14:00:28,036 Adding 3 to shipmentType
+2020-08-04 14:00:28,036 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,036 Adding None to address2
+2020-08-04 14:00:28,036 Adding 38093 to contactNumber
+2020-08-04 14:00:28,036 Adding M1271 to job
+2020-08-04 14:00:28,036 Adding 2 to country
+2020-08-04 14:00:28,036 Adding I to _ACTION_
+2020-08-04 14:00:28,036 Adding None to address3
+2020-08-04 14:00:28,036 Adding None to address3
+2020-08-04 14:00:28,036 Adding 3 to shipmentType
+2020-08-04 14:00:28,036 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,036 Adding None to address2
+2020-08-04 14:00:28,036 Adding 38095 to contactNumber
+2020-08-04 14:00:28,036 Adding M1232 to job
+2020-08-04 14:00:28,036 Adding 2 to country
+2020-08-04 14:00:28,037 Adding I to _ACTION_
+2020-08-04 14:00:28,037 Adding None to address3
+2020-08-04 14:00:28,037 Adding None to address3
+2020-08-04 14:00:28,037 Adding 3 to shipmentType
+2020-08-04 14:00:28,037 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,037 Adding None to address2
+2020-08-04 14:00:28,037 Adding 38097 to contactNumber
+2020-08-04 14:00:28,037 Adding M1142 to job
+2020-08-04 14:00:28,037 Adding 2 to country
+2020-08-04 14:00:28,037 Adding I to _ACTION_
+2020-08-04 14:00:28,037 Adding None to address3
+2020-08-04 14:00:28,037 Adding None to address3
+2020-08-04 14:00:28,037 Adding 3 to shipmentType
+2020-08-04 14:00:28,037 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,037 Adding None to address2
+2020-08-04 14:00:28,037 Adding 38097 to contactNumber
+2020-08-04 14:00:28,037 Adding M1142 to job
+2020-08-04 14:00:28,037 Adding 2 to country
+2020-08-04 14:00:28,037 Adding I to _ACTION_
+2020-08-04 14:00:28,037 Adding None to address3
+2020-08-04 14:00:28,037 Adding None to address3
+2020-08-04 14:00:28,037 Adding 3 to shipmentType
+2020-08-04 14:00:28,037 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,037 Adding None to address2
+2020-08-04 14:00:28,037 Adding 38101 to contactNumber
+2020-08-04 14:00:28,037 Adding M1254 to job
+2020-08-04 14:00:28,037 Adding 2 to country
+2020-08-04 14:00:28,037 Adding I to _ACTION_
+2020-08-04 14:00:28,037 Adding None to address3
+2020-08-04 14:00:28,037 Adding None to address3
+2020-08-04 14:00:28,038 Adding 3 to shipmentType
+2020-08-04 14:00:28,038 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,038 Adding None to address2
+2020-08-04 14:00:28,038 Adding 38106 to contactNumber
+2020-08-04 14:00:28,038 Adding M1262 to job
+2020-08-04 14:00:28,038 Adding 2 to country
+2020-08-04 14:00:28,038 Adding I to _ACTION_
+2020-08-04 14:00:28,038 Adding None to address3
+2020-08-04 14:00:28,038 Adding None to address3
+2020-08-04 14:00:28,038 Adding 3 to shipmentType
+2020-08-04 14:00:28,038 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,038 Adding None to address2
+2020-08-04 14:00:28,038 Adding 38109 to contactNumber
+2020-08-04 14:00:28,038 Adding M1237 to job
+2020-08-04 14:00:28,038 Adding 2 to country
+2020-08-04 14:00:28,038 Adding I to _ACTION_
+2020-08-04 14:00:28,038 Adding None to address3
+2020-08-04 14:00:28,038 Adding None to address3
+2020-08-04 14:00:28,038 Adding 3 to shipmentType
+2020-08-04 14:00:28,038 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,038 Adding None to address2
+2020-08-04 14:00:28,038 Adding 38111 to contactNumber
+2020-08-04 14:00:28,038 Adding M1249 to job
+2020-08-04 14:00:28,038 Adding 2 to country
+2020-08-04 14:00:28,038 Adding I to _ACTION_
+2020-08-04 14:00:28,038 Adding None to address3
+2020-08-04 14:00:28,038 Adding None to address3
+2020-08-04 14:00:28,038 Adding 3 to shipmentType
+2020-08-04 14:00:28,038 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,038 Adding None to address2
+2020-08-04 14:00:28,039 Adding 38111 to contactNumber
+2020-08-04 14:00:28,039 Adding M1249 to job
+2020-08-04 14:00:28,039 Adding 2 to country
+2020-08-04 14:00:28,039 Adding I to _ACTION_
+2020-08-04 14:00:28,039 Adding None to address3
+2020-08-04 14:00:28,039 Adding None to address3
+2020-08-04 14:00:28,039 Adding 3 to shipmentType
+2020-08-04 14:00:28,039 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,039 Adding None to address2
+2020-08-04 14:00:28,039 Adding 38111 to contactNumber
+2020-08-04 14:00:28,039 Adding M1249 to job
+2020-08-04 14:00:28,039 Adding 2 to country
+2020-08-04 14:00:28,039 Adding I to _ACTION_
+2020-08-04 14:00:28,039 Adding None to address3
+2020-08-04 14:00:28,039 Adding None to address3
+2020-08-04 14:00:28,039 Adding 3 to shipmentType
+2020-08-04 14:00:28,039 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,039 Adding None to address2
+2020-08-04 14:00:28,039 Adding 38112 to contactNumber
+2020-08-04 14:00:28,039 Adding M954 to job
+2020-08-04 14:00:28,039 Adding 2 to country
+2020-08-04 14:00:28,039 Adding I to _ACTION_
+2020-08-04 14:00:28,039 Adding None to address3
+2020-08-04 14:00:28,039 Adding None to address3
+2020-08-04 14:00:28,039 Adding 3 to shipmentType
+2020-08-04 14:00:28,039 Adding Maureen Calvo to shipperName
+2020-08-04 14:00:28,040 Retrieving settings for Designer Copies
+2020-08-04 14:00:28,053 Retrieving settings for EST File
+2020-08-04 14:00:28,057 Retrieving settings for Jobs List
+2020-08-04 14:00:28,057 Trying to retrieve jobs list
+2020-08-04 14:00:28,057 Retrieving settings for Jobs List
+2020-08-04 14:00:28,111 Jobs list loaded successfully
+2020-08-04 14:00:28,112 Adding 3264 to CPC
+2020-08-04 14:00:28,113 Retrieving settings for PDF Received
+2020-08-04 14:00:28,142 Retrieving settings for Jobs List
+2020-08-04 14:00:28,143 Trying to retrieve jobs list
+2020-08-04 14:00:28,143 Retrieving settings for Jobs List
+2020-08-04 14:00:28,214 Jobs list loaded successfully
+2020-08-04 14:00:28,216 Adding 2020-08-04 14:00:28.113752 to Files In
+2020-08-04 14:00:28,216 Adding 16 to True Page Count
+2020-08-04 14:00:28,216 Adding 2020-08-04 14:00:28.113752 to Files In
+2020-08-04 14:00:28,216 Adding 16 to True Page Count
+2020-08-04 14:00:28,340 Retrieving settings for Pace Update
+2020-08-04 14:00:28,340 Trying to open the MIS Update
+2020-08-04 14:00:28,341 Retrieving settings for Pace Update
+2020-08-04 14:00:28,375 Retrieving settings for Jobs List
+2020-08-04 14:00:28,376 Trying to retrieve jobs list
+2020-08-04 14:00:28,376 Retrieving settings for Jobs List
+2020-08-04 14:00:28,429 Jobs list loaded successfully
+2020-08-04 14:00:28,430 Retrieving settings for Pace Update
+2020-08-04 14:00:28,430 Trying to open the MIS Update
+2020-08-04 14:00:28,430 Retrieving settings for Pace Update
+2020-08-04 14:00:28,458 Retrieving settings for Samples
+2020-08-04 14:00:28,474 Retrieving settings for Designer Copies
+2020-08-04 14:00:28,488 Retrieving settings for Samples
+2020-08-04 14:00:28,506 Retrieving settings for Job Shipments
+2020-08-04 14:00:28,506 Retrieving settings for Job Shipments
+2020-08-04 14:00:34,522 Retrieving settings for EST File
+2020-08-04 14:00:34,551 Retrieving settings for Jobs List
+2020-08-04 14:00:34,552 Trying to retrieve jobs list
+2020-08-04 14:00:34,552 Retrieving settings for Jobs List
+2020-08-04 14:00:34,783 Jobs list loaded successfully
+2020-08-04 14:00:34,785 Adding 3264 to CPC
+2020-08-04 14:01:16,711 Retrieving settings for EST File
+2020-08-04 14:01:16,735 Retrieving settings for Jobs List
+2020-08-04 14:01:16,735 Trying to retrieve jobs list
+2020-08-04 14:01:16,735 Retrieving settings for Jobs List
+2020-08-04 14:01:16,945 Jobs list loaded successfully
+2020-08-04 14:01:16,947 Adding 3264 to CPC
+2020-08-04 14:01:47,357 Retrieving settings for EST File
+2020-08-04 14:01:47,380 Retrieving settings for Jobs List
+2020-08-04 14:01:47,381 Trying to retrieve jobs list
+2020-08-04 14:01:47,381 Retrieving settings for Jobs List
+2020-08-04 14:01:47,594 Jobs list loaded successfully
+2020-08-04 14:01:47,597 Adding 3264 to CPC
+2020-08-04 14:01:51,795 Replacing In Production with In Production
+2020-08-04 14:01:51,795 Replacing 07/15/2020 with 07/15/2020
+2020-08-04 14:01:51,795 Replacing In Production with In Production
+2020-08-04 14:01:51,795 Replacing 08/15/2020 with 08/15/2020
+2020-08-04 14:01:51,795 Replacing M1800 with M1800
+2020-08-04 14:01:51,821 Retrieving settings for Contacts
+2020-08-04 14:01:51,821 Retrieving settings for Contacts
+2020-08-04 14:01:51,854 Retrieving settings for Customer Report
+2020-08-04 14:01:51,854 Retrieving settings for Customer Report
+2020-08-04 14:01:51,855 Retrieving settings for Jobs List
+2020-08-04 14:01:51,855 Trying to retrieve jobs list
+2020-08-04 14:01:51,855 Retrieving settings for Jobs List
+2020-08-04 14:01:51,913 Jobs list loaded successfully
+2020-08-04 14:01:51,913 Retrieving settings for Customer Report
+2020-08-04 14:01:51,913 Retrieving settings for Customer Report
+2020-08-04 14:01:51,915 Retrieving settings for Samples
+2020-08-04 14:01:51,931 Retrieving settings for Designer Copies
+2020-08-04 14:01:51,947 Retrieving settings for Job Shipments
+2020-08-04 14:01:51,947 Retrieving settings for Job Shipments
+2020-08-04 14:01:51,947 Retrieving settings for Jobs List
+2020-08-04 14:01:51,947 Trying to retrieve jobs list
+2020-08-04 14:01:51,947 Retrieving settings for Jobs List
+2020-08-04 14:01:52,001 Jobs list loaded successfully
+2020-08-04 14:01:52,001 Retrieving settings for Contacts
+2020-08-04 14:01:52,001 Retrieving settings for Contacts
+2020-08-04 14:01:52,034 Adding M1100 to job
+2020-08-04 14:01:52,034 Adding None to address2
+2020-08-04 14:01:52,034 Adding 38023 to contactNumber
+2020-08-04 14:01:52,034 Adding I to _ACTION_
+2020-08-04 14:01:52,034 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,035 Adding 2 to country
+2020-08-04 14:01:52,035 Adding 3 to shipmentType
+2020-08-04 14:01:52,035 Adding None to address3
+2020-08-04 14:01:52,035 Adding None to address3
+2020-08-04 14:01:52,035 Adding M1100 to job
+2020-08-04 14:01:52,035 Adding None to address2
+2020-08-04 14:01:52,035 Adding 38023 to contactNumber
+2020-08-04 14:01:52,035 Adding I to _ACTION_
+2020-08-04 14:01:52,035 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,035 Adding 2 to country
+2020-08-04 14:01:52,035 Adding 3 to shipmentType
+2020-08-04 14:01:52,035 Adding None to address3
+2020-08-04 14:01:52,035 Adding None to address3
+2020-08-04 14:01:52,035 Adding M1100 to job
+2020-08-04 14:01:52,035 Adding None to address2
+2020-08-04 14:01:52,035 Adding 38023 to contactNumber
+2020-08-04 14:01:52,035 Adding I to _ACTION_
+2020-08-04 14:01:52,035 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,035 Adding 2 to country
+2020-08-04 14:01:52,035 Adding 3 to shipmentType
+2020-08-04 14:01:52,035 Adding None to address3
+2020-08-04 14:01:52,035 Adding None to address3
+2020-08-04 14:01:52,035 Adding M1100 to job
+2020-08-04 14:01:52,035 Adding None to address2
+2020-08-04 14:01:52,035 Adding 38023 to contactNumber
+2020-08-04 14:01:52,035 Adding I to _ACTION_
+2020-08-04 14:01:52,035 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,035 Adding 2 to country
+2020-08-04 14:01:52,036 Adding 3 to shipmentType
+2020-08-04 14:01:52,036 Adding None to address3
+2020-08-04 14:01:52,036 Adding None to address3
+2020-08-04 14:01:52,036 Adding M1100 to job
+2020-08-04 14:01:52,036 Adding None to address2
+2020-08-04 14:01:52,036 Adding 38023 to contactNumber
+2020-08-04 14:01:52,036 Adding I to _ACTION_
+2020-08-04 14:01:52,036 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,036 Adding 2 to country
+2020-08-04 14:01:52,036 Adding 3 to shipmentType
+2020-08-04 14:01:52,036 Adding None to address3
+2020-08-04 14:01:52,036 Adding None to address3
+2020-08-04 14:01:52,036 Adding M1100 to job
+2020-08-04 14:01:52,036 Adding None to address2
+2020-08-04 14:01:52,036 Adding 38023 to contactNumber
+2020-08-04 14:01:52,036 Adding I to _ACTION_
+2020-08-04 14:01:52,036 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,036 Adding 2 to country
+2020-08-04 14:01:52,036 Adding 3 to shipmentType
+2020-08-04 14:01:52,036 Adding None to address3
+2020-08-04 14:01:52,036 Adding None to address3
+2020-08-04 14:01:52,036 Adding M1100 to job
+2020-08-04 14:01:52,036 Adding None to address2
+2020-08-04 14:01:52,036 Adding 38023 to contactNumber
+2020-08-04 14:01:52,037 Adding I to _ACTION_
+2020-08-04 14:01:52,037 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,037 Adding 2 to country
+2020-08-04 14:01:52,037 Adding 3 to shipmentType
+2020-08-04 14:01:52,037 Adding None to address3
+2020-08-04 14:01:52,037 Adding None to address3
+2020-08-04 14:01:52,037 Adding M1100 to job
+2020-08-04 14:01:52,037 Adding None to address2
+2020-08-04 14:01:52,037 Adding 38023 to contactNumber
+2020-08-04 14:01:52,037 Adding I to _ACTION_
+2020-08-04 14:01:52,037 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,037 Adding 2 to country
+2020-08-04 14:01:52,037 Adding 3 to shipmentType
+2020-08-04 14:01:52,037 Adding None to address3
+2020-08-04 14:01:52,037 Adding None to address3
+2020-08-04 14:01:52,037 Adding M1142 to job
+2020-08-04 14:01:52,038 Adding None to address2
+2020-08-04 14:01:52,038 Adding 38032 to contactNumber
+2020-08-04 14:01:52,038 Adding I to _ACTION_
+2020-08-04 14:01:52,038 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,038 Adding 2 to country
+2020-08-04 14:01:52,038 Adding 3 to shipmentType
+2020-08-04 14:01:52,038 Adding None to address3
+2020-08-04 14:01:52,038 Adding None to address3
+2020-08-04 14:01:52,038 Adding M1142 to job
+2020-08-04 14:01:52,038 Adding None to address2
+2020-08-04 14:01:52,038 Adding 38032 to contactNumber
+2020-08-04 14:01:52,038 Adding I to _ACTION_
+2020-08-04 14:01:52,038 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,038 Adding 2 to country
+2020-08-04 14:01:52,038 Adding 3 to shipmentType
+2020-08-04 14:01:52,038 Adding None to address3
+2020-08-04 14:01:52,038 Adding None to address3
+2020-08-04 14:01:52,038 Adding M1154 to job
+2020-08-04 14:01:52,038 Adding None to address2
+2020-08-04 14:01:52,038 Adding 38036 to contactNumber
+2020-08-04 14:01:52,038 Adding I to _ACTION_
+2020-08-04 14:01:52,038 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,038 Adding 2 to country
+2020-08-04 14:01:52,038 Adding 3 to shipmentType
+2020-08-04 14:01:52,038 Adding None to address3
+2020-08-04 14:01:52,038 Adding None to address3
+2020-08-04 14:01:52,039 Adding M1154 to job
+2020-08-04 14:01:52,039 Adding None to address2
+2020-08-04 14:01:52,039 Adding 38036 to contactNumber
+2020-08-04 14:01:52,039 Adding I to _ACTION_
+2020-08-04 14:01:52,039 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,039 Adding 2 to country
+2020-08-04 14:01:52,039 Adding 3 to shipmentType
+2020-08-04 14:01:52,039 Adding None to address3
+2020-08-04 14:01:52,039 Adding None to address3
+2020-08-04 14:01:52,039 Adding M1154 to job
+2020-08-04 14:01:52,039 Adding None to address2
+2020-08-04 14:01:52,039 Adding 38036 to contactNumber
+2020-08-04 14:01:52,039 Adding I to _ACTION_
+2020-08-04 14:01:52,039 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,039 Adding 2 to country
+2020-08-04 14:01:52,039 Adding 3 to shipmentType
+2020-08-04 14:01:52,039 Adding None to address3
+2020-08-04 14:01:52,039 Adding None to address3
+2020-08-04 14:01:52,039 Adding M1171 to job
+2020-08-04 14:01:52,039 Adding None to address2
+2020-08-04 14:01:52,039 Adding 38053 to contactNumber
+2020-08-04 14:01:52,039 Adding I to _ACTION_
+2020-08-04 14:01:52,039 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,039 Adding 2 to country
+2020-08-04 14:01:52,039 Adding 3 to shipmentType
+2020-08-04 14:01:52,039 Adding None to address3
+2020-08-04 14:01:52,040 Adding None to address3
+2020-08-04 14:01:52,040 Adding M1171 to job
+2020-08-04 14:01:52,040 Adding None to address2
+2020-08-04 14:01:52,040 Adding 38053 to contactNumber
+2020-08-04 14:01:52,040 Adding I to _ACTION_
+2020-08-04 14:01:52,040 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,040 Adding 2 to country
+2020-08-04 14:01:52,040 Adding 3 to shipmentType
+2020-08-04 14:01:52,040 Adding None to address3
+2020-08-04 14:01:52,040 Adding None to address3
+2020-08-04 14:01:52,040 Adding M1194 to job
+2020-08-04 14:01:52,040 Adding None to address2
+2020-08-04 14:01:52,040 Adding 38057 to contactNumber
+2020-08-04 14:01:52,040 Adding I to _ACTION_
+2020-08-04 14:01:52,040 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,040 Adding 2 to country
+2020-08-04 14:01:52,040 Adding 3 to shipmentType
+2020-08-04 14:01:52,040 Adding None to address3
+2020-08-04 14:01:52,040 Adding None to address3
+2020-08-04 14:01:52,040 Adding M1194 to job
+2020-08-04 14:01:52,040 Adding None to address2
+2020-08-04 14:01:52,040 Adding 38057 to contactNumber
+2020-08-04 14:01:52,040 Adding I to _ACTION_
+2020-08-04 14:01:52,040 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,040 Adding 2 to country
+2020-08-04 14:01:52,040 Adding 3 to shipmentType
+2020-08-04 14:01:52,040 Adding None to address3
+2020-08-04 14:01:52,040 Adding None to address3
+2020-08-04 14:01:52,040 Adding M1194 to job
+2020-08-04 14:01:52,040 Adding None to address2
+2020-08-04 14:01:52,040 Adding 38057 to contactNumber
+2020-08-04 14:01:52,040 Adding I to _ACTION_
+2020-08-04 14:01:52,041 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,041 Adding 2 to country
+2020-08-04 14:01:52,041 Adding 3 to shipmentType
+2020-08-04 14:01:52,041 Adding None to address3
+2020-08-04 14:01:52,041 Adding None to address3
+2020-08-04 14:01:52,041 Adding M1194 to job
+2020-08-04 14:01:52,041 Adding None to address2
+2020-08-04 14:01:52,041 Adding 38057 to contactNumber
+2020-08-04 14:01:52,041 Adding I to _ACTION_
+2020-08-04 14:01:52,041 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,041 Adding 2 to country
+2020-08-04 14:01:52,041 Adding 3 to shipmentType
+2020-08-04 14:01:52,041 Adding None to address3
+2020-08-04 14:01:52,041 Adding None to address3
+2020-08-04 14:01:52,041 Adding M1207 to job
+2020-08-04 14:01:52,041 Adding None to address2
+2020-08-04 14:01:52,041 Adding 38062 to contactNumber
+2020-08-04 14:01:52,041 Adding I to _ACTION_
+2020-08-04 14:01:52,041 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,041 Adding 2 to country
+2020-08-04 14:01:52,041 Adding 3 to shipmentType
+2020-08-04 14:01:52,041 Adding None to address3
+2020-08-04 14:01:52,041 Adding None to address3
+2020-08-04 14:01:52,041 Adding M1207 to job
+2020-08-04 14:01:52,041 Adding None to address2
+2020-08-04 14:01:52,041 Adding 38062 to contactNumber
+2020-08-04 14:01:52,041 Adding I to _ACTION_
+2020-08-04 14:01:52,041 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,041 Adding 2 to country
+2020-08-04 14:01:52,041 Adding 3 to shipmentType
+2020-08-04 14:01:52,041 Adding None to address3
+2020-08-04 14:01:52,042 Adding None to address3
+2020-08-04 14:01:52,042 Adding M1207 to job
+2020-08-04 14:01:52,042 Adding None to address2
+2020-08-04 14:01:52,042 Adding 38062 to contactNumber
+2020-08-04 14:01:52,042 Adding I to _ACTION_
+2020-08-04 14:01:52,042 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,042 Adding 2 to country
+2020-08-04 14:01:52,042 Adding 3 to shipmentType
+2020-08-04 14:01:52,042 Adding None to address3
+2020-08-04 14:01:52,042 Adding None to address3
+2020-08-04 14:01:52,042 Adding M1237 to job
+2020-08-04 14:01:52,042 Adding None to address2
+2020-08-04 14:01:52,042 Adding 38071 to contactNumber
+2020-08-04 14:01:52,042 Adding I to _ACTION_
+2020-08-04 14:01:52,042 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,042 Adding 2 to country
+2020-08-04 14:01:52,042 Adding 3 to shipmentType
+2020-08-04 14:01:52,042 Adding None to address3
+2020-08-04 14:01:52,042 Adding None to address3
+2020-08-04 14:01:52,042 Adding M1239 to job
+2020-08-04 14:01:52,042 Adding None to address2
+2020-08-04 14:01:52,042 Adding 38072 to contactNumber
+2020-08-04 14:01:52,042 Adding I to _ACTION_
+2020-08-04 14:01:52,042 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,042 Adding 2 to country
+2020-08-04 14:01:52,043 Adding 3 to shipmentType
+2020-08-04 14:01:52,043 Adding None to address3
+2020-08-04 14:01:52,043 Adding None to address3
+2020-08-04 14:01:52,043 Adding M1243 to job
+2020-08-04 14:01:52,043 Adding None to address2
+2020-08-04 14:01:52,043 Adding 38086 to contactNumber
+2020-08-04 14:01:52,043 Adding I to _ACTION_
+2020-08-04 14:01:52,043 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,043 Adding 2 to country
+2020-08-04 14:01:52,043 Adding 3 to shipmentType
+2020-08-04 14:01:52,043 Adding None to address3
+2020-08-04 14:01:52,043 Adding None to address3
+2020-08-04 14:01:52,043 Adding M1184 to job
+2020-08-04 14:01:52,043 Adding None to address2
+2020-08-04 14:01:52,043 Adding 38091 to contactNumber
+2020-08-04 14:01:52,043 Adding I to _ACTION_
+2020-08-04 14:01:52,043 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,043 Adding 2 to country
+2020-08-04 14:01:52,043 Adding 3 to shipmentType
+2020-08-04 14:01:52,043 Adding None to address3
+2020-08-04 14:01:52,043 Adding None to address3
+2020-08-04 14:01:52,043 Adding M1184 to job
+2020-08-04 14:01:52,043 Adding None to address2
+2020-08-04 14:01:52,043 Adding 38091 to contactNumber
+2020-08-04 14:01:52,044 Adding I to _ACTION_
+2020-08-04 14:01:52,044 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,044 Adding 2 to country
+2020-08-04 14:01:52,044 Adding 3 to shipmentType
+2020-08-04 14:01:52,044 Adding None to address3
+2020-08-04 14:01:52,044 Adding None to address3
+2020-08-04 14:01:52,044 Adding M1184 to job
+2020-08-04 14:01:52,044 Adding None to address2
+2020-08-04 14:01:52,044 Adding 38091 to contactNumber
+2020-08-04 14:01:52,044 Adding I to _ACTION_
+2020-08-04 14:01:52,044 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,044 Adding 2 to country
+2020-08-04 14:01:52,044 Adding 3 to shipmentType
+2020-08-04 14:01:52,044 Adding None to address3
+2020-08-04 14:01:52,044 Adding None to address3
+2020-08-04 14:01:52,044 Adding M1184 to job
+2020-08-04 14:01:52,044 Adding None to address2
+2020-08-04 14:01:52,044 Adding 38091 to contactNumber
+2020-08-04 14:01:52,044 Adding I to _ACTION_
+2020-08-04 14:01:52,044 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,045 Adding 2 to country
+2020-08-04 14:01:52,045 Adding 3 to shipmentType
+2020-08-04 14:01:52,045 Adding None to address3
+2020-08-04 14:01:52,045 Adding None to address3
+2020-08-04 14:01:52,045 Adding M1271 to job
+2020-08-04 14:01:52,045 Adding None to address2
+2020-08-04 14:01:52,045 Adding 38093 to contactNumber
+2020-08-04 14:01:52,045 Adding I to _ACTION_
+2020-08-04 14:01:52,045 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,045 Adding 2 to country
+2020-08-04 14:01:52,045 Adding 3 to shipmentType
+2020-08-04 14:01:52,045 Adding None to address3
+2020-08-04 14:01:52,045 Adding None to address3
+2020-08-04 14:01:52,045 Adding M1232 to job
+2020-08-04 14:01:52,045 Adding None to address2
+2020-08-04 14:01:52,045 Adding 38095 to contactNumber
+2020-08-04 14:01:52,045 Adding I to _ACTION_
+2020-08-04 14:01:52,045 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,045 Adding 2 to country
+2020-08-04 14:01:52,045 Adding 3 to shipmentType
+2020-08-04 14:01:52,045 Adding None to address3
+2020-08-04 14:01:52,045 Adding None to address3
+2020-08-04 14:01:52,045 Adding M1142 to job
+2020-08-04 14:01:52,045 Adding None to address2
+2020-08-04 14:01:52,045 Adding 38097 to contactNumber
+2020-08-04 14:01:52,045 Adding I to _ACTION_
+2020-08-04 14:01:52,045 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,045 Adding 2 to country
+2020-08-04 14:01:52,045 Adding 3 to shipmentType
+2020-08-04 14:01:52,046 Adding None to address3
+2020-08-04 14:01:52,046 Adding None to address3
+2020-08-04 14:01:52,046 Adding M1142 to job
+2020-08-04 14:01:52,046 Adding None to address2
+2020-08-04 14:01:52,046 Adding 38097 to contactNumber
+2020-08-04 14:01:52,046 Adding I to _ACTION_
+2020-08-04 14:01:52,046 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,046 Adding 2 to country
+2020-08-04 14:01:52,046 Adding 3 to shipmentType
+2020-08-04 14:01:52,046 Adding None to address3
+2020-08-04 14:01:52,046 Adding None to address3
+2020-08-04 14:01:52,046 Adding M1254 to job
+2020-08-04 14:01:52,046 Adding None to address2
+2020-08-04 14:01:52,046 Adding 38101 to contactNumber
+2020-08-04 14:01:52,046 Adding I to _ACTION_
+2020-08-04 14:01:52,046 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,046 Adding 2 to country
+2020-08-04 14:01:52,046 Adding 3 to shipmentType
+2020-08-04 14:01:52,046 Adding None to address3
+2020-08-04 14:01:52,046 Adding None to address3
+2020-08-04 14:01:52,046 Adding M1262 to job
+2020-08-04 14:01:52,046 Adding None to address2
+2020-08-04 14:01:52,046 Adding 38106 to contactNumber
+2020-08-04 14:01:52,046 Adding I to _ACTION_
+2020-08-04 14:01:52,046 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,047 Adding 2 to country
+2020-08-04 14:01:52,047 Adding 3 to shipmentType
+2020-08-04 14:01:52,047 Adding None to address3
+2020-08-04 14:01:52,047 Adding None to address3
+2020-08-04 14:01:52,047 Adding M1237 to job
+2020-08-04 14:01:52,047 Adding None to address2
+2020-08-04 14:01:52,047 Adding 38109 to contactNumber
+2020-08-04 14:01:52,047 Adding I to _ACTION_
+2020-08-04 14:01:52,047 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,047 Adding 2 to country
+2020-08-04 14:01:52,047 Adding 3 to shipmentType
+2020-08-04 14:01:52,047 Adding None to address3
+2020-08-04 14:01:52,047 Adding None to address3
+2020-08-04 14:01:52,047 Adding M1249 to job
+2020-08-04 14:01:52,047 Adding None to address2
+2020-08-04 14:01:52,047 Adding 38111 to contactNumber
+2020-08-04 14:01:52,047 Adding I to _ACTION_
+2020-08-04 14:01:52,047 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,047 Adding 2 to country
+2020-08-04 14:01:52,047 Adding 3 to shipmentType
+2020-08-04 14:01:52,047 Adding None to address3
+2020-08-04 14:01:52,047 Adding None to address3
+2020-08-04 14:01:52,047 Adding M1249 to job
+2020-08-04 14:01:52,047 Adding None to address2
+2020-08-04 14:01:52,047 Adding 38111 to contactNumber
+2020-08-04 14:01:52,047 Adding I to _ACTION_
+2020-08-04 14:01:52,047 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,047 Adding 2 to country
+2020-08-04 14:01:52,047 Adding 3 to shipmentType
+2020-08-04 14:01:52,047 Adding None to address3
+2020-08-04 14:01:52,048 Adding None to address3
+2020-08-04 14:01:52,048 Adding M1249 to job
+2020-08-04 14:01:52,048 Adding None to address2
+2020-08-04 14:01:52,048 Adding 38111 to contactNumber
+2020-08-04 14:01:52,048 Adding I to _ACTION_
+2020-08-04 14:01:52,048 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,048 Adding 2 to country
+2020-08-04 14:01:52,048 Adding 3 to shipmentType
+2020-08-04 14:01:52,048 Adding None to address3
+2020-08-04 14:01:52,048 Adding None to address3
+2020-08-04 14:01:52,048 Adding M954 to job
+2020-08-04 14:01:52,048 Adding None to address2
+2020-08-04 14:01:52,048 Adding 38112 to contactNumber
+2020-08-04 14:01:52,048 Adding I to _ACTION_
+2020-08-04 14:01:52,048 Adding Maureen Calvo to shipperName
+2020-08-04 14:01:52,048 Adding 2 to country
+2020-08-04 14:01:52,048 Adding 3 to shipmentType
+2020-08-04 14:01:52,048 Adding None to address3
+2020-08-04 14:01:52,048 Adding None to address3
+2020-08-04 14:01:52,049 Retrieving settings for Designer Copies
+2020-08-04 14:01:52,059 Retrieving settings for EST File
+2020-08-04 14:01:52,064 Retrieving settings for Jobs List
+2020-08-04 14:01:52,065 Trying to retrieve jobs list
+2020-08-04 14:01:52,065 Retrieving settings for Jobs List
+2020-08-04 14:01:52,118 Jobs list loaded successfully
+2020-08-04 14:01:52,119 Adding 3264 to CPC
+2020-08-04 14:01:52,120 Retrieving settings for PDF Received
+2020-08-04 14:01:52,144 Retrieving settings for Jobs List
+2020-08-04 14:01:52,145 Trying to retrieve jobs list
+2020-08-04 14:01:52,145 Retrieving settings for Jobs List
+2020-08-04 14:01:52,218 Jobs list loaded successfully
+2020-08-04 14:01:52,219 Adding 16 to True Page Count
+2020-08-04 14:01:52,219 Adding 2020-08-04 14:01:52.121210 to Files In
+2020-08-04 14:01:52,219 Adding 16 to True Page Count
+2020-08-04 14:01:52,219 Adding 2020-08-04 14:01:52.121210 to Files In
+2020-08-04 14:01:52,341 Retrieving settings for Pace Update
+2020-08-04 14:01:52,341 Trying to open the MIS Update
+2020-08-04 14:01:52,341 Retrieving settings for Pace Update
+2020-08-04 14:01:52,375 Retrieving settings for Jobs List
+2020-08-04 14:01:52,375 Trying to retrieve jobs list
+2020-08-04 14:01:52,375 Retrieving settings for Jobs List
+2020-08-04 14:01:52,428 Jobs list loaded successfully
+2020-08-04 14:01:52,429 Retrieving settings for Pace Update
+2020-08-04 14:01:52,429 Trying to open the MIS Update
+2020-08-04 14:01:52,429 Retrieving settings for Pace Update
+2020-08-04 14:01:52,459 Retrieving settings for Samples
+2020-08-04 14:01:52,475 Retrieving settings for Designer Copies
+2020-08-04 14:01:52,485 Retrieving settings for Samples
+2020-08-04 14:01:52,501 Retrieving settings for Job Shipments
+2020-08-04 14:01:52,501 Retrieving settings for Job Shipments

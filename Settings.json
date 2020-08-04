@@ -466,6 +466,25 @@
                 "Approved"                
             ],
             "Write Once Columns": []
+        },
+        "EST File":{
+            "Default Path": "NA",
+            "Tab": "NA",
+            "True Dates": false,
+            "Date Columns":[],
+            "Columns Order": {
+                "1": "FSA",
+                "2": "From DMID",
+                "3": "To DMID",
+                "4": "Secondary Installation",
+                "5": "Houses",
+                "6": "Apartments",
+                "7": "Farms",
+                "8": "Businesses",
+                "9": "Reference 1",
+                "10": "Reference 2"
+            },
+            "Write Once Columns": []
         }
     }
 }

@@ -1,3 +1,4 @@
+from logging import log
 from typing import Dict, List
 import json
 from datetime import date, datetime
@@ -6,6 +7,9 @@ import copy
 import pandas as pd
 from Libraries.NameParse import NameParse
 from Libraries.ExcelLibs import WriteData
+import logging
+
+logging.basicConfig(filename='log.txt',level=logging.DEBUG, format='%(asctime)s %(message)s')
 
 class DataSource:
     """Base type for all data sources collected from Excel and comma delimited files.
@@ -260,18 +264,19 @@ class DataSource:
             if column not in old_row:
                 old_row[column] = new_row[column]                            
             if old_row[column] == None or column not in self.settings["Write Once Columns"]:
-                old_row[column] = new_row[column]
-                print("Replacing "+str(old_row[column])+" with "+str(new_row[column]))
+                if old_row[column] != new_row[column]:
+                    old_row[column] = new_row[column]
+                    logging.info("Replacing "+str(old_row[column])+" with "+str(new_row[column]))
 
 
     def hit_add_missing(self, columns, new_row, old_row):
         for column in columns:
             if column not in old_row:
                 old_row[column] = new_row[column]
-                print("Adding "+str(new_row[column])+" to "+column)
+                logging.info("Adding "+str(new_row[column])+" to "+column)
             if old_row[column] == None:
                 old_row[column] = new_row[column]
-                print("Adding "+str(new_row[column])+" to "+column)
+                logging.info("Adding "+str(new_row[column])+" to "+column)
 
     def _add_row(self, row: Dict):
         if len(self._data_list[0]) == 0:
@@ -279,9 +284,8 @@ class DataSource:
         else:
             self._data_list.append(row)
 
-    def _add_row_record_addition(self, row: Dict, record_column: str):
-        row[record_column] = datetime.now().strftime(
-            self.settings["Date Format"])
+    def _add_row_record_addition(self, row: Dict):
+        row["Added On"] = datetime.now()
         self._data_list.append(row)
 
     def _not_add_row(self, row: Dict):
@@ -562,6 +566,8 @@ class JobsList(DataSource):
         day_string = "01"
         for row in self._data_list:
             month_string = ""
+            if self.PublicationMonth not in row:
+                row[self.PublicationMonth]=None
             if row[self.PublicationMonth] == None:
                 if row[self.Description] != None:
                     if len(row[self.Description].split("-")[-1]) < 5:
@@ -610,8 +616,10 @@ class JobsList(DataSource):
     def save(self):
         self.write_to_file(self.path, self.tab, self.prep_data_none, WriteData)
 
-    def add_from_mis_list(self, mis_list):
-        self._merge_data(mis_list, ["Job"], self.hit_replace, self._add_row)
+    def on_mis_list(self, mis_list):
+        self._merge_data(mis_list, ["Job"], self.hit_replace, self._add_row_record_addition)
+        self._set_publication_numbers()
+        self.set_publication_month()
 
 
 class Samples(DataSource):
@@ -770,3 +778,20 @@ class PdfApproved(PdfFile):
         super().__init__(self._type, path, settingsFunc, dictFunc)
         self._data_list[0]["Approved"] = self._data_list[0]["DateTime"]
         self._data_list[0]["Publication Number"] = NameParse(self._data_list[0]["Name"])
+
+class EstFile(DataSource):
+    def __init__(self, path, settingsFunc, dictFunc) -> None:
+        self.type: str = "EST File"
+        self.settings = settingsFunc("EST File")
+        columns = self.settings["Columns Order"].values()        
+        self._data_list = dictFunc(path, columns)
+        for i in range(len(self._data_list)-1, 0, -1):
+            self._data_list[0]["Houses"] += self._data_list[i]["Houses"]
+            self._data_list[0]["Apartments"] += self._data_list[i]["Apartments"]
+            self._data_list[0]["Farms"] += self._data_list[i]["Farms"]
+            self._data_list[0]["Businesses"] += self._data_list[i]["Businesses"]
+            self._data_list.pop(i)
+        self._data_list[0]["CPC"]=self._data_list[0]["Houses"]+self._data_list[0]["Apartments"]+self._data_list[0]["Farms"]
+        self._data_list[0]["Publication Number"] = path.split("/")[-1].split("\\")[-1].split()[0]
+
+    

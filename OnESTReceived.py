@@ -1,10 +1,10 @@
-from DataManager import get_jobs_list, get_pdf_approved
+from DataManager import get_est_file, get_jobs_list, get_pdf_received
 import sys
 
 def receive_file(path):
     jobs = get_jobs_list()
-    pdf_approved = get_pdf_approved(path)
-    jobs.on_approval(pdf_approved)
+    est_received = get_est_file(path)
+    jobs.on_file_upload(est_received)
     jobs.save()
 
 if __name__ == "__main__":

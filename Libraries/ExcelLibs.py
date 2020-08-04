@@ -1,7 +1,6 @@
 from typing import Dict, List
 from openpyxl import Workbook, load_workbook
 from xlrd import open_workbook
-import csv
 from pandas import read_excel, read_csv, core
 import pandas as pd
 
@@ -100,6 +99,13 @@ def GetData(path: str, tab: str) -> list:
 # d = GetData('BVM+Job+Grouped+For+Tracking+Report.xls', '')
 # print('Pause')
 
+def get_data_csv(path, columns) -> List:
+    df = read_csv(path, names= columns)
+    df1 = df.where(pd.notnull(df), None)
+    dfDict = df1.to_dict('records')
+    return dfDict
+
 def WriteData(path: str, sheet: str, data_list: pd.DataFrame, columns: List):
     df = pd.DataFrame(data_list)
     df.to_excel(path, sheet, columns=columns, index=False)
+

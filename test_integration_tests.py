@@ -77,3 +77,10 @@ class TestObjectsInitialization(unittest.TestCase):
         jobs_list._merge_data(pdf_received, ["Publication Number"], jobs_list.hit_add_missing ,jobs_list._not_add_row)
         jobs_list.write_to_file("Test_Data/test.xlsx", jobs_list.settings["Tab"], jobs_list.prep_data_none, WriteData)
         self.assertIsNotNone(jobs_list)
+
+    def test_est_file_received(self):
+        test = dm.get_est_file("Test_Data/Good_txt/457 Old Thornhill #457.txt")
+        test2 = dm.get_jobs_list()
+        test2._merge_data(test, ["Publication Number"], test2.hit_add_missing, test2._not_add_row)
+        self.assertEqual(test2._data_list[257]["CPC"], 3264)
+        
