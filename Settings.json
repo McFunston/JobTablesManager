@@ -47,13 +47,15 @@
                 "16": "Shipping Added",
                 "17": "True Page Count",
                 "18": "Publication Month",
-                "19": "Exported to MIS"
+                "19": "Exported to MIS",
+                "20": "Project ID"
             },
             "Common Data Columns": {
                 "Job": "job",
                 "Qty Ordered": "part1QuantityOrdered",
                 "Description": "description",
-                "Publication Number": "id"
+                "Publication Number": "id",
+                "Project ID": "jobProject"                
             },
             "Data Types": {
                 "Job": "str",
@@ -309,7 +311,8 @@
         },
         "Job Projects": {
             "Type":"Data List",
-            "Default Path": "Test_Data/BVM Job Projects",
+            "Default Path": "Test_Data/BVM Job Projects.xlsx",
+            "Tab": "EPace Data",
             "Columns Order": {
                 "1": "Customer",
                 "2": "Code",
@@ -326,7 +329,7 @@
                 "Project ID": "int"
             },
             "Common Data Columns": {
-                "Code": "id"
+                "Code": "Publication Number"
             }
         },
         "Job Shipments":{

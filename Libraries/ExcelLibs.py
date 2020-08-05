@@ -23,16 +23,6 @@ def WriteXlsx(table, outputPath):
         ws_write.append(row)
     wb.save(outputPath)
 
-
-def OpenCSV(inputPath):
-    rows = list()
-    with open(inputPath, encoding="utf-8-sig") as csv_file:
-        csv_reader = csv.reader(csv_file, delimiter=',')
-        for row in csv_reader:
-            rows.append(row)
-    return rows
-
-
 def OpenXLS(inputPath):
     with open_workbook(inputPath) as book:
         sheet = book.sheet_by_index(0)
@@ -100,7 +90,7 @@ def GetData(path: str, tab: str) -> list:
 # print('Pause')
 
 def get_data_csv(path, columns) -> List:
-    df = read_csv(path, names= columns)
+    df: pd.DataFrame = read_csv(path, names= columns)
     df1 = df.where(pd.notnull(df), None)
     dfDict = df1.to_dict('records')
     return dfDict

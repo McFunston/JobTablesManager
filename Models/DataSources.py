@@ -42,6 +42,35 @@ class DataSource:
     
     def prep_data_none(self):
         return
+    
+    def add_one_month(self, orig_date):
+        # advance year and month by one month
+        new_year = orig_date.year
+        new_month = orig_date.month + 1
+        # note: in datetime.date, months go from 1 to 12
+        if new_month > 12:
+            new_year += 1
+            new_month -= 12
+
+        last_day_of_month = calendar.monthrange(new_year, new_month)[1]
+        new_day = min(orig_date.day, last_day_of_month)
+
+        return orig_date.replace(year=new_year, month=new_month, day=new_day)
+
+    def add_months_from_now(self, number_of_months):
+        # advance year and month by number_of_months
+        orig_date=datetime.now()
+        new_year = orig_date.year
+        new_month = orig_date.month + number_of_months
+        # note: in datetime.date, months go from 1 to 12
+        if new_month > 12:
+            new_year += 1
+            new_month -= 12
+
+        last_day_of_month = calendar.monthrange(new_year, new_month)[1]
+        new_day = min(orig_date.day, last_day_of_month)
+
+        return orig_date.replace(year=new_year, month=new_month, day=new_day)
 
     def _find_first_row(self, column: str, search_term: str) -> dict:
         """
@@ -469,19 +498,7 @@ class JobsList(DataSource):
         self.set_publication_month()
         self._set_publication_numbers()
 
-    def add_one_month(self, orig_date):
-        # advance year and month by one month
-        new_year = orig_date.year
-        new_month = orig_date.month + 1
-        # note: in datetime.date, months go from 1 to 12
-        if new_month > 12:
-            new_year += 1
-            new_month -= 12
 
-        last_day_of_month = calendar.monthrange(new_year, new_month)[1]
-        new_day = min(orig_date.day, last_day_of_month)
-
-        return orig_date.replace(year=new_year, month=new_month, day=new_day)
 
     def get_most_recent_pub(self, pub_number: str) -> Dict:
         """Find the most recent publication.
@@ -617,10 +634,13 @@ class JobsList(DataSource):
         self.write_to_file(self.path, self.tab, self.prep_data_none, WriteData)
 
     def on_mis_list(self, mis_list):
-        self._merge_data(mis_list, ["Job"], self.hit_replace, self._add_row_record_addition)
-        self._set_publication_numbers()
-        self.set_publication_month()
-
+        self._merge_data(mis_list, ["Description"], self.hit_replace, self._not_add_row)        
+    
+    def on_job_projects(self, mis_list):
+        self._merge_data(mis_list, ["Description"], self.hit_add_missing, self._add_row_record_addition)
+    
+    def on_est_received(self, est_file):
+        self._merge_data(est_file, ["Publication Number", "Publication Month"], self.hit_replace, self._not_add_row)
 
 class Samples(DataSource):
     """Mailing list of sample counts for publishers, advertisers, etc.
@@ -793,5 +813,43 @@ class EstFile(DataSource):
             self._data_list.pop(i)
         self._data_list[0]["CPC"]=self._data_list[0]["Houses"]+self._data_list[0]["Apartments"]+self._data_list[0]["Farms"]
         self._data_list[0]["Publication Number"] = path.split("/")[-1].split("\\")[-1].split()[0]
+        if datetime.now().day<=15:
+            pub_date=self.add_months_from_now(1)
+            self._data_list[0]["Publication Month"]=self.add_months_from_now(1)
+            
+        else:
+            pub_date=self.add_months_from_now(2)
+            self._data_list[0]["Publication Month"]=self.add_months_from_now(2)
+        pub_month=pub_date.month
+        pub_year=pub_date.year
+        pub_day="01"
+        self._data_list[0]["Publication Month"]=datetime.strptime(str(pub_month)+"/"+pub_day+"/"+str(pub_year), "%m/%d/%Y")
+        
 
+class JobProjects(DataSource):
+    def __init__(self, path, settingsFunc, dictFunc) -> None:
+        self._type: str = "Job Projects"
+        super().__init__(self._type, path, settingsFunc, dictFunc)
+        self._get_publication_month()
+        self._get_descriptions()
     
+    def _get_publication_month(self):
+        today = datetime.now()
+        publication_month = today
+        publication_month = self.add_one_month(today)
+        publication_month = self.add_one_month(publication_month)
+        publication_month.replace(day = 1)
+        month = publication_month.month
+        year = publication_month.year
+        day = "01"
+        date_string = str(month)+"/"+day+"/"+str(year)
+        for row in self._data_list:
+            row["Publication Month"] = datetime.strptime(date_string, "%m/%d/%Y")
+    
+    def _get_descriptions(self):
+        for row in self._data_list:
+            short_month = row["Publication Month"].strftime("%b")
+            short_year = row["Publication Month"].strftime("%y")
+            row["Description"] = row["Name"][:40]
+            row["Description"] += " - "+short_month+" - "+short_year
+
