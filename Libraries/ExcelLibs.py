@@ -57,20 +57,15 @@ def getDict(sheet):
         entries.append(entry)
     return entries
 
-# def GetXLSXAsDict(path, tab):
-#     return getDict(OpenXLSX(path, tab))
-
 def GetData(path: str, tab: str) -> list:
     if tab != '':
         df = read_excel(path, tab)
     else: 
         df = read_excel(path)
     df1 = df.where(pd.notnull(df), None)
-    #df1.replace({pd.NaT: None}) 
     dfDict = df1.to_dict('records')
     for d in dfDict:
-        for c in d:
-            # print(type(d[c]))            
+        for c in d:       
             if str(type(d[c]))=="<class 'pandas._libs.tslibs.timestamps.Timestamp'>":
                 d[c]=d[c].to_pydatetime()
             if str(type(d[c]))=="<class 'pandas._libs.tslibs.nattype.NaTType'>":
@@ -79,20 +74,8 @@ def GetData(path: str, tab: str) -> list:
                 d[c]=int(d[c])
             except:
                 pass
-                #print(str(d[c])+" is not an int")
-            # if type(d[c])==float:
-            #     d[c]=int(d[c])
-            #if type(d[c])==int:
-            #d[c]=str(d[c])
-    return dfDict
-    # dfList = df.values.tolist()
-    # for d in dfDict:
-    #     for c in d:
-    #         print(d[c])
-    # print('Pause')
 
-# d = GetData('BVM+Job+Grouped+For+Tracking+Report.xls', '')
-# print('Pause')
+    return dfDict
 
 def get_data_csv(path, columns) -> List:
     df: pd.DataFrame = read_csv(path, names= columns)
