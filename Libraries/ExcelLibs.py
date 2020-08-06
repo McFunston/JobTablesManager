@@ -75,10 +75,15 @@ def GetData(path: str, tab: str) -> list:
                 d[c]=d[c].to_pydatetime()
             if str(type(d[c]))=="<class 'pandas._libs.tslibs.nattype.NaTType'>":
                 d[c] = None
+            try:
+                d[c]=int(d[c])
+            except:
+                pass
+                #print(str(d[c])+" is not an int")
             # if type(d[c])==float:
             #     d[c]=int(d[c])
-            if type(d[c])==int:
-                d[c]=str(d[c])                                            
+            #if type(d[c])==int:
+            #d[c]=str(d[c])
     return dfDict
     # dfList = df.values.tolist()
     # for d in dfDict:
@@ -99,3 +104,5 @@ def WriteData(path: str, sheet: str, data_list: pd.DataFrame, columns: List):
     df = pd.DataFrame(data_list)
     df.to_excel(path, sheet, columns=columns, index=False)
 
+# test = GetData("Test_Data/BVM_Jobs.xlsx", "Sheet")
+# print("stop")

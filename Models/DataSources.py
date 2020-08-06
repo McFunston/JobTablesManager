@@ -1,4 +1,5 @@
 from logging import log
+import math
 from typing import Dict, List
 import json
 from datetime import date, datetime
@@ -31,9 +32,7 @@ class DataSource:
     Data_Frame = property(_get_data_frame)
 
     def write_to_file(self, path: str, sheet: str, prep_data_funct, write_func):
-        self.populate_static()
-      
-        
+        self.populate_static()        
         write_func(path, sheet, self.Data_Frame, self.ExportColumns)
 
     def prep_data_to_string(self):
@@ -102,7 +101,10 @@ class DataSource:
             list of columns[str]
 
         """
-        return list(self._data_list[0].keys())
+        try:
+            return list(self._data_list[0].keys())
+        except:
+            return list(self.settings["Columns Order"].values())
 
     def _get_export_columns(self):
         columns_list = list()
@@ -228,7 +230,11 @@ class DataSource:
         for row in self._data_list:
             entries = dict()
             for column in columns:
-                entries[column] = row[column]
+                try:
+                    entries[column] = row[column]
+                except:
+                    print("Key error "+ column)
+
             consumableList.append(entries)
         return consumableList
 
@@ -271,8 +277,13 @@ class DataSource:
         listToConsume = data_source.get_consumable_list(commonColumns)
         for newRow in listToConsume:
             found = False
-            if len(self._data_list[0]) == 0:
+            # if len(self._data_list) == 0:
+            #     empty = dict()
+            #     self._data_list.append(empty)
+
+            if len(self._data_list) == 0:
                 miss_funct(newRow)
+
             for oldRow in self._data_list:
                 data_match = True
                 for id in id_columns:
@@ -336,10 +347,10 @@ class DataSource:
                             row[common_name] = row[column]
 
     def nd_merge(self, data_source):
-        self._create_common_column_names()
         self.populate_static()
-        data_source._create_common_column_names()
+        self._create_common_column_names()        
         data_source.populate_static()
+        data_source._create_common_column_names()        
         # self._create_common_column_names()
         commonColumns = self.find_common_columns(data_source)
         list_to_merge = data_source.get_consumable_list(commonColumns)
@@ -496,7 +507,10 @@ class JobsList(DataSource):
         self.ExportedToMIS = "Exported to MIS"
         self._data_list = self._normalize_dates()
         self.set_publication_month()
-        self._set_publication_numbers()
+        try:
+            self._set_publication_numbers()
+        except:
+            print("Unable to set all publication numbers")
 
 
 
@@ -619,10 +633,25 @@ class JobsList(DataSource):
 
     def _set_publication_numbers(self):
         for row in self._data_list:
+
             pub_number: str = row[self.Description].split("-")[0]
             pub_number = pub_number.strip()
             #pub_number = pub_number.rjust(4, "0")
-            row[self.PublicationNumber] = pub_number
+            row[self.PublicationNumber] = int(pub_number)
+
+    def _update_quantities(self):
+        for row in self._data_list:
+            if row["CPC"] != None and row["Samples"] != None:
+                qty = int(row["CPC"]) + int(row["Samples"])
+                if int(math.ceil(qty / 500.000) * 500) % qty < 150:
+                    qty += 500
+                qty = int(math.ceil(qty / 500.000) * 500)  # round up to the next 500
+                row["Qty Ordered"]=qty
+
+    def _set_item_templates(self):
+        for row in self._data_list:
+            if row["True Page Count"] != None and row["itemTemplate"] == None:
+                row["itemTemplate"] = "BVM-"+str(int(row["True Page Count"]))+"P"
     
     def on_file_upload(self, file_upload):
         self._merge_data(file_upload, ["Publication Number"], self.hit_add_missing, self._not_add_row)
@@ -641,6 +670,11 @@ class JobsList(DataSource):
     
     def on_est_received(self, est_file):
         self._merge_data(est_file, ["Publication Number", "Publication Month"], self.hit_replace, self._not_add_row)
+
+    def on_samples_received(self, flattened_samples):
+        self._merge_data(flattened_samples, ["id", "Publication Month"], self.hit_add_missing, self._not_add_row)
+        self._update_quantities()
+        self._set_item_templates()
 
 class Samples(DataSource):
     """Mailing list of sample counts for publishers, advertisers, etc.
@@ -672,6 +706,13 @@ class Samples(DataSource):
         namesList.append(lastName)
         return namesList
 
+    def write_to_file(self, path: str, sheet: str, prep_data_funct, write_func):
+        self.populate_static()        
+        write_func(path, sheet, self.Data_Frame, self.Columns)
+    
+    def save(self, path):
+        self.write_to_file(path, self.tab, self.prep_data_none, WriteData)
+
 
 class DesignerCopies(DataSource):
     """Mailing list of designers. Does not include counts since they only receive one sample.
@@ -686,6 +727,40 @@ class DesignerCopies(DataSource):
         self._data_list = self._normalize_dates()
         self._add_column("job")
 
+class ExportList(DataSource):
+    def _get_column_names(self) -> list:
+        return list(self.settings["Columns Order"].values())
+
+    Columns = property(_get_column_names)
+    
+    def save(self):
+        self.write_to_file(self.path, self.tab, self.prep_data_none, WriteData)
+
+class FlattenedSamples(ExportList):
+
+    def __init__(self, samples: Samples, designer_copies: DesignerCopies, file_name: str, settingsFunc, dictFunc) -> None:
+        self._type: str = "Flattened Samples"
+        temp_settings = settingsFunc(self._type)
+        path = temp_settings["Default Path"]+file_name
+        super().__init__(self._type, path, settingsFunc, dictFunc)
+        samples.nd_merge(designer_copies)
+        self.nd_merge(samples)
+        for row in self._data_list:
+            row["Samples"] = self.get_pub_samples_quantity(row["id"])
+    
+    def get_pub_samples_quantity(self, pub) -> int:
+        quantity = 0
+        for row in self._data_list:
+            if row["id"]==pub:
+                quantity += int(row["U_shipmentNotes"])
+        return quantity
+    
+    def get_pubs(self) -> List[str]:
+        pubs = list()
+        for row in self._data_list:
+            if row["id"] not in pubs:
+                pubs.append(row["id"])
+        return pubs
 
 class Contacts(DataSource):
     """List of Contacts from the MIS. Used for substitution when updating the records in the MIS
@@ -753,14 +828,6 @@ class PaceUpdate(DataSource):
             row['CPC'] = self._get_cpc(row)
             row['Page Count'] = self._get_page_count(row)
 
-
-class ExportList(DataSource):
-    def _get_column_names(self) -> list:
-        return list(self.settings["Columns Order"].values())
-
-    Columns = property(_get_column_names)
-
-
 class CustomerReport(ExportList):
     def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "Customer Report"
@@ -777,6 +844,12 @@ class Invoice(ExportList):
     def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "Invoice"
         super().__init__(self._type, path, settingsFunc, dictFunc)
+
+class JobImport(ExportList):
+    def __init__(self, path, settingsFunc, dictFunc) -> None:
+        self._type: str = "Job Import"
+        super().__init__(self._type, path, settingsFunc, dictFunc)
+
 
 class PdfFile(DataSource):
 
@@ -812,6 +885,7 @@ class EstFile(DataSource):
             self._data_list[0]["Businesses"] += self._data_list[i]["Businesses"]
             self._data_list.pop(i)
         self._data_list[0]["CPC"]=self._data_list[0]["Houses"]+self._data_list[0]["Apartments"]+self._data_list[0]["Farms"]
+
         self._data_list[0]["Publication Number"] = path.split("/")[-1].split("\\")[-1].split()[0]
         if datetime.now().day<=15:
             pub_date=self.add_months_from_now(1)

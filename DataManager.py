@@ -5,7 +5,7 @@ from typing import Dict, List
 from Libraries.ExcelLibs import GetData, get_data_csv
 from Libraries.PDFLibs import get_pdf_data
 import Models.DataSources as ds
-from Models.DataSources import Contacts, CustomerReport, DesignerCopies, EstFile, Invoice, JobProjects, JobShipments, JobsList, PaceUpdate, PdfApproved, PdfReceived, Samples
+from Models.DataSources import Contacts, CustomerReport, DesignerCopies, EstFile, FlattenedSamples, Invoice, JobProjects, JobShipments, JobsList, PaceUpdate, PdfApproved, PdfReceived, Samples
 import logging
 
 logging.basicConfig(filename='log.txt',level=logging.DEBUG)
@@ -89,6 +89,12 @@ def get_job_projects() -> JobProjects:
     settings = load_data_settings_json(name)
     job_projects = ds.JobProjects(settings["Default Path"], load_data_settings_json, GetData)
     return job_projects
+
+def get_flattened_samples(file_name, samples, designer_copies):    
+    flattened_samples = ds.FlattenedSamples(samples, designer_copies, file_name, load_data_settings_json, getEmptyDS)
+    return flattened_samples
+
+
 
 
 

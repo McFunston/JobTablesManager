@@ -48,14 +48,16 @@
                 "17": "True Page Count",
                 "18": "Publication Month",
                 "19": "Exported to MIS",
-                "20": "Project ID"
+                "20": "Project ID",
+                "21": "itemTemplate"
             },
             "Common Data Columns": {
                 "Job": "job",
                 "Qty Ordered": "part1QuantityOrdered",
                 "Description": "description",
                 "Publication Number": "id",
-                "Project ID": "jobProject"                
+                "Project ID": "jobProject",
+                "CPC": "U_productionNotes"
             },
             "Data Types": {
                 "Job": "str",
@@ -200,6 +202,28 @@
             },
             "Static Columns":{
                 "Quantity": "1"
+            }
+        },
+        "Flattened Samples": {
+            "Tab": "Ship List",
+            "Default Path":"Test_Data/Delivery_Counts/",
+            "Columns Order": {
+                "1": "job",
+                "2": "id",
+                "3": "Publication",
+                "4": "Publication Month",
+                "5": "Deadline",
+                "6": "U_shipmentNotes",
+                "7": "User Number",
+                "8": "contactFirstName",
+                "9": "contactLastName",
+                "10": "address1",
+                "11": "address2",
+                "12": "city",
+                "13": "state",
+                "14": "zip",
+                "15": "phone",
+                "16": "Samples"
             }
         },
         "Contacts": {
@@ -488,6 +512,19 @@
                 "10": "Reference 2"
             },
             "Write Once Columns": []
+        },
+        "Job Import": {
+            "Default Path":"Test_Data/Job_Import/job.xlsx",
+            "Tab": "job",
+            "Columns Order": {
+                "1":"_ACTION_",
+                "2": "customer",
+                "3": "jobProject",
+                "4": "itemTemplate",
+                "5": "part1QuantityOrdered",
+                "6": "description",
+                "7": "U_productionNotes"
+            }
         }
     }
 }

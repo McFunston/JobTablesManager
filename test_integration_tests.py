@@ -90,4 +90,9 @@ class TestObjectsInitialization(unittest.TestCase):
         jobs_list._merge_data(job_projects, ["Publication Number", "Publication Month"], jobs_list.hit_add_missing, jobs_list._add_row_record_addition)
         # jobs_list.write_to_file("Test_Data/test.xlsx", jobs_list.settings["Tab"], jobs_list.prep_data_none, WriteData)
         self.assertIsNotNone(jobs_list)
-        
+
+    def test_create_flattened_samples(self):
+        sample_list = dm.get_samples_list("Test_Data/1st deadline_Sample Magazine Orders_July 2020_Canada.xlsx")
+        designer_list = dm.get_designer_copies_list("Test_Data/1st deadline_Sample Magazine Orders_July 2020_Canada.xlsx")
+        flattened_list = dm.get_flattened_samples("1st deadline_Sample Magazine Orders_July 2020_Canada.xlsx", sample_list, designer_list)
+        self.assertIsNotNone(flattened_list)
