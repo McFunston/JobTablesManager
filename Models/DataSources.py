@@ -1,6 +1,6 @@
 from logging import log
 import math
-from typing import Dict, List
+from typing import Dict, List, Callable
 import json
 from datetime import date, datetime
 import calendar
@@ -31,14 +31,31 @@ class DataSource:
 
     Data_Frame = property(_get_data_frame)
 
+    def _ready_to_export(self, row):
+        exportable=True
+        
+        for column in self.settings["Export On"]:
+            if row[column] == None or row[column] == "" or row["Exported"] != None:
+                exportable=False
+         
+        return exportable
+
+
     def write_to_file(self, path: str, sheet: str, prep_data_funct, write_func):
-        self.populate_static()        
+        self.populate_static()
+        prep_data_funct()     
         write_func(path, sheet, self.Data_Frame, self.ExportColumns)
 
     def prep_data_to_string(self):
         if self.settings["True Dates"] == False:
             self._data_list = self._get_string_data_list()
     
+    def prep_data_add_columns(self):
+        for row in self._data_list:
+            for column in self.settings["Columns Order"].values():
+                if column not in row:
+                    row[column] = None
+
     def prep_data_none(self):
         return
     
@@ -259,11 +276,17 @@ class DataSource:
         savableList.insert(0, headers)
         return savableList
 
+    def add_row(self, row):
+        if len(self._data_list) > 1:
+            self._data_list.append(row)
+        else:
+            self._data_list[0]=row
+
     def _add_column(self, name: str):
         for row in self._data_list:
             row[name] = None
     
-    def _merge_data(self, data_source, id_columns: List, hit_funct, miss_funct):
+    def _merge_data(self, data_source, id_columns: List, hit_funct: Callable, miss_funct: Callable):
         """Merge and/or add compatible data from another DataSource's _data_list. 
         If IDColunn exists in the source's _data_list its' columns are overwritten with matching ones from the DataSource it's consuming.
 
@@ -299,7 +322,7 @@ class DataSource:
                 miss_funct(newRow)
 
 
-    def hit_replace(self, columns, new_row, old_row):
+    def _hit_replace(self, columns, new_row, old_row):
         for column in columns:
             if column not in old_row:
                 old_row[column] = new_row[column]                            
@@ -308,8 +331,7 @@ class DataSource:
                     old_row[column] = new_row[column]
                     logging.info("Replacing "+str(old_row[column])+" with "+str(new_row[column]))
 
-
-    def hit_add_missing(self, columns, new_row, old_row):
+    def _hit_add_missing(self, columns, new_row, old_row):
         for column in columns:
             if column not in old_row:
                 old_row[column] = new_row[column]
@@ -318,17 +340,17 @@ class DataSource:
                 old_row[column] = new_row[column]
                 logging.info("Adding "+str(new_row[column])+" to "+column)
 
-    def _add_row(self, row: Dict):
+    def _miss_add_row(self, row: Dict):
         if len(self._data_list[0]) == 0:
             self._data_list[0] = row
         else:
             self._data_list.append(row)
 
-    def _add_row_record_addition(self, row: Dict):
+    def _miss_add_row_record_addition(self, row: Dict):
         row["Added On"] = datetime.now()
         self._data_list.append(row)
 
-    def _not_add_row(self, row: Dict):
+    def _miss_not_add_row(self, row: Dict):
         row.clear()
 
     def populate_static(self):
@@ -358,6 +380,28 @@ class DataSource:
             self._data_list = self._data_list + list_to_merge
         else:
             self._data_list = list_to_merge
+
+    def export(self, data_source) -> bool:
+        exported=False
+        if "Export On" in self.settings:
+            self.populate_static()
+            self._create_common_column_names()        
+            data_source.populate_static()
+            data_source._create_common_column_names()        
+            # self._create_common_column_names()
+            commonColumns = self.find_common_columns(data_source)
+            for row in self._data_list:
+                new_row=dict()
+                if self._ready_to_export(row):
+                    for column in commonColumns:
+                        new_row[column]=row[column]
+                    row["Exported"]=datetime.now()
+                    
+                    data_source.add_row(new_row)
+                    exported=True
+        return exported
+            
+
 
     def column_is_date(self, columnHeader: str) -> bool:
         """Checks if a column contains dates or not as described by the DataSource's settings
@@ -474,6 +518,26 @@ class DataSource:
             for new_column_value in new_column_values:
                 row[new_column_names[i]] = new_column_value
                 i = i + 1
+    
+    def _check_data_complete(self, columns_list: List[str], on_complete_func: Callable):
+        """Checks to see which rows are 'Complete' based on a list of column names (that each column contains data)
+
+        Args:
+            columns_list (List): A list of column names
+            on_complete_func (Function): Function to run if the row is complete
+
+        Returns:
+            [type]: A list of rows
+        """
+
+        for record in self._data_list:
+            complete = True
+            for column in columns_list:
+                if record[column]==None:
+                    complete=False
+            if complete==True:
+                on_complete_func(record)
+
 
 
 class JobsList(DataSource):
@@ -654,27 +718,39 @@ class JobsList(DataSource):
                 row["itemTemplate"] = "BVM-"+str(int(row["True Page Count"]))+"P"
     
     def on_file_upload(self, file_upload):
-        self._merge_data(file_upload, ["Publication Number"], self.hit_add_missing, self._not_add_row)
+        self._merge_data(file_upload, ["Publication Number"], self._hit_add_missing, self._miss_not_add_row)
+        self._set_item_templates()
     
     def on_approval(self, approved):
-        self._merge_data(approved, ["Publication Number"], self.hit_add_missing, self._not_add_row)
+        self._merge_data(approved, ["Publication Number"], self._hit_add_missing, self._miss_not_add_row)
+        self._set_item_templates()
 
     def save(self):
-        self.write_to_file(self.path, self.tab, self.prep_data_none, WriteData)
+        self.write_to_file(self.path, self.tab, self.prep_data_add_columns, WriteData)
 
     def on_mis_list(self, mis_list):
-        self._merge_data(mis_list, ["Description"], self.hit_replace, self._not_add_row)        
+        self._merge_data(mis_list, ["Description"], self._hit_replace, self._miss_not_add_row)        
     
     def on_job_projects(self, mis_list):
-        self._merge_data(mis_list, ["Description"], self.hit_add_missing, self._add_row_record_addition)
+        self._merge_data(mis_list, ["Description"], self._hit_add_missing, self._miss_add_row_record_addition)
     
     def on_est_received(self, est_file):
-        self._merge_data(est_file, ["Publication Number", "Publication Month"], self.hit_replace, self._not_add_row)
+        self._merge_data(est_file, ["Publication Number", "Publication Month"], self._hit_replace, self._miss_not_add_row)
 
     def on_samples_received(self, flattened_samples):
-        self._merge_data(flattened_samples, ["id", "Publication Month"], self.hit_add_missing, self._not_add_row)
+        self._merge_data(flattened_samples, ["id", "Publication Month"], self._hit_add_missing, self._miss_not_add_row)
         self._update_quantities()
         self._set_item_templates()
+
+    def check_mis_exports(self, job_imports):
+        exported = self.export(job_imports)
+        job_imports.populate_static()
+        if exported:
+            self.save()
+            job_imports.fix_production_notes()
+            job_imports.save()
+
+        
 
 class Samples(DataSource):
     """Mailing list of sample counts for publishers, advertisers, etc.
@@ -850,6 +926,10 @@ class JobImport(ExportList):
         self._type: str = "Job Import"
         super().__init__(self._type, path, settingsFunc, dictFunc)
 
+    def fix_production_notes(self):
+        for row in self._data_list:
+            row["U_productionNotes"] = "PW Count = " + str(row["U_productionNotes"])
+
 
 class PdfFile(DataSource):
 
@@ -863,14 +943,14 @@ class PdfReceived(PdfFile):
         self._type: str = "PDF Received"
         super().__init__(self._type, path, settingsFunc, dictFunc)
         self._data_list[0]["Files In"] = self._data_list[0]["DateTime"]
-        self._data_list[0]["Publication Number"] = NameParse(self._data_list[0]["Name"])
+        self._data_list[0]["Publication Number"] = int(NameParse(self._data_list[0]["Name"]))
 
 class PdfApproved(PdfFile):
     def __init__(self, path, settingsFunc, dictFunc) -> None:
         self._type: str = "PDF Approved"
         super().__init__(self._type, path, settingsFunc, dictFunc)
         self._data_list[0]["Approved"] = self._data_list[0]["DateTime"]
-        self._data_list[0]["Publication Number"] = NameParse(self._data_list[0]["Name"])
+        self._data_list[0]["Publication Number"] = int(NameParse(self._data_list[0]["Name"]))
 
 class EstFile(DataSource):
     def __init__(self, path, settingsFunc, dictFunc) -> None:
@@ -886,7 +966,7 @@ class EstFile(DataSource):
             self._data_list.pop(i)
         self._data_list[0]["CPC"]=self._data_list[0]["Houses"]+self._data_list[0]["Apartments"]+self._data_list[0]["Farms"]
 
-        self._data_list[0]["Publication Number"] = path.split("/")[-1].split("\\")[-1].split()[0]
+        self._data_list[0]["Publication Number"] = int(path.split("/")[-1].split("\\")[-1].split()[0])
         if datetime.now().day<=15:
             pub_date=self.add_months_from_now(1)
             self._data_list[0]["Publication Month"]=self.add_months_from_now(1)

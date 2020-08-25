@@ -1,5 +1,5 @@
 import json
-from logging import log
+from logging import exception, log
 from pprint import pprint
 from typing import Dict, List
 from Libraries.ExcelLibs import GetData, get_data_csv
@@ -24,11 +24,11 @@ def get_jobs_list() -> JobsList:
     name='Jobs List'
     settings = load_data_settings_json(name)
     logging.info("Trying to retrieve jobs list")
-    try:
-        jobs: JobsList = ds.JobsList(settings['Default Path'], load_data_settings_json, GetData)
-    except:
-        logging.critical("Unable to load jobs list. Something is broken")
-        exit()
+    # try:
+    jobs: JobsList = ds.JobsList(settings['Default Path'], load_data_settings_json, GetData)
+    # except exception as e:
+    #     logging.critical("Unable to load jobs list, because ")
+    #     exit()
     logging.info("Jobs list loaded successfully")        
     return jobs
 
@@ -94,7 +94,11 @@ def get_flattened_samples(file_name, samples, designer_copies):
     flattened_samples = ds.FlattenedSamples(samples, designer_copies, file_name, load_data_settings_json, getEmptyDS)
     return flattened_samples
 
-
+def get_jobs_import():
+    name = "Job Import"
+    settings = load_data_settings_json(name)
+    jobs_import = ds.JobImport(settings["Default Path"], load_data_settings_json, getEmptyDS)
+    return jobs_import
 
 
 

@@ -4674,3 +4674,687 @@
 2020-08-06 16:07:08,657 Jobs list loaded successfully
 2020-08-06 16:07:08,657 Retrieving settings for Job Projects
 2020-08-06 16:07:08,658 Retrieving settings for Job Projects
+2020-08-06 16:44:45,398 Retrieving settings for Jobs List
+2020-08-06 16:44:45,398 Trying to retrieve jobs list
+2020-08-06 16:44:45,399 Retrieving settings for Jobs List
+2020-08-06 16:44:45,434 Jobs list loaded successfully
+2020-08-06 16:44:45,434 Retrieving settings for Job Projects
+2020-08-06 16:44:45,435 Retrieving settings for Job Projects
+2020-08-06 16:54:23,059 Retrieving settings for Jobs List
+2020-08-06 16:54:23,060 Trying to retrieve jobs list
+2020-08-06 16:54:23,060 Retrieving settings for Jobs List
+2020-08-06 16:54:23,096 Jobs list loaded successfully
+2020-08-06 16:54:23,096 Retrieving settings for Job Projects
+2020-08-06 16:54:23,096 Retrieving settings for Job Projects
+2020-08-06 16:54:29,784 Retrieving settings for Jobs List
+2020-08-06 16:54:29,785 Trying to retrieve jobs list
+2020-08-06 16:54:29,785 Retrieving settings for Jobs List
+2020-08-06 16:54:29,820 Jobs list loaded successfully
+2020-08-06 16:54:29,820 Retrieving settings for Job Projects
+2020-08-06 16:54:29,820 Retrieving settings for Job Projects
+2020-08-06 16:55:42,665 Retrieving settings for Jobs List
+2020-08-06 16:55:42,665 Trying to retrieve jobs list
+2020-08-06 16:55:42,666 Retrieving settings for Jobs List
+2020-08-06 16:55:42,699 Jobs list loaded successfully
+2020-08-06 16:55:42,700 Retrieving settings for Job Projects
+2020-08-06 16:55:42,700 Retrieving settings for Job Projects
+2020-08-06 16:56:27,376 Retrieving settings for Jobs List
+2020-08-06 16:56:27,377 Trying to retrieve jobs list
+2020-08-06 16:56:27,378 Retrieving settings for Jobs List
+2020-08-06 16:56:27,414 Jobs list loaded successfully
+2020-08-06 16:56:27,414 Retrieving settings for Job Projects
+2020-08-06 16:56:27,414 Retrieving settings for Job Projects
+2020-08-06 16:57:30,680 Retrieving settings for Jobs List
+2020-08-06 16:57:30,681 Trying to retrieve jobs list
+2020-08-06 16:57:30,681 Retrieving settings for Jobs List
+2020-08-06 16:57:30,721 Jobs list loaded successfully
+2020-08-06 16:57:30,721 Retrieving settings for Job Projects
+2020-08-06 16:57:30,721 Retrieving settings for Job Projects
+2020-08-06 16:58:13,105 Retrieving settings for Jobs List
+2020-08-06 16:58:13,106 Trying to retrieve jobs list
+2020-08-06 16:58:13,107 Retrieving settings for Jobs List
+2020-08-06 16:58:13,141 Jobs list loaded successfully
+2020-08-06 16:58:13,141 Retrieving settings for Job Projects
+2020-08-06 16:58:13,141 Retrieving settings for Job Projects
+2020-08-06 16:58:49,962 Retrieving settings for Jobs List
+2020-08-06 16:58:49,963 Trying to retrieve jobs list
+2020-08-06 16:58:49,963 Retrieving settings for Jobs List
+2020-08-06 16:58:49,998 Jobs list loaded successfully
+2020-08-06 16:58:49,998 Retrieving settings for Job Projects
+2020-08-06 16:58:49,998 Retrieving settings for Job Projects
+2020-08-06 16:59:35,856 Retrieving settings for Jobs List
+2020-08-06 16:59:35,857 Trying to retrieve jobs list
+2020-08-06 16:59:35,857 Retrieving settings for Jobs List
+2020-08-06 16:59:35,892 Jobs list loaded successfully
+2020-08-06 16:59:35,892 Retrieving settings for Job Projects
+2020-08-06 16:59:35,892 Retrieving settings for Job Projects
+2020-08-06 16:59:48,422 Retrieving settings for Jobs List
+2020-08-06 16:59:48,423 Trying to retrieve jobs list
+2020-08-06 16:59:48,423 Retrieving settings for Jobs List
+2020-08-06 16:59:48,460 Jobs list loaded successfully
+2020-08-06 16:59:48,460 Retrieving settings for Job Projects
+2020-08-06 16:59:48,460 Retrieving settings for Job Projects
+2020-08-06 17:00:50,194 Retrieving settings for Jobs List
+2020-08-06 17:00:50,195 Trying to retrieve jobs list
+2020-08-06 17:00:50,195 Retrieving settings for Jobs List
+2020-08-06 17:00:50,230 Jobs list loaded successfully
+2020-08-06 17:00:50,230 Retrieving settings for Job Projects
+2020-08-06 17:00:50,230 Retrieving settings for Job Projects
+2020-08-10 11:04:52,698 Retrieving settings for Jobs List
+2020-08-10 11:04:52,700 Trying to retrieve jobs list
+2020-08-10 11:04:52,701 Retrieving settings for Jobs List
+2020-08-10 11:04:52,824 Jobs list loaded successfully
+2020-08-10 11:04:52,824 Retrieving settings for EST File
+2020-08-10 11:05:26,279 Retrieving settings for Jobs List
+2020-08-10 11:05:26,280 Trying to retrieve jobs list
+2020-08-10 11:05:26,280 Retrieving settings for Jobs List
+2020-08-10 11:05:26,396 Jobs list loaded successfully
+2020-08-10 11:05:26,396 Retrieving settings for EST File
+2020-08-10 11:07:03,290 Retrieving settings for Jobs List
+2020-08-10 11:07:03,291 Trying to retrieve jobs list
+2020-08-10 11:07:03,291 Retrieving settings for Jobs List
+2020-08-10 11:07:03,405 Jobs list loaded successfully
+2020-08-10 11:07:03,405 Retrieving settings for EST File
+2020-08-10 11:11:10,145 Retrieving settings for Jobs List
+2020-08-10 11:11:10,145 Trying to retrieve jobs list
+2020-08-10 11:11:10,145 Retrieving settings for Jobs List
+2020-08-10 11:11:10,281 Jobs list loaded successfully
+2020-08-10 11:11:10,282 Retrieving settings for EST File
+2020-08-10 11:12:32,690 Retrieving settings for Jobs List
+2020-08-10 11:12:32,690 Trying to retrieve jobs list
+2020-08-10 11:12:32,691 Retrieving settings for Jobs List
+2020-08-10 11:12:32,828 Jobs list loaded successfully
+2020-08-10 11:12:32,828 Retrieving settings for EST File
+2020-08-12 11:52:58,683 Retrieving settings for Jobs List
+2020-08-12 11:52:58,686 Trying to retrieve jobs list
+2020-08-12 11:52:58,686 Retrieving settings for Jobs List
+2020-08-12 11:52:58,837 Jobs list loaded successfully
+2020-08-12 11:52:58,837 Retrieving settings for PDF Received
+2020-08-12 11:55:44,297 Retrieving settings for Jobs List
+2020-08-12 11:55:44,298 Trying to retrieve jobs list
+2020-08-12 11:55:44,298 Retrieving settings for Jobs List
+2020-08-12 11:55:44,435 Jobs list loaded successfully
+2020-08-12 11:55:44,435 Retrieving settings for PDF Received
+2020-08-12 11:59:02,351 Retrieving settings for Jobs List
+2020-08-12 11:59:02,352 Trying to retrieve jobs list
+2020-08-12 11:59:02,352 Retrieving settings for Jobs List
+2020-08-12 11:59:02,487 Jobs list loaded successfully
+2020-08-12 11:59:02,487 Retrieving settings for PDF Received
+2020-08-12 11:59:02,554 Adding 2020-08-12 11:59:02.487664 to Files In
+2020-08-12 11:59:02,555 Adding 16 to True Page Count
+2020-08-12 12:02:17,639 Retrieving settings for Jobs List
+2020-08-12 12:02:17,640 Trying to retrieve jobs list
+2020-08-12 12:02:17,640 Retrieving settings for Jobs List
+2020-08-12 12:02:17,739 Jobs list loaded successfully
+2020-08-12 12:02:17,739 Retrieving settings for PDF Received
+2020-08-12 12:02:17,830 Adding 16 to True Page Count
+2020-08-12 12:02:17,830 Adding 2020-08-12 12:02:17.740054 to Files In
+2020-08-19 15:23:31,929 Replacing 07/15/2020 with 07/15/2020
+2020-08-19 15:23:31,930 Replacing In Production with In Production
+2020-08-19 15:23:31,930 Replacing 08/15/2020 with 08/15/2020
+2020-08-19 15:23:31,930 Replacing In Production with In Production
+2020-08-19 15:23:31,930 Replacing M1800 with M1800
+2020-08-19 15:23:31,957 Retrieving settings for Contacts
+2020-08-19 15:23:31,958 Retrieving settings for Contacts
+2020-08-19 15:23:31,993 Retrieving settings for Samples
+2020-08-19 15:23:32,010 Retrieving settings for Designer Copies
+2020-08-19 15:23:32,025 Retrieving settings for Flattened Samples
+2020-08-19 15:23:32,026 Retrieving settings for Flattened Samples
+2020-08-19 15:23:32,028 Retrieving settings for Customer Report
+2020-08-19 15:23:32,028 Retrieving settings for Customer Report
+2020-08-19 15:23:32,029 Retrieving settings for Jobs List
+2020-08-19 15:23:32,029 Trying to retrieve jobs list
+2020-08-19 15:23:32,029 Retrieving settings for Jobs List
+2020-08-19 15:23:32,060 Jobs list loaded successfully
+2020-08-19 15:23:32,060 Retrieving settings for Customer Report
+2020-08-19 15:23:32,061 Retrieving settings for Customer Report
+2020-08-19 15:23:32,062 Retrieving settings for Samples
+2020-08-19 15:23:32,079 Retrieving settings for Designer Copies
+2020-08-19 15:23:32,094 Retrieving settings for Job Shipments
+2020-08-19 15:23:32,094 Retrieving settings for Job Shipments
+2020-08-19 15:23:32,095 Retrieving settings for Jobs List
+2020-08-19 15:23:32,095 Trying to retrieve jobs list
+2020-08-19 15:23:32,095 Retrieving settings for Jobs List
+2020-08-19 15:23:32,127 Jobs list loaded successfully
+2020-08-19 15:23:32,127 Retrieving settings for Contacts
+2020-08-19 15:23:32,127 Retrieving settings for Contacts
+2020-08-19 15:23:32,156 Adding 2 to country
+2020-08-19 15:23:32,156 Adding None to address3
+2020-08-19 15:23:32,156 Adding None to address3
+2020-08-19 15:23:32,157 Adding 38023 to contactNumber
+2020-08-19 15:23:32,157 Adding 3 to shipmentType
+2020-08-19 15:23:32,157 Adding None to address2
+2020-08-19 15:23:32,157 Adding I to _ACTION_
+2020-08-19 15:23:32,157 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,157 Adding M1100 to job
+2020-08-19 15:23:32,157 Adding 2 to country
+2020-08-19 15:23:32,157 Adding None to address3
+2020-08-19 15:23:32,157 Adding None to address3
+2020-08-19 15:23:32,157 Adding 38023 to contactNumber
+2020-08-19 15:23:32,157 Adding 3 to shipmentType
+2020-08-19 15:23:32,157 Adding None to address2
+2020-08-19 15:23:32,157 Adding I to _ACTION_
+2020-08-19 15:23:32,157 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,157 Adding M1100 to job
+2020-08-19 15:23:32,157 Adding 2 to country
+2020-08-19 15:23:32,157 Adding None to address3
+2020-08-19 15:23:32,157 Adding None to address3
+2020-08-19 15:23:32,157 Adding 38023 to contactNumber
+2020-08-19 15:23:32,157 Adding 3 to shipmentType
+2020-08-19 15:23:32,157 Adding None to address2
+2020-08-19 15:23:32,157 Adding I to _ACTION_
+2020-08-19 15:23:32,157 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,157 Adding M1100 to job
+2020-08-19 15:23:32,157 Adding 2 to country
+2020-08-19 15:23:32,157 Adding None to address3
+2020-08-19 15:23:32,157 Adding None to address3
+2020-08-19 15:23:32,157 Adding 38023 to contactNumber
+2020-08-19 15:23:32,157 Adding 3 to shipmentType
+2020-08-19 15:23:32,158 Adding None to address2
+2020-08-19 15:23:32,158 Adding I to _ACTION_
+2020-08-19 15:23:32,158 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,158 Adding M1100 to job
+2020-08-19 15:23:32,158 Adding 2 to country
+2020-08-19 15:23:32,158 Adding None to address3
+2020-08-19 15:23:32,158 Adding None to address3
+2020-08-19 15:23:32,158 Adding 38023 to contactNumber
+2020-08-19 15:23:32,158 Adding 3 to shipmentType
+2020-08-19 15:23:32,158 Adding None to address2
+2020-08-19 15:23:32,158 Adding I to _ACTION_
+2020-08-19 15:23:32,158 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,158 Adding M1100 to job
+2020-08-19 15:23:32,158 Adding 2 to country
+2020-08-19 15:23:32,158 Adding None to address3
+2020-08-19 15:23:32,158 Adding None to address3
+2020-08-19 15:23:32,158 Adding 38023 to contactNumber
+2020-08-19 15:23:32,158 Adding 3 to shipmentType
+2020-08-19 15:23:32,158 Adding None to address2
+2020-08-19 15:23:32,158 Adding I to _ACTION_
+2020-08-19 15:23:32,158 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,158 Adding M1100 to job
+2020-08-19 15:23:32,158 Adding 2 to country
+2020-08-19 15:23:32,158 Adding None to address3
+2020-08-19 15:23:32,158 Adding None to address3
+2020-08-19 15:23:32,158 Adding 38023 to contactNumber
+2020-08-19 15:23:32,158 Adding 3 to shipmentType
+2020-08-19 15:23:32,158 Adding None to address2
+2020-08-19 15:23:32,158 Adding I to _ACTION_
+2020-08-19 15:23:32,158 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,158 Adding M1100 to job
+2020-08-19 15:23:32,159 Adding 2 to country
+2020-08-19 15:23:32,159 Adding None to address3
+2020-08-19 15:23:32,159 Adding None to address3
+2020-08-19 15:23:32,159 Adding 38023 to contactNumber
+2020-08-19 15:23:32,159 Adding 3 to shipmentType
+2020-08-19 15:23:32,159 Adding None to address2
+2020-08-19 15:23:32,159 Adding I to _ACTION_
+2020-08-19 15:23:32,159 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,159 Adding M1100 to job
+2020-08-19 15:23:32,159 Adding 2 to country
+2020-08-19 15:23:32,159 Adding None to address3
+2020-08-19 15:23:32,159 Adding None to address3
+2020-08-19 15:23:32,159 Adding 38032 to contactNumber
+2020-08-19 15:23:32,159 Adding 3 to shipmentType
+2020-08-19 15:23:32,159 Adding None to address2
+2020-08-19 15:23:32,159 Adding I to _ACTION_
+2020-08-19 15:23:32,159 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,159 Adding M1142 to job
+2020-08-19 15:23:32,159 Adding 2 to country
+2020-08-19 15:23:32,159 Adding None to address3
+2020-08-19 15:23:32,159 Adding None to address3
+2020-08-19 15:23:32,159 Adding 38032 to contactNumber
+2020-08-19 15:23:32,159 Adding 3 to shipmentType
+2020-08-19 15:23:32,159 Adding None to address2
+2020-08-19 15:23:32,159 Adding I to _ACTION_
+2020-08-19 15:23:32,159 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,159 Adding M1142 to job
+2020-08-19 15:23:32,160 Adding 2 to country
+2020-08-19 15:23:32,160 Adding None to address3
+2020-08-19 15:23:32,160 Adding None to address3
+2020-08-19 15:23:32,160 Adding 38036 to contactNumber
+2020-08-19 15:23:32,160 Adding 3 to shipmentType
+2020-08-19 15:23:32,160 Adding None to address2
+2020-08-19 15:23:32,160 Adding I to _ACTION_
+2020-08-19 15:23:32,160 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,160 Adding M1154 to job
+2020-08-19 15:23:32,160 Adding 2 to country
+2020-08-19 15:23:32,160 Adding None to address3
+2020-08-19 15:23:32,160 Adding None to address3
+2020-08-19 15:23:32,160 Adding 38036 to contactNumber
+2020-08-19 15:23:32,160 Adding 3 to shipmentType
+2020-08-19 15:23:32,160 Adding None to address2
+2020-08-19 15:23:32,160 Adding I to _ACTION_
+2020-08-19 15:23:32,160 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,160 Adding M1154 to job
+2020-08-19 15:23:32,161 Adding 2 to country
+2020-08-19 15:23:32,161 Adding None to address3
+2020-08-19 15:23:32,161 Adding None to address3
+2020-08-19 15:23:32,161 Adding 38036 to contactNumber
+2020-08-19 15:23:32,161 Adding 3 to shipmentType
+2020-08-19 15:23:32,161 Adding None to address2
+2020-08-19 15:23:32,161 Adding I to _ACTION_
+2020-08-19 15:23:32,161 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,161 Adding M1154 to job
+2020-08-19 15:23:32,161 Adding 2 to country
+2020-08-19 15:23:32,161 Adding None to address3
+2020-08-19 15:23:32,161 Adding None to address3
+2020-08-19 15:23:32,161 Adding 38053 to contactNumber
+2020-08-19 15:23:32,161 Adding 3 to shipmentType
+2020-08-19 15:23:32,161 Adding None to address2
+2020-08-19 15:23:32,161 Adding I to _ACTION_
+2020-08-19 15:23:32,161 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,161 Adding M1171 to job
+2020-08-19 15:23:32,161 Adding 2 to country
+2020-08-19 15:23:32,161 Adding None to address3
+2020-08-19 15:23:32,161 Adding None to address3
+2020-08-19 15:23:32,161 Adding 38053 to contactNumber
+2020-08-19 15:23:32,161 Adding 3 to shipmentType
+2020-08-19 15:23:32,162 Adding None to address2
+2020-08-19 15:23:32,162 Adding I to _ACTION_
+2020-08-19 15:23:32,162 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,162 Adding M1171 to job
+2020-08-19 15:23:32,162 Adding 2 to country
+2020-08-19 15:23:32,162 Adding None to address3
+2020-08-19 15:23:32,162 Adding None to address3
+2020-08-19 15:23:32,162 Adding 38057 to contactNumber
+2020-08-19 15:23:32,162 Adding 3 to shipmentType
+2020-08-19 15:23:32,162 Adding None to address2
+2020-08-19 15:23:32,162 Adding I to _ACTION_
+2020-08-19 15:23:32,162 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,162 Adding M1194 to job
+2020-08-19 15:23:32,162 Adding 2 to country
+2020-08-19 15:23:32,162 Adding None to address3
+2020-08-19 15:23:32,162 Adding None to address3
+2020-08-19 15:23:32,162 Adding 38057 to contactNumber
+2020-08-19 15:23:32,163 Adding 3 to shipmentType
+2020-08-19 15:23:32,163 Adding None to address2
+2020-08-19 15:23:32,163 Adding I to _ACTION_
+2020-08-19 15:23:32,163 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,163 Adding M1194 to job
+2020-08-19 15:23:32,163 Adding 2 to country
+2020-08-19 15:23:32,163 Adding None to address3
+2020-08-19 15:23:32,163 Adding None to address3
+2020-08-19 15:23:32,163 Adding 38057 to contactNumber
+2020-08-19 15:23:32,163 Adding 3 to shipmentType
+2020-08-19 15:23:32,163 Adding None to address2
+2020-08-19 15:23:32,163 Adding I to _ACTION_
+2020-08-19 15:23:32,163 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,163 Adding M1194 to job
+2020-08-19 15:23:32,163 Adding 2 to country
+2020-08-19 15:23:32,163 Adding None to address3
+2020-08-19 15:23:32,163 Adding None to address3
+2020-08-19 15:23:32,163 Adding 38057 to contactNumber
+2020-08-19 15:23:32,163 Adding 3 to shipmentType
+2020-08-19 15:23:32,163 Adding None to address2
+2020-08-19 15:23:32,163 Adding I to _ACTION_
+2020-08-19 15:23:32,163 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,163 Adding M1194 to job
+2020-08-19 15:23:32,163 Adding 2 to country
+2020-08-19 15:23:32,163 Adding None to address3
+2020-08-19 15:23:32,164 Adding None to address3
+2020-08-19 15:23:32,164 Adding 38062 to contactNumber
+2020-08-19 15:23:32,164 Adding 3 to shipmentType
+2020-08-19 15:23:32,164 Adding None to address2
+2020-08-19 15:23:32,164 Adding I to _ACTION_
+2020-08-19 15:23:32,164 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,164 Adding M1207 to job
+2020-08-19 15:23:32,164 Adding 2 to country
+2020-08-19 15:23:32,164 Adding None to address3
+2020-08-19 15:23:32,164 Adding None to address3
+2020-08-19 15:23:32,164 Adding 38062 to contactNumber
+2020-08-19 15:23:32,164 Adding 3 to shipmentType
+2020-08-19 15:23:32,164 Adding None to address2
+2020-08-19 15:23:32,164 Adding I to _ACTION_
+2020-08-19 15:23:32,164 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,164 Adding M1207 to job
+2020-08-19 15:23:32,164 Adding 2 to country
+2020-08-19 15:23:32,164 Adding None to address3
+2020-08-19 15:23:32,164 Adding None to address3
+2020-08-19 15:23:32,164 Adding 38062 to contactNumber
+2020-08-19 15:23:32,164 Adding 3 to shipmentType
+2020-08-19 15:23:32,164 Adding None to address2
+2020-08-19 15:23:32,164 Adding I to _ACTION_
+2020-08-19 15:23:32,164 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,164 Adding M1207 to job
+2020-08-19 15:23:32,164 Adding 2 to country
+2020-08-19 15:23:32,164 Adding None to address3
+2020-08-19 15:23:32,165 Adding None to address3
+2020-08-19 15:23:32,165 Adding 38071 to contactNumber
+2020-08-19 15:23:32,165 Adding 3 to shipmentType
+2020-08-19 15:23:32,165 Adding None to address2
+2020-08-19 15:23:32,165 Adding I to _ACTION_
+2020-08-19 15:23:32,165 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,165 Adding M1237 to job
+2020-08-19 15:23:32,165 Adding 2 to country
+2020-08-19 15:23:32,165 Adding None to address3
+2020-08-19 15:23:32,165 Adding None to address3
+2020-08-19 15:23:32,165 Adding 38072 to contactNumber
+2020-08-19 15:23:32,165 Adding 3 to shipmentType
+2020-08-19 15:23:32,165 Adding None to address2
+2020-08-19 15:23:32,165 Adding I to _ACTION_
+2020-08-19 15:23:32,165 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,165 Adding M1239 to job
+2020-08-19 15:23:32,165 Adding 2 to country
+2020-08-19 15:23:32,165 Adding None to address3
+2020-08-19 15:23:32,165 Adding None to address3
+2020-08-19 15:23:32,165 Adding 38086 to contactNumber
+2020-08-19 15:23:32,165 Adding 3 to shipmentType
+2020-08-19 15:23:32,165 Adding None to address2
+2020-08-19 15:23:32,165 Adding I to _ACTION_
+2020-08-19 15:23:32,165 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,165 Adding M1243 to job
+2020-08-19 15:23:32,166 Adding 2 to country
+2020-08-19 15:23:32,166 Adding None to address3
+2020-08-19 15:23:32,166 Adding None to address3
+2020-08-19 15:23:32,166 Adding 38091 to contactNumber
+2020-08-19 15:23:32,166 Adding 3 to shipmentType
+2020-08-19 15:23:32,166 Adding None to address2
+2020-08-19 15:23:32,166 Adding I to _ACTION_
+2020-08-19 15:23:32,166 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,166 Adding M1184 to job
+2020-08-19 15:23:32,166 Adding 2 to country
+2020-08-19 15:23:32,166 Adding None to address3
+2020-08-19 15:23:32,166 Adding None to address3
+2020-08-19 15:23:32,166 Adding 38091 to contactNumber
+2020-08-19 15:23:32,166 Adding 3 to shipmentType
+2020-08-19 15:23:32,166 Adding None to address2
+2020-08-19 15:23:32,166 Adding I to _ACTION_
+2020-08-19 15:23:32,166 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,166 Adding M1184 to job
+2020-08-19 15:23:32,166 Adding 2 to country
+2020-08-19 15:23:32,166 Adding None to address3
+2020-08-19 15:23:32,166 Adding None to address3
+2020-08-19 15:23:32,166 Adding 38091 to contactNumber
+2020-08-19 15:23:32,166 Adding 3 to shipmentType
+2020-08-19 15:23:32,166 Adding None to address2
+2020-08-19 15:23:32,166 Adding I to _ACTION_
+2020-08-19 15:23:32,166 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,166 Adding M1184 to job
+2020-08-19 15:23:32,166 Adding 2 to country
+2020-08-19 15:23:32,166 Adding None to address3
+2020-08-19 15:23:32,167 Adding None to address3
+2020-08-19 15:23:32,167 Adding 38091 to contactNumber
+2020-08-19 15:23:32,167 Adding 3 to shipmentType
+2020-08-19 15:23:32,167 Adding None to address2
+2020-08-19 15:23:32,167 Adding I to _ACTION_
+2020-08-19 15:23:32,167 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,167 Adding M1184 to job
+2020-08-19 15:23:32,167 Adding 2 to country
+2020-08-19 15:23:32,167 Adding None to address3
+2020-08-19 15:23:32,167 Adding None to address3
+2020-08-19 15:23:32,167 Adding 38093 to contactNumber
+2020-08-19 15:23:32,167 Adding 3 to shipmentType
+2020-08-19 15:23:32,167 Adding None to address2
+2020-08-19 15:23:32,167 Adding I to _ACTION_
+2020-08-19 15:23:32,167 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,167 Adding M1271 to job
+2020-08-19 15:23:32,167 Adding 2 to country
+2020-08-19 15:23:32,167 Adding None to address3
+2020-08-19 15:23:32,167 Adding None to address3
+2020-08-19 15:23:32,167 Adding 38095 to contactNumber
+2020-08-19 15:23:32,167 Adding 3 to shipmentType
+2020-08-19 15:23:32,167 Adding None to address2
+2020-08-19 15:23:32,167 Adding I to _ACTION_
+2020-08-19 15:23:32,167 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,167 Adding M1232 to job
+2020-08-19 15:23:32,167 Adding 2 to country
+2020-08-19 15:23:32,167 Adding None to address3
+2020-08-19 15:23:32,167 Adding None to address3
+2020-08-19 15:23:32,168 Adding 38097 to contactNumber
+2020-08-19 15:23:32,168 Adding 3 to shipmentType
+2020-08-19 15:23:32,168 Adding None to address2
+2020-08-19 15:23:32,168 Adding I to _ACTION_
+2020-08-19 15:23:32,168 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,168 Adding M1142 to job
+2020-08-19 15:23:32,168 Adding 2 to country
+2020-08-19 15:23:32,168 Adding None to address3
+2020-08-19 15:23:32,168 Adding None to address3
+2020-08-19 15:23:32,168 Adding 38097 to contactNumber
+2020-08-19 15:23:32,168 Adding 3 to shipmentType
+2020-08-19 15:23:32,168 Adding None to address2
+2020-08-19 15:23:32,168 Adding I to _ACTION_
+2020-08-19 15:23:32,168 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,168 Adding M1142 to job
+2020-08-19 15:23:32,168 Adding 2 to country
+2020-08-19 15:23:32,168 Adding None to address3
+2020-08-19 15:23:32,168 Adding None to address3
+2020-08-19 15:23:32,168 Adding 38101 to contactNumber
+2020-08-19 15:23:32,168 Adding 3 to shipmentType
+2020-08-19 15:23:32,168 Adding None to address2
+2020-08-19 15:23:32,168 Adding I to _ACTION_
+2020-08-19 15:23:32,168 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,168 Adding M1254 to job
+2020-08-19 15:23:32,168 Adding 2 to country
+2020-08-19 15:23:32,168 Adding None to address3
+2020-08-19 15:23:32,168 Adding None to address3
+2020-08-19 15:23:32,169 Adding 38106 to contactNumber
+2020-08-19 15:23:32,169 Adding 3 to shipmentType
+2020-08-19 15:23:32,169 Adding None to address2
+2020-08-19 15:23:32,169 Adding I to _ACTION_
+2020-08-19 15:23:32,169 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,169 Adding M1262 to job
+2020-08-19 15:23:32,169 Adding 2 to country
+2020-08-19 15:23:32,169 Adding None to address3
+2020-08-19 15:23:32,169 Adding None to address3
+2020-08-19 15:23:32,169 Adding 38109 to contactNumber
+2020-08-19 15:23:32,169 Adding 3 to shipmentType
+2020-08-19 15:23:32,169 Adding None to address2
+2020-08-19 15:23:32,169 Adding I to _ACTION_
+2020-08-19 15:23:32,169 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,169 Adding M1237 to job
+2020-08-19 15:23:32,169 Adding 2 to country
+2020-08-19 15:23:32,169 Adding None to address3
+2020-08-19 15:23:32,169 Adding None to address3
+2020-08-19 15:23:32,169 Adding 38111 to contactNumber
+2020-08-19 15:23:32,169 Adding 3 to shipmentType
+2020-08-19 15:23:32,169 Adding None to address2
+2020-08-19 15:23:32,169 Adding I to _ACTION_
+2020-08-19 15:23:32,169 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,169 Adding M1249 to job
+2020-08-19 15:23:32,169 Adding 2 to country
+2020-08-19 15:23:32,169 Adding None to address3
+2020-08-19 15:23:32,169 Adding None to address3
+2020-08-19 15:23:32,169 Adding 38111 to contactNumber
+2020-08-19 15:23:32,170 Adding 3 to shipmentType
+2020-08-19 15:23:32,170 Adding None to address2
+2020-08-19 15:23:32,170 Adding I to _ACTION_
+2020-08-19 15:23:32,170 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,170 Adding M1249 to job
+2020-08-19 15:23:32,170 Adding 2 to country
+2020-08-19 15:23:32,170 Adding None to address3
+2020-08-19 15:23:32,170 Adding None to address3
+2020-08-19 15:23:32,170 Adding 38111 to contactNumber
+2020-08-19 15:23:32,170 Adding 3 to shipmentType
+2020-08-19 15:23:32,170 Adding None to address2
+2020-08-19 15:23:32,170 Adding I to _ACTION_
+2020-08-19 15:23:32,170 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,170 Adding M1249 to job
+2020-08-19 15:23:32,170 Adding 2 to country
+2020-08-19 15:23:32,170 Adding None to address3
+2020-08-19 15:23:32,170 Adding None to address3
+2020-08-19 15:23:32,170 Adding 38112 to contactNumber
+2020-08-19 15:23:32,170 Adding 3 to shipmentType
+2020-08-19 15:23:32,170 Adding None to address2
+2020-08-19 15:23:32,170 Adding I to _ACTION_
+2020-08-19 15:23:32,170 Adding Maureen Calvo to shipperName
+2020-08-19 15:23:32,170 Adding M954 to job
+2020-08-19 15:23:32,171 Retrieving settings for Designer Copies
+2020-08-19 15:23:32,184 Retrieving settings for EST File
+2020-08-19 15:23:32,189 Retrieving settings for Jobs List
+2020-08-19 15:23:32,189 Trying to retrieve jobs list
+2020-08-19 15:23:32,189 Retrieving settings for Jobs List
+2020-08-19 15:23:32,221 Jobs list loaded successfully
+2020-08-19 15:23:32,222 Retrieving settings for PDF Received
+2020-08-19 15:23:32,248 Retrieving settings for Jobs List
+2020-08-19 15:23:32,249 Trying to retrieve jobs list
+2020-08-19 15:23:32,249 Retrieving settings for Jobs List
+2020-08-19 15:23:32,296 Jobs list loaded successfully
+2020-08-19 15:23:32,297 Adding 16 to True Page Count
+2020-08-19 15:23:32,297 Adding 2020-08-19 15:23:32.223155 to Files In
+2020-08-19 15:23:32,298 Retrieving settings for Pace Update
+2020-08-19 15:23:32,298 Trying to open the MIS Update
+2020-08-19 15:23:32,298 Retrieving settings for Pace Update
+2020-08-19 15:23:32,345 Retrieving settings for Job Projects
+2020-08-19 15:23:32,346 Retrieving settings for Job Projects
+2020-08-19 15:23:32,360 Retrieving settings for Jobs List
+2020-08-19 15:23:32,361 Trying to retrieve jobs list
+2020-08-19 15:23:32,361 Retrieving settings for Jobs List
+2020-08-19 15:23:32,393 Jobs list loaded successfully
+2020-08-19 15:23:32,403 Retrieving settings for Jobs List
+2020-08-19 15:23:32,403 Trying to retrieve jobs list
+2020-08-19 15:23:32,403 Retrieving settings for Jobs List
+2020-08-19 15:23:32,435 Jobs list loaded successfully
+2020-08-19 15:23:32,435 Retrieving settings for Pace Update
+2020-08-19 15:23:32,436 Trying to open the MIS Update
+2020-08-19 15:23:32,436 Retrieving settings for Pace Update
+2020-08-19 15:23:32,465 Retrieving settings for Samples
+2020-08-19 15:23:32,481 Retrieving settings for Designer Copies
+2020-08-19 15:23:32,492 Retrieving settings for Samples
+2020-08-19 15:23:32,507 Retrieving settings for Job Shipments
+2020-08-19 15:23:32,507 Retrieving settings for Job Shipments
+2020-08-25 13:47:23,281 Retrieving settings for Jobs List
+2020-08-25 13:47:23,281 Trying to retrieve jobs list
+2020-08-25 13:47:23,282 Retrieving settings for Jobs List
+2020-08-25 13:47:23,434 Unable to load jobs list. Something is broken
+2020-08-25 14:17:51,282 Retrieving settings for Jobs List
+2020-08-25 14:17:51,283 Trying to retrieve jobs list
+2020-08-25 14:17:51,283 Retrieving settings for Jobs List
+2020-08-25 14:17:51,422 Unable to load jobs list. Something is broken
+2020-08-25 14:37:44,647 Retrieving settings for Jobs List
+2020-08-25 14:37:44,648 Trying to retrieve jobs list
+2020-08-25 14:37:44,648 Retrieving settings for Jobs List
+2020-08-25 14:50:38,379 Retrieving settings for Jobs List
+2020-08-25 14:50:38,380 Trying to retrieve jobs list
+2020-08-25 14:50:38,380 Retrieving settings for Jobs List
+2020-08-25 14:51:19,023 Retrieving settings for Jobs List
+2020-08-25 14:51:19,023 Trying to retrieve jobs list
+2020-08-25 14:51:19,024 Retrieving settings for Jobs List
+2020-08-25 14:52:59,928 Retrieving settings for Jobs List
+2020-08-25 14:52:59,929 Trying to retrieve jobs list
+2020-08-25 14:52:59,929 Retrieving settings for Jobs List
+2020-08-25 14:55:55,029 Retrieving settings for Jobs List
+2020-08-25 14:55:55,030 Trying to retrieve jobs list
+2020-08-25 14:55:55,030 Retrieving settings for Jobs List
+2020-08-25 14:55:55,131 Jobs list loaded successfully
+2020-08-25 14:55:55,131 Retrieving settings for Job Import
+2020-08-25 14:55:55,132 Retrieving settings for Job Import
+2020-08-25 14:59:04,527 Retrieving settings for Jobs List
+2020-08-25 14:59:04,527 Trying to retrieve jobs list
+2020-08-25 14:59:04,528 Retrieving settings for Jobs List
+2020-08-25 14:59:04,628 Jobs list loaded successfully
+2020-08-25 14:59:04,628 Retrieving settings for Job Import
+2020-08-25 14:59:04,628 Retrieving settings for Job Import
+2020-08-25 14:59:19,930 Retrieving settings for Jobs List
+2020-08-25 14:59:19,931 Trying to retrieve jobs list
+2020-08-25 14:59:19,931 Retrieving settings for Jobs List
+2020-08-25 14:59:20,030 Jobs list loaded successfully
+2020-08-25 14:59:20,030 Retrieving settings for Job Import
+2020-08-25 14:59:20,031 Retrieving settings for Job Import
+2020-08-25 15:02:44,198 Retrieving settings for Jobs List
+2020-08-25 15:02:44,199 Trying to retrieve jobs list
+2020-08-25 15:02:44,199 Retrieving settings for Jobs List
+2020-08-25 15:02:44,301 Jobs list loaded successfully
+2020-08-25 15:02:44,301 Retrieving settings for Job Import
+2020-08-25 15:02:44,302 Retrieving settings for Job Import
+2020-08-25 15:04:44,884 Retrieving settings for Jobs List
+2020-08-25 15:04:44,885 Trying to retrieve jobs list
+2020-08-25 15:04:44,885 Retrieving settings for Jobs List
+2020-08-25 15:04:44,984 Jobs list loaded successfully
+2020-08-25 15:04:44,984 Retrieving settings for Job Import
+2020-08-25 15:04:44,984 Retrieving settings for Job Import
+2020-08-25 15:05:30,135 Retrieving settings for Jobs List
+2020-08-25 15:05:30,136 Trying to retrieve jobs list
+2020-08-25 15:05:30,136 Retrieving settings for Jobs List
+2020-08-25 15:05:30,235 Jobs list loaded successfully
+2020-08-25 15:05:30,235 Retrieving settings for Job Import
+2020-08-25 15:05:30,236 Retrieving settings for Job Import
+2020-08-25 15:09:57,828 Retrieving settings for Jobs List
+2020-08-25 15:09:57,828 Trying to retrieve jobs list
+2020-08-25 15:09:57,828 Retrieving settings for Jobs List
+2020-08-25 15:09:57,928 Jobs list loaded successfully
+2020-08-25 15:09:57,928 Retrieving settings for Job Import
+2020-08-25 15:09:57,928 Retrieving settings for Job Import
+2020-08-25 15:10:17,509 Retrieving settings for Jobs List
+2020-08-25 15:10:17,510 Trying to retrieve jobs list
+2020-08-25 15:10:17,510 Retrieving settings for Jobs List
+2020-08-25 15:10:17,608 Jobs list loaded successfully
+2020-08-25 15:10:17,608 Retrieving settings for Job Import
+2020-08-25 15:10:17,608 Retrieving settings for Job Import
+2020-08-25 15:11:07,304 Retrieving settings for Jobs List
+2020-08-25 15:11:07,304 Trying to retrieve jobs list
+2020-08-25 15:11:07,304 Retrieving settings for Jobs List
+2020-08-25 15:11:07,405 Jobs list loaded successfully
+2020-08-25 15:11:07,405 Retrieving settings for Job Import
+2020-08-25 15:11:07,405 Retrieving settings for Job Import
+2020-08-25 15:11:21,866 Retrieving settings for Jobs List
+2020-08-25 15:11:21,867 Trying to retrieve jobs list
+2020-08-25 15:11:21,867 Retrieving settings for Jobs List
+2020-08-25 15:11:21,964 Jobs list loaded successfully
+2020-08-25 15:11:21,965 Retrieving settings for Job Import
+2020-08-25 15:11:21,965 Retrieving settings for Job Import
+2020-08-25 15:13:21,024 Retrieving settings for Jobs List
+2020-08-25 15:13:21,024 Trying to retrieve jobs list
+2020-08-25 15:13:21,025 Retrieving settings for Jobs List
+2020-08-25 15:13:21,122 Jobs list loaded successfully
+2020-08-25 15:13:21,122 Retrieving settings for Job Import
+2020-08-25 15:13:21,122 Retrieving settings for Job Import
+2020-08-25 15:17:13,422 Retrieving settings for Jobs List
+2020-08-25 15:17:13,423 Trying to retrieve jobs list
+2020-08-25 15:17:13,423 Retrieving settings for Jobs List
+2020-08-25 15:17:13,523 Jobs list loaded successfully
+2020-08-25 15:17:13,523 Retrieving settings for Job Import
+2020-08-25 15:17:13,524 Retrieving settings for Job Import
+2020-08-25 15:17:35,423 Retrieving settings for Jobs List
+2020-08-25 15:17:35,424 Trying to retrieve jobs list
+2020-08-25 15:17:35,424 Retrieving settings for Jobs List
+2020-08-25 15:17:35,521 Jobs list loaded successfully
+2020-08-25 15:17:35,521 Retrieving settings for Job Import
+2020-08-25 15:17:35,522 Retrieving settings for Job Import
+2020-08-25 15:19:39,435 Retrieving settings for Jobs List
+2020-08-25 15:19:39,435 Trying to retrieve jobs list
+2020-08-25 15:19:39,435 Retrieving settings for Jobs List
+2020-08-25 15:19:39,571 Jobs list loaded successfully
+2020-08-25 15:19:39,571 Retrieving settings for Job Import
+2020-08-25 15:19:39,571 Retrieving settings for Job Import
+2020-08-25 15:20:57,771 Retrieving settings for Jobs List
+2020-08-25 15:20:57,771 Trying to retrieve jobs list
+2020-08-25 15:20:57,772 Retrieving settings for Jobs List
+2020-08-25 15:20:57,907 Jobs list loaded successfully
+2020-08-25 15:20:57,907 Retrieving settings for Job Import
+2020-08-25 15:20:57,907 Retrieving settings for Job Import
+2020-08-25 15:23:43,055 Retrieving settings for Jobs List
+2020-08-25 15:23:43,055 Trying to retrieve jobs list
+2020-08-25 15:23:43,056 Retrieving settings for Jobs List
+2020-08-25 15:23:43,191 Jobs list loaded successfully
+2020-08-25 15:23:43,191 Retrieving settings for Job Import
+2020-08-25 15:23:43,192 Retrieving settings for Job Import
+2020-08-25 15:25:35,445 Retrieving settings for Jobs List
+2020-08-25 15:25:35,446 Trying to retrieve jobs list
+2020-08-25 15:25:35,446 Retrieving settings for Jobs List
+2020-08-25 15:25:35,583 Jobs list loaded successfully
+2020-08-25 15:25:35,583 Retrieving settings for Job Import
+2020-08-25 15:25:35,583 Retrieving settings for Job Import
+2020-08-25 15:25:42,801 Retrieving settings for Jobs List
+2020-08-25 15:25:42,802 Trying to retrieve jobs list
+2020-08-25 15:25:42,802 Retrieving settings for Jobs List
+2020-08-25 15:25:42,938 Jobs list loaded successfully
+2020-08-25 15:25:42,938 Retrieving settings for Job Import
+2020-08-25 15:25:42,938 Retrieving settings for Job Import
+2020-08-25 15:26:45,620 Retrieving settings for Jobs List
+2020-08-25 15:26:45,620 Trying to retrieve jobs list
+2020-08-25 15:26:45,621 Retrieving settings for Jobs List
+2020-08-25 15:26:45,755 Jobs list loaded successfully
+2020-08-25 15:26:45,755 Retrieving settings for Job Import
+2020-08-25 15:26:45,756 Retrieving settings for Job Import
+2020-08-25 15:27:02,881 Retrieving settings for Jobs List
+2020-08-25 15:27:02,881 Trying to retrieve jobs list
+2020-08-25 15:27:02,881 Retrieving settings for Jobs List
+2020-08-25 15:27:02,985 Jobs list loaded successfully
+2020-08-25 15:27:02,985 Retrieving settings for Job Import
+2020-08-25 15:27:02,985 Retrieving settings for Job Import
+2020-08-25 15:35:03,321 Retrieving settings for Jobs List
+2020-08-25 15:35:03,322 Trying to retrieve jobs list
+2020-08-25 15:35:03,322 Retrieving settings for Jobs List
+2020-08-25 15:35:03,427 Jobs list loaded successfully
+2020-08-25 15:35:03,427 Retrieving settings for Job Import
+2020-08-25 15:35:03,428 Retrieving settings for Job Import

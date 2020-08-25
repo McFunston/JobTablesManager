@@ -81,6 +81,12 @@ def get_data_csv(path, columns) -> List:
     df: pd.DataFrame = read_csv(path, names= columns)
     df1 = df.where(pd.notnull(df), None)
     dfDict = df1.to_dict('records')
+    for d in dfDict:
+        for c in d:
+            try:
+                d[c]=int(d[c])
+            except:
+                pass
     return dfDict
 
 def WriteData(path: str, sheet: str, data_list: pd.DataFrame, columns: List):

@@ -16,7 +16,4 @@ def NameParse(name):
         print("Name not Found")
         return 0
 
-# print(NameParspython3 e("75_Kris_Locke_2933_NeighboursOfFairfield_Jul2020_p1-16_15"))
 
-if __name__ == "__main__":
-    print(NameParse(sys.argv[1]))

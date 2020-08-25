@@ -7,7 +7,7 @@ def receive_file(path):
     jobs.on_est_received(est_received)
     jobs.save()
 
-# receive_file("Test_Data/Good_txt/457 Old Thornhill #457.txt")
+# receive_file("Test_Data/88 Neighbours of OLD OAKVILLE #88.txt")
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:

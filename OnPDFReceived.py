@@ -7,6 +7,8 @@ def receive_file(path):
     jobs.on_file_upload(pdf_received)
     jobs.save()
 
+# receive_file('Test_Data/1534_NofMahoganyAug2020final.pdf')
+
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Wrong number of arguments")

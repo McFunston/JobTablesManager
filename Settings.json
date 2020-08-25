@@ -15,7 +15,7 @@
                 "Date Setup",
                 "Added On",
                 "Publication Month",
-                "Exported to MIS"
+                "Exported"
             ],
             "Write Once Columns": [
                 "Files In",
@@ -23,8 +23,15 @@
                 "Date Setup",
                 "Added On",
                 "Publication Month",
-                "Exported to MIS",
+                "Exported",
                 "True Page Count"
+            ],
+            "Export On": [
+                "Description",
+                "itemTemplate",
+                "Qty Ordered",
+                "CPC",
+                "Project ID"            
             ],
             "True Dates": false,
             "Date Format": "%m/%d/%Y",
@@ -47,7 +54,7 @@
                 "16": "Shipping Added",
                 "17": "True Page Count",
                 "18": "Publication Month",
-                "19": "Exported to MIS",
+                "19": "Exported",
                 "20": "Project ID",
                 "21": "itemTemplate"
             },
@@ -78,7 +85,7 @@
                 "Shipping Added": "datetime",
                 "True Page Count": "int",
                 "Publication Month": "datetime",
-                "Exported to MIS": "datetime"
+                "Exported": "datetime"
             }
         },
         "Samples": {
@@ -524,6 +531,10 @@
                 "5": "part1QuantityOrdered",
                 "6": "description",
                 "7": "U_productionNotes"
+            },
+            "Static Columns":{                
+                "_ACTION_": "I",
+                "customer": "5646"
             }
         }
     }
