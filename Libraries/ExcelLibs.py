@@ -70,10 +70,11 @@ def GetData(path: str, tab: str) -> list:
                 d[c]=d[c].to_pydatetime()
             if str(type(d[c]))=="<class 'pandas._libs.tslibs.nattype.NaTType'>":
                 d[c] = None
-            try:
-                d[c]=int(d[c])
-            except:
-                pass
+            if 'phone' not in str(c).lower():
+                try:
+                    d[c]=int(d[c])
+                except:
+                    pass
 
     return dfDict
 

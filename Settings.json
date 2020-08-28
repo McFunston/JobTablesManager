@@ -230,8 +230,22 @@
                 "13": "state",
                 "14": "zip",
                 "15": "phone",
-                "16": "Samples"
-            }
+                "16": "Samples",
+                "17": "Exported",
+                "18": "jobContactID",
+                "19": "globalContactID"
+            },
+            "Export On": [
+                "job",
+                "id",
+                "Publication",
+                "Publication Month",
+                "U_shipmentNotes",
+                "address1",
+                "city",
+                "state",
+                "zip"            
+            ]
         },
         "Contacts": {
             "File Name": "Contacts.xlsx",
@@ -243,23 +257,31 @@
             "Date Columns": [],
             "Write Once Columns": [],
             "Columns Order": {
-                "1": "_ACTION_",
-                "2": "job",
-                "3": "shipmentType",
-                "4": "shipVia",
-                "5": "U_shipmentNotes",
-                "6": "contactFirstName",
-                "7": "contactLastName",
-                "8": "address1",
-                "9": "address2",
-                "10": "address3",
-                "11": "city",
-                "12": "state",
-                "13": "zip",
-                "14": "phone",
-                "15": "country",
-                "16": "shipperName",
-                "17": "contactNumber"
+                "1": "jobContactID",
+                "2": "globalContactID",
+                "3": "Lookup Hint",
+                "4": "First Name",
+                "5": "Last Name",
+                "6": "Add. Line 1",
+                "7": "Add. Line 2",
+                "8": "Add. Line 3",
+                "9": "City",
+                "10": "State",
+                "11": "Postcode",
+                "12": "Phone"
+            },
+            "Common Data Columns": {
+                "Lookup Hint": "User Number",
+                "First Name": "contactFirstName",
+                "Last Name": "contactLastName",
+                "Add. Line 1": "address1",
+                "Add. Line 2": "address2",
+                "Add. Line 3": "address3",
+                "City": "city",
+                "State": "state",
+                "Postcode": "zip",
+                "Phone": "phone"
+
             }
         },
         "Customer Report": {

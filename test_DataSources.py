@@ -299,7 +299,7 @@ class TestDataSources(unittest.TestCase):
                                 moqCustomerReportSettingsFunc, moqCustomerReportFunc)
         
         # Act
-        customerReport._merge_data(jobs, ['Job'], customerReport.hit_add_missing, customerReport._add_row)
+        customerReport._merge_data(jobs, ['Job'], customerReport._hit_add_missing, customerReport._miss_add_row)
         expected = jobs._data_list[0]['Job']
         actual = customerReport._data_list[0]['Job']
 
@@ -315,7 +315,7 @@ class TestDataSources(unittest.TestCase):
         paceUpdate._data_list = paceUpdate._get_string_data_list()
         
         # Act
-        jobs._merge_data(paceUpdate, ['Description'], jobs.hit_replace,jobs._add_row)
+        jobs._merge_data(paceUpdate, ['Description'], jobs._hit_replace,jobs._miss_add_row)
         expected = "M1800"
         actual = jobs._data_list[4]["Job"]
 

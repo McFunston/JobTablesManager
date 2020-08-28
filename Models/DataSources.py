@@ -304,7 +304,7 @@ class DataSource:
             #     empty = dict()
             #     self._data_list.append(empty)
 
-            if len(self._data_list) == 0:
+            if len(self._data_list[0]) == 0:
                 miss_funct(newRow)
 
             for oldRow in self._data_list:
@@ -742,13 +742,14 @@ class JobsList(DataSource):
         self._update_quantities()
         self._set_item_templates()
 
-    def check_mis_exports(self, job_imports):
+    def check_mis_exports(self, job_imports) -> bool:
         exported = self.export(job_imports)
         job_imports.populate_static()
-        if exported:
-            self.save()
-            job_imports.fix_production_notes()
-            job_imports.save()
+        return exported
+        # if exported:
+        #     self.save()
+        #     job_imports.fix_production_notes()
+        #     job_imports.save()
 
         
 

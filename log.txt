@@ -5358,3 +5358,1549 @@
 2020-08-25 15:35:03,427 Jobs list loaded successfully
 2020-08-25 15:35:03,427 Retrieving settings for Job Import
 2020-08-25 15:35:03,428 Retrieving settings for Job Import
+2020-08-25 15:39:34,127 Retrieving settings for Jobs List
+2020-08-25 15:39:34,128 Trying to retrieve jobs list
+2020-08-25 15:39:34,128 Retrieving settings for Jobs List
+2020-08-25 15:39:34,253 Jobs list loaded successfully
+2020-08-25 15:39:34,253 Retrieving settings for Job Import
+2020-08-25 15:39:34,254 Retrieving settings for Job Import
+2020-08-25 16:47:59,454 Retrieving settings for Jobs List
+2020-08-25 16:47:59,454 Trying to retrieve jobs list
+2020-08-25 16:47:59,454 Retrieving settings for Jobs List
+2020-08-25 16:47:59,569 Jobs list loaded successfully
+2020-08-25 16:47:59,569 Retrieving settings for Job Import
+2020-08-25 16:47:59,570 Retrieving settings for Job Import
+2020-08-27 12:36:14,604 Retrieving settings for Jobs List
+2020-08-27 12:36:14,606 Trying to retrieve jobs list
+2020-08-27 12:36:14,606 Retrieving settings for Jobs List
+2020-08-27 12:37:21,542 Retrieving settings for Jobs List
+2020-08-27 12:37:21,543 Trying to retrieve jobs list
+2020-08-27 12:37:21,543 Retrieving settings for Jobs List
+2020-08-27 12:38:41,739 Retrieving settings for Contacts
+2020-08-27 12:38:41,739 Retrieving settings for Contacts
+2020-08-27 12:38:41,771 Retrieving settings for Samples
+2020-08-27 12:38:41,788 Retrieving settings for Designer Copies
+2020-08-27 12:38:41,803 Retrieving settings for Flattened Samples
+2020-08-27 12:38:41,804 Retrieving settings for Flattened Samples
+2020-08-27 12:38:41,806 Retrieving settings for Customer Report
+2020-08-27 12:38:41,806 Retrieving settings for Customer Report
+2020-08-27 12:38:41,806 Retrieving settings for Jobs List
+2020-08-27 12:38:41,806 Trying to retrieve jobs list
+2020-08-27 12:38:41,807 Retrieving settings for Jobs List
+2020-08-27 12:38:41,839 Jobs list loaded successfully
+2020-08-27 12:38:41,839 Retrieving settings for Customer Report
+2020-08-27 12:38:41,840 Retrieving settings for Customer Report
+2020-08-27 12:38:41,841 Retrieving settings for Samples
+2020-08-27 12:38:41,858 Retrieving settings for Designer Copies
+2020-08-27 12:38:41,873 Retrieving settings for Job Shipments
+2020-08-27 12:38:41,873 Retrieving settings for Job Shipments
+2020-08-27 12:38:41,873 Retrieving settings for Jobs List
+2020-08-27 12:38:41,874 Trying to retrieve jobs list
+2020-08-27 12:38:41,874 Retrieving settings for Jobs List
+2020-08-27 12:38:41,905 Jobs list loaded successfully
+2020-08-27 12:38:41,905 Retrieving settings for Contacts
+2020-08-27 12:38:41,906 Retrieving settings for Contacts
+2020-08-27 12:38:41,934 Retrieving settings for Designer Copies
+2020-08-27 12:38:41,945 Retrieving settings for EST File
+2020-08-27 12:38:41,950 Retrieving settings for Jobs List
+2020-08-27 12:38:41,950 Trying to retrieve jobs list
+2020-08-27 12:38:41,950 Retrieving settings for Jobs List
+2020-08-27 12:38:41,982 Jobs list loaded successfully
+2020-08-27 12:38:41,983 Retrieving settings for PDF Received
+2020-08-27 12:38:42,009 Retrieving settings for Jobs List
+2020-08-27 12:38:42,009 Trying to retrieve jobs list
+2020-08-27 12:38:42,009 Retrieving settings for Jobs List
+2020-08-27 12:38:42,059 Jobs list loaded successfully
+2020-08-27 12:38:42,059 Retrieving settings for Pace Update
+2020-08-27 12:38:42,060 Trying to open the MIS Update
+2020-08-27 12:38:42,060 Retrieving settings for Pace Update
+2020-08-27 12:38:42,098 Retrieving settings for Job Projects
+2020-08-27 12:38:42,098 Retrieving settings for Job Projects
+2020-08-27 12:38:42,111 Retrieving settings for Jobs List
+2020-08-27 12:38:42,111 Trying to retrieve jobs list
+2020-08-27 12:38:42,111 Retrieving settings for Jobs List
+2020-08-27 12:38:42,143 Jobs list loaded successfully
+2020-08-27 12:38:42,144 Retrieving settings for Jobs List
+2020-08-27 12:38:42,144 Trying to retrieve jobs list
+2020-08-27 12:38:42,144 Retrieving settings for Jobs List
+2020-08-27 12:38:42,175 Jobs list loaded successfully
+2020-08-27 12:38:42,176 Retrieving settings for Pace Update
+2020-08-27 12:38:42,176 Trying to open the MIS Update
+2020-08-27 12:38:42,176 Retrieving settings for Pace Update
+2020-08-27 12:38:42,205 Retrieving settings for Samples
+2020-08-27 12:38:42,221 Retrieving settings for Designer Copies
+2020-08-27 12:38:42,230 Retrieving settings for Samples
+2020-08-27 12:38:42,247 Retrieving settings for Job Shipments
+2020-08-27 12:38:42,247 Retrieving settings for Job Shipments
+2020-08-28 09:46:17,326 Retrieving settings for Jobs List
+2020-08-28 09:46:17,328 Trying to retrieve jobs list
+2020-08-28 09:46:17,329 Retrieving settings for Jobs List
+2020-08-28 09:46:17,439 Jobs list loaded successfully
+2020-08-28 09:46:17,439 Retrieving settings for Job Import
+2020-08-28 09:46:17,439 Retrieving settings for Job Import
+2020-08-28 13:02:37,067 Retrieving settings for Contacts
+2020-08-28 13:02:37,068 Retrieving settings for Contacts
+2020-08-28 13:02:37,090 Retrieving settings for Samples
+2020-08-28 13:02:37,107 Retrieving settings for Designer Copies
+2020-08-28 13:02:37,122 Retrieving settings for Flattened Samples
+2020-08-28 13:02:37,122 Retrieving settings for Flattened Samples
+2020-08-28 13:02:37,124 Retrieving settings for Customer Report
+2020-08-28 13:02:37,124 Retrieving settings for Customer Report
+2020-08-28 13:02:37,125 Retrieving settings for Jobs List
+2020-08-28 13:02:37,125 Trying to retrieve jobs list
+2020-08-28 13:02:37,125 Retrieving settings for Jobs List
+2020-08-28 13:02:37,156 Jobs list loaded successfully
+2020-08-28 13:02:37,156 Retrieving settings for Customer Report
+2020-08-28 13:02:37,157 Retrieving settings for Customer Report
+2020-08-28 13:02:37,159 Retrieving settings for Samples
+2020-08-28 13:02:37,176 Retrieving settings for Designer Copies
+2020-08-28 13:02:37,190 Retrieving settings for Job Shipments
+2020-08-28 13:02:37,190 Retrieving settings for Job Shipments
+2020-08-28 13:02:37,190 Retrieving settings for Jobs List
+2020-08-28 13:02:37,190 Trying to retrieve jobs list
+2020-08-28 13:02:37,191 Retrieving settings for Jobs List
+2020-08-28 13:02:37,222 Jobs list loaded successfully
+2020-08-28 13:02:37,222 Retrieving settings for Contacts
+2020-08-28 13:02:37,222 Retrieving settings for Contacts
+2020-08-28 13:02:37,243 Retrieving settings for Designer Copies
+2020-08-28 13:02:37,253 Retrieving settings for EST File
+2020-08-28 13:02:37,258 Retrieving settings for Jobs List
+2020-08-28 13:02:37,258 Trying to retrieve jobs list
+2020-08-28 13:02:37,258 Retrieving settings for Jobs List
+2020-08-28 13:02:37,289 Jobs list loaded successfully
+2020-08-28 13:02:37,290 Retrieving settings for PDF Received
+2020-08-28 13:02:37,317 Retrieving settings for Jobs List
+2020-08-28 13:02:37,318 Trying to retrieve jobs list
+2020-08-28 13:02:37,318 Retrieving settings for Jobs List
+2020-08-28 13:02:37,349 Jobs list loaded successfully
+2020-08-28 13:02:37,350 Retrieving settings for Pace Update
+2020-08-28 13:02:37,350 Trying to open the MIS Update
+2020-08-28 13:02:37,350 Retrieving settings for Pace Update
+2020-08-28 13:02:37,389 Retrieving settings for Job Projects
+2020-08-28 13:02:37,389 Retrieving settings for Job Projects
+2020-08-28 13:02:37,404 Retrieving settings for Jobs List
+2020-08-28 13:02:37,404 Trying to retrieve jobs list
+2020-08-28 13:02:37,404 Retrieving settings for Jobs List
+2020-08-28 13:02:37,452 Jobs list loaded successfully
+2020-08-28 13:02:37,453 Retrieving settings for Jobs List
+2020-08-28 13:02:37,453 Trying to retrieve jobs list
+2020-08-28 13:02:37,453 Retrieving settings for Jobs List
+2020-08-28 13:02:37,487 Jobs list loaded successfully
+2020-08-28 13:02:37,487 Retrieving settings for Pace Update
+2020-08-28 13:02:37,487 Trying to open the MIS Update
+2020-08-28 13:02:37,487 Retrieving settings for Pace Update
+2020-08-28 13:02:37,519 Retrieving settings for Samples
+2020-08-28 13:02:37,535 Retrieving settings for Designer Copies
+2020-08-28 13:02:37,545 Retrieving settings for Samples
+2020-08-28 13:02:37,560 Retrieving settings for Job Shipments
+2020-08-28 13:02:37,560 Retrieving settings for Job Shipments
+2020-08-28 13:05:26,284 Retrieving settings for Contacts
+2020-08-28 13:05:26,285 Retrieving settings for Contacts
+2020-08-28 13:05:26,363 Retrieving settings for Samples
+2020-08-28 13:05:26,419 Retrieving settings for Designer Copies
+2020-08-28 13:05:26,475 Retrieving settings for Flattened Samples
+2020-08-28 13:05:26,475 Retrieving settings for Flattened Samples
+2020-08-28 13:05:26,480 Retrieving settings for Customer Report
+2020-08-28 13:05:26,481 Retrieving settings for Customer Report
+2020-08-28 13:05:26,482 Retrieving settings for Jobs List
+2020-08-28 13:05:26,482 Trying to retrieve jobs list
+2020-08-28 13:05:26,482 Retrieving settings for Jobs List
+2020-08-28 13:05:26,605 Jobs list loaded successfully
+2020-08-28 13:05:26,605 Retrieving settings for Customer Report
+2020-08-28 13:05:26,606 Retrieving settings for Customer Report
+2020-08-28 13:05:26,609 Retrieving settings for Samples
+2020-08-28 13:05:26,665 Retrieving settings for Designer Copies
+2020-08-28 13:05:26,713 Retrieving settings for Job Shipments
+2020-08-28 13:05:26,714 Retrieving settings for Job Shipments
+2020-08-28 13:05:26,714 Retrieving settings for Jobs List
+2020-08-28 13:05:26,715 Trying to retrieve jobs list
+2020-08-28 13:05:26,715 Retrieving settings for Jobs List
+2020-08-28 13:05:26,831 Jobs list loaded successfully
+2020-08-28 13:05:26,832 Retrieving settings for Contacts
+2020-08-28 13:05:26,832 Retrieving settings for Contacts
+2020-08-28 13:05:26,909 Retrieving settings for Designer Copies
+2020-08-28 13:05:26,942 Retrieving settings for EST File
+2020-08-28 13:05:26,957 Retrieving settings for Jobs List
+2020-08-28 13:05:26,957 Trying to retrieve jobs list
+2020-08-28 13:05:26,957 Retrieving settings for Jobs List
+2020-08-28 13:05:27,068 Jobs list loaded successfully
+2020-08-28 13:05:27,071 Retrieving settings for PDF Received
+2020-08-28 13:05:27,164 Retrieving settings for Jobs List
+2020-08-28 13:05:27,164 Trying to retrieve jobs list
+2020-08-28 13:05:27,164 Retrieving settings for Jobs List
+2020-08-28 13:05:27,271 Jobs list loaded successfully
+2020-08-28 13:05:27,273 Adding 16 to True Page Count
+2020-08-28 13:05:27,273 Adding 2020-08-28 13:05:27.071951 to Files In
+2020-08-28 13:05:27,274 Retrieving settings for Pace Update
+2020-08-28 13:05:27,275 Trying to open the MIS Update
+2020-08-28 13:05:27,275 Retrieving settings for Pace Update
+2020-08-28 13:05:27,363 Retrieving settings for Job Projects
+2020-08-28 13:05:27,364 Retrieving settings for Job Projects
+2020-08-28 13:05:27,407 Retrieving settings for Jobs List
+2020-08-28 13:05:27,407 Trying to retrieve jobs list
+2020-08-28 13:05:27,407 Retrieving settings for Jobs List
+2020-08-28 13:05:27,524 Jobs list loaded successfully
+2020-08-28 13:05:27,544 Retrieving settings for Jobs List
+2020-08-28 13:05:27,544 Trying to retrieve jobs list
+2020-08-28 13:05:27,545 Retrieving settings for Jobs List
+2020-08-28 13:05:27,652 Jobs list loaded successfully
+2020-08-28 13:05:27,653 Retrieving settings for Pace Update
+2020-08-28 13:05:27,654 Trying to open the MIS Update
+2020-08-28 13:05:27,654 Retrieving settings for Pace Update
+2020-08-28 13:05:27,735 Retrieving settings for Samples
+2020-08-28 13:05:27,786 Retrieving settings for Designer Copies
+2020-08-28 13:05:27,816 Retrieving settings for Samples
+2020-08-28 13:05:27,866 Retrieving settings for Job Shipments
+2020-08-28 13:05:27,866 Retrieving settings for Job Shipments
+2020-08-28 13:05:33,113 Retrieving settings for Contacts
+2020-08-28 13:05:33,113 Retrieving settings for Contacts
+2020-08-28 13:05:33,134 Retrieving settings for Samples
+2020-08-28 13:05:33,150 Retrieving settings for Designer Copies
+2020-08-28 13:05:33,164 Retrieving settings for Flattened Samples
+2020-08-28 13:05:33,164 Retrieving settings for Flattened Samples
+2020-08-28 13:05:33,166 Retrieving settings for Customer Report
+2020-08-28 13:05:33,167 Retrieving settings for Customer Report
+2020-08-28 13:05:33,167 Retrieving settings for Jobs List
+2020-08-28 13:05:33,167 Trying to retrieve jobs list
+2020-08-28 13:05:33,167 Retrieving settings for Jobs List
+2020-08-28 13:05:33,199 Jobs list loaded successfully
+2020-08-28 13:05:33,199 Retrieving settings for Customer Report
+2020-08-28 13:05:33,200 Retrieving settings for Customer Report
+2020-08-28 13:05:33,201 Retrieving settings for Samples
+2020-08-28 13:05:33,216 Retrieving settings for Designer Copies
+2020-08-28 13:05:33,231 Retrieving settings for Job Shipments
+2020-08-28 13:05:33,231 Retrieving settings for Job Shipments
+2020-08-28 13:05:33,231 Retrieving settings for Jobs List
+2020-08-28 13:05:33,231 Trying to retrieve jobs list
+2020-08-28 13:05:33,231 Retrieving settings for Jobs List
+2020-08-28 13:05:33,262 Jobs list loaded successfully
+2020-08-28 13:05:33,262 Retrieving settings for Contacts
+2020-08-28 13:05:33,262 Retrieving settings for Contacts
+2020-08-28 13:05:33,285 Retrieving settings for Designer Copies
+2020-08-28 13:05:33,295 Retrieving settings for EST File
+2020-08-28 13:05:33,298 Retrieving settings for Jobs List
+2020-08-28 13:05:33,299 Trying to retrieve jobs list
+2020-08-28 13:05:33,299 Retrieving settings for Jobs List
+2020-08-28 13:05:33,330 Jobs list loaded successfully
+2020-08-28 13:05:33,331 Retrieving settings for PDF Received
+2020-08-28 13:05:33,354 Retrieving settings for Jobs List
+2020-08-28 13:05:33,355 Trying to retrieve jobs list
+2020-08-28 13:05:33,355 Retrieving settings for Jobs List
+2020-08-28 13:05:33,387 Jobs list loaded successfully
+2020-08-28 13:05:33,389 Adding 16 to True Page Count
+2020-08-28 13:05:33,389 Adding 2020-08-28 13:05:33.331915 to Files In
+2020-08-28 13:05:33,390 Retrieving settings for Pace Update
+2020-08-28 13:05:33,391 Trying to open the MIS Update
+2020-08-28 13:05:33,391 Retrieving settings for Pace Update
+2020-08-28 13:05:33,421 Retrieving settings for Job Projects
+2020-08-28 13:05:33,422 Retrieving settings for Job Projects
+2020-08-28 13:05:33,434 Retrieving settings for Jobs List
+2020-08-28 13:05:33,434 Trying to retrieve jobs list
+2020-08-28 13:05:33,434 Retrieving settings for Jobs List
+2020-08-28 13:05:33,483 Jobs list loaded successfully
+2020-08-28 13:05:33,493 Retrieving settings for Jobs List
+2020-08-28 13:05:33,494 Trying to retrieve jobs list
+2020-08-28 13:05:33,494 Retrieving settings for Jobs List
+2020-08-28 13:05:33,524 Jobs list loaded successfully
+2020-08-28 13:05:33,524 Retrieving settings for Pace Update
+2020-08-28 13:05:33,525 Trying to open the MIS Update
+2020-08-28 13:05:33,525 Retrieving settings for Pace Update
+2020-08-28 13:05:33,554 Retrieving settings for Samples
+2020-08-28 13:05:33,569 Retrieving settings for Designer Copies
+2020-08-28 13:05:33,580 Retrieving settings for Samples
+2020-08-28 13:05:33,595 Retrieving settings for Job Shipments
+2020-08-28 13:05:33,595 Retrieving settings for Job Shipments
+2020-08-28 13:05:49,267 Retrieving settings for Samples
+2020-08-28 13:05:49,359 Retrieving settings for Designer Copies
+2020-08-28 13:05:49,408 Retrieving settings for Job Shipments
+2020-08-28 13:05:49,409 Retrieving settings for Job Shipments
+2020-08-28 13:05:49,409 Retrieving settings for Jobs List
+2020-08-28 13:05:49,409 Trying to retrieve jobs list
+2020-08-28 13:05:49,410 Retrieving settings for Jobs List
+2020-08-28 13:05:49,521 Jobs list loaded successfully
+2020-08-28 13:05:49,522 Retrieving settings for Contacts
+2020-08-28 13:05:49,522 Retrieving settings for Contacts
+2020-08-28 13:12:23,871 Retrieving settings for Samples
+2020-08-28 13:12:23,962 Retrieving settings for Designer Copies
+2020-08-28 13:12:24,013 Retrieving settings for Job Shipments
+2020-08-28 13:12:24,013 Retrieving settings for Job Shipments
+2020-08-28 13:12:24,014 Retrieving settings for Jobs List
+2020-08-28 13:12:24,014 Trying to retrieve jobs list
+2020-08-28 13:12:24,014 Retrieving settings for Jobs List
+2020-08-28 13:12:24,117 Jobs list loaded successfully
+2020-08-28 13:12:24,117 Retrieving settings for Contacts
+2020-08-28 13:12:24,117 Retrieving settings for Contacts
+2020-08-28 13:23:34,183 Retrieving settings for Samples
+2020-08-28 13:23:34,275 Retrieving settings for Designer Copies
+2020-08-28 13:23:34,325 Retrieving settings for Job Shipments
+2020-08-28 13:23:34,326 Retrieving settings for Job Shipments
+2020-08-28 13:23:34,326 Retrieving settings for Jobs List
+2020-08-28 13:23:34,326 Trying to retrieve jobs list
+2020-08-28 13:23:34,326 Retrieving settings for Jobs List
+2020-08-28 13:23:34,430 Jobs list loaded successfully
+2020-08-28 13:23:34,430 Retrieving settings for Contacts
+2020-08-28 13:23:34,430 Retrieving settings for Contacts
+2020-08-28 13:23:34,498 Adding None to address3
+2020-08-28 13:23:34,498 Adding None to address3
+2020-08-28 13:23:34,498 Adding None to address2
+2020-08-28 13:23:34,498 Adding None to address3
+2020-08-28 13:23:34,498 Adding None to address3
+2020-08-28 13:23:34,499 Adding None to address2
+2020-08-28 13:23:34,499 Adding None to address3
+2020-08-28 13:23:34,499 Adding None to address3
+2020-08-28 13:23:34,499 Adding None to address2
+2020-08-28 13:23:34,499 Adding None to address3
+2020-08-28 13:23:34,499 Adding None to address3
+2020-08-28 13:23:34,499 Adding None to address2
+2020-08-28 13:23:34,499 Adding None to address3
+2020-08-28 13:23:34,499 Adding None to address3
+2020-08-28 13:23:34,499 Adding None to address2
+2020-08-28 13:23:34,499 Adding None to address3
+2020-08-28 13:23:34,500 Adding None to address3
+2020-08-28 13:23:34,500 Adding None to address2
+2020-08-28 13:23:34,500 Adding None to address3
+2020-08-28 13:23:34,500 Adding None to address3
+2020-08-28 13:23:34,500 Adding None to address2
+2020-08-28 13:23:34,500 Adding None to address3
+2020-08-28 13:23:34,500 Adding None to address3
+2020-08-28 13:23:34,500 Adding None to address2
+2020-08-28 13:23:34,500 Adding None to address3
+2020-08-28 13:23:34,500 Adding None to address3
+2020-08-28 13:23:34,500 Adding None to address2
+2020-08-28 13:23:34,501 Adding None to address3
+2020-08-28 13:23:34,501 Adding None to address3
+2020-08-28 13:23:34,501 Adding None to address2
+2020-08-28 13:23:34,501 Adding None to address3
+2020-08-28 13:23:34,501 Adding None to address3
+2020-08-28 13:23:34,501 Adding None to address2
+2020-08-28 13:23:34,502 Adding None to address3
+2020-08-28 13:23:34,502 Adding None to address3
+2020-08-28 13:23:34,502 Adding None to address2
+2020-08-28 13:23:34,502 Adding None to address3
+2020-08-28 13:23:34,503 Adding None to address3
+2020-08-28 13:23:34,503 Adding None to address2
+2020-08-28 13:23:34,503 Adding None to address3
+2020-08-28 13:23:34,503 Adding None to address3
+2020-08-28 13:23:34,503 Adding None to address2
+2020-08-28 13:23:34,503 Adding None to address3
+2020-08-28 13:23:34,503 Adding None to address3
+2020-08-28 13:23:34,503 Adding None to address2
+2020-08-28 13:23:34,504 Adding None to address3
+2020-08-28 13:23:34,504 Adding None to address3
+2020-08-28 13:23:34,504 Adding None to address2
+2020-08-28 13:23:34,504 Adding None to address3
+2020-08-28 13:23:34,504 Adding None to address3
+2020-08-28 13:23:34,504 Adding None to address2
+2020-08-28 13:23:34,504 Adding None to address3
+2020-08-28 13:23:34,505 Adding None to address3
+2020-08-28 13:23:34,505 Adding None to address2
+2020-08-28 13:23:34,505 Adding None to address3
+2020-08-28 13:23:34,505 Adding None to address3
+2020-08-28 13:23:34,505 Adding None to address2
+2020-08-28 13:23:34,505 Adding None to address3
+2020-08-28 13:23:34,505 Adding None to address3
+2020-08-28 13:23:34,505 Adding None to address2
+2020-08-28 13:23:34,505 Adding None to address3
+2020-08-28 13:23:34,505 Adding None to address3
+2020-08-28 13:23:34,505 Adding None to address2
+2020-08-28 13:23:34,506 Adding None to address3
+2020-08-28 13:23:34,506 Adding None to address3
+2020-08-28 13:23:34,506 Adding None to address2
+2020-08-28 13:23:34,506 Adding None to address3
+2020-08-28 13:23:34,506 Adding None to address3
+2020-08-28 13:23:34,506 Adding None to address2
+2020-08-28 13:23:34,506 Adding None to address3
+2020-08-28 13:23:34,506 Adding None to address3
+2020-08-28 13:23:34,507 Adding None to address2
+2020-08-28 13:23:34,507 Adding None to address3
+2020-08-28 13:23:34,507 Adding None to address3
+2020-08-28 13:23:34,507 Adding None to address2
+2020-08-28 13:23:34,507 Adding None to address3
+2020-08-28 13:23:34,507 Adding None to address3
+2020-08-28 13:23:34,507 Adding None to address2
+2020-08-28 13:23:34,507 Adding None to address3
+2020-08-28 13:23:34,507 Adding None to address3
+2020-08-28 13:23:34,507 Adding None to address2
+2020-08-28 13:23:34,507 Adding None to address3
+2020-08-28 13:23:34,508 Adding None to address3
+2020-08-28 13:23:34,508 Adding None to address2
+2020-08-28 13:23:34,508 Adding None to address3
+2020-08-28 13:23:34,508 Adding None to address3
+2020-08-28 13:23:34,508 Adding None to address2
+2020-08-28 13:23:34,508 Adding None to address3
+2020-08-28 13:23:34,508 Adding None to address3
+2020-08-28 13:23:34,508 Adding None to address2
+2020-08-28 13:23:34,508 Adding None to address3
+2020-08-28 13:23:34,508 Adding None to address3
+2020-08-28 13:23:34,509 Adding None to address2
+2020-08-28 13:23:34,509 Adding None to address3
+2020-08-28 13:23:34,509 Adding None to address3
+2020-08-28 13:23:34,509 Adding None to address2
+2020-08-28 13:23:34,509 Adding None to address3
+2020-08-28 13:23:34,509 Adding None to address3
+2020-08-28 13:23:34,509 Adding None to address2
+2020-08-28 13:23:34,509 Adding None to address3
+2020-08-28 13:23:34,509 Adding None to address3
+2020-08-28 13:23:34,509 Adding None to address2
+2020-08-28 13:23:34,510 Adding None to address3
+2020-08-28 13:23:34,510 Adding None to address3
+2020-08-28 13:23:34,510 Adding None to address2
+2020-08-28 13:23:34,510 Adding None to address3
+2020-08-28 13:23:34,510 Adding None to address3
+2020-08-28 13:23:34,510 Adding None to address2
+2020-08-28 13:23:34,510 Adding None to address3
+2020-08-28 13:23:34,511 Adding None to address3
+2020-08-28 13:23:34,511 Adding None to address2
+2020-08-28 13:23:34,511 Adding None to address3
+2020-08-28 13:23:34,511 Adding None to address3
+2020-08-28 13:23:34,511 Adding None to address2
+2020-08-28 13:23:34,511 Adding None to address3
+2020-08-28 13:23:34,512 Adding None to address3
+2020-08-28 13:23:34,512 Adding None to address2
+2020-08-28 13:23:39,230 Retrieving settings for Contacts
+2020-08-28 13:23:39,231 Retrieving settings for Contacts
+2020-08-28 13:23:39,252 Retrieving settings for Samples
+2020-08-28 13:23:39,268 Retrieving settings for Designer Copies
+2020-08-28 13:23:39,282 Retrieving settings for Flattened Samples
+2020-08-28 13:23:39,282 Retrieving settings for Flattened Samples
+2020-08-28 13:23:39,285 Retrieving settings for Customer Report
+2020-08-28 13:23:39,285 Retrieving settings for Customer Report
+2020-08-28 13:23:39,285 Retrieving settings for Jobs List
+2020-08-28 13:23:39,286 Trying to retrieve jobs list
+2020-08-28 13:23:39,286 Retrieving settings for Jobs List
+2020-08-28 13:23:39,317 Jobs list loaded successfully
+2020-08-28 13:23:39,317 Retrieving settings for Customer Report
+2020-08-28 13:23:39,318 Retrieving settings for Customer Report
+2020-08-28 13:23:39,319 Retrieving settings for Samples
+2020-08-28 13:23:39,335 Retrieving settings for Designer Copies
+2020-08-28 13:23:39,349 Retrieving settings for Job Shipments
+2020-08-28 13:23:39,349 Retrieving settings for Job Shipments
+2020-08-28 13:23:39,350 Retrieving settings for Jobs List
+2020-08-28 13:23:39,350 Trying to retrieve jobs list
+2020-08-28 13:23:39,350 Retrieving settings for Jobs List
+2020-08-28 13:23:39,381 Jobs list loaded successfully
+2020-08-28 13:23:39,381 Retrieving settings for Contacts
+2020-08-28 13:23:39,381 Retrieving settings for Contacts
+2020-08-28 13:23:39,405 Adding None to address3
+2020-08-28 13:23:39,405 Adding None to address3
+2020-08-28 13:23:39,405 Adding None to address2
+2020-08-28 13:23:39,405 Adding None to address3
+2020-08-28 13:23:39,405 Adding None to address3
+2020-08-28 13:23:39,405 Adding None to address2
+2020-08-28 13:23:39,405 Adding None to address3
+2020-08-28 13:23:39,405 Adding None to address3
+2020-08-28 13:23:39,405 Adding None to address2
+2020-08-28 13:23:39,405 Adding None to address3
+2020-08-28 13:23:39,406 Adding None to address3
+2020-08-28 13:23:39,406 Adding None to address2
+2020-08-28 13:23:39,406 Adding None to address3
+2020-08-28 13:23:39,406 Adding None to address3
+2020-08-28 13:23:39,406 Adding None to address2
+2020-08-28 13:23:39,406 Adding None to address3
+2020-08-28 13:23:39,406 Adding None to address3
+2020-08-28 13:23:39,406 Adding None to address2
+2020-08-28 13:23:39,406 Adding None to address3
+2020-08-28 13:23:39,406 Adding None to address3
+2020-08-28 13:23:39,406 Adding None to address2
+2020-08-28 13:23:39,406 Adding None to address3
+2020-08-28 13:23:39,406 Adding None to address3
+2020-08-28 13:23:39,406 Adding None to address2
+2020-08-28 13:23:39,406 Adding None to address3
+2020-08-28 13:23:39,406 Adding None to address3
+2020-08-28 13:23:39,406 Adding None to address2
+2020-08-28 13:23:39,406 Adding None to address3
+2020-08-28 13:23:39,406 Adding None to address3
+2020-08-28 13:23:39,406 Adding None to address2
+2020-08-28 13:23:39,407 Adding None to address3
+2020-08-28 13:23:39,407 Adding None to address3
+2020-08-28 13:23:39,407 Adding None to address2
+2020-08-28 13:23:39,407 Adding None to address3
+2020-08-28 13:23:39,407 Adding None to address3
+2020-08-28 13:23:39,407 Adding None to address2
+2020-08-28 13:23:39,407 Adding None to address3
+2020-08-28 13:23:39,407 Adding None to address3
+2020-08-28 13:23:39,407 Adding None to address2
+2020-08-28 13:23:39,407 Adding None to address3
+2020-08-28 13:23:39,407 Adding None to address3
+2020-08-28 13:23:39,407 Adding None to address2
+2020-08-28 13:23:39,407 Adding None to address3
+2020-08-28 13:23:39,407 Adding None to address3
+2020-08-28 13:23:39,408 Adding None to address2
+2020-08-28 13:23:39,408 Adding None to address3
+2020-08-28 13:23:39,408 Adding None to address3
+2020-08-28 13:23:39,408 Adding None to address2
+2020-08-28 13:23:39,408 Adding None to address3
+2020-08-28 13:23:39,408 Adding None to address3
+2020-08-28 13:23:39,408 Adding None to address2
+2020-08-28 13:23:39,408 Adding None to address3
+2020-08-28 13:23:39,408 Adding None to address3
+2020-08-28 13:23:39,408 Adding None to address2
+2020-08-28 13:23:39,408 Adding None to address3
+2020-08-28 13:23:39,408 Adding None to address3
+2020-08-28 13:23:39,408 Adding None to address2
+2020-08-28 13:23:39,408 Adding None to address3
+2020-08-28 13:23:39,408 Adding None to address3
+2020-08-28 13:23:39,408 Adding None to address2
+2020-08-28 13:23:39,408 Adding None to address3
+2020-08-28 13:23:39,408 Adding None to address3
+2020-08-28 13:23:39,408 Adding None to address2
+2020-08-28 13:23:39,408 Adding None to address3
+2020-08-28 13:23:39,408 Adding None to address3
+2020-08-28 13:23:39,408 Adding None to address2
+2020-08-28 13:23:39,409 Adding None to address3
+2020-08-28 13:23:39,409 Adding None to address3
+2020-08-28 13:23:39,409 Adding None to address2
+2020-08-28 13:23:39,409 Adding None to address3
+2020-08-28 13:23:39,409 Adding None to address3
+2020-08-28 13:23:39,409 Adding None to address2
+2020-08-28 13:23:39,409 Adding None to address3
+2020-08-28 13:23:39,409 Adding None to address3
+2020-08-28 13:23:39,409 Adding None to address2
+2020-08-28 13:23:39,409 Adding None to address3
+2020-08-28 13:23:39,409 Adding None to address3
+2020-08-28 13:23:39,409 Adding None to address2
+2020-08-28 13:23:39,409 Adding None to address3
+2020-08-28 13:23:39,409 Adding None to address3
+2020-08-28 13:23:39,409 Adding None to address2
+2020-08-28 13:23:39,409 Adding None to address3
+2020-08-28 13:23:39,409 Adding None to address3
+2020-08-28 13:23:39,409 Adding None to address2
+2020-08-28 13:23:39,409 Adding None to address3
+2020-08-28 13:23:39,409 Adding None to address3
+2020-08-28 13:23:39,409 Adding None to address2
+2020-08-28 13:23:39,409 Adding None to address3
+2020-08-28 13:23:39,409 Adding None to address3
+2020-08-28 13:23:39,409 Adding None to address2
+2020-08-28 13:23:39,409 Adding None to address3
+2020-08-28 13:23:39,409 Adding None to address3
+2020-08-28 13:23:39,410 Adding None to address2
+2020-08-28 13:23:39,410 Adding None to address3
+2020-08-28 13:23:39,410 Adding None to address3
+2020-08-28 13:23:39,410 Adding None to address2
+2020-08-28 13:23:39,410 Adding None to address3
+2020-08-28 13:23:39,410 Adding None to address3
+2020-08-28 13:23:39,410 Adding None to address2
+2020-08-28 13:23:39,410 Adding None to address3
+2020-08-28 13:23:39,410 Adding None to address3
+2020-08-28 13:23:39,410 Adding None to address2
+2020-08-28 13:23:39,410 Adding None to address3
+2020-08-28 13:23:39,410 Adding None to address3
+2020-08-28 13:23:39,410 Adding None to address2
+2020-08-28 13:23:39,410 Adding None to address3
+2020-08-28 13:23:39,410 Adding None to address3
+2020-08-28 13:23:39,410 Adding None to address2
+2020-08-28 13:23:39,410 Adding None to address3
+2020-08-28 13:23:39,410 Adding None to address3
+2020-08-28 13:23:39,410 Adding None to address2
+2020-08-28 13:23:39,410 Adding None to address3
+2020-08-28 13:23:39,410 Adding None to address3
+2020-08-28 13:23:39,410 Adding None to address2
+2020-08-28 13:23:39,411 Adding None to address3
+2020-08-28 13:23:39,411 Adding None to address3
+2020-08-28 13:23:39,411 Adding None to address2
+2020-08-28 13:23:39,411 Retrieving settings for Designer Copies
+2020-08-28 13:23:39,421 Retrieving settings for EST File
+2020-08-28 13:23:39,425 Retrieving settings for Jobs List
+2020-08-28 13:23:39,426 Trying to retrieve jobs list
+2020-08-28 13:23:39,426 Retrieving settings for Jobs List
+2020-08-28 13:23:39,458 Jobs list loaded successfully
+2020-08-28 13:23:39,459 Retrieving settings for PDF Received
+2020-08-28 13:23:39,481 Retrieving settings for Jobs List
+2020-08-28 13:23:39,481 Trying to retrieve jobs list
+2020-08-28 13:23:39,481 Retrieving settings for Jobs List
+2020-08-28 13:23:39,513 Jobs list loaded successfully
+2020-08-28 13:23:39,514 Adding 16 to True Page Count
+2020-08-28 13:23:39,514 Adding 2020-08-28 13:23:39.459678 to Files In
+2020-08-28 13:23:39,514 Retrieving settings for Pace Update
+2020-08-28 13:23:39,515 Trying to open the MIS Update
+2020-08-28 13:23:39,515 Retrieving settings for Pace Update
+2020-08-28 13:23:39,543 Retrieving settings for Job Projects
+2020-08-28 13:23:39,543 Retrieving settings for Job Projects
+2020-08-28 13:23:39,555 Retrieving settings for Jobs List
+2020-08-28 13:23:39,556 Trying to retrieve jobs list
+2020-08-28 13:23:39,556 Retrieving settings for Jobs List
+2020-08-28 13:23:39,605 Jobs list loaded successfully
+2020-08-28 13:23:39,616 Retrieving settings for Jobs List
+2020-08-28 13:23:39,616 Trying to retrieve jobs list
+2020-08-28 13:23:39,616 Retrieving settings for Jobs List
+2020-08-28 13:23:39,648 Jobs list loaded successfully
+2020-08-28 13:23:39,649 Retrieving settings for Pace Update
+2020-08-28 13:23:39,649 Trying to open the MIS Update
+2020-08-28 13:23:39,649 Retrieving settings for Pace Update
+2020-08-28 13:23:39,678 Retrieving settings for Samples
+2020-08-28 13:23:39,694 Retrieving settings for Designer Copies
+2020-08-28 13:23:39,704 Retrieving settings for Samples
+2020-08-28 13:23:39,719 Retrieving settings for Job Shipments
+2020-08-28 13:23:39,720 Retrieving settings for Job Shipments
+2020-08-28 13:24:54,663 Retrieving settings for Contacts
+2020-08-28 13:24:54,663 Retrieving settings for Contacts
+2020-08-28 13:24:54,686 Retrieving settings for Samples
+2020-08-28 13:24:54,703 Retrieving settings for Designer Copies
+2020-08-28 13:24:54,717 Retrieving settings for Flattened Samples
+2020-08-28 13:24:54,718 Retrieving settings for Flattened Samples
+2020-08-28 13:24:54,721 Retrieving settings for Customer Report
+2020-08-28 13:24:54,721 Retrieving settings for Customer Report
+2020-08-28 13:24:54,722 Retrieving settings for Jobs List
+2020-08-28 13:24:54,722 Trying to retrieve jobs list
+2020-08-28 13:24:54,722 Retrieving settings for Jobs List
+2020-08-28 13:24:54,755 Jobs list loaded successfully
+2020-08-28 13:24:54,755 Retrieving settings for Customer Report
+2020-08-28 13:24:54,756 Retrieving settings for Customer Report
+2020-08-28 13:24:54,757 Retrieving settings for Samples
+2020-08-28 13:24:54,773 Retrieving settings for Designer Copies
+2020-08-28 13:24:54,788 Retrieving settings for Job Shipments
+2020-08-28 13:24:54,788 Retrieving settings for Job Shipments
+2020-08-28 13:24:54,789 Retrieving settings for Jobs List
+2020-08-28 13:24:54,789 Trying to retrieve jobs list
+2020-08-28 13:24:54,789 Retrieving settings for Jobs List
+2020-08-28 13:24:54,821 Jobs list loaded successfully
+2020-08-28 13:24:54,821 Retrieving settings for Contacts
+2020-08-28 13:24:54,821 Retrieving settings for Contacts
+2020-08-28 13:24:54,845 Adding None to address3
+2020-08-28 13:24:54,845 Adding None to address3
+2020-08-28 13:24:54,845 Adding None to address2
+2020-08-28 13:24:54,845 Adding None to address3
+2020-08-28 13:24:54,845 Adding None to address3
+2020-08-28 13:24:54,846 Adding None to address2
+2020-08-28 13:24:54,846 Adding None to address3
+2020-08-28 13:24:54,846 Adding None to address3
+2020-08-28 13:24:54,846 Adding None to address2
+2020-08-28 13:24:54,846 Adding None to address3
+2020-08-28 13:24:54,846 Adding None to address3
+2020-08-28 13:24:54,846 Adding None to address2
+2020-08-28 13:24:54,846 Adding None to address3
+2020-08-28 13:24:54,846 Adding None to address3
+2020-08-28 13:24:54,846 Adding None to address2
+2020-08-28 13:24:54,846 Adding None to address3
+2020-08-28 13:24:54,846 Adding None to address3
+2020-08-28 13:24:54,846 Adding None to address2
+2020-08-28 13:24:54,846 Adding None to address3
+2020-08-28 13:24:54,846 Adding None to address3
+2020-08-28 13:24:54,846 Adding None to address2
+2020-08-28 13:24:54,846 Adding None to address3
+2020-08-28 13:24:54,846 Adding None to address3
+2020-08-28 13:24:54,846 Adding None to address2
+2020-08-28 13:24:54,846 Adding None to address3
+2020-08-28 13:24:54,846 Adding None to address3
+2020-08-28 13:24:54,846 Adding None to address2
+2020-08-28 13:24:54,846 Adding None to address3
+2020-08-28 13:24:54,846 Adding None to address3
+2020-08-28 13:24:54,846 Adding None to address2
+2020-08-28 13:24:54,846 Adding None to address3
+2020-08-28 13:24:54,846 Adding None to address3
+2020-08-28 13:24:54,846 Adding None to address2
+2020-08-28 13:24:54,847 Adding None to address3
+2020-08-28 13:24:54,847 Adding None to address3
+2020-08-28 13:24:54,847 Adding None to address2
+2020-08-28 13:24:54,847 Adding None to address3
+2020-08-28 13:24:54,847 Adding None to address3
+2020-08-28 13:24:54,847 Adding None to address2
+2020-08-28 13:24:54,847 Adding None to address3
+2020-08-28 13:24:54,847 Adding None to address3
+2020-08-28 13:24:54,847 Adding None to address2
+2020-08-28 13:24:54,847 Adding None to address3
+2020-08-28 13:24:54,847 Adding None to address3
+2020-08-28 13:24:54,847 Adding None to address2
+2020-08-28 13:24:54,847 Adding None to address3
+2020-08-28 13:24:54,848 Adding None to address3
+2020-08-28 13:24:54,848 Adding None to address2
+2020-08-28 13:24:54,848 Adding None to address3
+2020-08-28 13:24:54,848 Adding None to address3
+2020-08-28 13:24:54,848 Adding None to address2
+2020-08-28 13:24:54,848 Adding None to address3
+2020-08-28 13:24:54,848 Adding None to address3
+2020-08-28 13:24:54,848 Adding None to address2
+2020-08-28 13:24:54,848 Adding None to address3
+2020-08-28 13:24:54,848 Adding None to address3
+2020-08-28 13:24:54,848 Adding None to address2
+2020-08-28 13:24:54,848 Adding None to address3
+2020-08-28 13:24:54,848 Adding None to address3
+2020-08-28 13:24:54,848 Adding None to address2
+2020-08-28 13:24:54,848 Adding None to address3
+2020-08-28 13:24:54,848 Adding None to address3
+2020-08-28 13:24:54,848 Adding None to address2
+2020-08-28 13:24:54,848 Adding None to address3
+2020-08-28 13:24:54,848 Adding None to address3
+2020-08-28 13:24:54,848 Adding None to address2
+2020-08-28 13:24:54,848 Adding None to address3
+2020-08-28 13:24:54,848 Adding None to address3
+2020-08-28 13:24:54,848 Adding None to address2
+2020-08-28 13:24:54,849 Adding None to address3
+2020-08-28 13:24:54,849 Adding None to address3
+2020-08-28 13:24:54,849 Adding None to address2
+2020-08-28 13:24:54,849 Adding None to address3
+2020-08-28 13:24:54,849 Adding None to address3
+2020-08-28 13:24:54,849 Adding None to address2
+2020-08-28 13:24:54,849 Adding None to address3
+2020-08-28 13:24:54,849 Adding None to address3
+2020-08-28 13:24:54,849 Adding None to address2
+2020-08-28 13:24:54,849 Adding None to address3
+2020-08-28 13:24:54,849 Adding None to address3
+2020-08-28 13:24:54,849 Adding None to address2
+2020-08-28 13:24:54,849 Adding None to address3
+2020-08-28 13:24:54,849 Adding None to address3
+2020-08-28 13:24:54,849 Adding None to address2
+2020-08-28 13:24:54,849 Adding None to address3
+2020-08-28 13:24:54,849 Adding None to address3
+2020-08-28 13:24:54,849 Adding None to address2
+2020-08-28 13:24:54,849 Adding None to address3
+2020-08-28 13:24:54,849 Adding None to address3
+2020-08-28 13:24:54,849 Adding None to address2
+2020-08-28 13:24:54,849 Adding None to address3
+2020-08-28 13:24:54,849 Adding None to address3
+2020-08-28 13:24:54,849 Adding None to address2
+2020-08-28 13:24:54,850 Adding None to address3
+2020-08-28 13:24:54,850 Adding None to address3
+2020-08-28 13:24:54,850 Adding None to address2
+2020-08-28 13:24:54,850 Adding None to address3
+2020-08-28 13:24:54,850 Adding None to address3
+2020-08-28 13:24:54,850 Adding None to address2
+2020-08-28 13:24:54,850 Adding None to address3
+2020-08-28 13:24:54,850 Adding None to address3
+2020-08-28 13:24:54,850 Adding None to address2
+2020-08-28 13:24:54,850 Adding None to address3
+2020-08-28 13:24:54,850 Adding None to address3
+2020-08-28 13:24:54,850 Adding None to address2
+2020-08-28 13:24:54,850 Adding None to address3
+2020-08-28 13:24:54,850 Adding None to address3
+2020-08-28 13:24:54,850 Adding None to address2
+2020-08-28 13:24:54,850 Adding None to address3
+2020-08-28 13:24:54,850 Adding None to address3
+2020-08-28 13:24:54,850 Adding None to address2
+2020-08-28 13:24:54,850 Adding None to address3
+2020-08-28 13:24:54,850 Adding None to address3
+2020-08-28 13:24:54,850 Adding None to address2
+2020-08-28 13:24:54,851 Adding None to address3
+2020-08-28 13:24:54,851 Adding None to address3
+2020-08-28 13:24:54,851 Adding None to address2
+2020-08-28 13:24:54,851 Retrieving settings for Designer Copies
+2020-08-28 13:24:54,861 Retrieving settings for EST File
+2020-08-28 13:24:54,865 Retrieving settings for Jobs List
+2020-08-28 13:24:54,865 Trying to retrieve jobs list
+2020-08-28 13:24:54,866 Retrieving settings for Jobs List
+2020-08-28 13:24:54,898 Jobs list loaded successfully
+2020-08-28 13:24:54,899 Retrieving settings for PDF Received
+2020-08-28 13:24:54,922 Retrieving settings for Jobs List
+2020-08-28 13:24:54,922 Trying to retrieve jobs list
+2020-08-28 13:24:54,922 Retrieving settings for Jobs List
+2020-08-28 13:24:54,955 Jobs list loaded successfully
+2020-08-28 13:24:54,956 Adding 2020-08-28 13:24:54.899862 to Files In
+2020-08-28 13:24:54,956 Adding 16 to True Page Count
+2020-08-28 13:24:54,956 Retrieving settings for Pace Update
+2020-08-28 13:24:54,957 Trying to open the MIS Update
+2020-08-28 13:24:54,957 Retrieving settings for Pace Update
+2020-08-28 13:24:54,987 Retrieving settings for Job Projects
+2020-08-28 13:24:54,987 Retrieving settings for Job Projects
+2020-08-28 13:24:54,999 Retrieving settings for Jobs List
+2020-08-28 13:24:54,999 Trying to retrieve jobs list
+2020-08-28 13:24:54,999 Retrieving settings for Jobs List
+2020-08-28 13:24:55,048 Jobs list loaded successfully
+2020-08-28 13:24:55,058 Retrieving settings for Jobs List
+2020-08-28 13:24:55,059 Trying to retrieve jobs list
+2020-08-28 13:24:55,059 Retrieving settings for Jobs List
+2020-08-28 13:24:55,092 Jobs list loaded successfully
+2020-08-28 13:24:55,092 Retrieving settings for Pace Update
+2020-08-28 13:24:55,093 Trying to open the MIS Update
+2020-08-28 13:24:55,093 Retrieving settings for Pace Update
+2020-08-28 13:24:55,123 Retrieving settings for Samples
+2020-08-28 13:24:55,138 Retrieving settings for Designer Copies
+2020-08-28 13:24:55,148 Retrieving settings for Samples
+2020-08-28 13:24:55,164 Retrieving settings for Job Shipments
+2020-08-28 13:24:55,164 Retrieving settings for Job Shipments
+2020-08-28 13:25:37,103 Retrieving settings for Samples
+2020-08-28 13:25:37,196 Retrieving settings for Designer Copies
+2020-08-28 13:25:37,246 Retrieving settings for Job Shipments
+2020-08-28 13:25:37,246 Retrieving settings for Job Shipments
+2020-08-28 13:25:37,246 Retrieving settings for Jobs List
+2020-08-28 13:25:37,247 Trying to retrieve jobs list
+2020-08-28 13:25:37,247 Retrieving settings for Jobs List
+2020-08-28 13:25:37,353 Jobs list loaded successfully
+2020-08-28 13:25:37,354 Retrieving settings for Contacts
+2020-08-28 13:25:37,354 Retrieving settings for Contacts
+2020-08-28 13:25:37,425 Adding None to address2
+2020-08-28 13:25:37,425 Adding None to address3
+2020-08-28 13:25:37,426 Adding None to address3
+2020-08-28 13:25:37,426 Adding None to address2
+2020-08-28 13:25:37,426 Adding None to address3
+2020-08-28 13:25:37,426 Adding None to address3
+2020-08-28 13:25:37,426 Adding None to address2
+2020-08-28 13:25:37,426 Adding None to address3
+2020-08-28 13:25:37,426 Adding None to address3
+2020-08-28 13:25:37,426 Adding None to address2
+2020-08-28 13:25:37,426 Adding None to address3
+2020-08-28 13:25:37,426 Adding None to address3
+2020-08-28 13:25:37,427 Adding None to address2
+2020-08-28 13:25:37,427 Adding None to address3
+2020-08-28 13:25:37,427 Adding None to address3
+2020-08-28 13:25:37,427 Adding None to address2
+2020-08-28 13:25:37,427 Adding None to address3
+2020-08-28 13:25:37,427 Adding None to address3
+2020-08-28 13:25:37,427 Adding None to address2
+2020-08-28 13:25:37,427 Adding None to address3
+2020-08-28 13:25:37,427 Adding None to address3
+2020-08-28 13:25:37,427 Adding None to address2
+2020-08-28 13:25:37,428 Adding None to address3
+2020-08-28 13:25:37,428 Adding None to address3
+2020-08-28 13:25:37,428 Adding None to address2
+2020-08-28 13:25:37,428 Adding None to address3
+2020-08-28 13:25:37,428 Adding None to address3
+2020-08-28 13:25:37,428 Adding None to address2
+2020-08-28 13:25:37,428 Adding None to address3
+2020-08-28 13:25:37,428 Adding None to address3
+2020-08-28 13:25:37,428 Adding None to address2
+2020-08-28 13:25:37,428 Adding None to address3
+2020-08-28 13:25:37,429 Adding None to address3
+2020-08-28 13:25:37,429 Adding None to address2
+2020-08-28 13:25:37,429 Adding None to address3
+2020-08-28 13:25:37,429 Adding None to address3
+2020-08-28 13:25:37,430 Adding None to address2
+2020-08-28 13:25:37,430 Adding None to address3
+2020-08-28 13:25:37,430 Adding None to address3
+2020-08-28 13:25:37,430 Adding None to address2
+2020-08-28 13:25:37,430 Adding None to address3
+2020-08-28 13:25:37,430 Adding None to address3
+2020-08-28 13:25:37,431 Adding None to address2
+2020-08-28 13:25:37,431 Adding None to address3
+2020-08-28 13:25:37,431 Adding None to address3
+2020-08-28 13:25:37,431 Adding None to address2
+2020-08-28 13:25:37,431 Adding None to address3
+2020-08-28 13:25:37,431 Adding None to address3
+2020-08-28 13:25:37,431 Adding None to address2
+2020-08-28 13:25:37,431 Adding None to address3
+2020-08-28 13:25:37,432 Adding None to address3
+2020-08-28 13:25:37,432 Adding None to address2
+2020-08-28 13:25:37,432 Adding None to address3
+2020-08-28 13:25:37,432 Adding None to address3
+2020-08-28 13:25:37,432 Adding None to address2
+2020-08-28 13:25:37,432 Adding None to address3
+2020-08-28 13:25:37,433 Adding None to address3
+2020-08-28 13:25:37,433 Adding None to address2
+2020-08-28 13:25:37,433 Adding None to address3
+2020-08-28 13:25:37,433 Adding None to address3
+2020-08-28 13:25:37,433 Adding None to address2
+2020-08-28 13:25:37,433 Adding None to address3
+2020-08-28 13:25:37,433 Adding None to address3
+2020-08-28 13:25:37,433 Adding None to address2
+2020-08-28 13:25:37,433 Adding None to address3
+2020-08-28 13:25:37,433 Adding None to address3
+2020-08-28 13:25:37,434 Adding None to address2
+2020-08-28 13:25:37,434 Adding None to address3
+2020-08-28 13:25:37,434 Adding None to address3
+2020-08-28 13:25:37,434 Adding None to address2
+2020-08-28 13:25:37,434 Adding None to address3
+2020-08-28 13:25:37,434 Adding None to address3
+2020-08-28 13:25:37,434 Adding None to address2
+2020-08-28 13:25:37,434 Adding None to address3
+2020-08-28 13:25:37,434 Adding None to address3
+2020-08-28 13:25:37,435 Adding None to address2
+2020-08-28 13:25:37,435 Adding None to address3
+2020-08-28 13:25:37,435 Adding None to address3
+2020-08-28 13:25:37,435 Adding None to address2
+2020-08-28 13:25:37,435 Adding None to address3
+2020-08-28 13:25:37,435 Adding None to address3
+2020-08-28 13:25:37,435 Adding None to address2
+2020-08-28 13:25:37,435 Adding None to address3
+2020-08-28 13:25:37,435 Adding None to address3
+2020-08-28 13:25:37,435 Adding None to address2
+2020-08-28 13:25:37,436 Adding None to address3
+2020-08-28 13:25:37,436 Adding None to address3
+2020-08-28 13:25:37,436 Adding None to address2
+2020-08-28 13:25:37,436 Adding None to address3
+2020-08-28 13:25:37,436 Adding None to address3
+2020-08-28 13:25:37,436 Adding None to address2
+2020-08-28 13:25:37,436 Adding None to address3
+2020-08-28 13:25:37,436 Adding None to address3
+2020-08-28 13:25:37,437 Adding None to address2
+2020-08-28 13:25:37,437 Adding None to address3
+2020-08-28 13:25:37,437 Adding None to address3
+2020-08-28 13:25:37,437 Adding None to address2
+2020-08-28 13:25:37,437 Adding None to address3
+2020-08-28 13:25:37,437 Adding None to address3
+2020-08-28 13:25:37,437 Adding None to address2
+2020-08-28 13:25:37,437 Adding None to address3
+2020-08-28 13:25:37,437 Adding None to address3
+2020-08-28 13:25:37,438 Adding None to address2
+2020-08-28 13:25:37,438 Adding None to address3
+2020-08-28 13:25:37,438 Adding None to address3
+2020-08-28 13:25:37,438 Adding None to address2
+2020-08-28 13:25:37,438 Adding None to address3
+2020-08-28 13:25:37,438 Adding None to address3
+2020-08-28 13:25:37,438 Adding None to address2
+2020-08-28 13:25:37,438 Adding None to address3
+2020-08-28 13:25:37,439 Adding None to address3
+2020-08-28 13:25:37,439 Adding None to address2
+2020-08-28 13:25:37,439 Adding None to address3
+2020-08-28 13:25:37,439 Adding None to address3
+2020-08-28 13:25:37,439 Adding None to address2
+2020-08-28 13:25:37,439 Adding None to address3
+2020-08-28 13:25:37,440 Adding None to address3
+2020-08-28 13:34:25,192 Retrieving settings for Samples
+2020-08-28 13:43:31,033 Retrieving settings for Designer Copies
+2020-08-28 13:45:09,274 Retrieving settings for Samples
+2020-08-28 13:45:09,369 Retrieving settings for Designer Copies
+2020-08-28 13:45:09,422 Retrieving settings for Job Shipments
+2020-08-28 13:45:09,423 Retrieving settings for Job Shipments
+2020-08-28 13:45:09,423 Retrieving settings for Jobs List
+2020-08-28 13:45:09,423 Trying to retrieve jobs list
+2020-08-28 13:45:09,423 Retrieving settings for Jobs List
+2020-08-28 13:45:09,548 Jobs list loaded successfully
+2020-08-28 13:45:09,548 Retrieving settings for Contacts
+2020-08-28 13:45:09,549 Retrieving settings for Contacts
+2020-08-28 13:45:09,629 Adding None to address2
+2020-08-28 13:45:09,629 Adding None to address3
+2020-08-28 13:45:09,629 Adding None to address3
+2020-08-28 13:45:09,629 Adding None to address2
+2020-08-28 13:45:09,630 Adding None to address3
+2020-08-28 13:45:09,630 Adding None to address3
+2020-08-28 13:45:09,630 Adding None to address2
+2020-08-28 13:45:09,630 Adding None to address3
+2020-08-28 13:45:09,630 Adding None to address3
+2020-08-28 13:45:09,630 Adding None to address2
+2020-08-28 13:45:09,630 Adding None to address3
+2020-08-28 13:45:09,630 Adding None to address3
+2020-08-28 13:45:09,630 Adding None to address2
+2020-08-28 13:45:09,630 Adding None to address3
+2020-08-28 13:45:09,631 Adding None to address3
+2020-08-28 13:45:09,631 Adding None to address2
+2020-08-28 13:45:09,631 Adding None to address3
+2020-08-28 13:45:09,631 Adding None to address3
+2020-08-28 13:45:09,631 Adding None to address2
+2020-08-28 13:45:09,631 Adding None to address3
+2020-08-28 13:45:09,632 Adding None to address3
+2020-08-28 13:45:09,632 Adding None to address2
+2020-08-28 13:45:09,632 Adding None to address3
+2020-08-28 13:45:09,632 Adding None to address3
+2020-08-28 13:45:09,632 Adding None to address2
+2020-08-28 13:45:09,632 Adding None to address3
+2020-08-28 13:45:09,632 Adding None to address3
+2020-08-28 13:45:09,632 Adding None to address2
+2020-08-28 13:45:09,632 Adding None to address3
+2020-08-28 13:45:09,632 Adding None to address3
+2020-08-28 13:45:09,633 Adding None to address2
+2020-08-28 13:45:09,633 Adding None to address3
+2020-08-28 13:45:09,633 Adding None to address3
+2020-08-28 13:45:09,633 Adding None to address2
+2020-08-28 13:45:09,633 Adding None to address3
+2020-08-28 13:45:09,633 Adding None to address3
+2020-08-28 13:45:09,634 Adding None to address2
+2020-08-28 13:45:09,634 Adding None to address3
+2020-08-28 13:45:09,634 Adding None to address3
+2020-08-28 13:45:09,634 Adding None to address2
+2020-08-28 13:45:09,634 Adding None to address3
+2020-08-28 13:45:09,635 Adding None to address3
+2020-08-28 13:45:09,635 Adding None to address2
+2020-08-28 13:45:09,635 Adding None to address3
+2020-08-28 13:45:09,635 Adding None to address3
+2020-08-28 13:45:09,635 Adding None to address2
+2020-08-28 13:45:09,635 Adding None to address3
+2020-08-28 13:45:09,635 Adding None to address3
+2020-08-28 13:45:09,636 Adding None to address2
+2020-08-28 13:45:09,636 Adding None to address3
+2020-08-28 13:45:09,636 Adding None to address3
+2020-08-28 13:45:09,636 Adding None to address2
+2020-08-28 13:45:09,636 Adding None to address3
+2020-08-28 13:45:09,636 Adding None to address3
+2020-08-28 13:45:09,636 Adding None to address2
+2020-08-28 13:45:09,637 Adding None to address3
+2020-08-28 13:45:09,637 Adding None to address3
+2020-08-28 13:45:09,637 Adding None to address2
+2020-08-28 13:45:09,637 Adding None to address3
+2020-08-28 13:45:09,637 Adding None to address3
+2020-08-28 13:45:09,637 Adding None to address2
+2020-08-28 13:45:09,637 Adding None to address3
+2020-08-28 13:45:09,637 Adding None to address3
+2020-08-28 13:45:09,637 Adding None to address2
+2020-08-28 13:45:09,637 Adding None to address3
+2020-08-28 13:45:09,638 Adding None to address3
+2020-08-28 13:45:09,638 Adding None to address2
+2020-08-28 13:45:09,638 Adding None to address3
+2020-08-28 13:45:09,638 Adding None to address3
+2020-08-28 13:45:09,638 Adding None to address2
+2020-08-28 13:45:09,638 Adding None to address3
+2020-08-28 13:45:09,638 Adding None to address3
+2020-08-28 13:45:09,638 Adding None to address2
+2020-08-28 13:45:09,638 Adding None to address3
+2020-08-28 13:45:09,638 Adding None to address3
+2020-08-28 13:45:09,639 Adding None to address2
+2020-08-28 13:45:09,639 Adding None to address3
+2020-08-28 13:45:09,639 Adding None to address3
+2020-08-28 13:45:09,639 Adding None to address2
+2020-08-28 13:45:09,639 Adding None to address3
+2020-08-28 13:45:09,639 Adding None to address3
+2020-08-28 13:45:09,639 Adding None to address2
+2020-08-28 13:45:09,639 Adding None to address3
+2020-08-28 13:45:09,639 Adding None to address3
+2020-08-28 13:45:09,640 Adding None to address2
+2020-08-28 13:45:09,640 Adding None to address3
+2020-08-28 13:45:09,640 Adding None to address3
+2020-08-28 13:45:09,640 Adding None to address2
+2020-08-28 13:45:09,640 Adding None to address3
+2020-08-28 13:45:09,640 Adding None to address3
+2020-08-28 13:45:09,640 Adding None to address2
+2020-08-28 13:45:09,640 Adding None to address3
+2020-08-28 13:45:09,640 Adding None to address3
+2020-08-28 13:45:09,641 Adding None to address2
+2020-08-28 13:45:09,641 Adding None to address3
+2020-08-28 13:45:09,641 Adding None to address3
+2020-08-28 13:45:09,641 Adding None to address2
+2020-08-28 13:45:09,641 Adding None to address3
+2020-08-28 13:45:09,641 Adding None to address3
+2020-08-28 13:45:09,641 Adding None to address2
+2020-08-28 13:45:09,641 Adding None to address3
+2020-08-28 13:45:09,641 Adding None to address3
+2020-08-28 13:45:09,642 Adding None to address2
+2020-08-28 13:45:09,642 Adding None to address3
+2020-08-28 13:45:09,642 Adding None to address3
+2020-08-28 13:45:09,642 Adding None to address2
+2020-08-28 13:45:09,642 Adding None to address3
+2020-08-28 13:45:09,642 Adding None to address3
+2020-08-28 13:45:09,642 Adding None to address2
+2020-08-28 13:45:09,642 Adding None to address3
+2020-08-28 13:45:09,643 Adding None to address3
+2020-08-28 13:45:09,643 Adding None to address2
+2020-08-28 13:45:09,643 Adding None to address3
+2020-08-28 13:45:09,643 Adding None to address3
+2020-08-28 13:45:09,643 Adding None to address2
+2020-08-28 13:45:09,644 Adding None to address3
+2020-08-28 13:45:09,644 Adding None to address3
+2020-08-28 13:49:15,661 Retrieving settings for Samples
+2020-08-28 13:49:15,759 Retrieving settings for Designer Copies
+2020-08-28 13:50:24,741 Retrieving settings for Samples
+2020-08-28 13:50:24,837 Retrieving settings for Designer Copies
+2020-08-28 13:52:36,866 Retrieving settings for Samples
+2020-08-28 13:52:36,968 Retrieving settings for Designer Copies
+2020-08-28 13:53:19,418 Retrieving settings for Contacts
+2020-08-28 13:53:19,418 Retrieving settings for Contacts
+2020-08-28 13:53:19,441 Retrieving settings for Samples
+2020-08-28 13:53:19,456 Retrieving settings for Designer Copies
+2020-08-28 13:53:19,471 Retrieving settings for Flattened Samples
+2020-08-28 13:53:19,472 Retrieving settings for Flattened Samples
+2020-08-28 13:53:19,474 Retrieving settings for Customer Report
+2020-08-28 13:53:19,474 Retrieving settings for Customer Report
+2020-08-28 13:53:19,474 Retrieving settings for Jobs List
+2020-08-28 13:53:19,475 Trying to retrieve jobs list
+2020-08-28 13:53:19,475 Retrieving settings for Jobs List
+2020-08-28 13:53:19,509 Jobs list loaded successfully
+2020-08-28 13:53:19,509 Retrieving settings for Customer Report
+2020-08-28 13:53:19,509 Retrieving settings for Customer Report
+2020-08-28 13:53:19,511 Retrieving settings for Samples
+2020-08-28 13:53:19,527 Retrieving settings for Designer Copies
+2020-08-28 13:53:19,541 Retrieving settings for Job Shipments
+2020-08-28 13:53:19,542 Retrieving settings for Job Shipments
+2020-08-28 13:53:19,542 Retrieving settings for Jobs List
+2020-08-28 13:53:19,543 Trying to retrieve jobs list
+2020-08-28 13:53:19,543 Retrieving settings for Jobs List
+2020-08-28 13:53:19,575 Jobs list loaded successfully
+2020-08-28 13:53:19,575 Retrieving settings for Contacts
+2020-08-28 13:53:19,576 Retrieving settings for Contacts
+2020-08-28 13:53:19,600 Adding None to address2
+2020-08-28 13:53:19,600 Adding None to address3
+2020-08-28 13:53:19,600 Adding None to address3
+2020-08-28 13:53:19,600 Adding None to address2
+2020-08-28 13:53:19,600 Adding None to address3
+2020-08-28 13:53:19,600 Adding None to address3
+2020-08-28 13:53:19,601 Adding None to address2
+2020-08-28 13:53:19,601 Adding None to address3
+2020-08-28 13:53:19,601 Adding None to address3
+2020-08-28 13:53:19,601 Adding None to address2
+2020-08-28 13:53:19,601 Adding None to address3
+2020-08-28 13:53:19,601 Adding None to address3
+2020-08-28 13:53:19,601 Adding None to address2
+2020-08-28 13:53:19,601 Adding None to address3
+2020-08-28 13:53:19,601 Adding None to address3
+2020-08-28 13:53:19,601 Adding None to address2
+2020-08-28 13:53:19,601 Adding None to address3
+2020-08-28 13:53:19,601 Adding None to address3
+2020-08-28 13:53:19,601 Adding None to address2
+2020-08-28 13:53:19,601 Adding None to address3
+2020-08-28 13:53:19,601 Adding None to address3
+2020-08-28 13:53:19,601 Adding None to address2
+2020-08-28 13:53:19,601 Adding None to address3
+2020-08-28 13:53:19,601 Adding None to address3
+2020-08-28 13:53:19,601 Adding None to address2
+2020-08-28 13:53:19,601 Adding None to address3
+2020-08-28 13:53:19,601 Adding None to address3
+2020-08-28 13:53:19,601 Adding None to address2
+2020-08-28 13:53:19,601 Adding None to address3
+2020-08-28 13:53:19,601 Adding None to address3
+2020-08-28 13:53:19,601 Adding None to address2
+2020-08-28 13:53:19,601 Adding None to address3
+2020-08-28 13:53:19,601 Adding None to address3
+2020-08-28 13:53:19,602 Adding None to address2
+2020-08-28 13:53:19,602 Adding None to address3
+2020-08-28 13:53:19,602 Adding None to address3
+2020-08-28 13:53:19,602 Adding None to address2
+2020-08-28 13:53:19,602 Adding None to address3
+2020-08-28 13:53:19,602 Adding None to address3
+2020-08-28 13:53:19,602 Adding None to address2
+2020-08-28 13:53:19,602 Adding None to address3
+2020-08-28 13:53:19,602 Adding None to address3
+2020-08-28 13:53:19,602 Adding None to address2
+2020-08-28 13:53:19,602 Adding None to address3
+2020-08-28 13:53:19,602 Adding None to address3
+2020-08-28 13:53:19,602 Adding None to address2
+2020-08-28 13:53:19,602 Adding None to address3
+2020-08-28 13:53:19,603 Adding None to address3
+2020-08-28 13:53:19,603 Adding None to address2
+2020-08-28 13:53:19,603 Adding None to address3
+2020-08-28 13:53:19,603 Adding None to address3
+2020-08-28 13:53:19,603 Adding None to address2
+2020-08-28 13:53:19,603 Adding None to address3
+2020-08-28 13:53:19,603 Adding None to address3
+2020-08-28 13:53:19,603 Adding None to address2
+2020-08-28 13:53:19,603 Adding None to address3
+2020-08-28 13:53:19,603 Adding None to address3
+2020-08-28 13:53:19,603 Adding None to address2
+2020-08-28 13:53:19,603 Adding None to address3
+2020-08-28 13:53:19,603 Adding None to address3
+2020-08-28 13:53:19,603 Adding None to address2
+2020-08-28 13:53:19,603 Adding None to address3
+2020-08-28 13:53:19,603 Adding None to address3
+2020-08-28 13:53:19,603 Adding None to address2
+2020-08-28 13:53:19,603 Adding None to address3
+2020-08-28 13:53:19,603 Adding None to address3
+2020-08-28 13:53:19,603 Adding None to address2
+2020-08-28 13:53:19,603 Adding None to address3
+2020-08-28 13:53:19,604 Adding None to address3
+2020-08-28 13:53:19,604 Adding None to address2
+2020-08-28 13:53:19,604 Adding None to address3
+2020-08-28 13:53:19,604 Adding None to address3
+2020-08-28 13:53:19,604 Adding None to address2
+2020-08-28 13:53:19,604 Adding None to address3
+2020-08-28 13:53:19,604 Adding None to address3
+2020-08-28 13:53:19,604 Adding None to address2
+2020-08-28 13:53:19,604 Adding None to address3
+2020-08-28 13:53:19,604 Adding None to address3
+2020-08-28 13:53:19,604 Adding None to address2
+2020-08-28 13:53:19,604 Adding None to address3
+2020-08-28 13:53:19,604 Adding None to address3
+2020-08-28 13:53:19,604 Adding None to address2
+2020-08-28 13:53:19,604 Adding None to address3
+2020-08-28 13:53:19,604 Adding None to address3
+2020-08-28 13:53:19,604 Adding None to address2
+2020-08-28 13:53:19,604 Adding None to address3
+2020-08-28 13:53:19,604 Adding None to address3
+2020-08-28 13:53:19,604 Adding None to address2
+2020-08-28 13:53:19,604 Adding None to address3
+2020-08-28 13:53:19,604 Adding None to address3
+2020-08-28 13:53:19,604 Adding None to address2
+2020-08-28 13:53:19,604 Adding None to address3
+2020-08-28 13:53:19,605 Adding None to address3
+2020-08-28 13:53:19,605 Adding None to address2
+2020-08-28 13:53:19,605 Adding None to address3
+2020-08-28 13:53:19,605 Adding None to address3
+2020-08-28 13:53:19,605 Adding None to address2
+2020-08-28 13:53:19,605 Adding None to address3
+2020-08-28 13:53:19,605 Adding None to address3
+2020-08-28 13:53:19,605 Adding None to address2
+2020-08-28 13:53:19,605 Adding None to address3
+2020-08-28 13:53:19,605 Adding None to address3
+2020-08-28 13:53:19,605 Adding None to address2
+2020-08-28 13:53:19,605 Adding None to address3
+2020-08-28 13:53:19,605 Adding None to address3
+2020-08-28 13:53:19,605 Adding None to address2
+2020-08-28 13:53:19,605 Adding None to address3
+2020-08-28 13:53:19,605 Adding None to address3
+2020-08-28 13:53:19,605 Adding None to address2
+2020-08-28 13:53:19,605 Adding None to address3
+2020-08-28 13:53:19,605 Adding None to address3
+2020-08-28 13:53:19,605 Adding None to address2
+2020-08-28 13:53:19,605 Adding None to address3
+2020-08-28 13:53:19,605 Adding None to address3
+2020-08-28 13:53:19,606 Adding None to address2
+2020-08-28 13:53:19,606 Adding None to address3
+2020-08-28 13:53:19,606 Adding None to address3
+2020-08-28 13:53:19,607 Retrieving settings for Designer Copies
+2020-08-28 13:53:19,616 Retrieving settings for EST File
+2020-08-28 13:53:19,620 Retrieving settings for Jobs List
+2020-08-28 13:53:19,620 Trying to retrieve jobs list
+2020-08-28 13:53:19,620 Retrieving settings for Jobs List
+2020-08-28 13:53:19,653 Jobs list loaded successfully
+2020-08-28 13:53:19,655 Retrieving settings for PDF Received
+2020-08-28 13:53:19,678 Retrieving settings for Jobs List
+2020-08-28 13:53:19,678 Trying to retrieve jobs list
+2020-08-28 13:53:19,678 Retrieving settings for Jobs List
+2020-08-28 13:53:19,711 Jobs list loaded successfully
+2020-08-28 13:53:19,712 Adding 2020-08-28 13:53:19.655481 to Files In
+2020-08-28 13:53:19,712 Adding 16 to True Page Count
+2020-08-28 13:53:19,712 Retrieving settings for Pace Update
+2020-08-28 13:53:19,713 Trying to open the MIS Update
+2020-08-28 13:53:19,713 Retrieving settings for Pace Update
+2020-08-28 13:53:19,743 Retrieving settings for Job Projects
+2020-08-28 13:53:19,743 Retrieving settings for Job Projects
+2020-08-28 13:53:19,755 Retrieving settings for Jobs List
+2020-08-28 13:53:19,755 Trying to retrieve jobs list
+2020-08-28 13:53:19,756 Retrieving settings for Jobs List
+2020-08-28 13:53:19,806 Jobs list loaded successfully
+2020-08-28 13:53:19,817 Retrieving settings for Jobs List
+2020-08-28 13:53:19,817 Trying to retrieve jobs list
+2020-08-28 13:53:19,817 Retrieving settings for Jobs List
+2020-08-28 13:53:19,850 Jobs list loaded successfully
+2020-08-28 13:53:19,850 Retrieving settings for Pace Update
+2020-08-28 13:53:19,850 Trying to open the MIS Update
+2020-08-28 13:53:19,850 Retrieving settings for Pace Update
+2020-08-28 13:53:19,881 Retrieving settings for Samples
+2020-08-28 13:53:19,898 Retrieving settings for Designer Copies
+2020-08-28 13:53:19,908 Retrieving settings for Samples
+2020-08-28 13:53:19,924 Retrieving settings for Job Shipments
+2020-08-28 13:53:19,924 Retrieving settings for Job Shipments
+2020-08-28 13:54:30,803 Replacing In Production with In Production
+2020-08-28 13:54:30,803 Replacing 07/15/2020 with 07/15/2020
+2020-08-28 13:54:30,803 Replacing In Production with In Production
+2020-08-28 13:54:30,803 Replacing M1800 with M1800
+2020-08-28 13:54:30,803 Replacing 08/15/2020 with 08/15/2020
+2020-08-28 13:54:30,829 Retrieving settings for Contacts
+2020-08-28 13:54:30,829 Retrieving settings for Contacts
+2020-08-28 13:54:30,851 Retrieving settings for Samples
+2020-08-28 13:54:30,869 Retrieving settings for Designer Copies
+2020-08-28 13:54:30,885 Retrieving settings for Flattened Samples
+2020-08-28 13:54:30,885 Retrieving settings for Flattened Samples
+2020-08-28 13:54:30,888 Retrieving settings for Customer Report
+2020-08-28 13:54:30,888 Retrieving settings for Customer Report
+2020-08-28 13:54:30,888 Retrieving settings for Jobs List
+2020-08-28 13:54:30,888 Trying to retrieve jobs list
+2020-08-28 13:54:30,888 Retrieving settings for Jobs List
+2020-08-28 13:54:30,921 Jobs list loaded successfully
+2020-08-28 13:54:30,921 Retrieving settings for Customer Report
+2020-08-28 13:54:30,922 Retrieving settings for Customer Report
+2020-08-28 13:54:30,923 Retrieving settings for Samples
+2020-08-28 13:54:30,940 Retrieving settings for Designer Copies
+2020-08-28 13:54:30,955 Retrieving settings for Job Shipments
+2020-08-28 13:54:30,955 Retrieving settings for Job Shipments
+2020-08-28 13:54:30,955 Retrieving settings for Jobs List
+2020-08-28 13:54:30,955 Trying to retrieve jobs list
+2020-08-28 13:54:30,956 Retrieving settings for Jobs List
+2020-08-28 13:54:30,991 Jobs list loaded successfully
+2020-08-28 13:54:30,992 Retrieving settings for Contacts
+2020-08-28 13:54:30,992 Retrieving settings for Contacts
+2020-08-28 13:54:31,018 Adding None to address3
+2020-08-28 13:54:31,018 Adding None to address3
+2020-08-28 13:54:31,018 Adding None to address2
+2020-08-28 13:54:31,018 Adding None to address3
+2020-08-28 13:54:31,018 Adding None to address3
+2020-08-28 13:54:31,019 Adding None to address2
+2020-08-28 13:54:31,019 Adding None to address3
+2020-08-28 13:54:31,019 Adding None to address3
+2020-08-28 13:54:31,019 Adding None to address2
+2020-08-28 13:54:31,019 Adding None to address3
+2020-08-28 13:54:31,019 Adding None to address3
+2020-08-28 13:54:31,019 Adding None to address2
+2020-08-28 13:54:31,019 Adding None to address3
+2020-08-28 13:54:31,019 Adding None to address3
+2020-08-28 13:54:31,019 Adding None to address2
+2020-08-28 13:54:31,019 Adding None to address3
+2020-08-28 13:54:31,019 Adding None to address3
+2020-08-28 13:54:31,019 Adding None to address2
+2020-08-28 13:54:31,019 Adding None to address3
+2020-08-28 13:54:31,019 Adding None to address3
+2020-08-28 13:54:31,019 Adding None to address2
+2020-08-28 13:54:31,019 Adding None to address3
+2020-08-28 13:54:31,019 Adding None to address3
+2020-08-28 13:54:31,019 Adding None to address2
+2020-08-28 13:54:31,019 Adding None to address3
+2020-08-28 13:54:31,019 Adding None to address3
+2020-08-28 13:54:31,019 Adding None to address2
+2020-08-28 13:54:31,019 Adding None to address3
+2020-08-28 13:54:31,019 Adding None to address3
+2020-08-28 13:54:31,019 Adding None to address2
+2020-08-28 13:54:31,020 Adding None to address3
+2020-08-28 13:54:31,020 Adding None to address3
+2020-08-28 13:54:31,020 Adding None to address2
+2020-08-28 13:54:31,020 Adding None to address3
+2020-08-28 13:54:31,020 Adding None to address3
+2020-08-28 13:54:31,020 Adding None to address2
+2020-08-28 13:54:31,020 Adding None to address3
+2020-08-28 13:54:31,020 Adding None to address3
+2020-08-28 13:54:31,020 Adding None to address2
+2020-08-28 13:54:31,020 Adding None to address3
+2020-08-28 13:54:31,020 Adding None to address3
+2020-08-28 13:54:31,020 Adding None to address2
+2020-08-28 13:54:31,021 Adding None to address3
+2020-08-28 13:54:31,021 Adding None to address3
+2020-08-28 13:54:31,021 Adding None to address2
+2020-08-28 13:54:31,021 Adding None to address3
+2020-08-28 13:54:31,021 Adding None to address3
+2020-08-28 13:54:31,021 Adding None to address2
+2020-08-28 13:54:31,021 Adding None to address3
+2020-08-28 13:54:31,021 Adding None to address3
+2020-08-28 13:54:31,021 Adding None to address2
+2020-08-28 13:54:31,021 Adding None to address3
+2020-08-28 13:54:31,021 Adding None to address3
+2020-08-28 13:54:31,021 Adding None to address2
+2020-08-28 13:54:31,021 Adding None to address3
+2020-08-28 13:54:31,021 Adding None to address3
+2020-08-28 13:54:31,021 Adding None to address2
+2020-08-28 13:54:31,021 Adding None to address3
+2020-08-28 13:54:31,021 Adding None to address3
+2020-08-28 13:54:31,021 Adding None to address2
+2020-08-28 13:54:31,022 Adding None to address3
+2020-08-28 13:54:31,022 Adding None to address3
+2020-08-28 13:54:31,022 Adding None to address2
+2020-08-28 13:54:31,022 Adding None to address3
+2020-08-28 13:54:31,022 Adding None to address3
+2020-08-28 13:54:31,022 Adding None to address2
+2020-08-28 13:54:31,022 Adding None to address3
+2020-08-28 13:54:31,022 Adding None to address3
+2020-08-28 13:54:31,022 Adding None to address2
+2020-08-28 13:54:31,022 Adding None to address3
+2020-08-28 13:54:31,022 Adding None to address3
+2020-08-28 13:54:31,022 Adding None to address2
+2020-08-28 13:54:31,022 Adding None to address3
+2020-08-28 13:54:31,022 Adding None to address3
+2020-08-28 13:54:31,022 Adding None to address2
+2020-08-28 13:54:31,022 Adding None to address3
+2020-08-28 13:54:31,022 Adding None to address3
+2020-08-28 13:54:31,022 Adding None to address2
+2020-08-28 13:54:31,022 Adding None to address3
+2020-08-28 13:54:31,022 Adding None to address3
+2020-08-28 13:54:31,022 Adding None to address2
+2020-08-28 13:54:31,022 Adding None to address3
+2020-08-28 13:54:31,022 Adding None to address3
+2020-08-28 13:54:31,022 Adding None to address2
+2020-08-28 13:54:31,023 Adding None to address3
+2020-08-28 13:54:31,023 Adding None to address3
+2020-08-28 13:54:31,023 Adding None to address2
+2020-08-28 13:54:31,023 Adding None to address3
+2020-08-28 13:54:31,023 Adding None to address3
+2020-08-28 13:54:31,023 Adding None to address2
+2020-08-28 13:54:31,023 Adding None to address3
+2020-08-28 13:54:31,023 Adding None to address3
+2020-08-28 13:54:31,023 Adding None to address2
+2020-08-28 13:54:31,023 Adding None to address3
+2020-08-28 13:54:31,023 Adding None to address3
+2020-08-28 13:54:31,023 Adding None to address2
+2020-08-28 13:54:31,023 Adding None to address3
+2020-08-28 13:54:31,023 Adding None to address3
+2020-08-28 13:54:31,023 Adding None to address2
+2020-08-28 13:54:31,023 Adding None to address3
+2020-08-28 13:54:31,023 Adding None to address3
+2020-08-28 13:54:31,023 Adding None to address2
+2020-08-28 13:54:31,023 Adding None to address3
+2020-08-28 13:54:31,023 Adding None to address3
+2020-08-28 13:54:31,024 Adding None to address2
+2020-08-28 13:54:31,024 Adding None to address3
+2020-08-28 13:54:31,024 Adding None to address3
+2020-08-28 13:54:31,024 Adding None to address2
+2020-08-28 13:54:31,024 Adding None to address3
+2020-08-28 13:54:31,024 Adding None to address3
+2020-08-28 13:54:31,024 Adding None to address2
+2020-08-28 13:54:31,024 Adding None to address3
+2020-08-28 13:54:31,024 Adding None to address3
+2020-08-28 13:54:31,024 Adding None to address2
+2020-08-28 13:54:31,024 Adding None to address3
+2020-08-28 13:54:31,024 Adding None to address3
+2020-08-28 13:54:31,024 Adding None to address2
+2020-08-28 13:54:31,025 Retrieving settings for Designer Copies
+2020-08-28 13:54:31,035 Retrieving settings for EST File
+2020-08-28 13:54:31,040 Retrieving settings for Jobs List
+2020-08-28 13:54:31,040 Trying to retrieve jobs list
+2020-08-28 13:54:31,040 Retrieving settings for Jobs List
+2020-08-28 13:54:31,073 Jobs list loaded successfully
+2020-08-28 13:54:31,074 Retrieving settings for PDF Received
+2020-08-28 13:54:31,097 Retrieving settings for Jobs List
+2020-08-28 13:54:31,098 Trying to retrieve jobs list
+2020-08-28 13:54:31,098 Retrieving settings for Jobs List
+2020-08-28 13:54:31,132 Jobs list loaded successfully
+2020-08-28 13:54:31,133 Adding 2020-08-28 13:54:31.075168 to Files In
+2020-08-28 13:54:31,133 Adding 16 to True Page Count
+2020-08-28 13:54:31,133 Retrieving settings for Pace Update
+2020-08-28 13:54:31,133 Trying to open the MIS Update
+2020-08-28 13:54:31,133 Retrieving settings for Pace Update
+2020-08-28 13:54:31,164 Retrieving settings for Job Projects
+2020-08-28 13:54:31,164 Retrieving settings for Job Projects
+2020-08-28 13:54:31,178 Retrieving settings for Jobs List
+2020-08-28 13:54:31,178 Trying to retrieve jobs list
+2020-08-28 13:54:31,178 Retrieving settings for Jobs List
+2020-08-28 13:54:31,225 Jobs list loaded successfully
+2020-08-28 13:54:31,236 Retrieving settings for Jobs List
+2020-08-28 13:54:31,236 Trying to retrieve jobs list
+2020-08-28 13:54:31,236 Retrieving settings for Jobs List
+2020-08-28 13:54:31,267 Jobs list loaded successfully
+2020-08-28 13:54:31,267 Retrieving settings for Pace Update
+2020-08-28 13:54:31,268 Trying to open the MIS Update
+2020-08-28 13:54:31,268 Retrieving settings for Pace Update
+2020-08-28 13:54:31,296 Retrieving settings for Samples
+2020-08-28 13:54:31,312 Retrieving settings for Designer Copies
+2020-08-28 13:54:31,322 Retrieving settings for Samples
+2020-08-28 13:54:31,339 Retrieving settings for Job Shipments
+2020-08-28 13:54:31,339 Retrieving settings for Job Shipments
+2020-08-28 14:02:30,478 Replacing 07/15/2020 with 07/15/2020
+2020-08-28 14:02:30,478 Replacing In Production with In Production
+2020-08-28 14:02:30,478 Replacing 08/15/2020 with 08/15/2020
+2020-08-28 14:02:30,478 Replacing M1800 with M1800
+2020-08-28 14:02:30,478 Replacing In Production with In Production
+2020-08-28 14:02:30,502 Retrieving settings for Contacts
+2020-08-28 14:02:30,503 Retrieving settings for Contacts
+2020-08-28 14:02:30,524 Retrieving settings for Samples
+2020-08-28 14:02:30,541 Retrieving settings for Designer Copies
+2020-08-28 14:02:30,555 Retrieving settings for Flattened Samples
+2020-08-28 14:02:30,555 Retrieving settings for Flattened Samples
+2020-08-28 14:02:30,558 Retrieving settings for Customer Report
+2020-08-28 14:02:30,559 Retrieving settings for Customer Report
+2020-08-28 14:02:30,559 Retrieving settings for Jobs List
+2020-08-28 14:02:30,559 Trying to retrieve jobs list
+2020-08-28 14:02:30,559 Retrieving settings for Jobs List
+2020-08-28 14:02:30,592 Jobs list loaded successfully
+2020-08-28 14:02:30,592 Retrieving settings for Customer Report
+2020-08-28 14:02:30,592 Retrieving settings for Customer Report
+2020-08-28 14:02:30,593 Retrieving settings for Samples
+2020-08-28 14:02:30,609 Retrieving settings for Designer Copies
+2020-08-28 14:02:30,623 Retrieving settings for Job Shipments
+2020-08-28 14:02:30,623 Retrieving settings for Job Shipments
+2020-08-28 14:02:30,623 Retrieving settings for Jobs List
+2020-08-28 14:02:30,624 Trying to retrieve jobs list
+2020-08-28 14:02:30,624 Retrieving settings for Jobs List
+2020-08-28 14:02:30,655 Jobs list loaded successfully
+2020-08-28 14:02:30,655 Retrieving settings for Contacts
+2020-08-28 14:02:30,656 Retrieving settings for Contacts
+2020-08-28 14:02:30,680 Adding None to address3
+2020-08-28 14:02:30,680 Adding None to address3
+2020-08-28 14:02:30,680 Adding None to address2
+2020-08-28 14:02:30,680 Adding None to address3
+2020-08-28 14:02:30,680 Adding None to address3
+2020-08-28 14:02:30,680 Adding None to address2
+2020-08-28 14:02:30,680 Adding None to address3
+2020-08-28 14:02:30,680 Adding None to address3
+2020-08-28 14:02:30,680 Adding None to address2
+2020-08-28 14:02:30,680 Adding None to address3
+2020-08-28 14:02:30,680 Adding None to address3
+2020-08-28 14:02:30,680 Adding None to address2
+2020-08-28 14:02:30,680 Adding None to address3
+2020-08-28 14:02:30,680 Adding None to address3
+2020-08-28 14:02:30,680 Adding None to address2
+2020-08-28 14:02:30,680 Adding None to address3
+2020-08-28 14:02:30,681 Adding None to address3
+2020-08-28 14:02:30,681 Adding None to address2
+2020-08-28 14:02:30,681 Adding None to address3
+2020-08-28 14:02:30,681 Adding None to address3
+2020-08-28 14:02:30,681 Adding None to address2
+2020-08-28 14:02:30,681 Adding None to address3
+2020-08-28 14:02:30,681 Adding None to address3
+2020-08-28 14:02:30,681 Adding None to address2
+2020-08-28 14:02:30,681 Adding None to address3
+2020-08-28 14:02:30,681 Adding None to address3
+2020-08-28 14:02:30,681 Adding None to address2
+2020-08-28 14:02:30,681 Adding None to address3
+2020-08-28 14:02:30,681 Adding None to address3
+2020-08-28 14:02:30,681 Adding None to address2
+2020-08-28 14:02:30,681 Adding None to address3
+2020-08-28 14:02:30,681 Adding None to address3
+2020-08-28 14:02:30,681 Adding None to address2
+2020-08-28 14:02:30,681 Adding None to address3
+2020-08-28 14:02:30,681 Adding None to address3
+2020-08-28 14:02:30,681 Adding None to address2
+2020-08-28 14:02:30,682 Adding None to address3
+2020-08-28 14:02:30,682 Adding None to address3
+2020-08-28 14:02:30,682 Adding None to address2
+2020-08-28 14:02:30,682 Adding None to address3
+2020-08-28 14:02:30,682 Adding None to address3
+2020-08-28 14:02:30,682 Adding None to address2
+2020-08-28 14:02:30,682 Adding None to address3
+2020-08-28 14:02:30,682 Adding None to address3
+2020-08-28 14:02:30,682 Adding None to address2
+2020-08-28 14:02:30,682 Adding None to address3
+2020-08-28 14:02:30,682 Adding None to address3
+2020-08-28 14:02:30,682 Adding None to address2
+2020-08-28 14:02:30,682 Adding None to address3
+2020-08-28 14:02:30,682 Adding None to address3
+2020-08-28 14:02:30,682 Adding None to address2
+2020-08-28 14:02:30,683 Adding None to address3
+2020-08-28 14:02:30,683 Adding None to address3
+2020-08-28 14:02:30,683 Adding None to address2
+2020-08-28 14:02:30,683 Adding None to address3
+2020-08-28 14:02:30,683 Adding None to address3
+2020-08-28 14:02:30,683 Adding None to address2
+2020-08-28 14:02:30,683 Adding None to address3
+2020-08-28 14:02:30,683 Adding None to address3
+2020-08-28 14:02:30,683 Adding None to address2
+2020-08-28 14:02:30,683 Adding None to address3
+2020-08-28 14:02:30,683 Adding None to address3
+2020-08-28 14:02:30,683 Adding None to address2
+2020-08-28 14:02:30,683 Adding None to address3
+2020-08-28 14:02:30,683 Adding None to address3
+2020-08-28 14:02:30,683 Adding None to address2
+2020-08-28 14:02:30,683 Adding None to address3
+2020-08-28 14:02:30,683 Adding None to address3
+2020-08-28 14:02:30,683 Adding None to address2
+2020-08-28 14:02:30,684 Adding None to address3
+2020-08-28 14:02:30,684 Adding None to address3
+2020-08-28 14:02:30,684 Adding None to address2
+2020-08-28 14:02:30,684 Adding None to address3
+2020-08-28 14:02:30,684 Adding None to address3
+2020-08-28 14:02:30,684 Adding None to address2
+2020-08-28 14:02:30,684 Adding None to address3
+2020-08-28 14:02:30,684 Adding None to address3
+2020-08-28 14:02:30,684 Adding None to address2
+2020-08-28 14:02:30,684 Adding None to address3
+2020-08-28 14:02:30,684 Adding None to address3
+2020-08-28 14:02:30,684 Adding None to address2
+2020-08-28 14:02:30,684 Adding None to address3
+2020-08-28 14:02:30,684 Adding None to address3
+2020-08-28 14:02:30,684 Adding None to address2
+2020-08-28 14:02:30,684 Adding None to address3
+2020-08-28 14:02:30,684 Adding None to address3
+2020-08-28 14:02:30,684 Adding None to address2
+2020-08-28 14:02:30,684 Adding None to address3
+2020-08-28 14:02:30,684 Adding None to address3
+2020-08-28 14:02:30,684 Adding None to address2
+2020-08-28 14:02:30,684 Adding None to address3
+2020-08-28 14:02:30,684 Adding None to address3
+2020-08-28 14:02:30,684 Adding None to address2
+2020-08-28 14:02:30,684 Adding None to address3
+2020-08-28 14:02:30,684 Adding None to address3
+2020-08-28 14:02:30,685 Adding None to address2
+2020-08-28 14:02:30,685 Adding None to address3
+2020-08-28 14:02:30,685 Adding None to address3
+2020-08-28 14:02:30,685 Adding None to address2
+2020-08-28 14:02:30,685 Adding None to address3
+2020-08-28 14:02:30,685 Adding None to address3
+2020-08-28 14:02:30,685 Adding None to address2
+2020-08-28 14:02:30,685 Adding None to address3
+2020-08-28 14:02:30,685 Adding None to address3
+2020-08-28 14:02:30,685 Adding None to address2
+2020-08-28 14:02:30,685 Adding None to address3
+2020-08-28 14:02:30,685 Adding None to address3
+2020-08-28 14:02:30,685 Adding None to address2
+2020-08-28 14:02:30,685 Adding None to address3
+2020-08-28 14:02:30,685 Adding None to address3
+2020-08-28 14:02:30,685 Adding None to address2
+2020-08-28 14:02:30,685 Adding None to address3
+2020-08-28 14:02:30,685 Adding None to address3
+2020-08-28 14:02:30,685 Adding None to address2
+2020-08-28 14:02:30,686 Adding None to address3
+2020-08-28 14:02:30,686 Adding None to address3
+2020-08-28 14:02:30,686 Adding None to address2
+2020-08-28 14:02:30,686 Retrieving settings for Designer Copies
+2020-08-28 14:02:30,696 Retrieving settings for EST File
+2020-08-28 14:02:30,700 Retrieving settings for Jobs List
+2020-08-28 14:02:30,700 Trying to retrieve jobs list
+2020-08-28 14:02:30,700 Retrieving settings for Jobs List
+2020-08-28 14:02:30,732 Jobs list loaded successfully
+2020-08-28 14:02:30,733 Retrieving settings for PDF Received
+2020-08-28 14:02:30,756 Retrieving settings for Jobs List
+2020-08-28 14:02:30,756 Trying to retrieve jobs list
+2020-08-28 14:02:30,756 Retrieving settings for Jobs List
+2020-08-28 14:02:30,788 Jobs list loaded successfully
+2020-08-28 14:02:30,789 Adding 2020-08-28 14:02:30.734107 to Files In
+2020-08-28 14:02:30,789 Adding 16 to True Page Count
+2020-08-28 14:02:30,789 Retrieving settings for Pace Update
+2020-08-28 14:02:30,790 Trying to open the MIS Update
+2020-08-28 14:02:30,790 Retrieving settings for Pace Update
+2020-08-28 14:02:30,819 Retrieving settings for Job Projects
+2020-08-28 14:02:30,819 Retrieving settings for Job Projects
+2020-08-28 14:02:30,831 Retrieving settings for Jobs List
+2020-08-28 14:02:30,832 Trying to retrieve jobs list
+2020-08-28 14:02:30,832 Retrieving settings for Jobs List
+2020-08-28 14:02:30,881 Jobs list loaded successfully
+2020-08-28 14:02:30,891 Retrieving settings for Jobs List
+2020-08-28 14:02:30,892 Trying to retrieve jobs list
+2020-08-28 14:02:30,892 Retrieving settings for Jobs List
+2020-08-28 14:02:30,923 Jobs list loaded successfully
+2020-08-28 14:02:30,924 Retrieving settings for Pace Update
+2020-08-28 14:02:30,924 Trying to open the MIS Update
+2020-08-28 14:02:30,924 Retrieving settings for Pace Update
+2020-08-28 14:02:30,953 Retrieving settings for Samples
+2020-08-28 14:02:30,968 Retrieving settings for Designer Copies
+2020-08-28 14:02:30,978 Retrieving settings for Samples
+2020-08-28 14:02:30,994 Retrieving settings for Job Shipments
+2020-08-28 14:02:30,994 Retrieving settings for Job Shipments
