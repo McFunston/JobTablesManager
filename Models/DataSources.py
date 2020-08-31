@@ -824,6 +824,9 @@ class FlattenedSamples(ExportList):
         self.nd_merge(samples)
         for row in self._data_list:
             row["Samples"] = self.get_pub_samples_quantity(row["id"])
+        self._add_column("Exported")
+        self._add_column("jobContactID")
+        self._add_column("globalContactID")
     
     def get_pub_samples_quantity(self, pub) -> int:
         quantity = 0

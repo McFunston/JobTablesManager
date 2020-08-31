@@ -6904,3 +6904,280 @@
 2020-08-28 14:02:30,978 Retrieving settings for Samples
 2020-08-28 14:02:30,994 Retrieving settings for Job Shipments
 2020-08-28 14:02:30,994 Retrieving settings for Job Shipments
+2020-08-28 14:56:25,583 Retrieving settings for Samples
+2020-08-28 14:56:25,649 Retrieving settings for Designer Copies
+2020-08-28 14:56:25,696 Retrieving settings for Flattened Samples
+2020-08-28 14:56:25,696 Retrieving settings for Flattened Samples
+2020-08-28 14:56:25,700 Retrieving settings for Jobs List
+2020-08-28 14:56:25,701 Trying to retrieve jobs list
+2020-08-28 14:56:25,701 Retrieving settings for Jobs List
+2020-08-28 14:56:25,828 Jobs list loaded successfully
+2020-08-28 14:56:25,830 Adding None to job
+2020-08-28 15:28:36,226 Retrieving settings for Samples
+2020-08-28 15:28:36,289 Retrieving settings for Designer Copies
+2020-08-28 15:28:36,334 Retrieving settings for Flattened Samples
+2020-08-28 15:28:36,335 Retrieving settings for Flattened Samples
+2020-08-28 15:28:36,338 Retrieving settings for Jobs List
+2020-08-28 15:28:36,339 Trying to retrieve jobs list
+2020-08-28 15:28:36,339 Retrieving settings for Jobs List
+2020-08-28 15:28:36,462 Jobs list loaded successfully
+2020-08-28 15:31:58,422 Retrieving settings for Samples
+2020-08-28 15:31:58,484 Retrieving settings for Designer Copies
+2020-08-28 15:31:58,528 Retrieving settings for Flattened Samples
+2020-08-28 15:31:58,528 Retrieving settings for Flattened Samples
+2020-08-28 15:31:58,533 Retrieving settings for Jobs List
+2020-08-28 15:31:58,533 Trying to retrieve jobs list
+2020-08-28 15:31:58,533 Retrieving settings for Jobs List
+2020-08-28 15:31:58,657 Jobs list loaded successfully
+2020-08-28 15:32:31,111 Retrieving settings for Samples
+2020-08-28 15:32:31,179 Retrieving settings for Designer Copies
+2020-08-28 15:32:31,224 Retrieving settings for Flattened Samples
+2020-08-28 15:32:31,224 Retrieving settings for Flattened Samples
+2020-08-28 15:32:31,228 Retrieving settings for Jobs List
+2020-08-28 15:32:31,228 Trying to retrieve jobs list
+2020-08-28 15:32:31,228 Retrieving settings for Jobs List
+2020-08-28 15:32:31,351 Jobs list loaded successfully
+2020-08-28 15:32:31,353 Adding None to job
+2020-08-28 15:32:31,353 Adding None to Exported
+2020-08-28 15:32:31,353 Adding None to job
+2020-08-28 15:32:31,353 Adding None to Exported
+2020-08-28 15:32:31,353 Adding None to job
+2020-08-28 15:32:31,354 Adding None to Exported
+2020-08-28 15:32:31,354 Adding None to job
+2020-08-28 15:32:31,354 Adding None to Exported
+2020-08-28 15:32:31,354 Adding None to job
+2020-08-28 15:32:31,354 Adding None to Exported
+2020-08-28 15:32:31,354 Adding None to job
+2020-08-28 15:32:31,354 Adding None to Exported
+2020-08-28 15:32:31,354 Adding None to job
+2020-08-28 15:32:31,355 Adding None to Exported
+2020-08-28 15:32:31,355 Adding None to job
+2020-08-28 15:32:31,355 Adding None to Exported
+2020-08-28 15:32:31,355 Adding None to job
+2020-08-28 15:32:31,355 Adding None to Exported
+2020-08-28 15:32:31,355 Adding None to job
+2020-08-28 15:32:31,355 Adding None to Exported
+2020-08-28 15:32:31,356 Adding None to job
+2020-08-28 15:32:31,356 Adding None to Exported
+2020-08-28 15:32:31,356 Adding None to job
+2020-08-28 15:32:31,356 Adding None to Exported
+2020-08-28 15:32:31,356 Adding None to job
+2020-08-28 15:32:31,356 Adding None to Exported
+2020-08-28 15:32:31,356 Adding None to job
+2020-08-28 15:32:31,356 Adding None to Exported
+2020-08-28 15:32:31,356 Adding None to job
+2020-08-28 15:32:31,357 Adding None to Exported
+2020-08-28 15:32:31,357 Adding None to job
+2020-08-28 15:32:31,357 Adding None to Exported
+2020-08-28 15:32:31,357 Adding None to job
+2020-08-28 15:32:31,357 Adding None to Exported
+2020-08-28 15:32:31,357 Adding None to job
+2020-08-28 15:32:31,357 Adding None to Exported
+2020-08-28 15:32:31,357 Adding None to job
+2020-08-28 15:32:31,358 Adding None to Exported
+2020-08-28 15:32:31,358 Adding None to job
+2020-08-28 15:32:31,358 Adding None to Exported
+2020-08-28 15:32:31,358 Adding None to job
+2020-08-28 15:32:31,358 Adding None to Exported
+2020-08-28 15:32:31,358 Adding None to job
+2020-08-28 15:32:31,358 Adding None to Exported
+2020-08-28 15:32:31,358 Adding None to job
+2020-08-28 15:32:31,359 Adding None to Exported
+2020-08-28 15:32:31,359 Adding None to job
+2020-08-28 15:32:31,359 Adding None to Exported
+2020-08-28 15:32:31,359 Adding None to job
+2020-08-28 15:32:31,359 Adding None to Exported
+2020-08-28 15:32:31,359 Adding None to job
+2020-08-28 15:32:31,359 Adding None to Exported
+2020-08-28 15:32:31,359 Adding None to job
+2020-08-28 15:32:31,360 Adding None to Exported
+2020-08-28 15:32:31,360 Adding None to job
+2020-08-28 15:32:31,360 Adding None to Exported
+2020-08-28 15:32:31,360 Adding None to job
+2020-08-28 15:32:31,360 Adding None to Exported
+2020-08-28 15:32:31,360 Adding None to job
+2020-08-28 15:32:31,360 Adding None to Exported
+2020-08-28 15:32:31,360 Adding None to job
+2020-08-28 15:32:31,361 Adding None to Exported
+2020-08-28 15:32:31,361 Adding None to job
+2020-08-28 15:32:31,361 Adding None to Exported
+2020-08-28 15:32:31,361 Adding None to job
+2020-08-28 15:32:31,361 Adding None to Exported
+2020-08-28 15:32:31,361 Adding None to job
+2020-08-28 15:32:31,361 Adding None to Exported
+2020-08-28 15:32:31,361 Adding None to job
+2020-08-28 15:32:31,361 Adding None to Exported
+2020-08-28 15:32:31,362 Adding None to job
+2020-08-28 15:32:31,362 Adding None to Exported
+2020-08-28 15:32:31,362 Adding None to job
+2020-08-28 15:32:31,362 Adding None to Exported
+2020-08-28 15:32:31,362 Adding None to job
+2020-08-28 15:32:31,362 Adding None to Exported
+2020-08-28 15:32:31,363 Adding None to job
+2020-08-28 15:32:31,363 Adding None to Exported
+2020-08-28 15:32:31,363 Adding None to job
+2020-08-28 15:32:31,363 Adding None to Exported
+2020-08-28 15:32:31,363 Adding None to job
+2020-08-28 15:32:31,363 Adding None to Exported
+2020-08-28 15:32:31,363 Adding None to job
+2020-08-28 15:32:31,363 Adding None to Exported
+2020-08-28 15:32:31,364 Adding None to job
+2020-08-28 15:32:31,364 Adding None to Exported
+2020-08-28 15:32:31,364 Adding None to job
+2020-08-28 15:32:31,364 Adding None to Exported
+2020-08-28 15:32:31,364 Adding None to job
+2020-08-28 15:32:31,364 Adding None to Exported
+2020-08-28 15:32:31,364 Adding None to job
+2020-08-28 15:32:31,364 Adding None to Exported
+2020-08-28 15:32:31,365 Adding None to job
+2020-08-28 15:32:31,365 Adding None to Exported
+2020-08-28 15:32:31,365 Adding None to job
+2020-08-28 15:32:31,365 Adding None to Exported
+2020-08-28 15:32:31,365 Adding None to job
+2020-08-28 15:32:31,365 Adding None to Exported
+2020-08-28 15:32:31,365 Adding None to job
+2020-08-28 15:32:31,365 Adding None to Exported
+2020-08-28 15:32:31,365 Adding None to job
+2020-08-28 15:32:31,366 Adding None to Exported
+2020-08-28 15:32:31,366 Adding None to job
+2020-08-28 15:32:31,366 Adding None to Exported
+2020-08-28 15:32:31,366 Adding None to job
+2020-08-28 15:32:31,366 Adding None to Exported
+2020-08-28 15:32:31,366 Adding None to job
+2020-08-28 15:32:31,366 Adding None to Exported
+2020-08-28 15:32:31,366 Adding None to job
+2020-08-28 15:32:31,367 Adding None to Exported
+2020-08-28 15:32:31,367 Adding None to job
+2020-08-28 15:32:31,367 Adding None to Exported
+2020-08-28 15:32:31,367 Adding None to job
+2020-08-28 15:32:31,367 Adding None to Exported
+2020-08-28 15:32:31,367 Adding None to job
+2020-08-28 15:32:31,367 Adding None to Exported
+2020-08-28 15:32:31,367 Adding None to job
+2020-08-28 15:32:31,368 Adding None to Exported
+2020-08-28 15:40:23,202 Retrieving settings for Samples
+2020-08-28 15:40:23,269 Retrieving settings for Designer Copies
+2020-08-28 15:40:23,316 Retrieving settings for Flattened Samples
+2020-08-28 15:40:23,317 Retrieving settings for Flattened Samples
+2020-08-28 15:40:23,320 Retrieving settings for Jobs List
+2020-08-28 15:40:23,321 Trying to retrieve jobs list
+2020-08-28 15:40:23,321 Retrieving settings for Jobs List
+2020-08-28 15:40:23,453 Jobs list loaded successfully
+2020-08-28 15:40:23,455 Adding None to job
+2020-08-28 15:40:23,455 Adding None to Exported
+2020-08-28 15:40:23,456 Adding None to job
+2020-08-28 15:40:23,456 Adding None to Exported
+2020-08-28 15:40:23,456 Adding None to job
+2020-08-28 15:40:23,456 Adding None to Exported
+2020-08-28 15:40:23,456 Adding None to job
+2020-08-28 15:40:23,456 Adding None to Exported
+2020-08-28 15:40:23,457 Adding None to job
+2020-08-28 15:40:23,457 Adding None to Exported
+2020-08-28 15:40:23,457 Adding None to job
+2020-08-28 15:40:23,457 Adding None to Exported
+2020-08-28 15:40:23,457 Adding None to job
+2020-08-28 15:40:23,457 Adding None to Exported
+2020-08-28 15:40:23,457 Adding None to job
+2020-08-28 15:40:23,457 Adding None to Exported
+2020-08-28 15:40:23,458 Adding None to job
+2020-08-28 15:40:23,458 Adding None to Exported
+2020-08-28 15:40:23,458 Adding None to job
+2020-08-28 15:40:23,458 Adding None to Exported
+2020-08-28 15:40:23,458 Adding None to job
+2020-08-28 15:40:23,458 Adding None to Exported
+2020-08-28 15:40:23,458 Adding None to job
+2020-08-28 15:40:23,458 Adding None to Exported
+2020-08-28 15:40:23,459 Adding None to job
+2020-08-28 15:40:23,459 Adding None to Exported
+2020-08-28 15:40:23,459 Adding None to job
+2020-08-28 15:40:23,459 Adding None to Exported
+2020-08-28 15:40:23,459 Adding None to job
+2020-08-28 15:40:23,459 Adding None to Exported
+2020-08-28 15:40:23,459 Adding None to job
+2020-08-28 15:40:23,459 Adding None to Exported
+2020-08-28 15:40:23,460 Adding None to job
+2020-08-28 15:40:23,460 Adding None to Exported
+2020-08-28 15:40:23,460 Adding None to job
+2020-08-28 15:40:23,460 Adding None to Exported
+2020-08-28 15:40:23,460 Adding None to job
+2020-08-28 15:40:23,460 Adding None to Exported
+2020-08-28 15:40:23,460 Adding None to job
+2020-08-28 15:40:23,461 Adding None to Exported
+2020-08-28 15:40:23,461 Adding None to job
+2020-08-28 15:40:23,461 Adding None to Exported
+2020-08-28 15:40:23,461 Adding None to job
+2020-08-28 15:40:23,461 Adding None to Exported
+2020-08-28 15:40:23,461 Adding None to job
+2020-08-28 15:40:23,461 Adding None to Exported
+2020-08-28 15:40:23,462 Adding None to job
+2020-08-28 15:40:23,462 Adding None to Exported
+2020-08-28 15:40:23,462 Adding None to job
+2020-08-28 15:40:23,462 Adding None to Exported
+2020-08-28 15:40:23,462 Adding None to job
+2020-08-28 15:40:23,462 Adding None to Exported
+2020-08-28 15:40:23,462 Adding None to job
+2020-08-28 15:40:23,462 Adding None to Exported
+2020-08-28 15:40:23,463 Adding None to job
+2020-08-28 15:40:23,463 Adding None to Exported
+2020-08-28 15:40:23,463 Adding None to job
+2020-08-28 15:40:23,463 Adding None to Exported
+2020-08-28 15:40:23,463 Adding None to job
+2020-08-28 15:40:23,463 Adding None to Exported
+2020-08-28 15:40:23,463 Adding None to job
+2020-08-28 15:40:23,464 Adding None to Exported
+2020-08-28 15:40:23,464 Adding None to job
+2020-08-28 15:40:23,464 Adding None to Exported
+2020-08-28 15:40:23,464 Adding None to job
+2020-08-28 15:40:23,464 Adding None to Exported
+2020-08-28 15:40:23,464 Adding None to job
+2020-08-28 15:40:23,464 Adding None to Exported
+2020-08-28 15:40:23,464 Adding None to job
+2020-08-28 15:40:23,465 Adding None to Exported
+2020-08-28 15:40:23,465 Adding None to job
+2020-08-28 15:40:23,465 Adding None to Exported
+2020-08-28 15:40:23,465 Adding None to job
+2020-08-28 15:40:23,465 Adding None to Exported
+2020-08-28 15:40:23,465 Adding None to job
+2020-08-28 15:40:23,465 Adding None to Exported
+2020-08-28 15:40:23,465 Adding None to job
+2020-08-28 15:40:23,466 Adding None to Exported
+2020-08-28 15:40:23,466 Adding None to job
+2020-08-28 15:40:23,466 Adding None to Exported
+2020-08-28 15:40:23,466 Adding None to job
+2020-08-28 15:40:23,466 Adding None to Exported
+2020-08-28 15:40:23,466 Adding None to job
+2020-08-28 15:40:23,467 Adding None to Exported
+2020-08-28 15:40:23,467 Adding None to job
+2020-08-28 15:40:23,467 Adding None to Exported
+2020-08-28 15:40:23,467 Adding None to job
+2020-08-28 15:40:23,467 Adding None to Exported
+2020-08-28 15:40:23,467 Adding None to job
+2020-08-28 15:40:23,467 Adding None to Exported
+2020-08-28 15:40:23,467 Adding None to job
+2020-08-28 15:40:23,468 Adding None to Exported
+2020-08-28 15:40:23,468 Adding None to job
+2020-08-28 15:40:23,468 Adding None to Exported
+2020-08-28 15:40:23,468 Adding None to job
+2020-08-28 15:40:23,468 Adding None to Exported
+2020-08-28 15:40:23,468 Adding None to job
+2020-08-28 15:40:23,468 Adding None to Exported
+2020-08-28 15:40:23,469 Adding None to job
+2020-08-28 15:40:23,469 Adding None to Exported
+2020-08-28 15:40:23,469 Adding None to job
+2020-08-28 15:40:23,469 Adding None to Exported
+2020-08-28 15:40:23,469 Adding None to job
+2020-08-28 15:40:23,469 Adding None to Exported
+2020-08-28 15:40:23,469 Adding None to job
+2020-08-28 15:40:23,469 Adding None to Exported
+2020-08-28 15:40:23,470 Adding None to job
+2020-08-28 15:40:23,470 Adding None to Exported
+2020-08-28 15:40:23,470 Adding None to job
+2020-08-28 15:40:23,470 Adding None to Exported
+2020-08-28 15:40:23,470 Adding None to job
+2020-08-28 15:40:23,470 Adding None to Exported
+2020-08-28 15:40:23,470 Adding None to job
+2020-08-28 15:40:23,470 Adding None to Exported
+2020-08-28 15:40:23,471 Adding None to job
+2020-08-28 15:40:23,471 Adding None to Exported
+2020-08-28 15:40:23,471 Adding None to job
+2020-08-28 15:40:23,471 Adding None to Exported

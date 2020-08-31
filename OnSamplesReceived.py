@@ -16,10 +16,10 @@ def receive_file(path: str):
     flattened_list.save()
     
 
-# receive_file("Test_Data/1st deadline_Sample Magazine Orders_September 2020_Canada.xlsx")
+receive_file("Test_Data/1st deadline_Sample Magazine Orders_September 2020_Canada.xlsx")
 
-if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Wrong number of arguments")
-    else:
-        receive_file(sys.argv[1])
+# if __name__ == "__main__":
+#     if len(sys.argv) != 2:
+#         print("Wrong number of arguments")
+#     else:
+#         receive_file(sys.argv[1])
