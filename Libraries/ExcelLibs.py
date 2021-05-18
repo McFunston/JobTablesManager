@@ -6,11 +6,7 @@ import pandas as pd
 
 def OpenXLSX(inputPath, tab):
     book = load_workbook(inputPath)
-    if len(book.sheetnames) > 1:
-        sheet = book[tab]
-    else:
-        sheet = book.active
-    return sheet
+    return book[tab] if len(book.sheetnames) > 1 else book.active
 
 
 def WriteXlsx(table, outputPath):
@@ -33,7 +29,7 @@ def OpenXLS(inputPath):
 def GetRows(sheet):
     table = list()
     for row in sheet:
-        rowList = list()
+        rowList = []
         for column in row:
             if type(column) != str:
                 rowList.append(column.value)
@@ -43,25 +39,16 @@ def GetRows(sheet):
     return table
 
 def getDict(sheet):
-    columnHeaders = list()
-    entries = list()
-    for column in sheet[1]:
-        columnHeaders.append(column.value)
+    entries = []
+    columnHeaders = [column.value for column in sheet[1]]
     sheet.delete_rows(1, 1)
     for row in sheet:
-        entry = dict()
-        index = 0
-        for cel in row:
-            entry[columnHeaders[index]] = cel.value
-            index = index+1
+        entry = {columnHeaders[index]: cel.value for index, cel in enumerate(row)}
         entries.append(entry)
     return entries
 
 def GetData(path: str, tab: str) -> list:
-    if tab != '':
-        df = read_excel(path, tab)
-    else: 
-        df = read_excel(path)
+    df = read_excel(path, tab) if tab != '' else read_excel(path)
     df1 = df.where(pd.notnull(df), None)
     dfDict = df1.to_dict('records')
     for d in dfDict:

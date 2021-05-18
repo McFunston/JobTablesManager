@@ -12,12 +12,10 @@ import sys
 
 def OpenXLSX(inputPath):
     book = load_workbook(inputPath)
-    sheet = book.active
-    return sheet
+    return book.active
 
 def padString(name):
-    jn = name.zfill(4)
-    return jn
+    return name.zfill(4)
 
 def findValue(sheet, searchColumn, searchValue, killColumn, dateColumn):
     foundRows=list()

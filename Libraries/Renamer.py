@@ -3,7 +3,7 @@ import sys
 import os
 
 def OpenCSV(inputPath):
-    rows = list()
+    rows = []
     with open(inputPath, encoding="utf-8-sig") as csv_file:
         csv_reader = csv.reader(csv_file, delimiter =',')
         for row in csv_reader:
@@ -26,7 +26,7 @@ def jobNumberPadder(number):
 
 def pdfRenamer(fileName, jobsList, codeColumn, jNColumn):
     table = OpenCSV(jobsList)
-    newTable=list()
+    newTable = []
     catch=False
 
     if '-' in fileName[:5]:
@@ -35,15 +35,19 @@ def pdfRenamer(fileName, jobsList, codeColumn, jNColumn):
         fileNameNumbers = [s.rjust(4, '0') for s in fileName.split('_') if s.isdigit()]
     else:
         fileNameNumbers = [s.rjust(4, '0') for s in fileName.split() if s.isdigit()]
-    
+
     if len(fileNameNumbers) == 0:
         return
 
     for row in table:
         code = row[int(codeColumn)].rjust(4, '0')
 
-        
-        if row[int(codeColumn)] != '' and code == fileNameNumbers[0] and catch==False:
+
+        if (
+            row[int(codeColumn)] != ''
+            and code == fileNameNumbers[0]
+            and not catch
+        ):
             newFileName = jobNumberPadder(row[int(jNColumn)])+'_'+fileName
             os.rename(fileName, 'Renamed/'+newFileName)
             catch=True

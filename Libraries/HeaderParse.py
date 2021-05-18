@@ -14,8 +14,7 @@ import sys
 
 def OpenXLSX(inputPath):
     book = load_workbook(inputPath)
-    sheet = book.active
-    return sheet
+    return book.active
 
 
 def OpenXLS(inputPath):
@@ -25,7 +24,7 @@ def OpenXLS(inputPath):
 
 
 def OpenCSV(inputPath):
-    rows = list()
+    rows = []
     with open(inputPath, encoding="utf-8-sig") as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         for row in csv_reader:
@@ -36,7 +35,7 @@ def OpenCSV(inputPath):
 def GetRows(sheet):
     table = list()
     for row in sheet:
-        rowList = list()
+        rowList = []
         for column in row:
             if type(column) != str:
                 rowList.append(column.value)
@@ -80,8 +79,8 @@ def NameParse(name):
 def OpenHeaders(headerfile):
     with open(headerfile, 'r') as hfile:
         headerList = hfile.read().split('\n')
-        newList = list()
-        newDim = list()
+        newList = []
+        newDim = []
         for headerItem in headerList:
             newDim.append(headerItem)
             if len(newDim) == 3:
@@ -115,13 +114,17 @@ def headerParse(oldFile, headerFile, idColumn, dateColumn):
                 parsedName = parsedName.zfill(4)
             else:
                 parsedName = padJob(str(oldRow[idColumn]))
-            if parsedName != None and parsedName in line[0] and oldRow[dateColumn] == None:
+            if (
+                parsedName != None
+                and parsedName in line[0]
+                and oldRow[dateColumn] is None
+            ):
                 print(parsedName)
                 if datetime.datetime.strptime(oldRow[9], '%m/%d/%Y') <= datetime.datetime.strptime(line[1].split()[0], '%m/%d/%Y'):
                     oldRow[dateColumn] = line[1].split()[0]
                     found = True
                     break
-            
+
     oldTable.insert(0, columnNames)
     WriteXlsx(oldTable, oldFile)
 

@@ -4,54 +4,251 @@ from Models.DataSources import CustomerReport, JobsList, PaceUpdate
 
 
 def moqJobsListSettingsFunc(name: str):
-    moqJobsListSettings = {"File Name": "BVM_Jobs.xlsx", "Default Path": "/Users/micafunston/Projects/BVMTools/BVM_Jobs.xlsx", "Type": "Data List", "Job Field": "Job", "Tab": "Sheet", "Publication Field": "Description", "Publication Number Separate": False, "Date Columns": [
-        "Files In", "Approved", "Scheduled Ship Date", "Date Setup"], "True Dates": False, "Date Format": "%m/%d/%Y", "Columns Order": {"1": "Job", "2": "Description", "3": "Files In", "4": "Approved", "5": "Production Status", "6": "Scheduled Ship Date", "7": "Qty Ordered", "8": "CPC", "9": "Page Count", "10": "Date Setup", "11": "Samples", "12": "Deadline"}, "Write Once Columns": ["Files In", "Approved", "Date Setup", "Added On", "Publication Month", "Exported to MIS"]}
-    return moqJobsListSettings
+    return {
+        "File Name": "BVM_Jobs.xlsx",
+        "Default Path": "/Users/micafunston/Projects/BVMTools/BVM_Jobs.xlsx",
+        "Type": "Data List",
+        "Job Field": "Job",
+        "Tab": "Sheet",
+        "Publication Field": "Description",
+        "Publication Number Separate": False,
+        "Date Columns": [
+            "Files In",
+            "Approved",
+            "Scheduled Ship Date",
+            "Date Setup",
+        ],
+        "True Dates": False,
+        "Date Format": "%m/%d/%Y",
+        "Columns Order": {
+            "1": "Job",
+            "2": "Description",
+            "3": "Files In",
+            "4": "Approved",
+            "5": "Production Status",
+            "6": "Scheduled Ship Date",
+            "7": "Qty Ordered",
+            "8": "CPC",
+            "9": "Page Count",
+            "10": "Date Setup",
+            "11": "Samples",
+            "12": "Deadline",
+        },
+        "Write Once Columns": [
+            "Files In",
+            "Approved",
+            "Date Setup",
+            "Added On",
+            "Publication Month",
+            "Exported to MIS",
+        ],
+    }
 
 
 def moqJobsListFunc(path: str, tab: str):
-    moqJobsList = [{"Job": "M511", "Description": "2656-Silver Valley-Academy Park Neighbou-Mar", "Files In": datetime.strptime("2/11/2020","%m/%d/%Y"), "Approved": datetime.strptime("3/3/2020","%m/%d/%Y"), "Production Status": "Closed",
-                    "Scheduled Ship Date": datetime.strptime("03/09/2020","%m/%d/%Y"), "Qty Ordered": "2500", "CPC": "2089", "Page Count": "16 Pages", "Date Setup": datetime.strptime("02/03/2020","%m/%d/%Y"), "Samples": "316", "Deadline": "10", "Publication Month": None},
-                   {"Job": "M532", "Description": "3254-Neighbours of Kirkendall and Durand-Mar", "Files In": datetime.strptime("02/28/2020","%m/%d/%Y"), "Approved": datetime.strptime("02/28/2020","%m/%d/%Y"), "Production Status": "Open",
-                    "Scheduled Ship Date": datetime.strptime("03/05/2020","%m/%d/%Y"), "Qty Ordered": "4500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("02/03/2020","%m/%d/%Y"), "Samples": "216", "Deadline": "15", "Publication Month": None},
-                   {"Job": "M999", "Description": "Bad Data1", "Files In": None, "Approved": datetime.strptime("02/28/2020","%m/%d/%Y"), "Production Status": "Open",
-                    "Scheduled Ship Date": datetime.strptime("02/26/2020","%m/%d/%Y"), "Qty Ordered": "3500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("09/04/2050","%m/%d/%Y"), "Samples": "216", "Deadline": "15", "Publication Month": None},
-                   {"Job": "M704", "Description": "3254-Neighbours of Kirkendall and Durand-Apr", "Files In": datetime.strptime("03/28/2020","%m/%d/%Y"), "Approved": None, "Production Status": "Open",
-                    "Scheduled Ship Date": datetime.strptime("04/05/2020","%m/%d/%Y"), "Qty Ordered": "4500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("03/03/2020","%m/%d/%Y"), "Samples": "216", "Deadline": "15", "Publication Month": None},
-                    {"Job": "", "Description": "3535-Neighbours of Perth-Jul", "Files In": datetime.strptime("03/28/2020","%m/%d/%Y"), "Approved": None, "Production Status": "Open",
-                    "Scheduled Ship Date": datetime.strptime("04/05/2020","%m/%d/%Y"), "Qty Ordered": "4500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("03/03/2020","%m/%d/%Y"), "Samples": "216", "Deadline": "15", "Publication Month": None},
-                    {"Job": "M1532", "Description": "3299-Neighbours of Something or Other", "Files In": datetime.strptime("02/28/2020","%m/%d/%Y"), "Approved": datetime.strptime("02/28/2020","%m/%d/%Y"), "Production Status": "Open",
-                    "Scheduled Ship Date": datetime.strptime("03/05/2020","%m/%d/%Y"), "Qty Ordered": "4500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("02/03/2020","%m/%d/%Y"), "Samples": "216", "Deadline": "15", "Publication Month": None},
-                    {"Job": "M1777", "Description": "3298-Neighbours of Nowhere", "Files In": datetime.strptime("02/28/2020","%m/%d/%Y"), "Approved": datetime.strptime("02/28/2020","%m/%d/%Y"), "Production Status": "Open",
-                    "Scheduled Ship Date": datetime.strptime("03/05/2020","%m/%d/%Y"), "Qty Ordered": "4500", "CPC": "4000", "Page Count": "24 Pages", "Date Setup": datetime.strptime("02/27/2020","%m/%d/%Y"), "Samples": "216", "Deadline": "15", "Publication Month": None}]
-    return moqJobsList
+    return [
+        {
+            "Job": "M511",
+            "Description": "2656-Silver Valley-Academy Park Neighbou-Mar",
+            "Files In": datetime.strptime("2/11/2020", "%m/%d/%Y"),
+            "Approved": datetime.strptime("3/3/2020", "%m/%d/%Y"),
+            "Production Status": "Closed",
+            "Scheduled Ship Date": datetime.strptime("03/09/2020", "%m/%d/%Y"),
+            "Qty Ordered": "2500",
+            "CPC": "2089",
+            "Page Count": "16 Pages",
+            "Date Setup": datetime.strptime("02/03/2020", "%m/%d/%Y"),
+            "Samples": "316",
+            "Deadline": "10",
+            "Publication Month": None,
+        },
+        {
+            "Job": "M532",
+            "Description": "3254-Neighbours of Kirkendall and Durand-Mar",
+            "Files In": datetime.strptime("02/28/2020", "%m/%d/%Y"),
+            "Approved": datetime.strptime("02/28/2020", "%m/%d/%Y"),
+            "Production Status": "Open",
+            "Scheduled Ship Date": datetime.strptime("03/05/2020", "%m/%d/%Y"),
+            "Qty Ordered": "4500",
+            "CPC": "4000",
+            "Page Count": "24 Pages",
+            "Date Setup": datetime.strptime("02/03/2020", "%m/%d/%Y"),
+            "Samples": "216",
+            "Deadline": "15",
+            "Publication Month": None,
+        },
+        {
+            "Job": "M999",
+            "Description": "Bad Data1",
+            "Files In": None,
+            "Approved": datetime.strptime("02/28/2020", "%m/%d/%Y"),
+            "Production Status": "Open",
+            "Scheduled Ship Date": datetime.strptime("02/26/2020", "%m/%d/%Y"),
+            "Qty Ordered": "3500",
+            "CPC": "4000",
+            "Page Count": "24 Pages",
+            "Date Setup": datetime.strptime("09/04/2050", "%m/%d/%Y"),
+            "Samples": "216",
+            "Deadline": "15",
+            "Publication Month": None,
+        },
+        {
+            "Job": "M704",
+            "Description": "3254-Neighbours of Kirkendall and Durand-Apr",
+            "Files In": datetime.strptime("03/28/2020", "%m/%d/%Y"),
+            "Approved": None,
+            "Production Status": "Open",
+            "Scheduled Ship Date": datetime.strptime("04/05/2020", "%m/%d/%Y"),
+            "Qty Ordered": "4500",
+            "CPC": "4000",
+            "Page Count": "24 Pages",
+            "Date Setup": datetime.strptime("03/03/2020", "%m/%d/%Y"),
+            "Samples": "216",
+            "Deadline": "15",
+            "Publication Month": None,
+        },
+        {
+            "Job": "",
+            "Description": "3535-Neighbours of Perth-Jul",
+            "Files In": datetime.strptime("03/28/2020", "%m/%d/%Y"),
+            "Approved": None,
+            "Production Status": "Open",
+            "Scheduled Ship Date": datetime.strptime("04/05/2020", "%m/%d/%Y"),
+            "Qty Ordered": "4500",
+            "CPC": "4000",
+            "Page Count": "24 Pages",
+            "Date Setup": datetime.strptime("03/03/2020", "%m/%d/%Y"),
+            "Samples": "216",
+            "Deadline": "15",
+            "Publication Month": None,
+        },
+        {
+            "Job": "M1532",
+            "Description": "3299-Neighbours of Something or Other",
+            "Files In": datetime.strptime("02/28/2020", "%m/%d/%Y"),
+            "Approved": datetime.strptime("02/28/2020", "%m/%d/%Y"),
+            "Production Status": "Open",
+            "Scheduled Ship Date": datetime.strptime("03/05/2020", "%m/%d/%Y"),
+            "Qty Ordered": "4500",
+            "CPC": "4000",
+            "Page Count": "24 Pages",
+            "Date Setup": datetime.strptime("02/03/2020", "%m/%d/%Y"),
+            "Samples": "216",
+            "Deadline": "15",
+            "Publication Month": None,
+        },
+        {
+            "Job": "M1777",
+            "Description": "3298-Neighbours of Nowhere",
+            "Files In": datetime.strptime("02/28/2020", "%m/%d/%Y"),
+            "Approved": datetime.strptime("02/28/2020", "%m/%d/%Y"),
+            "Production Status": "Open",
+            "Scheduled Ship Date": datetime.strptime("03/05/2020", "%m/%d/%Y"),
+            "Qty Ordered": "4500",
+            "CPC": "4000",
+            "Page Count": "24 Pages",
+            "Date Setup": datetime.strptime("02/27/2020", "%m/%d/%Y"),
+            "Samples": "216",
+            "Deadline": "15",
+            "Publication Month": None,
+        },
+    ]
 
 
 def moqPaceUpdateSettingsFunc(name: str):
-    moqSettings = {"Type": "Data List", "True Dates": True, "Date Columns": ["Scheduled Ship Date", "Date Setup"], "Tab": "Report1", "Columns Order": {
-        "1": "Job", "2": "Description", "3": "Production Status", "4": "Scheduled Ship Date", "5": "Qty Ordered", "6": "Production Notes", "7": "Item Template", "8": "Additional Description", "9": "Date Setup"}, "Date Format": "%m/%d/%Y", "Page Count Strings": {
-            "16 page": "16 Pages", "20 page": "20 Pages", "24 page": "24 Pages", "28 page": "28 Pages", "32 page": "32 Pages", "36 page": "36 Pages", "40 page": "40 Pages","Write Once Columns": []}}
-    return moqSettings
+    return {
+        "Type": "Data List",
+        "True Dates": True,
+        "Date Columns": ["Scheduled Ship Date", "Date Setup"],
+        "Tab": "Report1",
+        "Columns Order": {
+            "1": "Job",
+            "2": "Description",
+            "3": "Production Status",
+            "4": "Scheduled Ship Date",
+            "5": "Qty Ordered",
+            "6": "Production Notes",
+            "7": "Item Template",
+            "8": "Additional Description",
+            "9": "Date Setup",
+        },
+        "Date Format": "%m/%d/%Y",
+        "Page Count Strings": {
+            "16 page": "16 Pages",
+            "20 page": "20 Pages",
+            "24 page": "24 Pages",
+            "28 page": "28 Pages",
+            "32 page": "32 Pages",
+            "36 page": "36 Pages",
+            "40 page": "40 Pages",
+            "Write Once Columns": [],
+        },
+    }
 
 
 def moqPaceUpdateFunc(path: str, tab: str):
-    moqPaceUpdate = [{"Job": 'M1998', "Description": "2695-Neighbours of Whitemud Creek - Aug", "Production Status": "In Production", "Scheduled Ship Date": datetime.strptime("07-15-2020", "%m-%d-%Y"), "Qty Ordered": 2500, "Production Notes": "PW Count = 2200", "Item Template": "BVM 16 Page",
-                      "Additional Description": "2500 16 page self cover Flat size 16.75 x 10.875, fold & stitch to 8.375 x 10.875 4 process / same  with bleeds Plastic strap band (cross) in 50's Carton pack with 3 strips of tape on the bottom Deliver to DLI", "Date Setup": datetime.strptime("06-30-2020", "%m-%d-%Y")},
-                     {"Job": 'M532', "Description": "3254-Neighbours of Kirkendall and Durand-Mar", "Production Status": "In Production", "Scheduled Ship Date": datetime.strptime("07-15-2020", "%m-%d-%Y"), "Qty Ordered": 4500, "Production Notes": "PW Count = 4000", "Item Template": "BVM 16 Page",
-                      "Additional Description": "4500 24 page self cover Flat size 16.75 x 10.875, fold & stitch to 8.375 x 10.875 4 process / same  with bleeds Plastic strap band (cross) in 50's Carton pack with 3 strips of tape on the bottom Deliver to DLI", "Date Setup": datetime.strptime("07-30-2020", "%m-%d-%Y")},
-                     {"Job": 'M1800', "Description": "3535-Neighbours of Perth-Jul", "Production Status": "In Production", "Scheduled Ship Date": datetime.strptime("08-15-2020", "%m-%d-%Y"), "Qty Ordered": 4500, "Production Notes": "PW Count = 4000", "Item Template": "BVM 16 Page",
-                      "Additional Description": "4500 24 page self cover Flat size 16.75 x 10.875, fold & stitch to 8.375 x 10.875 4 process / same  with bleeds Plastic strap band (cross) in 50's Carton pack with 3 strips of tape on the bottom Deliver to DLI", "Date Setup": datetime.strptime("08-30-2020", "%m-%d-%Y")}]
-    return moqPaceUpdate
+    return [
+        {
+            "Job": 'M1998',
+            "Description": "2695-Neighbours of Whitemud Creek - Aug",
+            "Production Status": "In Production",
+            "Scheduled Ship Date": datetime.strptime("07-15-2020", "%m-%d-%Y"),
+            "Qty Ordered": 2500,
+            "Production Notes": "PW Count = 2200",
+            "Item Template": "BVM 16 Page",
+            "Additional Description": "2500 16 page self cover Flat size 16.75 x 10.875, fold & stitch to 8.375 x 10.875 4 process / same  with bleeds Plastic strap band (cross) in 50's Carton pack with 3 strips of tape on the bottom Deliver to DLI",
+            "Date Setup": datetime.strptime("06-30-2020", "%m-%d-%Y"),
+        },
+        {
+            "Job": 'M532',
+            "Description": "3254-Neighbours of Kirkendall and Durand-Mar",
+            "Production Status": "In Production",
+            "Scheduled Ship Date": datetime.strptime("07-15-2020", "%m-%d-%Y"),
+            "Qty Ordered": 4500,
+            "Production Notes": "PW Count = 4000",
+            "Item Template": "BVM 16 Page",
+            "Additional Description": "4500 24 page self cover Flat size 16.75 x 10.875, fold & stitch to 8.375 x 10.875 4 process / same  with bleeds Plastic strap band (cross) in 50's Carton pack with 3 strips of tape on the bottom Deliver to DLI",
+            "Date Setup": datetime.strptime("07-30-2020", "%m-%d-%Y"),
+        },
+        {
+            "Job": 'M1800',
+            "Description": "3535-Neighbours of Perth-Jul",
+            "Production Status": "In Production",
+            "Scheduled Ship Date": datetime.strptime("08-15-2020", "%m-%d-%Y"),
+            "Qty Ordered": 4500,
+            "Production Notes": "PW Count = 4000",
+            "Item Template": "BVM 16 Page",
+            "Additional Description": "4500 24 page self cover Flat size 16.75 x 10.875, fold & stitch to 8.375 x 10.875 4 process / same  with bleeds Plastic strap band (cross) in 50's Carton pack with 3 strips of tape on the bottom Deliver to DLI",
+            "Date Setup": datetime.strptime("08-30-2020", "%m-%d-%Y"),
+        },
+    ]
 
 
 def moqCustomerReportSettingsFunc(name: str):
-    moqSettings = {"Tab": "Sheet", "Type": "Report", "Last Column": "H", "True Dates": True, "Job Field": "Job", "Publication Field": "Description", "Publication Number Separate": False, "Date Columns": ["Files In", "Approved", "Scheduled Ship Date"],
-                                       "Columns Order": {"1": "Job", "2": "Deadline", "3": "Description", "4": "Files In", "5": "Approved", "6": "Production Status", "7": "Scheduled Ship Date", "8": "Qty Ordered"},"Write Once Columns": []}
-    return moqSettings
+    return {
+        "Tab": "Sheet",
+        "Type": "Report",
+        "Last Column": "H",
+        "True Dates": True,
+        "Job Field": "Job",
+        "Publication Field": "Description",
+        "Publication Number Separate": False,
+        "Date Columns": ["Files In", "Approved", "Scheduled Ship Date"],
+        "Columns Order": {
+            "1": "Job",
+            "2": "Deadline",
+            "3": "Description",
+            "4": "Files In",
+            "5": "Approved",
+            "6": "Production Status",
+            "7": "Scheduled Ship Date",
+            "8": "Qty Ordered",
+        },
+        "Write Once Columns": [],
+    }
 
 def moqCustomerReportFunc(path: str, tab: str):
-    moqCustomerReport = [{}]
-    return moqCustomerReport
+    return [{}]
 
 class TestDataSources(unittest.TestCase):
 
@@ -174,7 +371,7 @@ class TestDataSources(unittest.TestCase):
                         moqJobsListSettingsFunc, moqJobsListFunc)        
 
         # Act
-        expected = list()
+        expected = []
         actual = jobs._find_in_all_rows('Description', '3254')
         expected.append(jobs._data_list[1])
         expected.append(jobs._data_list[3])     

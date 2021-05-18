@@ -24,7 +24,7 @@ class DataSource:
         else:
             self.path: str = path
         self.tab: str = self.settings["Tab"]
-        self._data_list: list[dict] = dictFunc(self.path, self.tab)
+        self._data_list: List[dict] = dictFunc(self.path, self.tab)
 
     def _get_data_frame(self):
         return pd.DataFrame(self._data_list)
@@ -32,13 +32,10 @@ class DataSource:
     Data_Frame = property(_get_data_frame)
 
     def _ready_to_export(self, row):
-        exportable=True
-        
-        for column in self.settings["Export On"]:
-            if row[column] == None or row[column] == "" or row["Exported"] != None:
-                exportable=False
-         
-        return exportable
+        return not any(
+            row[column] is None or row[column] == "" or row["Exported"] != None
+            for column in self.settings["Export On"]
+        )
 
 
     def write_to_file(self, path: str, sheet: str, prep_data_funct, write_func):
@@ -101,7 +98,7 @@ class DataSource:
             dict: Complete row. Empty if nothing found.
 
         """
-        empty: dict[str, str] = {'None': ''}
+        empty: Dict[str, str] = {'None': ''}
         for row in self._data_list:
             if row[column] == search_term:
                 return row
@@ -124,10 +121,10 @@ class DataSource:
             return list(self.settings["Columns Order"].values())
 
     def _get_export_columns(self):
-        columns_list = list()
-        for i in range(1, len(self.settings["Columns Order"])+1):
-            columns_list.append(self.settings["Columns Order"][str(i)])
-        return columns_list
+        return [
+            self.settings["Columns Order"][str(i)]
+            for i in range(1, len(self.settings["Columns Order"]) + 1)
+        ]
 
     Columns = property(_get_column_names)
     ExportColumns = property(_get_export_columns)
@@ -147,10 +144,9 @@ class DataSource:
 
         for row in dateDataList:
             for column in self.settings["Date Columns"]:
-                if row[column] != None:
-                    if type(row[column]) == str:
-                        row[column] = datetime.strptime(
-                            row[column], self.settings['Date Format'])
+                if row[column] != None and type(row[column]) == str:
+                    row[column] = datetime.strptime(
+                        row[column], self.settings['Date Format'])
         return dateDataList
 
     def _get_string_data_list(self) -> List[Dict[str, str]]:
@@ -189,7 +185,7 @@ class DataSource:
             List[Dict]: List of all rows containing the search term
 
         """
-        found_list: list[dict] = list()
+        found_list: List[Dict] = list()
         for row in self._data_list:
             if row[column] == search_term:
                 found_list.append(row)
@@ -205,7 +201,7 @@ class DataSource:
         Returns:
             List[Dict]: List of rows
         """
-        found_list: list[dict] = list()
+        found_list: List[Dict] = list()
         for row in self._data_list:
             if search_term in row[column]:
                 found_list.append(row)
@@ -243,9 +239,9 @@ class DataSource:
         Returns:
             List: List of columns
         """
-        consumableList = list()
+        consumableList = []
         for row in self._data_list:
-            entries = dict()
+            entries = {}
             for column in columns:
                 try:
                     entries[column] = row[column]
@@ -261,11 +257,11 @@ class DataSource:
         Returns:
             List: List of lists
         """
-        savableList: list[list] = list()
-        headers: list[str] = list()
-        columnsOrder: dict[str, str] = self.settings["Columns Order"]
+        savableList: List[List] = list()
+        headers: List[str] = list()
+        columnsOrder: Dict[str, str] = self.settings["Columns Order"]
         for row in self._data_list:
-            rowList = list()
+            rowList = []
             for columnNumber in range(1, len(columnsOrder)+1):
                 columnName = columnsOrder[str(columnNumber)]
                 rowList.append(row[columnName])
@@ -310,33 +306,35 @@ class DataSource:
             for oldRow in self._data_list:
                 data_match = True
                 for id in id_columns:
-                    if newRow[id] == oldRow[id] and data_match == True:
+                    if newRow[id] == oldRow[id] and data_match:
                         data_match = True
                     else:
                         data_match = False
                 if data_match:
                     found = True
                     hit_funct(commonColumns, newRow, oldRow)
-                                     
-            if found == False:
+
+            if not found:
                 miss_funct(newRow)
 
 
     def _hit_replace(self, columns, new_row, old_row):
         for column in columns:
             if column not in old_row:
-                old_row[column] = new_row[column]                            
-            if old_row[column] == None or column not in self.settings["Write Once Columns"]:
-                if old_row[column] != new_row[column]:
-                    old_row[column] = new_row[column]
-                    logging.info("Replacing "+str(old_row[column])+" with "+str(new_row[column]))
+                old_row[column] = new_row[column]
+            if (
+                old_row[column] is None
+                or column not in self.settings["Write Once Columns"]
+            ) and old_row[column] != new_row[column]:
+                old_row[column] = new_row[column]
+                logging.info("Replacing "+str(old_row[column])+" with "+str(new_row[column]))
 
     def _hit_add_missing(self, columns, new_row, old_row):
         for column in columns:
             if column not in old_row:
                 old_row[column] = new_row[column]
                 logging.info("Adding "+str(new_row[column])+" to "+column)
-            if old_row[column] == None:
+            if old_row[column] is None:
                 old_row[column] = new_row[column]
                 logging.info("Adding "+str(new_row[column])+" to "+column)
 
@@ -385,18 +383,18 @@ class DataSource:
         exported=False
         if "Export On" in self.settings:
             self.populate_static()
-            self._create_common_column_names()        
+            self._create_common_column_names()
             data_source.populate_static()
-            data_source._create_common_column_names()        
+            data_source._create_common_column_names()
             # self._create_common_column_names()
             commonColumns = self.find_common_columns(data_source)
             for row in self._data_list:
-                new_row=dict()
+                new_row = {}
                 if self._ready_to_export(row):
                     for column in commonColumns:
                         new_row[column]=row[column]
                     row["Exported"]=datetime.now()
-                    
+
                     data_source.add_row(new_row)
                     exported=True
         return exported
@@ -412,10 +410,7 @@ class DataSource:
         Returns:
             bool: Return true if found in 'Date Columns', false otherwise.
         """
-        if columnHeader in self.settings['Date Columns']:
-            return True
-        else:
-            return False
+        return columnHeader in self.settings['Date Columns']
 
     def get_true_date(self, columnHeader: str, index: int) -> datetime:
         """Returns the value at a given row, and column as a proper Python DateTime.
@@ -468,8 +463,7 @@ class DataSource:
         if type(cell) == datetime:
             return cell
 
-        dateReturn = datetime.strptime(cell, self.settings['Date Format'])
-        return dateReturn
+        return datetime.strptime(cell, self.settings['Date Format'])
 
     def _update_field(self, row: dict, column_name: str, value: str) -> None:
         """Updates [column_name] in the supplied row with [value]
@@ -491,11 +485,10 @@ class DataSource:
         Returns:
             int: Index of the found row
         """
-        index = int()
         for i in range(len(self._data_list)):
             if self._data_list[i][column_name] == search_term:
                 return i
-        return index
+        return int()
 
     def find_common_columns(self, ds2) -> List[str]:
         """Returns a list of all common columns between the current object, and a supplied DataSource
@@ -508,16 +501,13 @@ class DataSource:
         """
         columnsSet = set(self.Columns)
         intersection = columnsSet.intersection(ds2.Columns)
-        _columns = list(intersection)
-        return _columns
+        return list(intersection)
 
     def _split_column(self, original_column_name: str, new_column_names: List[str], func):
         for row in self._data_list:
             new_column_values = func(row[original_column_name])
-            i = 0
-            for new_column_value in new_column_values:
+            for i, new_column_value in enumerate(new_column_values):
                 row[new_column_names[i]] = new_column_value
-                i = i + 1
     
     def _check_data_complete(self, columns_list: List[str], on_complete_func: Callable):
         """Checks to see which rows are 'Complete' based on a list of column names (that each column contains data)
@@ -531,11 +521,8 @@ class DataSource:
         """
 
         for record in self._data_list:
-            complete = True
-            for column in columns_list:
-                if record[column]==None:
-                    complete=False
-            if complete==True:
+            complete = all(record[column] is not None for column in columns_list)
+            if complete:
                 on_complete_func(record)
 
 
@@ -588,7 +575,7 @@ class JobsList(DataSource):
             Dict: The row containing the most recent publication
         """
         candidates = self._find_in_all_rows(self.Description, pub_number)
-        found = dict()
+        found = {}
         if len(candidates) > 0:
             found = candidates[0]
             for candidate in candidates:
@@ -605,8 +592,7 @@ class JobsList(DataSource):
         Returns:
             dict: Row containing the found job
         """
-        found = self._find_first_row(self.Job, job)
-        return found
+        return self._find_first_row(self.Job, job)
 
     def job_is_approved(self, job: str) -> bool:
         """Return true if a job has been approved, false if not.
@@ -618,10 +604,7 @@ class JobsList(DataSource):
             bool: True if approved, false if not.
         """
         found = self.get_job(job)
-        if len(found.keys()) > 1:
-            if found[self.Approved] != None:
-                return True
-        return False
+        return len(found.keys()) > 1 and found[self.Approved] != None
 
     def job_is_uploaded(self, job: str) -> bool:
         """Return true if a job has been uploaded, false if not.
@@ -633,10 +616,7 @@ class JobsList(DataSource):
             bool: True if uploaded, false it not.
         """
         found = self.get_job(job)
-        if len(found.keys()) > 1:
-            if found[self.FilesIn] != None:
-                return True
-        return False
+        return len(found.keys()) > 1 and found[self.FilesIn] != None
 
     def set_upload_date(self, job: str, date: datetime):
         """Set the upload date for a given job number
@@ -663,27 +643,27 @@ class JobsList(DataSource):
             month_string = ""
             if self.PublicationMonth not in row:
                 row[self.PublicationMonth]=None
-            if row[self.PublicationMonth] == None:
-                if row[self.Description] != None:
-                    if len(row[self.Description].split("-")[-1]) < 5:
-                        month_string = row[self.Description].split("-")[-1]
-                        #print("Used the Description "+row[self.Description])
-                if month_string == "":
-                    if row[self.DateSetup] != None:
-                        date_to_set: datetime = row[self.DateSetup]
+            if row[self.PublicationMonth] is None:
+                if (
+                    row[self.Description] != None
+                    and len(row[self.Description].split("-")[-1]) < 5
+                ):
+                    month_string = row[self.Description].split("-")[-1]
+                    #print("Used the Description "+row[self.Description])
+                if month_string == "" and row[self.DateSetup] != None:
+                    date_to_set: datetime = row[self.DateSetup]
+                    date_to_set = self.add_one_month(date_to_set)
+                    if date_to_set.day > 25:
                         date_to_set = self.add_one_month(date_to_set)
-                        if date_to_set.day > 25:
-                            date_to_set = self.add_one_month(date_to_set)
-                        month_string = date_to_set.strftime("%b")
-                        #print("Unable to use " + row[self.Description])
-                if month_string == "":
-                    if row[self.AddedOn] != None:
-                        date_to_set: datetime = row[self.AddedOn]
+                    month_string = date_to_set.strftime("%b")
+                    #print("Unable to use " + row[self.Description])
+                if month_string == "" and row[self.AddedOn] != None:
+                    date_to_set: datetime = row[self.AddedOn]
+                    date_to_set = self.add_one_month(date_to_set)
+                    if date_to_set.day > 25:
                         date_to_set = self.add_one_month(date_to_set)
-                        if date_to_set.day > 25:
-                            date_to_set = self.add_one_month(date_to_set)
-                        month_string = date_to_set.strftime("%b")
-                        #print("Used the Added On date")
+                    month_string = date_to_set.strftime("%b")
+                    #print("Used the Added On date")
             if month_string != "":
 
                 year_to_set = datetime.now().year
@@ -714,7 +694,7 @@ class JobsList(DataSource):
 
     def _set_item_templates(self):
         for row in self._data_list:
-            if row["True Page Count"] != None and row["itemTemplate"] == None:
+            if row["True Page Count"] != None and row["itemTemplate"] is None:
                 row["itemTemplate"] = "BVM-"+str(int(row["True Page Count"]))+"P"
     
     def on_file_upload(self, file_upload):
@@ -769,7 +749,7 @@ class Samples(DataSource):
         self._add_column("job")
 
     def _name_split(self, name: str) -> List[str]:
-        namesList = list()
+        namesList = []
         name = name.split('(')[0]
         names = name.split()
         firstName = ''
@@ -777,7 +757,7 @@ class Samples(DataSource):
             if firstName != '':
                 firstName = firstName+' ' + names[x]
             else:
-                firstName = firstName+names[x]
+                firstName += names[x]
         namesList.append(firstName)
         lastName = names[-1]
         namesList.append(lastName)
@@ -829,14 +809,14 @@ class FlattenedSamples(ExportList):
         self._add_column("globalContactID")
     
     def get_pub_samples_quantity(self, pub) -> int:
-        quantity = 0
-        for row in self._data_list:
-            if row["id"]==pub:
-                quantity += int(row["U_shipmentNotes"])
-        return quantity
+        return sum(
+            int(row["U_shipmentNotes"])
+            for row in self._data_list
+            if row["id"] == pub
+        )
     
     def get_pubs(self) -> List[str]:
-        pubs = list()
+        pubs = []
         for row in self._data_list:
             if row["id"] not in pubs:
                 pubs.append(row["id"])
@@ -885,8 +865,7 @@ class PaceUpdate(DataSource):
         Returns:
             str: Mailing count as string
         """
-        cpc = row[self._productionNotes].split()[-1]
-        return cpc
+        return row[self._productionNotes].split()[-1]
 
     def _get_page_count(self, row: dict) -> str:
         """Return the page count in a supplied row

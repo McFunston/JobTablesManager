@@ -10,8 +10,8 @@ def get_page_count(path) -> int:
 
 
 def get_pdf_data(path: str, file_name) -> List[Dict]:
-    return_list = list()
-    return_dict = dict()
+    return_list = []
+    return_dict = {}
     name = path.split("/")[-1]
     name = name.split('\\')[-1]
     return_dict["Name"] = name

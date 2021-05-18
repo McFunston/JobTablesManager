@@ -4,7 +4,7 @@ from os import rename, remove
 import sys
 
 def fix_csv(path):
-    fixed=list()
+    fixed = []
     needed_fixing = False
     file_name=path.split("/")[-1].split("\\")[-1].split(".")[0]
     file_ext = path.split(".")[-1]
@@ -14,47 +14,50 @@ def fix_csv(path):
             length = len(line)
             i=0
             open_quote=False
-            while i < length:            
+            while i < length:
                 prev = ""
                 #print(open_quote)
                 if line[i]=='"':
                     open_quote=not open_quote
-                    
+
                 if i > 1:
                     prev=line[i-1]
                     cur=line[i]
 
-                    if cur != '"' and cur != ',' and cur != '\n' and cur != ' ' and open_quote==False:
+                    if (
+                        cur != '"'
+                        and cur != ','
+                        and cur != '\n'
+                        and cur != ' '
+                        and not open_quote
+                    ):
                         if prev!=',':
-                            needed_fixing = True
                             print("In "+ file_name + " there is a field missing both quote and comma in this line: \n"+line)
                             line = line[:i] + ',"' + line[i:]
-                            i=i+2
-                            open_quote= not open_quote
+                            i += 2
                         else:
-                            needed_fixing = True
                             print("In "+ file_name + " there is a field with no opening quotation mark in this line: \n"+line)
                             line = line[:i] + '"' + line[i:]
-                            i=i+1
-                            open_quote= not open_quote
-
-                    if line[i] == "," and open_quote==True:
+                            i += 1
+                        needed_fixing = True
+                        open_quote= not open_quote
+                    if line[i] == "," and open_quote:
                         needed_fixing = True
                         print("In "+ file_name + " there is a field with no closing quotation mark in this line: \n"+line)
                         line = line[:i] + '"' + line[i:]
                         open_quote=not open_quote
                         #print(line)                        
-                        
+
                     if line[i] == " " and prev == ',':
                         needed_fixing = True
                         print("In "+ file_name + " there is a floating space found in this line: \n"+line)
                         line = line[:i] + line[i+1:]
-                        i=i-1
-                        length=length-1
-                
-                i=i+1
+                        i -= 1
+                        length -= 1
+
+                i += 1
             fixed.append(line)
-    if needed_fixing == True:
+    if needed_fixing:
         with open(new_path, 'w') as nf:
             nf.writelines(fixed)
     else:
@@ -65,9 +68,9 @@ def fix_csv(path):
             remove(path)
     except:
         print(file_name + " is broken, and I cannot fix it")
-        if needed_fixing == True:
+        if needed_fixing:
             remove(new_path)
-            
+
         broke_name = path.replace("."+file_ext, "-broken."+file_ext)
         rename(path, broke_name)
 

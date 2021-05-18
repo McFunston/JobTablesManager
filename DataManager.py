@@ -17,8 +17,7 @@ def load_data_settings_json(name: str) -> Dict:
         return settings["Data Sources"][name]
 
 def getEmptyDS(path: str, tab: str):
-    empty_list = [{}]
-    return empty_list
+    return [{}]
 
 def get_jobs_list() -> JobsList:
     name='Jobs List'
@@ -72,33 +71,37 @@ def get_invoice() -> Invoice:
     return invoice
 
 def get_pdf_received(path) -> PdfReceived:    
-    pdf_received = ds.PdfReceived(path, load_data_settings_json, get_pdf_data)
-    return pdf_received
+    return ds.PdfReceived(path, load_data_settings_json, get_pdf_data)
 
 def get_pdf_approved(path) -> PdfApproved:    
-    pdf_approved = ds.PdfApproved(path, load_data_settings_json, get_pdf_data)
-    return pdf_approved
+    return ds.PdfApproved(path, load_data_settings_json, get_pdf_data)
 
 def get_est_file(path) -> EstFile:
     name: str = "EST File"
-    est_file = ds.EstFile(path, load_data_settings_json, get_data_csv)
-    return est_file
+    return ds.EstFile(path, load_data_settings_json, get_data_csv)
 
 def get_job_projects() -> JobProjects:
     name = "Job Projects"
     settings = load_data_settings_json(name)
-    job_projects = ds.JobProjects(settings["Default Path"], load_data_settings_json, GetData)
-    return job_projects
+    return ds.JobProjects(
+        settings["Default Path"], load_data_settings_json, GetData
+    )
 
 def get_flattened_samples(file_name, samples, designer_copies):    
-    flattened_samples = ds.FlattenedSamples(samples, designer_copies, file_name, load_data_settings_json, getEmptyDS)
-    return flattened_samples
+    return ds.FlattenedSamples(
+        samples,
+        designer_copies,
+        file_name,
+        load_data_settings_json,
+        getEmptyDS,
+    )
 
 def get_jobs_import():
     name = "Job Import"
     settings = load_data_settings_json(name)
-    jobs_import = ds.JobImport(settings["Default Path"], load_data_settings_json, getEmptyDS)
-    return jobs_import
+    return ds.JobImport(
+        settings["Default Path"], load_data_settings_json, getEmptyDS
+    )
 
 
 

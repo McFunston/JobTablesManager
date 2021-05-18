@@ -118,7 +118,7 @@ def check_breakdown(path, pub_num):
         totals[pub_number]=find_largest_number(df, pub_number)
     return(find_largest_number(df, pub_num))
 
-# fix_csv("Test_Data/Good_txt/3793 Country Living  January 2020 #3793.txt", "Test_Data/Canada Mag Break Down September Issue 2020.xlsx")
+fix_csv("763 Neighbours of Wascana The Creeks #763.txt", "Test_Data/Canada Mag Break Down September Issue 2020.xlsx")
 
-if __name__ == "__main__":
-    fix_csv(sys.argv[1], sys.argv[2])
+# if __name__ == "__main__":
+#     fix_csv(sys.argv[1], sys.argv[2])
